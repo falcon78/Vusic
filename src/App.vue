@@ -1,8 +1,11 @@
 <template>
-  <div id="app">
+  <div id="app" class="is-fullheight scrollbar">
     <router-view />
-    <button class="button is-primary"></button>
   </div>
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">
+.columns {
+  margin: 0 !important;
+}
+</style>

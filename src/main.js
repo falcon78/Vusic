@@ -2,10 +2,11 @@ import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
 import store from './store';
+import 'bulma/css/bulma.css';
+import '@/assets/main.scss';
+import '@/assets/sideBar.scss';
 
 Vue.config.productionTip = false;
-
-require('./assets/stylesheet.scss');
 
 new Vue({
   router,
