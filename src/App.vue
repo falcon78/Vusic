@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="is-fullheight scrollbar">
-    <router-view />
+    <home />
   </div>
 </template>
 
@@ -9,3 +9,10 @@
   margin: 0 !important;
 }
 </style>
+<script>
+import Home from '@/views/Home.vue';
+
+export default {
+  components: { Home },
+};
+</script>
