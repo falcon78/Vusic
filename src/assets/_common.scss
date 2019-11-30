@@ -1,0 +1,47 @@
+@import 'constants';
+
+@mixin box-shadow {
+  box-shadow: 0 17px 20px -6px rgba(36, 52, 70, 0.2);
+}
+
+@mixin big-box-shadow {
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.25);
+}
+
+@mixin transition-animation($duration) {
+  transition: transform $duration * 1s;
+  transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
+}
+
+@mixin no-margin-padding {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin truncate-text ($width: 100%) {
+  width: $width;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@mixin small-album-image {
+  width: 20px;
+  height: 20px;
+}
+
+@mixin flex-all-center {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+
+@mixin bg-image-center {
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}

@@ -1,0 +1,98 @@
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  background: $background-color;
+  height: 100vh;
+  @include flex-all-center;
+  @include no-margin-padding;
+  overflow: hidden;
+}
+
+$player-height: 2em;
+$main-view-width: 96%;
+$main-body-height: 96vh;
+.home {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+
+.icon-buttons {
+  button,
+  input[type='submit'],
+  input[type='reset'] {
+    @include transition-animation(0.15);
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    margin: 10px;
+    &:hover{
+      transform: scale(1.2);
+    }
+  }
+}
+
+.main-view {
+  padding: 0;
+  height: 96vh;
+  width: $main-view-width;
+  @include flex-all-center;
+
+  #player {
+    height: $player-height;
+    width: $main-view-width;
+  }
+
+  #main-body {
+    height: $main-body-height;
+    width: $main-view-width;
+    flex-shrink: 0;
+    position: sticky;
+    bottom: 0;
+    overflow: scroll;
+    background: transparent;
+  }
+}
+
+.scrollWrapper {
+  overflow: auto;
+  overflow-x: hidden !important;
+
+  &::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+    border-radius: 1px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $background_color;
+    border-radius: 1px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: lighten($metallic-seaweed, 40%);
+    border-radius: 1px;
+    cursor: pointer;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: $metallic-seaweed;
+  }
+
+  &:hover::-webkit-scrollbar-thumb {
+    background: lighten($metallic-seaweed, 25%);
+  }
+
+  &::-webkit-scrollbar-corner {
+    display: none;
+  }
+}
