@@ -1,0 +1,11 @@
+.albums-page {
+  margin: 0 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-content: flex-start;
+
+  .thumbnail-and-title {
+    margin: 8px;
+  }
+}

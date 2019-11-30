@@ -1,28 +1,18 @@
 <template>
-  <div class="columns is-vcentered is-mobile home">
-    <side-bar class="column" />
+  <div class="home icon-buttons">
+    <sidebar />
 
-    <div class="column main-view scrollWrapper">
-      <div id="player">
-        <p>player</p>
-      </div>
-      <router-view />
+    <div class="main-view ">
+      <router-view id="main-body" />
     </div>
   </div>
 </template>
 
 <script>
-import SideBar from '@/components/SideBar.vue';
+import Sidebar from '@/components/Sidebar.vue';
 
 export default {
   name: 'home',
-  components: { SideBar },
+  components: { Sidebar },
 };
 </script>
-
-<style lang="scss" scoped>
-.home,
-html {
-  height: 100vh;
-}
-</style>

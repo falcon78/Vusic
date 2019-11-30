@@ -4,8 +4,16 @@ import music from './music';
 
 Vue.use(Vuex);
 
-export default new Vuex.Store({
+function test() {
+  // eslint-disable-next-line no-use-before-define
+  store.dispatch('music/getAlbums');
+}
+
+const store = new Vuex.Store({
   modules: {
     music,
   },
 });
+
+test();
+export default store;

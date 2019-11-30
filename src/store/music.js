@@ -1,27 +1,90 @@
-/* import keys from '../../apiKeys';
+import keys from '../../apiKeys';
 
 // eslint-disable-next-line no-undef
- MusicKit.configure({
+MusicKit.configure({
   developerToken: keys.appleMusic.developerToken,
   app: {
     name: 'My Cool Web App',
     build: '1978.4.1',
   },
 });
-
 // eslint-disable-next-line no-undef
-const music = MusicKit.getInstance();
+console.log(MusicKit.getInstance());
 
-// Set the playback queue to a specific album, and play
-music.setQueue({
-  album: '1025210938',
-});
+function getSafe(fn, defaultVal = '') {
+  try {
+    return fn();
+  } catch (e) {
+    return defaultVal;
+  }
+}
 
-console.log(music);
+function musicKit() {
+  // eslint-disable-next-line no-undef
+  return MusicKit.getInstance();
+}
 
-music.play();
- */
+const state = {
+  auth: {
+    isLoggedIn: false,
+  },
+  library: {
+    storeFront: '',
+    recentlyAdded: [],
+    artists: [],
+    songs: [],
+    albums: [],
+  },
+  appleMusic: {
+    forYou: [],
+    browse: [],
+  },
+  player: {
+    playing: null,
+    playbackTime: 0,
+    shuffle: false,
+    repeat: false,
+    volume: 100,
+    bitrate: 0,
+  },
+};
+const getters = {
+  getLibraryAlbums: (musicState) => {
+    const albums = [];
+    musicState.library.albums.forEach((album) => {
+      albums.push({
+        id: album.id,
+        artist: album.attributes.artistName,
+        title: album.attributes.name,
+        artwork: getSafe(() => album.attributes.artwork.url),
+      });
+    });
+    return albums;
+  },
+};
+const mutations = {
+  setLibraryAlbums(musicState, { albums }) {
+    state.library.albums = albums;
+  },
+};
+const actions = {
+  async getAlbums({ commit }) {
+    const albums = await musicKit().api.library.albums({ limit: 500 });
+    commit('setLibraryAlbums', { albums });
+  },
+  // eslint-disable-next-line no-unused-vars
+  addQueueAlbum({ commit }, { id }) {
+    return musicKit().setQueue({ album: id });
+  },
+  play() {
+    musicKit().player.play();
+  },
+};
 
-const music = {};
-
-export default music;
+export default {
+  namespaced: true,
+  state,
+  getters,
+  mutations,
+  actions,
+};
