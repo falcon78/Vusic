@@ -8,8 +8,6 @@ MusicKit.configure({
     build: '1978.4.1',
   },
 });
-// eslint-disable-next-line no-undef
-console.log(MusicKit.getInstance());
 
 function getSafe(fn, defaultVal = '') {
   try {
