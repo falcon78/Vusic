@@ -1,5 +1,5 @@
 <template>
-  <div class="sidebar scrollWrapper">
+  <nav class="sidebar scrollWrapper">
     <div v-for="(category, index) in categories" :key="index">
       <h2 class="sidebar__category">{{ category.category }}</h2>
       <ul class="sidebar__ul">
@@ -31,7 +31,7 @@
         </li>
       </ul>
     </div>
-  </div>
+  </nav>
 </template>
 
 <script>

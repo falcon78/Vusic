@@ -5,6 +5,7 @@ body {
   @include flex-all-center;
   @include no-margin-padding;
   overflow: hidden;
+  color: $main-font-color;
 }
 
 $player-height: 2em;
@@ -16,11 +17,9 @@ $main-body-height: 96vh;
   width: 100vw;
 }
 
-a{
+a {
   text-decoration: none;
-  color: black;
 }
-
 
 .icon-buttons {
   button,
@@ -35,7 +34,7 @@ a{
     cursor: pointer;
     outline: inherit;
     margin: 10px;
-    &:hover{
+    &:hover {
       transform: scale(1.2);
     }
   }
@@ -74,22 +73,22 @@ a{
   }
 
   &::-webkit-scrollbar-track {
-    background: $background_color;
+    background: rgba($background_color, 0);
     border-radius: 1px;
   }
 
   &::-webkit-scrollbar-thumb {
-    background: lighten($metallic-seaweed, 40%);
+    background: lighten($secondary-color, 40%);
     border-radius: 1px;
     cursor: pointer;
   }
 
   &::-webkit-scrollbar-thumb:hover {
-    background: $metallic-seaweed;
+    background: $secondary-color;
   }
 
   &:hover::-webkit-scrollbar-thumb {
-    background: lighten($metallic-seaweed, 25%);
+    background: lighten($secondary-color, 25%);
   }
 
   &::-webkit-scrollbar-corner {

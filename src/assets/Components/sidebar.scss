@@ -19,13 +19,14 @@ $padding: 6px;
   &__category {
     white-space: nowrap;
     margin: $margin * 2 0 $margin * 2 0;
+    color: $primary-color;
   }
 
   &__ul {
     @include no-margin-padding;
     border-left: solid;
     border-width: 1.5px;
-    border-color: $pastel-purple;
+    border-color: $primary-color;
   }
 
   &__li {
@@ -35,10 +36,17 @@ $padding: 6px;
     padding: $padding;
     margin: 6px 10px 6px 12px;
     width: 90%;
+    a {
+      color: rgba(0, 0, 0, 0.8);
+    }
     &:hover {
-      @include big-box-shadow;
-      background: $secondary-color;
+      @include box-shadow;
+      color: $pastel-purple;
+      background: $primary-color;
       transform: scale(1.1);
+      a {
+        color: rgba(white, 0.9);
+      }
     }
     &__isActive {
       @include big-box-shadow;
