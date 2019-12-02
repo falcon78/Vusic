@@ -1,59 +1,84 @@
-$margin: 6px;
-$padding: 6px;
+$title-margin: 6px;
+$li-padding: 6px;
+
+$sidebar-background-color: black;
+
+ul {
+  @include no-margin-padding;
+  list-style-type: none;
+}
+
+li {
+  @include truncate-text;
+  @include transition-animation(0.2);
+  margin: 6px 10px 6px 12px;
+  padding: $li-padding;
+  border-radius: 4px;
+  &:hover {
+    @include box-shadow;
+    color: $pastel-purple;
+    background: $primary-color;
+    transform: scale(1.1);
+    a {
+      color: rgba(white, 0.9);
+    }
+    margin-left: 1em;
+  }
+}
 
 .sidebar {
   @include box-shadow;
   flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
   box-sizing: border-box;
-  background: $secondary-background_color;
+  background: $sidebar-background-color;
   margin-left: 1em;
-  padding: 1em;
+  padding: 1em 0 0 0;
   position: sticky;
   top: 0;
   height: 96vh;
-  overflow-y: scroll;
+  overflow-y: hidden;
   overflow-x: hidden;
   border-radius: 0.5em;
   width: 250px;
+  .padding-div {
+    padding-left: 1em;
+  }
 
   &__category {
     white-space: nowrap;
-    margin: $margin * 2 0 $margin * 2 0;
+    margin: $title-margin * 3 0 $title-margin * 2 0;
     color: $primary-color;
   }
-
   &__ul {
-    @include no-margin-padding;
     border-left: solid;
     border-width: 1.5px;
     border-color: $primary-color;
   }
 
   &__li {
-    @include truncate-text;
-    @include transition-animation(0.2);
-    border-radius: 4px;
-    padding: $padding;
-    margin: 6px 10px 6px 12px;
-    width: 90%;
+    width: 80%;
     a {
-      color: rgba(0, 0, 0, 0.8);
+      color: $main-font-color;
     }
-    &:hover {
-      @include box-shadow;
-      color: $pastel-purple;
-      background: $primary-color;
-      transform: scale(1.1);
-      a {
-        color: rgba(white, 0.9);
-      }
-    }
+
     &__isActive {
       @include big-box-shadow;
-      background: $primary-color;
+      background: $secondary-color;
       a {
-        color: lightgray;
+        color: white;
       }
     }
   }
+}
+
+.player {
+  width: 100%;
+  height: 250px;
+  margin-top: auto;
+  flex-shrink: 0;
+  border-top: solid;
+  border-width: 4px;
+  border-color: $primary-color;
 }

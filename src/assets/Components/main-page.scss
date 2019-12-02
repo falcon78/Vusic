@@ -1,3 +1,7 @@
+$player-height: 2em;
+$main-view-width: 96%;
+$main-body-height: 96vh;
+
 body {
   font-family: 'Source Sans Pro', sans-serif;
   background: $background-color;
@@ -8,9 +12,6 @@ body {
   color: $main-font-color;
 }
 
-$player-height: 2em;
-$main-view-width: 96%;
-$main-body-height: 96vh;
 .home {
   display: flex;
   justify-content: center;
@@ -62,6 +63,16 @@ a {
   }
 }
 
+.svg-container{
+  display: flex;
+  align-content: center;
+}
+.svg {
+  width: 1em;
+  height: 1em;
+  padding: 3px 10px 0 0;
+}
+
 .scrollWrapper {
   overflow: auto;
   overflow-x: hidden !important;
@@ -78,17 +89,17 @@ a {
   }
 
   &::-webkit-scrollbar-thumb {
-    background: lighten($secondary-color, 40%);
+    background: lighten($primary-color, 40%);
     border-radius: 1px;
     cursor: pointer;
   }
 
   &::-webkit-scrollbar-thumb:hover {
-    background: $secondary-color;
+    background: $primary-color;
   }
 
   &:hover::-webkit-scrollbar-thumb {
-    background: lighten($secondary-color, 25%);
+    background: lighten($primary-color, 25%);
   }
 
   &::-webkit-scrollbar-corner {
