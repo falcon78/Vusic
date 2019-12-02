@@ -7,6 +7,7 @@ import RecentlyAdded from '@/views/RecentlyAdded.vue';
 import routerConstants from './routerConstants';
 import Artists from '@/views/Artists.vue';
 import Songs from '@/views/Songs.vue';
+import Playlists from '@/views/Playlists.vue';
 
 Vue.use(VueRouter);
 
@@ -55,6 +56,11 @@ const routes = [
     path: routerConstants[1].labels[3].routeName,
     name: routerConstants[1].labels[3].routeName,
     component: Songs,
+  },
+  {
+    path: routerConstants[1].labels[4].routeName,
+    name: routerConstants[1].labels[4].routeName,
+    component: Playlists,
   },
 ];
 

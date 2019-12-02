@@ -1,13 +1,12 @@
 <template>
-  <div
-    class="thumbnail-and-title"
-    :style="{ backgroundImage: `url('${artwork}')` }"
-    :class="`thumbnail-and-title__${size}`"
-  >
+  <div class="thumbnail-and-title" :class="`thumbnail-and-title__${size}`">
+    <div class="artwork" :style="{ backgroundImage: `url('${artwork}')` }"></div>
     <div class="buttons">
-      <button><img src="../assets/icons/heart.png" alt="like button" /></button>
-      <button @click="playAlbum(id)">
-        <img src="../assets/icons/play.png" alt="like button" />
+      <button class="button">
+        <HeartIcon class="button-svg" />
+      </button>
+      <button class="button button-svg" @click="playAlbum(id)">
+        <PlayCircleIcon class="button-svg" />
       </button>
     </div>
     <div class="info">
@@ -18,10 +17,12 @@
 </template>
 
 <script>
+import { HeartIcon, PlayCircleIcon } from 'vue-feather-icons';
 import { mapActions } from 'vuex';
 
 export default {
   name: 'thumbnail-and-title',
+  components: { HeartIcon, PlayCircleIcon },
   props: {
     size: String, // small or big
     title: String,
