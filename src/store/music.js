@@ -85,7 +85,7 @@ const actions = {
     return musicKit().setQueue({ album: id });
   },
   play() {
-    musicKit().player.play();
+    return musicKit().player.play();
   },
 };
 

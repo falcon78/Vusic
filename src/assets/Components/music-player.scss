@@ -3,11 +3,8 @@ $player-background-color: lighten(rgb(0, 0, 0), 6%);
 $player-scrubber-z-index: 2;
 
 .player {
-  @include flex-all-center;
   align-items: center;
   flex-wrap: nowrap;
-  flex-direction: column;
-  width: 100%;
   height: 250px;
   margin-top: auto;
   flex-shrink: 0;
@@ -15,13 +12,17 @@ $player-scrubber-z-index: 2;
   border-width: 2px;
   background-color: $player-background-color;
   border-color: $top-border-color;
+  width: $sidebar-width;
   img {
     height: 0;
+  }
+  .scrubber {
+    width: $sidebar-width - 10px;
   }
 }
 
 #player-scrubber {
-  width: 90%;
+  width: $sidebar-width;
   height: 7px;
   background-color: white;
   @include flex-all-center;
@@ -29,7 +30,6 @@ $player-scrubber-z-index: 2;
   z-index: $player-scrubber-z-index;
   #playback-status-bar {
     z-index: $player-scrubber-z-index - 1;
-    width: 97%;
     height: 5px;
     background-color: red;
   }

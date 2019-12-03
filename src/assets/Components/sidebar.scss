@@ -2,6 +2,7 @@ $title-margin: 6px;
 $li-padding: 6px;
 
 $sidebar-background-color: black;
+$sidebar-width: 260px;
 
 ul {
   @include no-margin-padding;
@@ -39,7 +40,7 @@ li {
   height: 100vh;
   overflow-y: hidden;
   overflow-x: hidden;
-  width: 250px;
+  width: $sidebar-width;
   .padding-div {
     padding-left: 1em;
   }
@@ -71,5 +72,3 @@ li {
     }
   }
 }
-
-
