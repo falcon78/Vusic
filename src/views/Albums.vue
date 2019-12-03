@@ -8,13 +8,13 @@
       :size="'small'"
       :artist="album.artist"
       :title="album.title"
-      :artwork="setImageSize(album.artwork, 150, 150)"
+      :artwork="album.artwork"
     />
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters, mapActions } from 'vuex';
 import ThumbnailAndTitle from '@/components/ThumbnailAndTitle.vue';
 
 export default {
@@ -23,14 +23,17 @@ export default {
     ThumbnailAndTitle,
   },
   methods: {
-    setImageSize(url, width, height) {
-      return url.replace('{w}', width).replace('{h}', height);
-    },
+    ...mapActions('music', {
+      getAlbums: 'getAlbums',
+    }),
   },
   computed: {
     ...mapGetters('music', {
       albums: 'getLibraryAlbums',
     }),
+  },
+  mounted() {
+    this.getAlbums();
   },
 };
 </script>

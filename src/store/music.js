@@ -1,4 +1,5 @@
 import keys from '../../apiKeys';
+import helpers from './helpers';
 
 // eslint-disable-next-line no-undef
 MusicKit.configure({
@@ -9,22 +10,16 @@ MusicKit.configure({
   },
 });
 
-function getSafe(fn, defaultVal = '') {
-  try {
-    return fn();
-  } catch (e) {
-    return defaultVal;
-  }
-}
-
+// eslint-disable-next-line no-undef
+const sdk = MusicKit;
 function musicKit() {
   // eslint-disable-next-line no-undef
-  return MusicKit.getInstance();
+  return sdk.getInstance();
 }
 
-const state = {
+const musicState = {
   auth: {
-    isLoggedIn: false,
+    isAuthorized: false,
   },
   library: {
     storeFront: '',
@@ -47,25 +42,40 @@ const state = {
   },
 };
 const getters = {
-  getLibraryAlbums: (musicState) => {
+  getLibraryAlbums: (state) => {
     const albums = [];
-    musicState.library.albums.forEach((album) => {
+    const { getSafe } = helpers;
+    state.library.albums.forEach((album) => {
       albums.push({
-        id: album.id,
-        artist: album.attributes.artistName,
-        title: album.attributes.name,
-        artwork: getSafe(() => album.attributes.artwork.url),
+        id: getSafe(() => album.id),
+        artist: getSafe(() => album.attributes.artistName),
+        title: getSafe(() => album.attributes.name),
+        artwork: getSafe(
+          () => sdk.formatArtworkURL(album.attributes.artwork, 70, 70),
+          'https://is1-ssl.mzstatic.com/image/thumb/Features127/v4/75/f9/6f/75f96fa5-99ca-0854-3aae-8f76f5cb7fb5/source/100x100bb.jpeg',
+        ),
       });
     });
     return albums;
   },
 };
+
 const mutations = {
-  setLibraryAlbums(musicState, { albums }) {
+  setLibraryAlbums(state, { albums }) {
     state.library.albums = albums;
   },
+  setAuth(state, { auth }) {
+    state.auth.isAuthorized = auth;
+  },
+  setStoreFront(state, { storefront }) {
+    state.library.storeFront = storefront;
+  },
 };
+
 const actions = {
+  initializeState() {
+    console.log('music state init');
+  },
   async getAlbums({ commit }) {
     const albums = await musicKit().api.library.albums({ limit: 500 });
     commit('setLibraryAlbums', { albums });
@@ -81,7 +91,7 @@ const actions = {
 
 export default {
   namespaced: true,
-  state,
+  state: musicState,
   getters,
   mutations,
   actions,

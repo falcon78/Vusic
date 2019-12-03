@@ -10,7 +10,7 @@ $primary-purple: #bb86fc;
 $owl-pink: #ff7597;
 $owl-pink-dark: #ff0266;
 
-$primary-color: darken($owl-pink, 0%);
+$primary-color: $owl-pink;
 $secondary-color: $blue-de-france;
 
 $background-color: #111111;
@@ -19,3 +19,4 @@ $secondary-background_color: #f5f5f5;
 $regular-font-size: 1em;
 $tiny-font-size: 12px;
 $sub-text-color: #868686;
+

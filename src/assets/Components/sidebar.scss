@@ -33,14 +33,12 @@ li {
   flex-direction: column;
   box-sizing: border-box;
   background: $sidebar-background-color;
-  margin-left: 1em;
   padding: 1em 0 0 0;
   position: sticky;
   top: 0;
-  height: 96vh;
+  height: 100vh;
   overflow-y: hidden;
   overflow-x: hidden;
-  border-radius: 0.5em;
   width: 250px;
   .padding-div {
     padding-left: 1em;
@@ -52,6 +50,7 @@ li {
     color: $primary-color;
   }
   &__ul {
+    margin-left: 9px;
     border-left: solid;
     border-width: 1.5px;
     border-color: $primary-color;
@@ -73,12 +72,4 @@ li {
   }
 }
 
-.player {
-  width: 100%;
-  height: 250px;
-  margin-top: auto;
-  flex-shrink: 0;
-  border-top: solid;
-  border-width: 4px;
-  border-color: $primary-color;
-}
+
