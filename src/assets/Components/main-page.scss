@@ -1,6 +1,6 @@
 $player-height: 2em;
 $main-view-width: 96%;
-$main-body-height: 96vh;
+$main-body-height: 100vh;
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
@@ -43,7 +43,7 @@ a {
 
 .main-view {
   padding: 0;
-  height: 96vh;
+  height: 100vh;
   width: $main-view-width;
   @include flex-all-center;
 

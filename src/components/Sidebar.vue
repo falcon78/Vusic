@@ -23,9 +23,7 @@
       </div>
     </nav>
     <div class="player">
-      <p>
-        player
-      </p>
+      <MusicPlayer/>
     </div>
   </div>
 </template>
@@ -33,12 +31,14 @@
 <script>
 import { MusicIcon, DiscIcon } from 'vue-feather-icons';
 import routerConstants from '../router/routerConstants';
+import MusicPlayer from '@/components/MusicPlayer.vue';
 
 export default {
   name: 'sidebar',
   components: {
     MusicIcon,
     DiscIcon,
+    MusicPlayer,
   },
   data() {
     return {

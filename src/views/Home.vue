@@ -1,5 +1,5 @@
 <template>
-  <div class="home icon-buttons">
+  <div class="home ">
     <sidebar />
 
     <div class="main-view ">

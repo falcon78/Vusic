@@ -1,5 +1,5 @@
 <template>
-  <div class="thumbnail-and-title" :class="`thumbnail-and-title__${size}`">
+  <div class="thumbnail-and-title icon-buttons" :class="`thumbnail-and-title__${size}`">
     <div class="artwork" :style="{ backgroundImage: `url('${artwork}')` }"></div>
     <div class="buttons">
       <button class="button">
