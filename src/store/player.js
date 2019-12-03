@@ -11,10 +11,11 @@ const playerState = {
   // Repeat mode , 0 = no repeat, 1 = one, 2 = all
   repeat: 0,
   // Currently playing MediaItem (Object with type MediaItem)
-  currentlyPlaying: null,
-  // how much has current playing song progressed 1 is max
-  // ( playProgress x 60 to get time)
-  playProgress: 0,
+  playbackTimeInfo: {
+    currentPlaybackTime: null,
+    currentPlaybackDuration: null,
+    currentPlaybackTimeRemaining: null,
+  },
   // @TODO: WTF is this?
   playbackState: 0,
   // Arrays of MediaItem Objects
@@ -28,9 +29,10 @@ const playerState = {
 const getters = {
   getNowPlayingStatus(state) {
     const currentPlaying = state.currentlyPlaying;
+    const playBackTimeInfo = state.playbackTimeInfo;
     if (!currentPlaying) return {};
-    console.log(currentPlaying);
     const { getSafe } = helpers;
+    // @TODO: Seperate playback info to different place
     const nowPlaying = {
       id: getSafe(() => currentPlaying.id),
       title: getSafe(() => currentPlaying.title),
@@ -39,11 +41,12 @@ const getters = {
       albumInfo: getSafe(() => currentPlaying.albumInfo),
       artistName: getSafe(() => currentPlaying.artistName),
       isLoading: getSafe(() => currentPlaying.isLoading),
-      playProgress: state.playProgress,
       artwork: getSafe(() => sdk.formatArtworkURL(currentPlaying.artwork, 140, 140)),
       isPlaying: getSafe(() => currentPlaying.isPlaying),
+      duration: getSafe(() => playBackTimeInfo.currentPlaybackDuration),
+      remaining: getSafe(() => playBackTimeInfo.currentPlaybackTimeRemaining),
+      playProgress: playBackTimeInfo.currentPlaybackTime,
     };
-    console.log(nowPlaying);
     return nowPlaying;
   },
 };
@@ -70,7 +73,6 @@ const mutations = {
   setQueuePosition(state, { position }) {
     // const oldPosition = position.oldPosition;
     state.queuePosition = position.position;
-    console.log(position);
   },
   setDrmStatus(state, { drmSupport }) {
     state.drmSupport = drmSupport;
@@ -80,6 +82,9 @@ const mutations = {
   },
   setPlayProgress(state, { progress }) {
     state.playProgress = progress;
+  },
+  setPlaybackTime(state, { playtimeInfo }) {
+    state.playbackTimeInfo = playtimeInfo;
   },
 };
 
@@ -120,6 +125,10 @@ const actions = {
     commit('setDrmStatus', { state: music.player.canSupportDRM });
     commit('music/setStoreFront', { storefront: music.storefrontId }, { root: true });
     commit('music/setAuth', { auth: music.isAuthorized }, { root: true });
+  },
+
+  changePlaybackTime(_, { time }) {
+    return music.player.seekToTime(time);
   },
 
   setRepeatStatus({ commit }, repeat = 'toggle') {

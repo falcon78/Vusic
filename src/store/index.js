@@ -26,11 +26,15 @@ musicInstance.addEventListener(sdk.Events.playbackStateDidChange, (event) => {
   store.commit('player/setPlaybackState', { playbackState: event.state });
 });
 musicInstance.addEventListener(sdk.Events.mediaItemDidChange, (event) => {
-  console.log(event);
   store.commit('player/setCurrentlyPlaying', { currentlyPlaying: event.item });
 });
-musicInstance.addEventListener(sdk.Events.playbackProgressDidChange, (event) => {
-  store.commit('player/setPlayProgress', { progress: event.progress });
+// musicInstance.addEventListener(sdk.Events.playbackProgressDidChange, (event) => {
+// store.commit('player/setPlayProgress', { progress: event.progress });
+// });
+musicInstance.addEventListener(sdk.Events.playbackTimeDidChange, (event) => {
+  store.commit('player/setPlaybackTime', {
+    playtimeInfo: event,
+  });
 });
 musicInstance.addEventListener(sdk.Events.queueItemsDidChange, (event) => {
   store.commit('player/setQueue', { items: event });

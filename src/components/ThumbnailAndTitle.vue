@@ -40,7 +40,12 @@ export default {
     }),
     async playAlbum(id) {
       await this.addQueue({ id });
-      this.play();
+      await this.play().catch((err) => {
+        // @TODO: add error handle
+        if (err.message === 'Not Playable.') {
+          console.log(err.message);
+        }
+      });
     },
   },
 };

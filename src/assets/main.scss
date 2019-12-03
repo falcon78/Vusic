@@ -9,3 +9,6 @@
 @import 'Components/sidebar';
 @import 'Components/albums-page';
 @import 'Components/music-player';
+
+$themeColor: $primary-color;
+@import '~vue-slider-component/lib/theme/default.scss';
