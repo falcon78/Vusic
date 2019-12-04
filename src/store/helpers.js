@@ -1,5 +1,5 @@
 const helpers = {
-  getSafe(fn, defaultVal = '') {
+  getSafe(fn, defaultVal = 'Could not load data') {
     try {
       return fn();
     } catch (e) {

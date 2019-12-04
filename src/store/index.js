@@ -7,7 +7,7 @@ Vue.use(Vuex);
 
 // eslint-disable-next-line no-undef
 const sdk = MusicKit;
-const musicInstance = sdk.getInstance();
+const musicKit = sdk.getInstance();
 
 const store = new Vuex.Store({
   modules: {
@@ -18,28 +18,29 @@ const store = new Vuex.Store({
 
 document.addEventListener('musickitloaded', () => {
   store.dispatch('player/initializeState');
+  store.dispatch('music/initializeState');
 });
-musicInstance.addEventListener(sdk.Events.authorizationStatusDidChange, () => {
-  store.commit('music/setAuth', { auth: musicInstance.isAuthorized });
+musicKit.addEventListener(sdk.Events.authorizationStatusDidChange, () => {
+  store.commit('music/setAuth', { auth: musicKit.isAuthorized });
 });
-musicInstance.addEventListener(sdk.Events.playbackStateDidChange, (event) => {
+musicKit.addEventListener(sdk.Events.playbackStateDidChange, (event) => {
   store.commit('player/setPlaybackState', { playbackState: event.state });
 });
-musicInstance.addEventListener(sdk.Events.mediaItemDidChange, (event) => {
+musicKit.addEventListener(sdk.Events.mediaItemDidChange, (event) => {
   store.commit('player/setCurrentlyPlaying', { currentlyPlaying: event.item });
 });
-// musicInstance.addEventListener(sdk.Events.playbackProgressDidChange, (event) => {
+// musicKit.addEventListener(sdk.Events.playbackProgressDidChange, (event) => {
 // store.commit('player/setPlayProgress', { progress: event.progress });
 // });
-musicInstance.addEventListener(sdk.Events.playbackTimeDidChange, (event) => {
+musicKit.addEventListener(sdk.Events.playbackTimeDidChange, (event) => {
   store.commit('player/setPlaybackTime', {
     playtimeInfo: event,
   });
 });
-musicInstance.addEventListener(sdk.Events.queueItemsDidChange, (event) => {
+musicKit.addEventListener(sdk.Events.queueItemsDidChange, (event) => {
   store.commit('player/setQueue', { items: event });
 });
-musicInstance.addEventListener(sdk.Events.queuePositionDidChange, (event) => {
+musicKit.addEventListener(sdk.Events.queuePositionDidChange, (event) => {
   store.commit('player/setQueuePosition', { position: event });
 });
 
