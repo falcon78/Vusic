@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 import music from './music';
 import player from './player';
+import myLibrary from './myLibrary';
 
 Vue.use(Vuex);
 
@@ -13,8 +14,12 @@ const store = new Vuex.Store({
   modules: {
     music,
     player,
+    myLibrary,
   },
 });
+
+if (!musicKit.isAuthorized) musicKit.authorize();
+store.commit('music/setStoreFront', musicKit.storefrontId);
 
 document.addEventListener('musickitloaded', () => {
   store.dispatch('player/initializeState');

@@ -18,6 +18,13 @@ body {
   width: 100vw;
 }
 
+.truncate {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 a {
   text-decoration: none;
 }

@@ -34,12 +34,14 @@ export default {
     return {};
   },
   methods: {
-    ...mapActions('music', {
-      addQueue: 'addQueueAlbum',
+    ...mapActions('myLibrary', {
+      addQueueAlbum: 'addQueueAlbum',
+    }),
+    ...mapActions('player', {
       play: 'play',
     }),
     async playAlbum(id) {
-      await this.addQueue({ id });
+      await this.addQueueAlbum({ id });
       await this.play().catch((err) => {
         // @TODO: add error handle
         if (err.message === 'Not Playable.') {

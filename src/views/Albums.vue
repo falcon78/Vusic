@@ -23,12 +23,12 @@ export default {
     ThumbnailAndTitle,
   },
   methods: {
-    ...mapActions('music', {
+    ...mapActions('myLibrary', {
       getAlbums: 'getAlbums',
     }),
   },
   computed: {
-    ...mapGetters('music', {
+    ...mapGetters('myLibrary', {
       albums: 'getLibraryAlbums',
     }),
   },
