@@ -1,36 +1,59 @@
 $top-border-color: $card-background-color;
-$player-background-color: lighten(rgb(0, 0, 0), 6%);
-$player-scrubber-z-index: 2;
+$player-background-color: #cf6679;
+$player-height: 280px;
+$image-width-height: 100px;
 
 .player {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
   align-items: center;
-  flex-wrap: nowrap;
-  height: 250px;
+  justify-content: flex-start;
+  height: $player-height;
   margin-top: auto;
-  flex-shrink: 0;
-  border-top: solid;
-  border-width: 2px;
   background-color: $player-background-color;
   border-color: $top-border-color;
   width: $sidebar-width;
-  img {
-    height: 0;
+  .image-and-titles {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 10px;
+    img {
+      display: block;
+      height: $image-width-height;
+      width: $image-width-height;
+      border-radius: 6px;
+      box-shadow: $artwork-box-shadow;
+    }
+    &__label-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      margin-bottom: 10px;
+      min-height: 56px;
+      width: 50%;
+      margin-left: 8px;
+      .link-color-text {
+        color: black;
+        font-size: 14px;
+      }
+    }
   }
-  .scrubber {
-    width: $sidebar-width - 10px;
-  }
-}
-
-#player-scrubber {
-  width: $sidebar-width;
-  height: 7px;
-  background-color: white;
-  @include flex-all-center;
-  flex-direction: column;
-  z-index: $player-scrubber-z-index;
-  #playback-status-bar {
-    z-index: $player-scrubber-z-index - 1;
-    height: 5px;
-    background-color: red;
+  .play-status {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 4.5em 10px 0;
+    min-height: 44px;
+    width: 85%;
+    .scrubber {
+      width: $sidebar-width - 10px;
+    }
+    .play-time-labels {
+      margin: 6px 0 0 0;
+      display: flex;
+      justify-content: space-between;
+    }
   }
 }
