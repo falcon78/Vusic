@@ -1,4 +1,6 @@
 import helpers from '@/store/helpers';
+
+const { getSafe } = helpers;
 // eslint-disable-next-line no-undef
 const sdk = MusicKit;
 const music = sdk.getInstance();
@@ -31,8 +33,7 @@ const getters = {
     const currentPlaying = state.currentlyPlaying;
     const playBackTimeInfo = state.playbackTimeInfo;
     if (!currentPlaying) return {};
-    const { getSafe } = helpers;
-    // @TODO: Seperate playback info to different place
+    // @TODO: Separate playback info to different place
     const nowPlaying = {
       id: getSafe(() => currentPlaying.id),
       title: getSafe(() => currentPlaying.title),
@@ -64,9 +65,6 @@ const mutations = {
   setCurrentlyPlaying(state, { currentlyPlaying }) {
     state.currentlyPlaying = currentlyPlaying;
   },
-  /* setPlayPosition(state, { time }) {
-    state.playPosition = time;
-  }, */
   setQueue(state, { items }) {
     state.queue = items;
   },
@@ -80,9 +78,6 @@ const mutations = {
   setPlaybackState(state, { playbackState }) {
     state.playbackState = playbackState;
   },
-  setPlayProgress(state, { progress }) {
-    state.playProgress = progress;
-  },
   setPlaybackTime(state, { playtimeInfo }) {
     state.playbackTimeInfo = playtimeInfo;
   },
@@ -94,32 +89,14 @@ const actions = {
       volume: 1,
       shuffle: false,
     };
-    if (localStorage && localStorage.getItem('volume')) {
-      try {
-        local.volume = JSON.parse(localStorage.getItem('volume') || '1');
-      } catch (e) {
-        local.volume = 1;
-      }
+    if (localStorage) {
+      local.volume = getSafe(() => JSON.parse(localStorage.getItem('volume') || '1'), 1);
+      local.shuffle = getSafe(() => JSON.parse(localStorage.getItem('shuffle') || 'false'), false);
+      local.repeat = getSafe(() => JSON.parse(localStorage.getItem('repeat') || '0'), 0);
     }
     dispatch('setVolume', { volume: local.volume });
-
-    if (localStorage && localStorage.getItem('shuffle')) {
-      try {
-        local.shuffle = JSON.parse(localStorage.getItem('shuffle') || 'false');
-      } catch (err) {
-        local.shuffle = music.player.shuffleMode;
-        console.error(err);
-      }
-    }
     dispatch('setShuffle', local.shuffle);
-
-    if (localStorage && localStorage.getItem('repeat')) {
-      try {
-        dispatch('setRepeatStatus', JSON.parse(localStorage.getItem('repeat') || '0'));
-      } catch (err) {
-        console.error(err);
-      }
-    }
+    dispatch('setRepeatStatus', local.repeat);
 
     music.bitrate = 256;
     commit('setDrmStatus', { state: music.player.canSupportDRM });
@@ -143,11 +120,11 @@ const actions = {
     }
   },
   setVolume({ commit }, { volume }) {
-    const vol = parseFloat(volume);
-    music.player.volume = vol;
-    commit('setVolume', { volume: vol });
+    const volumeValue = parseFloat(volume);
+    music.player.volume = volumeValue;
+    commit('setVolume', { volume: volumeValue });
     if (window.localStorage) {
-      window.localStorage.setItem('volume', JSON.stringify(vol));
+      window.localStorage.setItem('volume', JSON.stringify(volumeValue));
     }
   },
 

@@ -12,10 +12,7 @@ MusicKit.configure({
 
 // eslint-disable-next-line no-undef
 const sdk = MusicKit;
-function musicKit() {
-  // eslint-disable-next-line no-undef
-  return sdk.getInstance();
-}
+const musicKit = sdk.getInstance();
 
 const musicState = {
   auth: {
@@ -31,14 +28,6 @@ const musicState = {
   appleMusic: {
     forYou: [],
     browse: [],
-  },
-  player: {
-    playing: null,
-    playbackTime: 0,
-    shuffle: false,
-    repeat: false,
-    volume: 100,
-    bitrate: 0,
   },
 };
 const getters = {
@@ -77,15 +66,15 @@ const actions = {
     console.log('music state init');
   },
   async getAlbums({ commit }) {
-    const albums = await musicKit().api.library.albums({ limit: 500 });
+    const albums = await musicKit.api.library.albums({ limit: 500 });
     commit('setLibraryAlbums', { albums });
   },
   // eslint-disable-next-line no-unused-vars
   addQueueAlbum({ commit }, { id }) {
-    return musicKit().setQueue({ album: id });
+    return musicKit.setQueue({ album: id });
   },
   play() {
-    return musicKit().player.play();
+    return musicKit.player.play();
   },
 };
 
