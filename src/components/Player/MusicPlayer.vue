@@ -18,6 +18,7 @@
       loading
     </div>
     <div v-else class="play-status">
+      <play-pause-skip-controls></play-pause-skip-controls>
       <div>
         <vue-slider
           :value="playbackTimeInfo.currentPlaybackTime"
@@ -41,11 +42,13 @@
 <script>
 import { mapGetters, mapActions, mapState } from 'vuex';
 import VueSlider from 'vue-slider-component';
+import PlayPauseSkipControls from './PlayPauseSkipControls.vue';
 
 export default {
   name: 'music-player',
   components: {
     VueSlider,
+    PlayPauseSkipControls,
   },
   computed: {
     ...mapGetters('player', {
