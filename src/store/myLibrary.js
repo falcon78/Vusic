@@ -38,7 +38,7 @@ const mutations = {
 
 const actions = {
   async getAlbums({ commit }) {
-    const albums = await MusicKit.getInstance().api.library.albums({limit: 500});
+    const albums = await MusicKit.getInstance().api.library.albums({ limit: 500 });
     commit('setLibraryAlbums', { albums });
   },
   // eslint-disable-next-line no-unused-vars

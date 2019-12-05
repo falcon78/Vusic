@@ -35,7 +35,7 @@ $image-width-height: 100px;
       width: 50%;
       margin-left: 8px;
       .link-color-text {
-        color: rgba(0,0,0,0.8);
+        color: rgba(0, 0, 0, 0.8);
         font-size: 14px;
       }
     }
@@ -44,7 +44,7 @@ $image-width-height: 100px;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin: 4.5em 10px 0;
+    margin: 1em 10px 0;
     min-height: 44px;
     width: 85%;
     .scrubber {
@@ -54,6 +54,27 @@ $image-width-height: 100px;
       margin: 6px 0 0 0;
       display: flex;
       justify-content: space-between;
+    }
+  }
+}
+
+.play-pause-skip-controls {
+  display: flex;
+  align-self: center;
+  flex-shrink: 0;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 0 1em;
+
+  &__icons {
+    flex-shrink: 0;
+    @include transition-animation(0.1);
+    &:hover {
+      transform: scale(1.1);
+      stroke: $primary-purple;
+    }
+    &:active {
+      transform: scale(1.3);
     }
   }
 }

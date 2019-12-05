@@ -64,7 +64,10 @@ button,
       .button-svg {
         @include box-shadow;
         fill: $album-button-color;
-        stroke: white;
+        stroke: darken(white, 10%);
+      }
+      &:active {
+        transform: scale(1.5);
       }
     }
   }

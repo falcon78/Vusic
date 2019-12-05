@@ -26,6 +26,7 @@ MusicKit.getInstance().addEventListener(MusicKit.Events.authorizationStatusDidCh
 });
 MusicKit.getInstance().addEventListener(MusicKit.Events.playbackStateDidChange, (event) => {
   store.commit('player/setPlaybackState', { playbackState: event.state });
+  store.commit('player/setIsPlaying', { isPlaying: MusicKit.getInstance().player.isPlaying });
 });
 MusicKit.getInstance().addEventListener(MusicKit.Events.mediaItemDidChange, (event) => {
   store.commit('player/setCurrentlyPlaying', { currentlyPlaying: event.item });
@@ -39,7 +40,6 @@ MusicKit.getInstance().addEventListener(MusicKit.Events.playbackTimeDidChange, (
   store.commit('player/setPlaybackTime', {
     playtimeInfo: event,
   });
-  store.commit('player/setIsPlaying', { isPlaying: MusicKit.getInstance().player.isPlaying });
 });
 MusicKit.getInstance().addEventListener(MusicKit.Events.queueItemsDidChange, (event) => {
   store.commit('player/setQueue', { items: event });
