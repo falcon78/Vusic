@@ -1,13 +1,13 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Albums from '@/views/Albums.vue';
+import Albums from '@/views/Library/Albums.vue';
 import ForYou from '@/views/ForYou.vue';
 import Browse from '@/views/Browse.vue';
 import RecentlyAdded from '@/views/RecentlyAdded.vue';
 import routerConstants from './routerConstants';
 import Artists from '@/views/Artists.vue';
 import Songs from '@/views/Songs.vue';
-import Playlists from '@/views/Playlists.vue';
+import Playlists from '@/views/Library/Playlists.vue';
 
 Vue.use(VueRouter);
 

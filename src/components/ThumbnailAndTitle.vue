@@ -5,13 +5,18 @@
       <button class="button">
         <HeartIcon class="button-svg" />
       </button>
-      <button class="button button-svg" @click="playAlbum(id)">
+      <button class="button button-svg" @click="playItem(type, id)">
         <PlayCircleIcon class="button-svg" />
       </button>
     </div>
     <div class="info">
-      <p class="album-title" :title="title">{{ title }}</p>
-      <a href="#" class="album-artist" :title="artist">{{ artist }}</a>
+      <router-link class="album-title" :to="{ name: to, params: { id: 'abc123' } }" :title="title">
+        {{ title }}
+      </router-link>
+      <a v-if="artist && artist.length" href="#" class="album-artist" :title="artist">{{
+        artist
+      }}</a>
+      <p v-else class="album-artist">{{ type.charAt(0).toUpperCase() + type.slice(1) }}</p>
     </div>
   </div>
 </template>
@@ -29,19 +34,22 @@ export default {
     artist: String,
     artwork: String,
     id: String,
+    url: String,
+    type: String,
+    to: String,
   },
   data() {
     return {};
   },
   methods: {
     ...mapActions('myLibrary', {
-      addQueueAlbum: 'addQueueAlbum',
+      addQueue: 'addQueue',
     }),
     ...mapActions('player', {
       play: 'play',
     }),
-    async playAlbum(id) {
-      await this.addQueueAlbum({ id });
+    async playItem(type, id) {
+      await this.addQueue({ type, id });
       await this.play().catch((err) => {
         // @TODO: add error handle
         if (err.message === 'Not Playable.') {

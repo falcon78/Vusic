@@ -2,8 +2,8 @@ const helpers = {
   getSafe(fn, defaultVal = null) {
     try {
       return fn();
-    } catch (e) {
-      console.log(e);
+    } catch (_) {
+      console.error(`cant access property: ${fn}`);
       return defaultVal;
     }
   },
@@ -23,6 +23,8 @@ const helpers = {
       if (callNow) func.apply(context, args);
     };
   },
+  fakeArtwork:
+    'https://is1-ssl.mzstatic.com/image/thumb/Features127/v4/75/f9/6f/75f96fa5-99ca-0854-3aae-8f76f5cb7fb5/source/100x100bb.jpeg',
 };
 
 export default helpers;

@@ -14,13 +14,15 @@ const store = new Vuex.Store({
   },
 });
 
-if (!MusicKit.getInstance().isAuthorized) MusicKit.getInstance().authorize();
-store.commit('music/setStoreFront', MusicKit.getInstance().storefrontId);
-
 document.addEventListener('musickitloaded', () => {
   store.dispatch('player/initializeState');
   store.dispatch('music/initializeState');
 });
+
+if (!MusicKit.getInstance().isAuthorized) MusicKit.getInstance().authorize();
+store.commit('music/setStoreFront', MusicKit.getInstance().storefrontId);
+store.commit('music/setAuth', { auth: MusicKit.getInstance().isAuthorized });
+
 MusicKit.getInstance().addEventListener(MusicKit.Events.authorizationStatusDidChange, () => {
   store.commit('music/setAuth', { auth: MusicKit.getInstance().isAuthorized });
 });
