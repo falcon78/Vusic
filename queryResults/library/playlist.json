@@ -1,0 +1,85 @@
+{
+    "id": "p.gek1RKqCQvK19V",
+    "type": "library-playlists",
+    "href": "/v1/me/library/playlists/p.gek1RKqCQvK19V",
+    "attributes": {
+      "hasCatalog": false,
+      "description": {
+        "standard": "Relax"
+      },
+      "playParams": {
+        "id": "p.gek1RKqCQvK19V",
+        "kind": "playlist",
+        "isLibrary": true
+      },
+      "dateAdded": "2019-08-06T14:19:43Z",
+      "name": "Relax",
+      "canEdit": true
+    },
+    "relationships": {
+      "tracks": {
+        "data": [
+          {
+            "id": "i.kGO5a9zHDrLZYM",
+            "type": "library-songs",
+            "href": "/v1/me/library/songs/i.kGO5a9zHDrLZYM",
+            "attributes": {
+              "artwork": {
+                "width": 1200,
+                "height": 1200,
+                "url": "https://is4-ssl.mzstatic.com/image/thumb/Music113/v4/9d/94/47/9d9447a2-017e-7fa9-9ff7-c32f0506bd6b/19UMGIM38314.rgb.jpg/{w}x{h}bb.jpeg"
+              },
+              "artistName": "Sparklehorse",
+              "genreNames": [
+                "ポップ"
+              ],
+              "durationInMillis": 327907,
+              "releaseDate": "2001-05-31",
+              "name": "Eyepennies",
+              "albumName": "It's a Wonderful Life",
+              "playParams": {
+                "id": "i.kGO5a9zHDrLZYM",
+                "kind": "song",
+                "isLibrary": true,
+                "reporting": true,
+                "catalogId": "1461512822"
+              },
+              "trackNumber": 7
+            }
+          },
+          {
+            "id": "i.oOdK09kHA7zedo",
+            "type": "library-songs",
+            "href": "/v1/me/library/songs/i.oOdK09kHA7zedo",
+            "attributes": {
+              "artwork": {
+                "width": 1200,
+                "height": 1200,
+                "url": "https://is3-ssl.mzstatic.com/image/thumb/Music113/v4/4c/05/b1/4c05b15f-60d2-72d8-fcc4-c1f632bc9843/886447895856.jpg/{w}x{h}bb.jpeg"
+              },
+              "artistName": "TOOL",
+              "genreNames": [
+                "メタル"
+              ],
+              "durationInMillis": 620101,
+              "releaseDate": "2019-08-07",
+              "name": "Fear Inoculum",
+              "albumName": "Fear Inoculum",
+              "playParams": {
+                "id": "i.oOdK09kHA7zedo",
+                "kind": "song",
+                "isLibrary": true,
+                "reporting": true,
+                "catalogId": "1475686698"
+              },
+              "trackNumber": 1
+            }
+          }
+        ],
+        "href": "/v1/me/library/playlists/p.gek1RKqCQvK19V/tracks",
+        "meta": {
+          "total": 2
+        }
+      }
+    }
+  }

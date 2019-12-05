@@ -1,0 +1,466 @@
+{
+    "id": "l.Et6bMW",
+    "type": "library-albums",
+    "href": "/v1/me/library/albums/l.Et6bMW",
+    "attributes": {
+      "trackCount": 15,
+      "name": "The Lost Boy",
+      "artwork": {
+        "width": 1200,
+        "height": 1200,
+        "url": "https://is2-ssl.mzstatic.com/image/thumb/Music113/v4/ca/6b/a2/ca6ba2e2-cee7-e986-5497-75f8f3a6ff8e/075679843357.jpg/{w}x{h}bb.jpeg"
+      },
+      "dateAdded": "2019-10-15T13:59:04Z",
+      "artistName": "YBNコーデー",
+      "playParams": {
+        "id": "l.Et6bMW",
+        "kind": "album",
+        "isLibrary": true
+      }
+    },
+    "relationships": {
+      "tracks": {
+        "data": [
+          {
+            "id": "i.KoJeeG6cM8VqR1",
+            "type": "library-songs",
+            "href": "/v1/me/library/songs/i.KoJeeG6cM8VqR1",
+            "attributes": {
+              "artwork": {
+                "width": 1200,
+                "height": 1200,
+                "url": "https://is2-ssl.mzstatic.com/image/thumb/Music113/v4/ca/6b/a2/ca6ba2e2-cee7-e986-5497-75f8f3a6ff8e/075679843357.jpg/{w}x{h}bb.jpeg"
+              },
+              "artistName": "YBNコーデー",
+              "genreNames": [
+                "ヒップホップ／ラップ"
+              ],
+              "durationInMillis": 180680,
+              "releaseDate": "2019-07-26",
+              "name": "Wintertime",
+              "albumName": "The Lost Boy",
+              "playParams": {
+                "id": "i.KoJeeG6cM8VqR1",
+                "kind": "song",
+                "isLibrary": true,
+                "reporting": true,
+                "catalogId": "1471022564"
+              },
+              "trackNumber": 1,
+              "contentRating": "explicit"
+            }
+          },
+          {
+            "id": "i.kGO55VKCDrLZYM",
+            "type": "library-songs",
+            "href": "/v1/me/library/songs/i.kGO55VKCDrLZYM",
+            "attributes": {
+              "artwork": {
+                "width": 1200,
+                "height": 1200,
+                "url": "https://is2-ssl.mzstatic.com/image/thumb/Music113/v4/ca/6b/a2/ca6ba2e2-cee7-e986-5497-75f8f3a6ff8e/075679843357.jpg/{w}x{h}bb.jpeg"
+              },
+              "artistName": "YBNコーデー",
+              "genreNames": [
+                "ヒップホップ／ラップ"
+              ],
+              "durationInMillis": 202454,
+              "releaseDate": "2019-03-08",
+              "name": "Have Mercy",
+              "albumName": "The Lost Boy",
+              "playParams": {
+                "id": "i.kGO55VKCDrLZYM",
+                "kind": "song",
+                "isLibrary": true,
+                "reporting": true,
+                "catalogId": "1471022565"
+              },
+              "trackNumber": 2,
+              "contentRating": "explicit"
+            }
+          },
+          {
+            "id": "i.pmz00MdfBWgEY9",
+            "type": "library-songs",
+            "href": "/v1/me/library/songs/i.pmz00MdfBWgEY9",
+            "attributes": {
+              "artwork": {
+                "width": 1200,
+                "height": 1200,
+                "url": "https://is2-ssl.mzstatic.com/image/thumb/Music113/v4/ca/6b/a2/ca6ba2e2-cee7-e986-5497-75f8f3a6ff8e/075679843357.jpg/{w}x{h}bb.jpeg"
+              },
+              "artistName": "YBNコーデー",
+              "genreNames": [
+                "ヒップホップ／ラップ"
+              ],
+              "durationInMillis": 68629,
+              "releaseDate": "2019-07-26",
+              "name": "Sweet Lawd (skit)",
+              "albumName": "The Lost Boy",
+              "playParams": {
+                "id": "i.pmz00MdfBWgEY9",
+                "kind": "song",
+                "isLibrary": true,
+                "reporting": true,
+                "catalogId": "1471022566"
+              },
+              "trackNumber": 3,
+              "contentRating": "explicit"
+            }
+          },
+          {
+            "id": "i.5PkLLeYSYXEkNg",
+            "type": "library-songs",
+            "href": "/v1/me/library/songs/i.5PkLLeYSYXEkNg",
+            "attributes": {
+              "artwork": {
+                "width": 1200,
+                "height": 1200,
+                "url": "https://is2-ssl.mzstatic.com/image/thumb/Music113/v4/ca/6b/a2/ca6ba2e2-cee7-e986-5497-75f8f3a6ff8e/075679843357.jpg/{w}x{h}bb.jpeg"
+              },
+              "artistName": "YBNコーデー",
+              "genreNames": [
+                "ヒップホップ／ラップ"
+              ],
+              "durationInMillis": 234615,
+              "releaseDate": "2019-06-17",
+              "name": "Bad Idea (feat. Chance the Rapper)",
+              "albumName": "The Lost Boy",
+              "playParams": {
+                "id": "i.5PkLLeYSYXEkNg",
+                "kind": "song",
+                "isLibrary": true,
+                "reporting": true,
+                "catalogId": "1471022567"
+              },
+              "trackNumber": 4,
+              "contentRating": "explicit"
+            }
+          },
+          {
+            "id": "i.MoxKKMKI43B5xq",
+            "type": "library-songs",
+            "href": "/v1/me/library/songs/i.MoxKKMKI43B5xq",
+            "attributes": {
+              "artwork": {
+                "width": 1200,
+                "height": 1200,
+                "url": "https://is2-ssl.mzstatic.com/image/thumb/Music113/v4/ca/6b/a2/ca6ba2e2-cee7-e986-5497-75f8f3a6ff8e/075679843357.jpg/{w}x{h}bb.jpeg"
+              },
+              "artistName": "YBNコーデー",
+              "genreNames": [
+                "ヒップホップ／ラップ"
+              ],
+              "durationInMillis": 198147,
+              "releaseDate": "2019-07-26",
+              "name": "Thanksgiving",
+              "albumName": "The Lost Boy",
+              "playParams": {
+                "id": "i.MoxKKMKI43B5xq",
+                "kind": "song",
+                "isLibrary": true,
+                "reporting": true,
+                "catalogId": "1471022568"
+              },
+              "trackNumber": 5,
+              "contentRating": "explicit"
+            }
+          },
+          {
+            "id": "i.2P0NNqXfb76P1q",
+            "type": "library-songs",
+            "href": "/v1/me/library/songs/i.2P0NNqXfb76P1q",
+            "attributes": {
+              "artwork": {
+                "width": 1200,
+                "height": 1200,
+                "url": "https://is2-ssl.mzstatic.com/image/thumb/Music113/v4/ca/6b/a2/ca6ba2e2-cee7-e986-5497-75f8f3a6ff8e/075679843357.jpg/{w}x{h}bb.jpeg"
+              },
+              "artistName": "YBNコーデー",
+              "genreNames": [
+                "ヒップホップ／ラップ"
+              ],
+              "durationInMillis": 175828,
+              "releaseDate": "2019-07-23",
+              "name": "RNP (feat. Anderson .Paak)",
+              "albumName": "The Lost Boy",
+              "playParams": {
+                "id": "i.2P0NNqXfb76P1q",
+                "kind": "song",
+                "isLibrary": true,
+                "reporting": true,
+                "catalogId": "1471022569"
+              },
+              "trackNumber": 6,
+              "contentRating": "explicit"
+            }
+          },
+          {
+            "id": "i.kGO5akNTDrLZYM",
+            "type": "library-songs",
+            "href": "/v1/me/library/songs/i.kGO5akNTDrLZYM",
+            "attributes": {
+              "artwork": {
+                "width": 1200,
+                "height": 1200,
+                "url": "https://is2-ssl.mzstatic.com/image/thumb/Music113/v4/ca/6b/a2/ca6ba2e2-cee7-e986-5497-75f8f3a6ff8e/075679843357.jpg/{w}x{h}bb.jpeg"
+              },
+              "artistName": "YBNコーデー",
+              "genreNames": [
+                "ヒップホップ／ラップ"
+              ],
+              "durationInMillis": 196112,
+              "releaseDate": "2019-07-26",
+              "name": "Broke As F**k",
+              "albumName": "The Lost Boy",
+              "playParams": {
+                "id": "i.kGO5akNTDrLZYM",
+                "kind": "song",
+                "isLibrary": true,
+                "reporting": true,
+                "catalogId": "1471022570"
+              },
+              "trackNumber": 7,
+              "contentRating": "explicit"
+            }
+          },
+          {
+            "id": "i.8WdNNKQTG42grv",
+            "type": "library-songs",
+            "href": "/v1/me/library/songs/i.8WdNNKQTG42grv",
+            "attributes": {
+              "artwork": {
+                "width": 1200,
+                "height": 1200,
+                "url": "https://is2-ssl.mzstatic.com/image/thumb/Music113/v4/ca/6b/a2/ca6ba2e2-cee7-e986-5497-75f8f3a6ff8e/075679843357.jpg/{w}x{h}bb.jpeg"
+              },
+              "artistName": "YBNコーデー",
+              "genreNames": [
+                "ヒップホップ／ラップ"
+              ],
+              "durationInMillis": 200017,
+              "releaseDate": "2019-07-26",
+              "name": "Thousand Words",
+              "albumName": "The Lost Boy",
+              "playParams": {
+                "id": "i.8WdNNKQTG42grv",
+                "kind": "song",
+                "isLibrary": true,
+                "reporting": true,
+                "catalogId": "1471022571"
+              },
+              "trackNumber": 8,
+              "contentRating": "explicit"
+            }
+          },
+          {
+            "id": "i.oOdKKlpsA7zedo",
+            "type": "library-songs",
+            "href": "/v1/me/library/songs/i.oOdKKlpsA7zedo",
+            "attributes": {
+              "artwork": {
+                "width": 1200,
+                "height": 1200,
+                "url": "https://is2-ssl.mzstatic.com/image/thumb/Music113/v4/ca/6b/a2/ca6ba2e2-cee7-e986-5497-75f8f3a6ff8e/075679843357.jpg/{w}x{h}bb.jpeg"
+              },
+              "artistName": "YBNコーデー",
+              "genreNames": [
+                "ヒップホップ／ラップ"
+              ],
+              "durationInMillis": 199117,
+              "releaseDate": "2019-07-26",
+              "name": "Way Back Home (feat. Ty Dolla $ign)",
+              "albumName": "The Lost Boy",
+              "playParams": {
+                "id": "i.oOdKKlpsA7zedo",
+                "kind": "song",
+                "isLibrary": true,
+                "reporting": true,
+                "catalogId": "1471022572"
+              },
+              "trackNumber": 9,
+              "contentRating": "explicit"
+            }
+          },
+          {
+            "id": "i.3VBNNv2Sx0rYo5",
+            "type": "library-songs",
+            "href": "/v1/me/library/songs/i.3VBNNv2Sx0rYo5",
+            "attributes": {
+              "artwork": {
+                "width": 1200,
+                "height": 1200,
+                "url": "https://is2-ssl.mzstatic.com/image/thumb/Music113/v4/ca/6b/a2/ca6ba2e2-cee7-e986-5497-75f8f3a6ff8e/075679843357.jpg/{w}x{h}bb.jpeg"
+              },
+              "artistName": "YBNコーデー",
+              "genreNames": [
+                "ヒップホップ／ラップ"
+              ],
+              "durationInMillis": 82935,
+              "releaseDate": "2019-07-26",
+              "name": "Grandma's House (skit)",
+              "albumName": "The Lost Boy",
+              "playParams": {
+                "id": "i.3VBNNv2Sx0rYo5",
+                "kind": "song",
+                "isLibrary": true,
+                "reporting": true,
+                "catalogId": "1471022573"
+              },
+              "trackNumber": 10,
+              "contentRating": "explicit"
+            }
+          },
+          {
+            "id": "i.5PkLLaYUYXEkNg",
+            "type": "library-songs",
+            "href": "/v1/me/library/songs/i.5PkLLaYUYXEkNg",
+            "attributes": {
+              "artwork": {
+                "width": 1200,
+                "height": 1200,
+                "url": "https://is2-ssl.mzstatic.com/image/thumb/Music113/v4/ca/6b/a2/ca6ba2e2-cee7-e986-5497-75f8f3a6ff8e/075679843357.jpg/{w}x{h}bb.jpeg"
+              },
+              "artistName": "YBNコーデー",
+              "genreNames": [
+                "ヒップホップ／ラップ"
+              ],
+              "durationInMillis": 203703,
+              "releaseDate": "2019-07-26",
+              "name": "Been Around",
+              "albumName": "The Lost Boy",
+              "playParams": {
+                "id": "i.5PkLLaYUYXEkNg",
+                "kind": "song",
+                "isLibrary": true,
+                "reporting": true,
+                "catalogId": "1471022574"
+              },
+              "trackNumber": 11,
+              "contentRating": "explicit"
+            }
+          },
+          {
+            "id": "i.zpZVVG4FVeNb7Y",
+            "type": "library-songs",
+            "href": "/v1/me/library/songs/i.zpZVVG4FVeNb7Y",
+            "attributes": {
+              "artwork": {
+                "width": 1200,
+                "height": 1200,
+                "url": "https://is2-ssl.mzstatic.com/image/thumb/Music113/v4/ca/6b/a2/ca6ba2e2-cee7-e986-5497-75f8f3a6ff8e/075679843357.jpg/{w}x{h}bb.jpeg"
+              },
+              "artistName": "YBNコーデー",
+              "genreNames": [
+                "ヒップホップ／ラップ"
+              ],
+              "durationInMillis": 167110,
+              "releaseDate": "2019-07-26",
+              "name": "Nightmares Are Real (feat. Pusha T)",
+              "albumName": "The Lost Boy",
+              "playParams": {
+                "id": "i.zpZVVG4FVeNb7Y",
+                "kind": "song",
+                "isLibrary": true,
+                "reporting": true,
+                "catalogId": "1471022636"
+              },
+              "trackNumber": 12,
+              "contentRating": "explicit"
+            }
+          },
+          {
+            "id": "i.YJMzzWPSmbJZx1",
+            "type": "library-songs",
+            "href": "/v1/me/library/songs/i.YJMzzWPSmbJZx1",
+            "attributes": {
+              "artwork": {
+                "width": 1200,
+                "height": 1200,
+                "url": "https://is2-ssl.mzstatic.com/image/thumb/Music113/v4/ca/6b/a2/ca6ba2e2-cee7-e986-5497-75f8f3a6ff8e/075679843357.jpg/{w}x{h}bb.jpeg"
+              },
+              "artistName": "YBNコーデー",
+              "genreNames": [
+                "ヒップホップ／ラップ"
+              ],
+              "durationInMillis": 210779,
+              "releaseDate": "2019-07-26",
+              "name": "Family Matters (feat. Arin Ray)",
+              "albumName": "The Lost Boy",
+              "playParams": {
+                "id": "i.YJMzzWPSmbJZx1",
+                "kind": "song",
+                "isLibrary": true,
+                "reporting": true,
+                "catalogId": "1471022637"
+              },
+              "trackNumber": 13,
+              "contentRating": "explicit"
+            }
+          },
+          {
+            "id": "i.KoJeeZ6UM8VqR1",
+            "type": "library-songs",
+            "href": "/v1/me/library/songs/i.KoJeeZ6UM8VqR1",
+            "attributes": {
+              "artwork": {
+                "width": 1200,
+                "height": 1200,
+                "url": "https://is2-ssl.mzstatic.com/image/thumb/Music113/v4/ca/6b/a2/ca6ba2e2-cee7-e986-5497-75f8f3a6ff8e/075679843357.jpg/{w}x{h}bb.jpeg"
+              },
+              "artistName": "YBNコーデー",
+              "genreNames": [
+                "ヒップホップ／ラップ"
+              ],
+              "durationInMillis": 236541,
+              "releaseDate": "2019-07-26",
+              "name": "We Gon Make It (feat. Meek Mill)",
+              "albumName": "The Lost Boy",
+              "playParams": {
+                "id": "i.KoJeeZ6UM8VqR1",
+                "kind": "song",
+                "isLibrary": true,
+                "reporting": true,
+                "catalogId": "1471022638"
+              },
+              "trackNumber": 14,
+              "contentRating": "explicit"
+            }
+          },
+          {
+            "id": "i.kGO55JKTDrLZYM",
+            "type": "library-songs",
+            "href": "/v1/me/library/songs/i.kGO55JKTDrLZYM",
+            "attributes": {
+              "artwork": {
+                "width": 1200,
+                "height": 1200,
+                "url": "https://is2-ssl.mzstatic.com/image/thumb/Music113/v4/ca/6b/a2/ca6ba2e2-cee7-e986-5497-75f8f3a6ff8e/075679843357.jpg/{w}x{h}bb.jpeg"
+              },
+              "artistName": "YBNコーデー",
+              "genreNames": [
+                "ヒップホップ／ラップ"
+              ],
+              "durationInMillis": 160744,
+              "releaseDate": "2019-07-26",
+              "name": "Lost & Found",
+              "albumName": "The Lost Boy",
+              "playParams": {
+                "id": "i.kGO55JKTDrLZYM",
+                "kind": "song",
+                "isLibrary": true,
+                "reporting": true,
+                "catalogId": "1471022639"
+              },
+              "trackNumber": 15,
+              "contentRating": "explicit"
+            }
+          }
+        ],
+        "href": "/v1/me/library/albums/l.Et6bMW/tracks",
+        "meta": {
+          "total": 15
+        }
+      }
+    }
+  }

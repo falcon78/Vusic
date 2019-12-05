@@ -1,0 +1,4153 @@
+{
+    "id": "pl.043a2c9876114d95a4659988497567be",
+    "type": "playlists",
+    "href": "/v1/catalog/jp/playlists/pl.043a2c9876114d95a4659988497567be",
+    "attributes": {
+      "artwork": {
+        "width": 4320,
+        "height": 1080,
+        "url": "https://is2-ssl.mzstatic.com/image/thumb/Features128/v4/96/58/30/96583032-0093-639c-f350-4e71e6979c1b/source/{w}x{h}cc.jpeg",
+        "bgColor": "f7f3eb",
+        "textColor1": "480008",
+        "textColor2": "55000a",
+        "textColor3": "6b3036",
+        "textColor4": "753037"
+      },
+      "isChart": true,
+      "url": "https://music.apple.com/jp/playlist/%E3%83%88%E3%83%83%E3%83%97100-%E6%97%A5%E6%9C%AC/pl.043a2c9876114d95a4659988497567be",
+      "lastModifiedDate": "2019-12-05T06:05:08Z",
+      "name": "トップ100：日本",
+      "playlistType": "editorial",
+      "curatorName": "Apple Music",
+      "playParams": {
+        "id": "pl.043a2c9876114d95a4659988497567be",
+        "kind": "playlist"
+      },
+      "description": {
+        "standard": "日本で最も聴かれている曲のランキング。毎日更新。"
+      }
+    },
+    "relationships": {
+      "curator": {
+        "data": [],
+        "href": "/v1/catalog/jp/playlists/pl.043a2c9876114d95a4659988497567be/curator"
+      },
+      "tracks": {
+        "data": [
+          {
+            "id": "1459216694",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1459216694",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview113/v4/fa/17/3f/fa173f3a-26be-c0a2-9113-4d81fe7b0bfb/mzaf_4753248623521236962.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 2400,
+                "height": 2400,
+                "url": "https://is3-ssl.mzstatic.com/image/thumb/Music123/v4/1b/a6/d8/1ba6d881-4444-8a2f-4f10-8ba4a2307a5f/PCCA_04785.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "14100d",
+                "textColor1": "ff9700",
+                "textColor2": "f66f60",
+                "textColor3": "cf7b02",
+                "textColor4": "c95c50"
+              },
+              "artistName": "Official髭男dism",
+              "url": "https://music.apple.com/jp/album/pretender/1459216693?i=1459216694",
+              "discNumber": 1,
+              "genreNames": [
+                "J-Pop",
+                "ミュージック"
+              ],
+              "durationInMillis": 326440,
+              "releaseDate": "2019-04-17",
+              "name": "Pretender",
+              "isrc": "JPPC01900265",
+              "hasLyrics": true,
+              "albumName": "Pretender - Single",
+              "playParams": {
+                "id": "1459216694",
+                "kind": "song"
+              },
+              "trackNumber": 1,
+              "composerName": "藤原聡"
+            }
+          },
+          {
+            "id": "1451896732",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1451896732",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview114/v4/21/fa/a9/21faa942-15e6-1f50-e8ba-da0e8c68df43/mzaf_4095342760638102696.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3000,
+                "url": "https://is3-ssl.mzstatic.com/image/thumb/Music124/v4/ed/8a/c8/ed8ac8c5-7bc7-c69e-15bd-86153cc06671/jacket_BVXX01177B01A_550.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "e7e6e1",
+                "textColor1": "0e0d0b",
+                "textColor2": "21221f",
+                "textColor3": "393936",
+                "textColor4": "484945"
+              },
+              "artistName": "King Gnu",
+              "url": "https://music.apple.com/jp/album/%E7%99%BD%E6%97%A5/1451896731?i=1451896732",
+              "discNumber": 1,
+              "genreNames": [
+                "オルタナティブ",
+                "ミュージック"
+              ],
+              "durationInMillis": 274913,
+              "releaseDate": "2019-02-22",
+              "name": "白日",
+              "isrc": "JPU901900431",
+              "hasLyrics": true,
+              "albumName": "白日 - Single",
+              "playParams": {
+                "id": "1451896732",
+                "kind": "song"
+              },
+              "trackNumber": 1,
+              "composerName": "常田大希"
+            }
+          },
+          {
+            "id": "1479397583",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1479397583",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview113/v4/fd/c5/a4/fdc5a413-cdb7-0d90-9f34-1b154951f307/mzaf_4314164263445561701.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 1400,
+                "height": 1400,
+                "url": "https://is3-ssl.mzstatic.com/image/thumb/Music113/v4/9c/7d/88/9c7d883d-4477-bf68-f56f-a726030a63a2/PCCA_04822.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "3d635d",
+                "textColor1": "f1f3ed",
+                "textColor2": "f1efe2",
+                "textColor3": "cdd6d0",
+                "textColor4": "cdd3c7"
+              },
+              "artistName": "Official髭男dism",
+              "url": "https://music.apple.com/jp/album/%E3%82%A4%E3%82%A8%E3%82%B9%E3%82%BF%E3%83%87%E3%82%A4/1479397582?i=1479397583",
+              "discNumber": 1,
+              "genreNames": [
+                "J-Pop",
+                "ミュージック"
+              ],
+              "durationInMillis": 299164,
+              "releaseDate": "2019-09-11",
+              "name": "イエスタデイ",
+              "isrc": "JPPC01901536",
+              "hasLyrics": true,
+              "albumName": "Traveler",
+              "playParams": {
+                "id": "1479397583",
+                "kind": "song"
+              },
+              "trackNumber": 1,
+              "composerName": "藤原聡"
+            }
+          },
+          {
+            "id": "1470899806",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1470899806",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview113/v4/1d/60/fb/1d60fb75-fc79-d91e-ca88-83518c7c23bd/mzaf_16849894505148926696.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 1400,
+                "height": 1411,
+                "url": "https://is4-ssl.mzstatic.com/image/thumb/Music123/v4/72/e4/7b/72e47b64-a7e9-9665-6190-6876901520fa/PCCA_70544.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "dc690e",
+                "textColor1": "161613",
+                "textColor2": "161616",
+                "textColor3": "3e2712",
+                "textColor4": "3e2714"
+              },
+              "artistName": "Official髭男dism",
+              "url": "https://music.apple.com/jp/album/%E5%AE%BF%E5%91%BD/1470899805?i=1470899806",
+              "discNumber": 1,
+              "genreNames": [
+                "J-Pop",
+                "ミュージック"
+              ],
+              "durationInMillis": 281067,
+              "releaseDate": "2019-07-09",
+              "name": "宿命",
+              "isrc": "JPPC01900827",
+              "hasLyrics": true,
+              "albumName": "宿命 - Single",
+              "playParams": {
+                "id": "1470899806",
+                "kind": "song"
+              },
+              "trackNumber": 1,
+              "composerName": "藤原聡"
+            }
+          },
+          {
+            "id": "1446781787",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1446781787",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview128/v4/ee/ef/bd/eeefbd2a-11e1-996a-d592-7b39b298966f/mzaf_250234690531600763.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 1445,
+                "height": 1445,
+                "url": "https://is4-ssl.mzstatic.com/image/thumb/Music118/v4/24/14/fb/2414fba1-eb1c-20e2-3fe1-f815baa5d077/190295490089.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "2d6482",
+                "textColor1": "f9f9f7",
+                "textColor2": "9edff2",
+                "textColor3": "d0dbe0",
+                "textColor4": "87c6dc"
+              },
+              "artistName": "あいみょん",
+              "url": "https://music.apple.com/jp/album/%E3%83%9E%E3%83%AA%E3%83%BC%E3%82%B4%E3%83%BC%E3%83%AB%E3%83%89/1446781785?i=1446781787",
+              "discNumber": 1,
+              "genreNames": [
+                "J-Pop",
+                "ミュージック"
+              ],
+              "durationInMillis": 306627,
+              "releaseDate": "2018-07-18",
+              "name": "マリーゴールド",
+              "isrc": "JPWP01870687",
+              "hasLyrics": true,
+              "albumName": "瞬間的シックスセンス",
+              "playParams": {
+                "id": "1446781787",
+                "kind": "song"
+              },
+              "trackNumber": 2,
+              "composerName": "あいみょん"
+            }
+          },
+          {
+            "id": "1364826169",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1364826169",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview118/v4/25/fd/90/25fd9075-11ed-d0b7-aaef-31f1ca20834c/mzaf_6722421137099188573.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 2400,
+                "height": 2400,
+                "url": "https://is3-ssl.mzstatic.com/image/thumb/Music128/v4/df/b4/5f/dfb45ff1-6d02-f124-348e-39740a5e7e60/PCCA_70529.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "b4b4b6",
+                "textColor1": "000000",
+                "textColor2": "4c072b",
+                "textColor3": "242424",
+                "textColor4": "612a47"
+              },
+              "artistName": "Official髭男dism",
+              "url": "https://music.apple.com/jp/album/%E3%83%8E%E3%83%BC%E3%83%80%E3%82%A6%E3%83%88/1364825466?i=1364826169",
+              "discNumber": 1,
+              "genreNames": [
+                "J-Pop",
+                "ミュージック"
+              ],
+              "durationInMillis": 201867,
+              "releaseDate": "2018-04-11",
+              "name": "ノーダウト",
+              "isrc": "JPC841800602",
+              "hasLyrics": true,
+              "albumName": "ノーダウト - Single",
+              "playParams": {
+                "id": "1364826169",
+                "kind": "song"
+              },
+              "trackNumber": 1,
+              "composerName": "藤原聡"
+            }
+          },
+          {
+            "id": "1394013614",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1394013614",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/d4/bf/e0/d4bfe0c1-7f05-2bbd-3a94-122544d0e892/mzaf_222738066193917033.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 2000,
+                "height": 2000,
+                "url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/e6/df/22/e6df22c6-4e4e-8ba4-1ab9-2cd939149a91/jk.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "ffffff",
+                "textColor1": "0d0d0d",
+                "textColor2": "191919",
+                "textColor3": "3d3e3d",
+                "textColor4": "474747"
+              },
+              "artistName": "Official髭男dism",
+              "url": "https://music.apple.com/jp/album/115%E4%B8%87%E3%82%AD%E3%83%AD%E3%81%AE%E3%83%95%E3%82%A3%E3%83%AB%E3%83%A0/1394013451?i=1394013614",
+              "discNumber": 1,
+              "genreNames": [
+                "J-Pop",
+                "ミュージック"
+              ],
+              "durationInMillis": 324633,
+              "releaseDate": "2018-04-11",
+              "name": "115万キロのフィルム",
+              "isrc": "JPC841800601",
+              "hasLyrics": true,
+              "albumName": "エスカパレード",
+              "playParams": {
+                "id": "1394013614",
+                "kind": "song"
+              },
+              "trackNumber": 1,
+              "composerName": "藤原聡"
+            }
+          },
+          {
+            "id": "1479397866",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1479397866",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview113/v4/25/c0/c0/25c0c0b0-6293-b716-0d0d-8821b7671cca/mzaf_12104292125764967767.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 1400,
+                "height": 1400,
+                "url": "https://is3-ssl.mzstatic.com/image/thumb/Music113/v4/9c/7d/88/9c7d883d-4477-bf68-f56f-a726030a63a2/PCCA_04822.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "3d635d",
+                "textColor1": "f1f3ed",
+                "textColor2": "f1efe2",
+                "textColor3": "cdd6d0",
+                "textColor4": "cdd3c7"
+              },
+              "artistName": "Official髭男dism",
+              "url": "https://music.apple.com/jp/album/stand-by-you/1479397582?i=1479397866",
+              "discNumber": 1,
+              "genreNames": [
+                "J-Pop",
+                "ミュージック"
+              ],
+              "durationInMillis": 256132,
+              "releaseDate": "2019-09-11",
+              "name": "Stand By You",
+              "isrc": "JPPC01801627",
+              "hasLyrics": true,
+              "albumName": "Traveler",
+              "playParams": {
+                "id": "1479397866",
+                "kind": "song"
+              },
+              "trackNumber": 8,
+              "composerName": "藤原聡"
+            }
+          },
+          {
+            "id": "1451567627",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1451567627",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview124/v4/ae/ef/52/aeef520d-47c3-6bc4-8dd8-4028c34d0d96/mzaf_1053378630385784800.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3000,
+                "url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/3a/8d/f9/3a8df90c-8a71-395c-d345-d93ede9ef11e/00602577303920.rgb.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "090504",
+                "textColor1": "f2f2f2",
+                "textColor2": "cecbcf",
+                "textColor3": "c3c2c2",
+                "textColor4": "a6a3a6"
+              },
+              "artistName": "back number",
+              "url": "https://music.apple.com/jp/album/%E3%82%AF%E3%83%AA%E3%82%B9%E3%83%9E%E3%82%B9%E3%82%BD%E3%83%B3%E3%82%B0/1451567625?i=1451567627",
+              "discNumber": 1,
+              "genreNames": [
+                "J-Pop",
+                "ミュージック"
+              ],
+              "durationInMillis": 340720,
+              "releaseDate": "2015-11-18",
+              "name": "クリスマスソング",
+              "isrc": "JPPO01509647",
+              "hasLyrics": true,
+              "albumName": "クリスマスソング - EP",
+              "playParams": {
+                "id": "1451567627",
+                "kind": "song"
+              },
+              "trackNumber": 1,
+              "composerName": "清水依与吏"
+            }
+          },
+          {
+            "id": "1480800426",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1480800426",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview113/v4/c8/43/0c/c8430c49-606a-4029-a9d4-9d5594c321f7/mzaf_4716637039702764888.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3000,
+                "url": "https://is4-ssl.mzstatic.com/image/thumb/Music113/v4/1c/06/15/1c0615c3-6413-5c68-768d-d39d968aa99f/jacket_BVXX01267B01A_550.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "90c2c3",
+                "textColor1": "050e0a",
+                "textColor2": "0d2928",
+                "textColor3": "21322f",
+                "textColor4": "274747"
+              },
+              "artistName": "King Gnu",
+              "url": "https://music.apple.com/jp/album/%E5%82%98/1480800425?i=1480800426",
+              "discNumber": 1,
+              "genreNames": [
+                "オルタナティブ",
+                "ミュージック"
+              ],
+              "durationInMillis": 202286,
+              "releaseDate": "2019-10-11",
+              "name": "傘",
+              "isrc": "JPU901902469",
+              "hasLyrics": true,
+              "albumName": "傘 - Single",
+              "playParams": {
+                "id": "1480800426",
+                "kind": "song"
+              },
+              "trackNumber": 1,
+              "composerName": "常田大希"
+            }
+          },
+          {
+            "id": "1468234377",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1468234377",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview113/v4/a5/c8/d9/a5c8d937-51f2-8dbb-b8d1-3c1a967acce4/mzaf_12960559059791675919.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3000,
+                "url": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/91/e4/73/91e4732c-bca5-e4ca-5c10-6562a3edeb36/jacket_VVXX00432B01A_550.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "ffffff",
+                "textColor1": "1f110a",
+                "textColor2": "2a1b12",
+                "textColor3": "4c403b",
+                "textColor4": "554841"
+              },
+              "artistName": "LiSA",
+              "url": "https://music.apple.com/jp/album/%E7%B4%85%E8%93%AE%E8%8F%AF/1468234376?i=1468234377",
+              "discNumber": 1,
+              "genreNames": [
+                "アニメ",
+                "ミュージック"
+              ],
+              "durationInMillis": 238587,
+              "releaseDate": "2019-04-22",
+              "name": "紅蓮華",
+              "isrc": "JPU901900905",
+              "hasLyrics": true,
+              "albumName": "紅蓮華 - EP",
+              "playParams": {
+                "id": "1468234377",
+                "kind": "song"
+              },
+              "trackNumber": 1,
+              "composerName": "草野華余子"
+            }
+          },
+          {
+            "id": "1461077113",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1461077113",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview113/v4/36/f4/4e/36f44e42-60bf-e886-b20f-e8701bd1bba7/mzaf_2947517996821351892.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3000,
+                "url": "https://is5-ssl.mzstatic.com/image/thumb/Music113/v4/a4/71/70/a4717082-a6a5-c7d1-598a-f43ce4db7ce9/jacket_ESXX02067B01A_550.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "ffffff",
+                "textColor1": "0f0a09",
+                "textColor2": "343231",
+                "textColor3": "3f3b3a",
+                "textColor4": "5c5b5a"
+              },
+              "artistName": "菅田 将暉",
+              "url": "https://music.apple.com/jp/album/%E3%81%BE%E3%81%A1%E3%81%8C%E3%81%84%E3%81%95%E3%81%8C%E3%81%97/1461077107?i=1461077113",
+              "discNumber": 1,
+              "genreNames": [
+                "J-Pop",
+                "ミュージック"
+              ],
+              "durationInMillis": 221147,
+              "releaseDate": "2019-05-14",
+              "name": "まちがいさがし",
+              "isrc": "JPU901901148",
+              "hasLyrics": true,
+              "albumName": "まちがいさがし - Single",
+              "playParams": {
+                "id": "1461077113",
+                "kind": "song"
+              },
+              "trackNumber": 1,
+              "composerName": "米津玄師"
+            }
+          },
+          {
+            "id": "1474218028",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1474218028",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview113/v4/94/cf/f8/94cff882-f2dd-a289-7636-52f6d2e696cb/mzaf_3543120257054023527.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3000,
+                "url": "https://is4-ssl.mzstatic.com/image/thumb/Music123/v4/cc/68/ce/cc68ce80-18ed-cd18-5e33-328ef2253fc1/jacket_BVXX01235B01A_550.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "000409",
+                "textColor1": "f3faf8",
+                "textColor2": "a4e3e3",
+                "textColor3": "c3c9c8",
+                "textColor4": "83b7b8"
+              },
+              "artistName": "King Gnu",
+              "url": "https://music.apple.com/jp/album/%E9%A3%9B%E8%A1%8C%E8%89%87/1474218027?i=1474218028",
+              "discNumber": 1,
+              "genreNames": [
+                "オルタナティブ",
+                "ミュージック"
+              ],
+              "durationInMillis": 261910,
+              "releaseDate": "2019-08-09",
+              "name": "飛行艇",
+              "isrc": "JPU901901945",
+              "hasLyrics": true,
+              "albumName": "飛行艇 - Single",
+              "playParams": {
+                "id": "1474218028",
+                "kind": "song"
+              },
+              "trackNumber": 1,
+              "composerName": "常田大希"
+            }
+          },
+          {
+            "id": "1450695739",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1450695739",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview113/v4/5e/2f/80/5e2f8029-d77b-d097-08f5-b7ee25c57ff3/mzaf_2579071016942610640.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3000,
+                "url": "https://is2-ssl.mzstatic.com/image/thumb/Music124/v4/a7/31/24/a731244c-e065-2f44-63a2-d15b6b27fefa/00602577427657.rgb.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "020202",
+                "textColor1": "eadccf",
+                "textColor2": "dcd2c4",
+                "textColor3": "bbb1a6",
+                "textColor4": "b0a89d"
+              },
+              "artistName": "ビリー・アイリッシュ",
+              "url": "https://music.apple.com/jp/album/bad-guy/1450695723?i=1450695739",
+              "discNumber": 1,
+              "genreNames": [
+                "オルタナティブ",
+                "ミュージック"
+              ],
+              "durationInMillis": 194088,
+              "releaseDate": "2019-03-29",
+              "name": "bad guy",
+              "isrc": "USUM71900764",
+              "hasLyrics": true,
+              "albumName": "WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?",
+              "playParams": {
+                "id": "1450695739",
+                "kind": "song"
+              },
+              "trackNumber": 2,
+              "composerName": "FINNEAS & ビリー・アイリッシュ"
+            }
+          },
+          {
+            "id": "1485847799",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1485847799",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview123/v4/70/c5/ae/70c5aedd-776e-93b5-f8f5-0616c261396d/mzaf_14722966698735883343.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3000,
+                "url": "https://is3-ssl.mzstatic.com/image/thumb/Music113/v4/81/77/cf/8177cf4a-1bc4-da65-f082-f2742657d57a/194491545574.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "170e11",
+                "textColor1": "c2d5ed",
+                "textColor2": "a3caeb",
+                "textColor3": "9fadc1",
+                "textColor4": "87a4bf"
+              },
+              "artistName": "嵐",
+              "url": "https://music.apple.com/jp/album/turning-up/1485847795?i=1485847799",
+              "discNumber": 1,
+              "genreNames": [
+                "J-Pop",
+                "ミュージック"
+              ],
+              "durationInMillis": 182633,
+              "releaseDate": "2019-11-03",
+              "name": "Turning Up",
+              "isrc": "JPQ401901060",
+              "hasLyrics": true,
+              "albumName": "Turning Up - Single",
+              "playParams": {
+                "id": "1485847799",
+                "kind": "song"
+              },
+              "trackNumber": 1,
+              "composerName": "エリック・リッドボム, アンドレアス・カールソン, FUNK UCHINO & Sho Sakurai"
+            }
+          },
+          {
+            "id": "1273709797",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1273709797",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview128/v4/aa/62/b7/aa62b7c4-9813-841f-6ce1-108ac4587fa5/mzaf_935263694990952126.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 1838,
+                "height": 1600,
+                "url": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/3d/6f/db/3d6fdbd0-e6ef-61ec-0886-dc3c02f88b9b/190295747138.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "a4030f",
+                "textColor1": "f5e5e7",
+                "textColor2": "fe9792",
+                "textColor3": "e5b8bb",
+                "textColor4": "ec7a78"
+              },
+              "artistName": "あいみょん",
+              "url": "https://music.apple.com/jp/album/%E5%90%9B%E3%81%AF%E3%83%AD%E3%83%83%E3%82%AF%E3%82%92%E8%81%B4%E3%81%8B%E3%81%AA%E3%81%84/1273709789?i=1273709797",
+              "discNumber": 1,
+              "genreNames": [
+                "J-Pop",
+                "ミュージック"
+              ],
+              "durationInMillis": 246307,
+              "releaseDate": "2017-07-25",
+              "name": "君はロックを聴かない",
+              "isrc": "JPWP01771557",
+              "hasLyrics": true,
+              "albumName": "青春のエキサイトメント",
+              "playParams": {
+                "id": "1273709797",
+                "kind": "song"
+              },
+              "trackNumber": 3,
+              "composerName": "あいみょん"
+            }
+          },
+          {
+            "id": "1438144188",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1438144188",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview118/v4/4a/38/a4/4a38a439-abb5-0749-fa15-4a45a5b48f1d/mzaf_1751032193184717336.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 1902,
+                "height": 1654,
+                "url": "https://is2-ssl.mzstatic.com/image/thumb/Music118/v4/bf/58/6f/bf586fc4-99ae-bb82-fe5e-f50f040d2e2a/190295528652.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "0b292b",
+                "textColor1": "fdf3d8",
+                "textColor2": "efdccb",
+                "textColor3": "cdcbb5",
+                "textColor4": "c1b8ab"
+              },
+              "artistName": "あいみょん",
+              "url": "https://music.apple.com/jp/album/%E4%BB%8A%E5%A4%9C%E3%81%93%E3%81%AE%E3%81%BE%E3%81%BE/1438144187?i=1438144188",
+              "discNumber": 1,
+              "genreNames": [
+                "J-Pop",
+                "ミュージック"
+              ],
+              "durationInMillis": 237933,
+              "releaseDate": "2018-10-25",
+              "name": "今夜このまま",
+              "isrc": "JPWP01871332",
+              "hasLyrics": true,
+              "albumName": "今夜このまま - EP",
+              "playParams": {
+                "id": "1438144188",
+                "kind": "song"
+              },
+              "trackNumber": 1,
+              "composerName": "あいみょん"
+            }
+          },
+          {
+            "id": "1420019802",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1420019802",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview128/v4/55/ef/61/55ef6100-d49f-c344-104b-79827672304c/mzaf_5219449647399284916.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 1400,
+                "height": 1400,
+                "url": "https://is4-ssl.mzstatic.com/image/thumb/Music128/v4/75/f0/36/75f036ad-98fb-dd67-85f9-dbab0e75293b/dj.fcivpydk.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "fbe5ab",
+                "textColor1": "3f1d21",
+                "textColor2": "4d2a2c",
+                "textColor3": "64453d",
+                "textColor4": "704f45"
+              },
+              "artistName": "Foorin",
+              "url": "https://music.apple.com/jp/album/%E3%83%91%E3%83%97%E3%83%AA%E3%82%AB/1420019298?i=1420019802",
+              "discNumber": 1,
+              "genreNames": [
+                "J-Pop",
+                "ミュージック"
+              ],
+              "durationInMillis": 208347,
+              "releaseDate": "2018-08-13",
+              "name": "パプリカ",
+              "isrc": "JPU901802326",
+              "hasLyrics": true,
+              "albumName": "パプリカ - Single",
+              "playParams": {
+                "id": "1420019802",
+                "kind": "song"
+              },
+              "trackNumber": 1,
+              "composerName": "米津玄師"
+            }
+          },
+          {
+            "id": "1488148973",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1488148973",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview113/v4/b1/1a/c0/b11ac054-3b5c-7f31-a350-9a4935063dac/mzaf_3568204727762757852.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3000,
+                "url": "https://is4-ssl.mzstatic.com/image/thumb/Music123/v4/cd/88/57/cd885765-7aee-c1ba-2131-d79f3a8dd803/19UM1IM03476.rgb.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "c0d6ee",
+                "textColor1": "090b18",
+                "textColor2": "223647",
+                "textColor3": "2d3343",
+                "textColor4": "425668"
+              },
+              "artistName": "松たか子 & AURORA",
+              "url": "https://music.apple.com/jp/album/%E3%82%A4%E3%83%B3%E3%83%88%E3%82%A5-%E3%82%B8-%E3%82%A2%E3%83%B3%E3%83%8E%E3%82%A6%E3%83%B3-%E5%BF%83%E3%81%AE%E3%81%BE%E3%81%BE%E3%81%AB/1488147908?i=1488148973",
+              "discNumber": 1,
+              "genreNames": [
+                "サウンドトラック",
+                "ミュージック"
+              ],
+              "durationInMillis": 194907,
+              "releaseDate": "2019-11-22",
+              "name": "イントゥ・ジ・アンノウン~心のままに",
+              "isrc": "USWD11995213",
+              "hasLyrics": true,
+              "albumName": "アナと雪の女王2 (オリジナル・サウンドトラック)",
+              "playParams": {
+                "id": "1488148973",
+                "kind": "song"
+              },
+              "trackNumber": 14,
+              "composerName": "クリステン・アンダーソン=ロペス & ロバート・ロペス"
+            }
+          },
+          {
+            "id": "1451567963",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1451567963",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview124/v4/fb/0c/0c/fb0c0cc2-703a-3f6d-986d-b927f9af1f30/mzaf_9129375664630697056.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3000,
+                "url": "https://is2-ssl.mzstatic.com/image/thumb/Music124/v4/ad/35/1f/ad351f01-3b1e-e723-77db-3a7d88221e5e/00602577303753.rgb.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "080405",
+                "textColor1": "fce2a0",
+                "textColor2": "e6ce9a",
+                "textColor3": "cbb681",
+                "textColor4": "baa67c"
+              },
+              "artistName": "back number",
+              "url": "https://music.apple.com/jp/album/%E9%AB%98%E5%B6%BA%E3%81%AE%E8%8A%B1%E5%AD%90%E3%81%95%E3%82%93/1451567957?i=1451567963",
+              "discNumber": 1,
+              "genreNames": [
+                "J-Pop",
+                "ミュージック"
+              ],
+              "durationInMillis": 294813,
+              "releaseDate": "2014-03-26",
+              "name": "高嶺の花子さん",
+              "isrc": "JPPO01336381",
+              "hasLyrics": true,
+              "albumName": "ラブストーリー",
+              "playParams": {
+                "id": "1451567963",
+                "kind": "song"
+              },
+              "trackNumber": 6,
+              "composerName": "清水依与吏"
+            }
+          },
+          {
+            "id": "1384341683",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1384341683",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview118/v4/fe/6a/7f/fe6a7fb1-0afd-ce02-e2c2-8d0ff2bb2bbe/mzaf_5909776208322245853.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3000,
+                "url": "https://is2-ssl.mzstatic.com/image/thumb/Music118/v4/1a/1c/d6/1a1cd629-960a-1a9c-b3b4-e9ece4a1cfe0/00602567661191.rgb.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "ffffff",
+                "textColor1": "0f090e",
+                "textColor2": "1b1514",
+                "textColor3": "3f3a3e",
+                "textColor4": "484343"
+              },
+              "artistName": "椎名林檎",
+              "url": "https://music.apple.com/jp/album/%E4%B8%B8%E3%83%8E%E5%86%85%E3%82%B5%E3%83%87%E3%82%A3%E3%82%B9%E3%83%86%E3%82%A3%E3%83%83%E3%82%AF/1384341676?i=1384341683",
+              "discNumber": 1,
+              "genreNames": [
+                "J-Pop",
+                "ミュージック"
+              ],
+              "durationInMillis": 235867,
+              "releaseDate": "1999-02-24",
+              "name": "丸ノ内サディスティック",
+              "isrc": "JPTO09834920",
+              "hasLyrics": true,
+              "albumName": "無罪モラトリアム",
+              "playParams": {
+                "id": "1384341683",
+                "kind": "song"
+              },
+              "trackNumber": 3,
+              "composerName": "椎名林檎"
+            }
+          },
+          {
+            "id": "1471459432",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1471459432",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview123/v4/87/1d/55/871d557e-bdb3-923f-a815-1a08ed2c21ff/mzaf_16436098438590940546.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3000,
+                "url": "https://is3-ssl.mzstatic.com/image/thumb/Music123/v4/19/47/54/19475481-b781-c9b2-368c-3dcfddb56694/19UMGIM59475.rgb.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "000000",
+                "textColor1": "ffffff",
+                "textColor2": "febe01",
+                "textColor3": "cbcbcb",
+                "textColor4": "cb9800"
+              },
+              "artistName": "Mrs. GREEN APPLE",
+              "url": "https://music.apple.com/jp/album/%E3%82%A4%E3%83%B3%E3%83%95%E3%82%A7%E3%83%AB%E3%83%8E/1471459431?i=1471459432",
+              "discNumber": 1,
+              "genreNames": [
+                "ロック",
+                "ミュージック"
+              ],
+              "durationInMillis": 212547,
+              "releaseDate": "2019-07-18",
+              "name": "インフェルノ",
+              "isrc": "JPPO01902850",
+              "hasLyrics": true,
+              "albumName": "インフェルノ - Single",
+              "playParams": {
+                "id": "1471459432",
+                "kind": "song"
+              },
+              "trackNumber": 1,
+              "composerName": "大森元貴"
+            }
+          },
+          {
+            "id": "1479397865",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1479397865",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview123/v4/d4/9e/d6/d49ed662-394d-6bf1-196c-cbcc00246fef/mzaf_10484502842435982332.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 1400,
+                "height": 1400,
+                "url": "https://is3-ssl.mzstatic.com/image/thumb/Music113/v4/9c/7d/88/9c7d883d-4477-bf68-f56f-a726030a63a2/PCCA_04822.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "3d635d",
+                "textColor1": "f1f3ed",
+                "textColor2": "f1efe2",
+                "textColor3": "cdd6d0",
+                "textColor4": "cdd3c7"
+              },
+              "artistName": "Official髭男dism",
+              "url": "https://music.apple.com/jp/album/%E3%83%93%E3%83%B3%E3%83%86%E3%83%BC%E3%82%B8/1479397582?i=1479397865",
+              "discNumber": 1,
+              "genreNames": [
+                "J-Pop",
+                "ミュージック"
+              ],
+              "durationInMillis": 252566,
+              "releaseDate": "2019-10-09",
+              "name": "ビンテージ",
+              "isrc": "JPPC01901542",
+              "hasLyrics": true,
+              "albumName": "Traveler",
+              "playParams": {
+                "id": "1479397865",
+                "kind": "song"
+              },
+              "trackNumber": 7,
+              "composerName": "藤原聡"
+            }
+          },
+          {
+            "id": "1478290680",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1478290680",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview113/v4/f5/51/c7/f551c7ae-ee86-9cb9-818e-7d8e7caade84/mzaf_6815922803544644606.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 1700,
+                "height": 1700,
+                "url": "https://is5-ssl.mzstatic.com/image/thumb/Music123/v4/d9/dd/25/d9dd250e-b417-7d1a-18ee-70a92a5cc4f5/190295353926.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "7c9600",
+                "textColor1": "090f0e",
+                "textColor2": "0d1112",
+                "textColor3": "202a0b",
+                "textColor4": "232c0f"
+              },
+              "artistName": "あいみょん",
+              "url": "https://music.apple.com/jp/album/%E7%A9%BA%E3%81%AE%E9%9D%92%E3%81%95%E3%82%92%E7%9F%A5%E3%82%8B%E4%BA%BA%E3%82%88/1478290250?i=1478290680",
+              "discNumber": 1,
+              "genreNames": [
+                "J-Pop",
+                "ミュージック"
+              ],
+              "durationInMillis": 304933,
+              "releaseDate": "2019-09-13",
+              "name": "空の青さを知る人よ",
+              "isrc": "JPWP01970758",
+              "hasLyrics": true,
+              "albumName": "空の青さを知る人よ - EP",
+              "playParams": {
+                "id": "1478290680",
+                "kind": "song"
+              },
+              "trackNumber": 1,
+              "composerName": "あいみょん"
+            }
+          },
+          {
+            "id": "1489441663",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1489441663",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview113/v4/fd/4d/75/fd4d75bc-432d-aa98-ced3-31efa7535652/mzaf_12925025505250243633.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 1500,
+                "height": 1500,
+                "url": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/ea/d3/20/ead32006-2d40-24ce-3d8a-8c6be6f5ab06/cover.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "d9e2ff",
+                "textColor1": "001c71",
+                "textColor2": "162b71",
+                "textColor3": "2c438d",
+                "textColor4": "3d508e"
+              },
+              "artistName": "ドレミファソラシドーミノ",
+              "url": "https://music.apple.com/jp/album/domino/1489441658?i=1489441663",
+              "discNumber": 1,
+              "genreNames": [
+                "J-Pop",
+                "ミュージック"
+              ],
+              "durationInMillis": 208093,
+              "releaseDate": "2019-11-29",
+              "name": "DOMINO",
+              "isrc": "JPN001900568",
+              "hasLyrics": true,
+              "albumName": "PRODUCE 101 JAPAN - 35 Boys 5 Concepts - EP",
+              "playParams": {
+                "id": "1489441663",
+                "kind": "song"
+              },
+              "trackNumber": 2
+            }
+          },
+          {
+            "id": "1444834638",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1444834638",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview118/v4/96/95/fc/9695fc20-d79d-9cf2-e616-06828637f2fb/mzaf_1756235130815504634.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3000,
+                "url": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/fc/3d/40/fc3d4018-1301-c2c8-2109-3595111ee4dc/jacket_BVCL00930B01A_550.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "fcfdff",
+                "textColor1": "030100",
+                "textColor2": "3c0c0d",
+                "textColor3": "353333",
+                "textColor4": "623c3d"
+              },
+              "artistName": "King Gnu",
+              "url": "https://music.apple.com/jp/album/prayer-x/1444834388?i=1444834638",
+              "discNumber": 1,
+              "genreNames": [
+                "オルタナティブ",
+                "ミュージック"
+              ],
+              "durationInMillis": 195227,
+              "releaseDate": "2019-01-16",
+              "name": "Prayer X",
+              "isrc": "JPU901802251",
+              "hasLyrics": true,
+              "albumName": "Sympa",
+              "playParams": {
+                "id": "1444834638",
+                "kind": "song"
+              },
+              "trackNumber": 10,
+              "composerName": "常田大希"
+            }
+          },
+          {
+            "id": "1488717007",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1488717007",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview123/v4/3e/08/8e/3e088ee2-af83-638c-6450-23ebb3cdaeeb/mzaf_10401034695370559032.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 2400,
+                "height": 2400,
+                "url": "https://is4-ssl.mzstatic.com/image/thumb/Music113/v4/e1/ab/88/e1ab8835-6e28-751d-56f4-df31540f905d/ANTCD-A0000000665.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "aeb0b2",
+                "textColor1": "131313",
+                "textColor2": "232322",
+                "textColor3": "323233",
+                "textColor4": "3e3f3e"
+              },
+              "artistName": "三代目 J SOUL BROTHERS from EXILE TRIBE",
+              "url": "https://music.apple.com/jp/album/%E5%86%AC%E7%A9%BA/1488716735?i=1488717007",
+              "discNumber": 1,
+              "genreNames": [
+                "J-Pop",
+                "ミュージック"
+              ],
+              "durationInMillis": 275999,
+              "name": "冬空",
+              "isrc": "JPB601903710",
+              "hasLyrics": true,
+              "albumName": "冬空 / White Wings - Single",
+              "playParams": {
+                "id": "1488717007",
+                "kind": "song"
+              },
+              "trackNumber": 1,
+              "composerName": "春川仁志, Safari Natsukawa & 小竹 正人"
+            }
+          },
+          {
+            "id": "1451567751",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1451567751",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview114/v4/9a/4f/58/9a4f580f-b9fb-87ae-aef7-f9795079afe9/mzaf_1688158252534315102.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3000,
+                "url": "https://is3-ssl.mzstatic.com/image/thumb/Music124/v4/47/83/23/47832376-c905-eabf-95fe-03279c6cc75a/00602577303951.rgb.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "20201e",
+                "textColor1": "e5c5b8",
+                "textColor2": "dbb1a2",
+                "textColor3": "bea499",
+                "textColor4": "b69488"
+              },
+              "artistName": "back number",
+              "url": "https://music.apple.com/jp/album/%E3%83%8F%E3%83%83%E3%83%94%E3%83%BC%E3%82%A8%E3%83%B3%E3%83%89/1451567750?i=1451567751",
+              "discNumber": 1,
+              "genreNames": [
+                "J-Pop",
+                "ミュージック"
+              ],
+              "durationInMillis": 314280,
+              "releaseDate": "2016-11-16",
+              "name": "ハッピーエンド",
+              "isrc": "JPPO01621209",
+              "hasLyrics": true,
+              "albumName": "ハッピーエンド - EP",
+              "playParams": {
+                "id": "1451567751",
+                "kind": "song"
+              },
+              "trackNumber": 1,
+              "composerName": "清水依与吏"
+            }
+          },
+          {
+            "id": "1489441659",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1489441659",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview123/v4/af/91/2b/af912be0-093f-f738-e366-a3a775935684/mzaf_15014709524358205469.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 1500,
+                "height": 1500,
+                "url": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/ea/d3/20/ead32006-2d40-24ce-3d8a-8c6be6f5ab06/cover.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "d9e2ff",
+                "textColor1": "001c71",
+                "textColor2": "162b71",
+                "textColor3": "2c438d",
+                "textColor4": "3d508e"
+              },
+              "artistName": "クンチキタンポポ",
+              "url": "https://music.apple.com/jp/album/kungchikita/1489441658?i=1489441659",
+              "discNumber": 1,
+              "genreNames": [
+                "J-Pop",
+                "ミュージック"
+              ],
+              "durationInMillis": 210159,
+              "releaseDate": "2019-11-29",
+              "name": "KungChiKiTa",
+              "isrc": "JPN001900567",
+              "hasLyrics": true,
+              "albumName": "PRODUCE 101 JAPAN - 35 Boys 5 Concepts - EP",
+              "playParams": {
+                "id": "1489441659",
+                "kind": "song"
+              },
+              "trackNumber": 1
+            }
+          },
+          {
+            "id": "1193701392",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1193701392",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview111/v4/65/ca/83/65ca8336-2e09-a0bb-a810-2a6b8864e770/mzaf_3545919152242528717.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3000,
+                "url": "https://is5-ssl.mzstatic.com/image/thumb/Music122/v4/9a/35/95/9a3595c7-c675-fd74-352f-44e3638ac123/190295851286.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "151716",
+                "textColor1": "7ddafa",
+                "textColor2": "69d5f1",
+                "textColor3": "68b3cc",
+                "textColor4": "58afc5"
+              },
+              "artistName": "エド・シーラン",
+              "url": "https://music.apple.com/jp/album/shape-of-you/1193701079?i=1193701392",
+              "discNumber": 1,
+              "genreNames": [
+                "ポップ",
+                "ミュージック",
+                "シンガーソングライター"
+              ],
+              "durationInMillis": 233713,
+              "releaseDate": "2017-01-06",
+              "name": "Shape of You",
+              "isrc": "GBAHS1700003",
+              "hasLyrics": true,
+              "albumName": "÷ (Deluxe)",
+              "playParams": {
+                "id": "1193701392",
+                "kind": "song"
+              },
+              "trackNumber": 4,
+              "composerName": "エド・シーラン, スティーヴ・マック, Johnny McDaid, エド・シーラン, Johnny McDaid, キャンディ・ブルース, Kevin Briggs, スティーヴ・マック & TAMEKA COTTLE"
+            }
+          },
+          {
+            "id": "1489441668",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1489441668",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview123/v4/2c/5b/d5/2c5bd596-91f7-60b0-1908-eba834c0acd1/mzaf_14069995797111236947.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 1500,
+                "height": 1500,
+                "url": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/ea/d3/20/ead32006-2d40-24ce-3d8a-8c6be6f5ab06/cover.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "d9e2ff",
+                "textColor1": "001c71",
+                "textColor2": "162b71",
+                "textColor3": "2c438d",
+                "textColor4": "3d508e"
+              },
+              "artistName": "ハピメリ",
+              "url": "https://music.apple.com/jp/album/happy-merry-christmas/1489441658?i=1489441668",
+              "discNumber": 1,
+              "genreNames": [
+                "J-Pop",
+                "ミュージック"
+              ],
+              "durationInMillis": 223667,
+              "releaseDate": "2019-11-29",
+              "name": "Happy Merry Christmas",
+              "isrc": "JPN001900569",
+              "hasLyrics": true,
+              "albumName": "PRODUCE 101 JAPAN - 35 Boys 5 Concepts - EP",
+              "playParams": {
+                "id": "1489441668",
+                "kind": "song"
+              },
+              "trackNumber": 3
+            }
+          },
+          {
+            "id": "1479865077",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1479865077",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview113/v4/56/fa/c4/56fac49d-973a-1e34-3fd8-294cf22caa7a/mzaf_16993364703382831970.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3000,
+                "url": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/58/c7/dd/58c7dda7-3efa-c773-ced7-7e131b13c133/190295344245.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "c3a94f",
+                "textColor1": "110e07",
+                "textColor2": "231509",
+                "textColor3": "352d15",
+                "textColor4": "433217"
+              },
+              "artistName": "TWICE",
+              "url": "https://music.apple.com/jp/album/feel-special/1479865076?i=1479865077",
+              "discNumber": 1,
+              "genreNames": [
+                "K-Pop",
+                "ミュージック",
+                "ポップ"
+              ],
+              "durationInMillis": 206868,
+              "releaseDate": "2019-09-23",
+              "name": "Feel Special",
+              "isrc": "US5TA1900074",
+              "hasLyrics": true,
+              "albumName": "Feel Special",
+              "playParams": {
+                "id": "1479865077",
+                "kind": "song"
+              },
+              "trackNumber": 1,
+              "composerName": "Hayley Aitken, J.Y. Park & Ollipop"
+            }
+          },
+          {
+            "id": "1444839834",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1444839834",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview128/v4/fd/f9/06/fdf906f1-4c06-7d96-6352-4d8ece5bea43/mzaf_1699275283371939717.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 2500,
+                "height": 2499,
+                "url": "https://is4-ssl.mzstatic.com/image/thumb/Music118/v4/68/b3/82/68b382c1-75f4-4d50-8765-87ef5c84c14a/EPM-10001.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "d1eef6",
+                "textColor1": "23273c",
+                "textColor2": "2c3141",
+                "textColor3": "464e61",
+                "textColor4": "4d5765"
+              },
+              "artistName": "Novelbright",
+              "url": "https://music.apple.com/jp/album/walking-with-you/1444839833?i=1444839834",
+              "discNumber": 1,
+              "genreNames": [
+                "ロック",
+                "ミュージック",
+                "J-Pop"
+              ],
+              "durationInMillis": 223187,
+              "releaseDate": "2018-10-03",
+              "name": "Walking with you",
+              "isrc": "JPCO01820420",
+              "hasLyrics": true,
+              "albumName": "SKYWALK",
+              "playParams": {
+                "id": "1444839834",
+                "kind": "song"
+              },
+              "trackNumber": 1,
+              "composerName": "勇太朗 & 雄大"
+            }
+          },
+          {
+            "id": "1485857408",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1485857408",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview113/v4/95/00/c1/9500c14e-d013-77ed-2052-f0a499c10f34/mzaf_6710208853188396210.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3000,
+                "url": "https://is2-ssl.mzstatic.com/image/thumb/Music113/v4/8e/10/2a/8e102abd-d981-e370-82db-2ae5c98baac3/194491537920.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "ffffff",
+                "textColor1": "040301",
+                "textColor2": "27221b",
+                "textColor3": "363534",
+                "textColor4": "524e48"
+              },
+              "artistName": "嵐",
+              "url": "https://music.apple.com/jp/album/love-so-sweet/1485857244?i=1485857408",
+              "discNumber": 1,
+              "genreNames": [
+                "J-Pop",
+                "ミュージック"
+              ],
+              "durationInMillis": 289846,
+              "releaseDate": "2007-02-21",
+              "name": "Love so sweet",
+              "isrc": "JPQ400600740",
+              "hasLyrics": true,
+              "albumName": "Love so sweet - Single",
+              "playParams": {
+                "id": "1485857408",
+                "kind": "song"
+              },
+              "trackNumber": 1,
+              "composerName": "Spin & youth case"
+            }
+          },
+          {
+            "id": "1273710101",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1273710101",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview118/v4/5a/ce/9f/5ace9f3c-3b7b-5c75-2671-cecd079b8af0/mzaf_2864795697014721281.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 1838,
+                "height": 1600,
+                "url": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/3d/6f/db/3d6fdbd0-e6ef-61ec-0886-dc3c02f88b9b/190295747138.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "a4030f",
+                "textColor1": "f5e5e7",
+                "textColor2": "fe9792",
+                "textColor3": "e5b8bb",
+                "textColor4": "ec7a78"
+              },
+              "artistName": "あいみょん",
+              "url": "https://music.apple.com/jp/album/%E6%84%9B%E3%82%92%E4%BC%9D%E3%81%88%E3%81%9F%E3%81%84%E3%81%A0%E3%81%A8%E3%81%8B/1273709789?i=1273710101",
+              "discNumber": 1,
+              "genreNames": [
+                "J-Pop",
+                "ミュージック"
+              ],
+              "durationInMillis": 235241,
+              "releaseDate": "2017-05-03",
+              "name": "愛を伝えたいだとか",
+              "isrc": "JPWP01770243",
+              "hasLyrics": true,
+              "albumName": "青春のエキサイトメント",
+              "playParams": {
+                "id": "1273710101",
+                "kind": "song"
+              },
+              "trackNumber": 7,
+              "composerName": "あいみょん"
+            }
+          },
+          {
+            "id": "1258439534",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1258439534",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview118/v4/ee/cb/9f/eecb9f75-8b4c-6561-b270-e9da1f61d8cf/mzaf_7135162667242466675.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3003,
+                "url": "https://is4-ssl.mzstatic.com/image/thumb/Music128/v4/c4/2a/9e/c42a9e83-ca5d-5d5e-54a8-3af49a7506ce/jacket_XSXX00356B01A_550.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "ffffff",
+                "textColor1": "2e2821",
+                "textColor2": "3a2f27",
+                "textColor3": "58534d",
+                "textColor4": "625852"
+              },
+              "artistName": "King Gnu",
+              "url": "https://music.apple.com/jp/album/vinyl/1258439190?i=1258439534",
+              "discNumber": 1,
+              "genreNames": [
+                "オルタナティブ",
+                "ミュージック"
+              ],
+              "durationInMillis": 294387,
+              "releaseDate": "2017-09-29",
+              "name": "Vinyl",
+              "isrc": "JPU901702274",
+              "hasLyrics": true,
+              "albumName": "Tokyo Rendez-Vous",
+              "playParams": {
+                "id": "1258439534",
+                "kind": "song"
+              },
+              "trackNumber": 4,
+              "composerName": "常田大希"
+            }
+          },
+          {
+            "id": "1489441674",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1489441674",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview123/v4/4f/30/0b/4f300b30-2958-9b2c-9232-5101a159e41d/mzaf_16946171982739918500.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 1500,
+                "height": 1500,
+                "url": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/ea/d3/20/ead32006-2d40-24ce-3d8a-8c6be6f5ab06/cover.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "d9e2ff",
+                "textColor1": "001c71",
+                "textColor2": "162b71",
+                "textColor3": "2c438d",
+                "textColor4": "3d508e"
+              },
+              "artistName": "バブリンチョ",
+              "url": "https://music.apple.com/jp/album/%E3%82%84%E3%82%93%E3%81%A1%E3%82%83boy-%E3%82%84%E3%82%93%E3%81%A1%E3%82%83girl/1489441658?i=1489441674",
+              "discNumber": 1,
+              "genreNames": [
+                "J-Pop",
+                "ミュージック"
+              ],
+              "durationInMillis": 201267,
+              "releaseDate": "2019-11-29",
+              "name": "やんちゃBOY やんちゃGIRL",
+              "isrc": "JPN001900571",
+              "hasLyrics": true,
+              "albumName": "PRODUCE 101 JAPAN - 35 Boys 5 Concepts - EP",
+              "playParams": {
+                "id": "1489441674",
+                "kind": "song"
+              },
+              "trackNumber": 5
+            }
+          },
+          {
+            "id": "1486547361",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1486547361",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview123/v4/65/16/f7/6516f712-d642-7e82-65c9-2a8e8d3fd4ba/mzaf_6805236592253300888.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3000,
+                "url": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/2e/1c/3b/2e1c3b42-8b1f-311e-75de-66666088db9b/jacket_SRXX03282B01A_550.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "f9d7bc",
+                "textColor1": "190204",
+                "textColor2": "1c3340",
+                "textColor3": "452d28",
+                "textColor4": "485459"
+              },
+              "artistName": "sumika",
+              "url": "https://music.apple.com/jp/album/%E9%A1%98%E3%81%84/1486547359?i=1486547361",
+              "discNumber": 1,
+              "genreNames": [
+                "J-Pop",
+                "ミュージック"
+              ],
+              "durationInMillis": 314187,
+              "releaseDate": "2019-11-16",
+              "name": "願い",
+              "isrc": "JPU901902960",
+              "hasLyrics": true,
+              "albumName": "願い - Single",
+              "playParams": {
+                "id": "1486547361",
+                "kind": "song"
+              },
+              "trackNumber": 1,
+              "composerName": "黒田隼之介"
+            }
+          },
+          {
+            "id": "1489441672",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1489441672",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview123/v4/70/79/f2/7079f2e9-b070-af4b-dfec-dd40446794d7/mzaf_12893059814021981007.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 1500,
+                "height": 1500,
+                "url": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/ea/d3/20/ead32006-2d40-24ce-3d8a-8c6be6f5ab06/cover.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "d9e2ff",
+                "textColor1": "001c71",
+                "textColor2": "162b71",
+                "textColor3": "2c438d",
+                "textColor4": "3d508e"
+              },
+              "artistName": "Black Out",
+              "url": "https://music.apple.com/jp/album/black-out/1489441658?i=1489441672",
+              "discNumber": 1,
+              "genreNames": [
+                "J-Pop",
+                "ミュージック"
+              ],
+              "durationInMillis": 202507,
+              "releaseDate": "2019-11-29",
+              "name": "Black Out",
+              "isrc": "JPN001900570",
+              "hasLyrics": true,
+              "albumName": "PRODUCE 101 JAPAN - 35 Boys 5 Concepts - EP",
+              "playParams": {
+                "id": "1489441672",
+                "kind": "song"
+              },
+              "trackNumber": 4
+            }
+          },
+          {
+            "id": "1455341000",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1455341000",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview123/v4/8e/37/9f/8e379ff7-d394-1069-b337-434a6b65990b/mzaf_6690482053711888853.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 1600,
+                "height": 1600,
+                "url": "https://is2-ssl.mzstatic.com/image/thumb/Music114/v4/c6/17/ad/c617ad80-bf5c-64f1-0d52-f19cb1c04efd/190295450946.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "252e19",
+                "textColor1": "f6f3fa",
+                "textColor2": "acbbc9",
+                "textColor3": "cccccd",
+                "textColor4": "919ea6"
+              },
+              "artistName": "あいみょん",
+              "url": "https://music.apple.com/jp/album/%E3%83%8F%E3%83%AB%E3%83%8E%E3%83%92/1455340999?i=1455341000",
+              "discNumber": 1,
+              "genreNames": [
+                "J-Pop",
+                "ミュージック"
+              ],
+              "durationInMillis": 326867,
+              "releaseDate": "2019-03-13",
+              "name": "ハルノヒ",
+              "isrc": "JPWP01970073",
+              "hasLyrics": true,
+              "albumName": "ハルノヒ - Single",
+              "playParams": {
+                "id": "1455341000",
+                "kind": "song"
+              },
+              "trackNumber": 1,
+              "composerName": "あいみょん"
+            }
+          },
+          {
+            "id": "1444834390",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1444834390",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview128/v4/4c/cd/55/4ccd557b-81c7-b91d-6019-93b7cc4e9842/mzaf_4178655444498786126.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3000,
+                "url": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/fc/3d/40/fc3d4018-1301-c2c8-2109-3595111ee4dc/jacket_BVCL00930B01A_550.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "fcfdff",
+                "textColor1": "030100",
+                "textColor2": "3c0c0d",
+                "textColor3": "353333",
+                "textColor4": "623c3d"
+              },
+              "artistName": "King Gnu",
+              "url": "https://music.apple.com/jp/album/slumberland/1444834388?i=1444834390",
+              "discNumber": 1,
+              "genreNames": [
+                "オルタナティブ",
+                "ミュージック"
+              ],
+              "durationInMillis": 184493,
+              "releaseDate": "2018-12-14",
+              "name": "Slumberland",
+              "isrc": "JPU901803911",
+              "hasLyrics": true,
+              "albumName": "Sympa",
+              "playParams": {
+                "id": "1444834390",
+                "kind": "song"
+              },
+              "trackNumber": 2,
+              "composerName": "常田大希"
+            }
+          },
+          {
+            "id": "585972803",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/585972803",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/Music/v4/f5/46/ad/f546adcb-e1ba-97f2-4d47-decc1c89b652/mzaf_1457133712242746890.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 1471,
+                "height": 1471,
+                "url": "https://is4-ssl.mzstatic.com/image/thumb/Music4/v4/57/83/3e/57833ecc-a088-d45b-b257-33bd3e47dcca/dj.itfmdeif.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "ffffff",
+                "textColor1": "480b0e",
+                "textColor2": "521917",
+                "textColor3": "6d3c3e",
+                "textColor4": "754746"
+              },
+              "artistName": "マライア・キャリー",
+              "url": "https://music.apple.com/jp/album/all-i-want-for-christmas-is-you/585972750?i=585972803",
+              "discNumber": 1,
+              "genreNames": [
+                "ホリデー",
+                "ミュージック",
+                "ロック",
+                "クリスマス",
+                "ダンス",
+                "R&B／ソウル",
+                "ポップ",
+                "アダルトコンテンポラリー",
+                "コンテンポラリー R&B "
+              ],
+              "durationInMillis": 241562,
+              "releaseDate": "1994-10-29",
+              "name": "All I Want For Christmas Is You",
+              "isrc": "USSM19400325",
+              "hasLyrics": true,
+              "albumName": "Merry Christmas",
+              "playParams": {
+                "id": "585972803",
+                "kind": "song"
+              },
+              "trackNumber": 2,
+              "composerName": "マライア・キャリー & WALTER AFANASIEFF"
+            }
+          },
+          {
+            "id": "1479397862",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1479397862",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview113/v4/f9/2f/cb/f92fcbad-07aa-93bc-db88-e0f26c7cf62d/mzaf_9959423803964338678.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 1400,
+                "height": 1400,
+                "url": "https://is3-ssl.mzstatic.com/image/thumb/Music113/v4/9c/7d/88/9c7d883d-4477-bf68-f56f-a726030a63a2/PCCA_04822.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "3d635d",
+                "textColor1": "f1f3ed",
+                "textColor2": "f1efe2",
+                "textColor3": "cdd6d0",
+                "textColor4": "cdd3c7"
+              },
+              "artistName": "Official髭男dism",
+              "url": "https://music.apple.com/jp/album/%E3%83%90%E3%83%83%E3%83%89%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9F%E3%83%BC/1479397582?i=1479397862",
+              "discNumber": 1,
+              "genreNames": [
+                "J-Pop",
+                "ミュージック"
+              ],
+              "durationInMillis": 235325,
+              "releaseDate": "2019-09-11",
+              "name": "バッドフォーミー",
+              "isrc": "JPPC01801014",
+              "hasLyrics": true,
+              "albumName": "Traveler",
+              "playParams": {
+                "id": "1479397862",
+                "kind": "song"
+              },
+              "trackNumber": 5,
+              "composerName": "藤原聡"
+            }
+          },
+          {
+            "id": "1486344198",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1486344198",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview113/v4/f6/02/39/f602395f-f004-7f29-bfe3-61d4f4b9821e/mzaf_959134340737792976.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 2400,
+                "height": 2400,
+                "url": "https://is4-ssl.mzstatic.com/image/thumb/Music113/v4/01/c9/69/01c96960-29be-8176-629c-0ea8cb025af4/ANTCD-A0000000574.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "ffffff",
+                "textColor1": "0d090a",
+                "textColor2": "640604",
+                "textColor3": "3e3a3b",
+                "textColor4": "833836"
+              },
+              "artistName": "GENERATIONS from EXILE TRIBE",
+              "url": "https://music.apple.com/jp/album/one-in-a-million-%E5%A5%87%E8%B7%A1%E3%81%AE%E5%A4%9C%E3%81%AB/1486343735?i=1486344198",
+              "discNumber": 1,
+              "genreNames": [
+                "J-Pop",
+                "ミュージック"
+              ],
+              "durationInMillis": 222932,
+              "releaseDate": "2019-11-21",
+              "name": "One in a Million -奇跡の夜に-",
+              "isrc": "JPB601903375",
+              "hasLyrics": true,
+              "albumName": "SHONEN CHRONICLE",
+              "playParams": {
+                "id": "1486344198",
+                "kind": "song"
+              },
+              "trackNumber": 11,
+              "composerName": "☆Taku Takahashi(m-flo)/Minami(CREAM) & EIGO (ONEly Inc.)/Minami(CREAM)"
+            }
+          },
+          {
+            "id": "1348177014",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1348177014",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview118/v4/ef/78/25/ef782572-7efb-8295-a001-0dcc54c68b7b/mzaf_2259325979465735696.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3002,
+                "height": 3000,
+                "url": "https://is5-ssl.mzstatic.com/image/thumb/Music128/v4/aa/fb/74/aafb7493-cc4f-fda8-3cc1-9c59b2084e4a/jacket_ESXX01814B01A_550.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "c2dedf",
+                "textColor1": "030305",
+                "textColor2": "092834",
+                "textColor3": "292e30",
+                "textColor4": "2e4d56"
+              },
+              "artistName": "菅田 将暉",
+              "url": "https://music.apple.com/jp/album/%E3%81%95%E3%82%88%E3%81%AA%E3%82%89%E3%82%A8%E3%83%AC%E3%82%B8%E3%83%BC/1348177013?i=1348177014",
+              "discNumber": 1,
+              "genreNames": [
+                "J-Pop",
+                "ミュージック"
+              ],
+              "durationInMillis": 257067,
+              "releaseDate": "2018-01-07",
+              "name": "さよならエレジー",
+              "isrc": "JPU901704009",
+              "hasLyrics": true,
+              "albumName": "PLAY(Special Edition)",
+              "playParams": {
+                "id": "1348177014",
+                "kind": "song"
+              },
+              "trackNumber": 1,
+              "composerName": "石崎ひゅーい"
+            }
+          },
+          {
+            "id": "1408505264",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1408505264",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/3a/43/a6/3a43a625-6749-1a92-58f3-b8ab15768658/mzaf_3756683959257319530.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3000,
+                "url": "https://is2-ssl.mzstatic.com/image/thumb/Music115/v4/b3/83/3a/b3833a63-a7d6-ddec-8eb5-e61e25ba3470/00602567787693.rgb.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "0063ac",
+                "textColor1": "fefcff",
+                "textColor2": "fff000",
+                "textColor3": "cbddee",
+                "textColor4": "ccd323"
+              },
+              "artistName": "Mrs. GREEN APPLE",
+              "url": "https://music.apple.com/jp/album/%E9%9D%92%E3%81%A8%E5%A4%8F/1408505088?i=1408505264",
+              "discNumber": 1,
+              "genreNames": [
+                "ロック",
+                "ミュージック"
+              ],
+              "durationInMillis": 270507,
+              "releaseDate": "2018-07-12",
+              "name": "青と夏",
+              "isrc": "JPPO01802568",
+              "hasLyrics": true,
+              "albumName": "青と夏 - EP",
+              "playParams": {
+                "id": "1408505264",
+                "kind": "song"
+              },
+              "trackNumber": 1,
+              "composerName": "大森元貴"
+            }
+          },
+          {
+            "id": "1459251634",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1459251634",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview113/v4/ee/4e/31/ee4e3137-62ff-48e4-19cb-fb02ec770f8f/mzaf_4982915356528395063.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3000,
+                "url": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/5b/e4/4e/5be44e05-fb1b-3cc4-db35-da89b9624561/00602577794995.rgb.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "fe769b",
+                "textColor1": "161616",
+                "textColor2": "161616",
+                "textColor3": "452931",
+                "textColor4": "452931"
+              },
+              "artistName": "BTS",
+              "url": "https://music.apple.com/jp/album/boy-with-luv-feat-halsey/1459251626?i=1459251634",
+              "discNumber": 1,
+              "genreNames": [
+                "K-Pop",
+                "ミュージック",
+                "ポップ"
+              ],
+              "durationInMillis": 229720,
+              "releaseDate": "2019-04-12",
+              "name": "Boy With Luv (feat. Halsey)",
+              "isrc": "QM6MZ1917908",
+              "hasLyrics": true,
+              "albumName": "MAP OF THE SOUL : PERSONA",
+              "playParams": {
+                "id": "1459251634",
+                "kind": "song"
+              },
+              "trackNumber": 2,
+              "composerName": "ホールジー, Pdogg, RM, メラニー・ジョイ・フォンタナ, ミシェル・リンドグレン・シュルツ, \"hitman\"bang, SUGA, Emily Weisband & j-hope"
+            }
+          },
+          {
+            "id": "1479714727",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1479714727",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview113/v4/24/63/4e/24634e1c-d102-cdf1-01ef-cc747080c39d/mzaf_9534476126653295849.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 1702,
+                "height": 1702,
+                "url": "https://is3-ssl.mzstatic.com/image/thumb/Music113/v4/92/4c/5c/924c5c67-8ec7-c2e6-855c-ab2dfb2f237e/ANTCD-A0000000279.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "000000",
+                "textColor1": "00ff00",
+                "textColor2": "fe018f",
+                "textColor3": "00cb00",
+                "textColor4": "cb0072"
+              },
+              "artistName": "三代目 J SOUL BROTHERS from EXILE TRIBE",
+              "url": "https://music.apple.com/jp/album/rat-tat-tat/1479714724?i=1479714727",
+              "discNumber": 1,
+              "genreNames": [
+                "J-Pop",
+                "ミュージック"
+              ],
+              "durationInMillis": 150500,
+              "releaseDate": "2019-09-19",
+              "name": "Rat-tat-tat",
+              "isrc": "JPB601902973",
+              "hasLyrics": true,
+              "albumName": "Rat-tat-tat - Single",
+              "playParams": {
+                "id": "1479714727",
+                "kind": "song"
+              },
+              "trackNumber": 1,
+              "composerName": "Ricky Luna/Rolando Luna/Deekei & ZERO(YVES&ADAMS)/Ricky Luna/Rolando Luna/Deekei"
+            }
+          },
+          {
+            "id": "1441633535",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1441633535",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview118/v4/ce/4d/98/ce4d9842-e82a-a3cc-e283-5fde845c9b79/mzaf_2628363487291949308.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3000,
+                "url": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/f9/e0/af/f9e0afca-db4f-8e09-87b0-0ebea8925123/dj.upqukhjk.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "fffeff",
+                "textColor1": "00000a",
+                "textColor2": "1b2d55",
+                "textColor3": "33323b",
+                "textColor4": "495777"
+              },
+              "artistName": "ONE OK ROCK",
+              "url": "https://music.apple.com/jp/album/stand-out-fit-in/1441633532?i=1441633535",
+              "discNumber": 1,
+              "genreNames": [
+                "ロック",
+                "ミュージック"
+              ],
+              "durationInMillis": 214547,
+              "releaseDate": "2018-11-23",
+              "name": "Stand Out Fit In",
+              "isrc": "JPJ221801188",
+              "hasLyrics": true,
+              "albumName": "Eye of the Storm",
+              "playParams": {
+                "id": "1441633535",
+                "kind": "song"
+              },
+              "trackNumber": 2,
+              "composerName": "TAKA, デレク・フルマン, Liam O'Donnell & Jamil Kazmi"
+            }
+          },
+          {
+            "id": "1488073960",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1488073960",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview113/v4/3f/29/89/3f298905-ccfe-9ca6-0acc-caacae82d0f6/mzaf_14192943577319027380.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3000,
+                "url": "https://is4-ssl.mzstatic.com/image/thumb/Music123/v4/96/95/4f/96954f84-b611-cff3-8a4f-51f5d5ba791b/jacket_SRCL11329B01A_550.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "212121",
+                "textColor1": "e4e4e4",
+                "textColor2": "f2d6cf",
+                "textColor3": "bdbdbd",
+                "textColor4": "c8b2ac"
+              },
+              "artistName": "UVERworld",
+              "url": "https://music.apple.com/jp/album/making-it-drive/1488073959?i=1488073960",
+              "discNumber": 1,
+              "genreNames": [
+                "ロック",
+                "ミュージック"
+              ],
+              "durationInMillis": 262013,
+              "releaseDate": "2019-11-23",
+              "name": "Making it Drive",
+              "isrc": "JPU901903010",
+              "hasLyrics": true,
+              "albumName": "UNSER",
+              "playParams": {
+                "id": "1488073960",
+                "kind": "song"
+              },
+              "trackNumber": 1,
+              "composerName": "UVERworld, Chris Wallace & ドリュー・ライアン・スコット"
+            }
+          },
+          {
+            "id": "1488073961",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1488073961",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview123/v4/92/dd/eb/92ddeba7-982a-7f30-5ede-e320be717b7e/mzaf_13782405964006857854.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3000,
+                "url": "https://is4-ssl.mzstatic.com/image/thumb/Music123/v4/96/95/4f/96954f84-b611-cff3-8a4f-51f5d5ba791b/jacket_SRCL11329B01A_550.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "212121",
+                "textColor1": "e4e4e4",
+                "textColor2": "f2d6cf",
+                "textColor3": "bdbdbd",
+                "textColor4": "c8b2ac"
+              },
+              "artistName": "UVERworld",
+              "url": "https://music.apple.com/jp/album/after-life/1488073959?i=1488073961",
+              "discNumber": 1,
+              "genreNames": [
+                "ロック",
+                "ミュージック"
+              ],
+              "durationInMillis": 312747,
+              "releaseDate": "2019-12-04",
+              "name": "AFTER LIFE",
+              "isrc": "JPU901903011",
+              "hasLyrics": true,
+              "albumName": "UNSER",
+              "playParams": {
+                "id": "1488073961",
+                "kind": "song"
+              },
+              "trackNumber": 2,
+              "composerName": "TAKUYA∞"
+            }
+          },
+          {
+            "id": "1488729941",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1488729941",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview113/v4/97/56/ba/9756bad4-9aa4-4292-6263-f4c621cfd667/mzaf_11623187250257032479.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 1400,
+                "height": 1400,
+                "url": "https://is3-ssl.mzstatic.com/image/thumb/Music113/v4/92/93/01/92930170-dfcf-9a31-0b87-8ec2bcda39bd/VEATP-37036.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "000000",
+                "textColor1": "f1f1f1",
+                "textColor2": "d8d8d8",
+                "textColor3": "c1c1c1",
+                "textColor4": "adadad"
+              },
+              "artistName": "MAMAMOO",
+              "url": "https://music.apple.com/jp/album/hip/1488729629?i=1488729941",
+              "discNumber": 1,
+              "genreNames": [
+                "K-Pop",
+                "ミュージック",
+                "ポップ"
+              ],
+              "durationInMillis": 195305,
+              "releaseDate": "2019-11-22",
+              "name": "HIP",
+              "isrc": "KRA381904798",
+              "hasLyrics": true,
+              "albumName": "reality in BLACK",
+              "playParams": {
+                "id": "1488729941",
+                "kind": "song"
+              },
+              "trackNumber": 4,
+              "composerName": "KIM DO HOON, Park Woo Sang, Hwa Sa, KIM DO HOON, Park Woo Sang & Hwa Sa"
+            }
+          },
+          {
+            "id": "1441633607",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1441633607",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview118/v4/05/a6/ad/05a6ad8e-2118-6f35-0baf-ede173622a01/mzaf_2973140477153754842.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3000,
+                "url": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/f9/e0/af/f9e0afca-db4f-8e09-87b0-0ebea8925123/dj.upqukhjk.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "fffeff",
+                "textColor1": "00000a",
+                "textColor2": "1b2d55",
+                "textColor3": "33323b",
+                "textColor4": "495777"
+              },
+              "artistName": "ONE OK ROCK",
+              "url": "https://music.apple.com/jp/album/wasted-nights/1441633532?i=1441633607",
+              "discNumber": 1,
+              "genreNames": [
+                "ロック",
+                "ミュージック"
+              ],
+              "durationInMillis": 224773,
+              "releaseDate": "2019-02-01",
+              "name": "Wasted Nights",
+              "isrc": "JPJ221801192",
+              "hasLyrics": true,
+              "albumName": "Eye of the Storm",
+              "playParams": {
+                "id": "1441633607",
+                "kind": "song"
+              },
+              "trackNumber": 6,
+              "composerName": "TAKA, Pete Nappi, Janée “Jin Jin” Bennett & Jamil Kazmi"
+            }
+          },
+          {
+            "id": "1486753966",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1486753966",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview113/v4/0f/33/de/0f33de26-2f5e-4122-fbbd-216ce9c0a993/mzaf_15340862868345762492.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 1654,
+                "height": 1654,
+                "url": "https://is5-ssl.mzstatic.com/image/thumb/Music113/v4/a0/6d/8a/a06d8a34-709f-1987-09b7-9915e3b847d8/KICA-3281.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "4d008c",
+                "textColor1": "fffffd",
+                "textColor2": "17f025",
+                "textColor3": "dbcbe6",
+                "textColor4": "22c03a"
+              },
+              "artistName": "Bad Ass Temple",
+              "url": "https://music.apple.com/jp/album/bad-ass-temple-funky-sounds/1486753960?i=1486753966",
+              "discNumber": 1,
+              "genreNames": [
+                "アニメ",
+                "ミュージック"
+              ],
+              "durationInMillis": 269978,
+              "releaseDate": "2019-11-27",
+              "name": "Bad Ass Temple Funky Sounds",
+              "isrc": "JPKI01916267",
+              "hasLyrics": true,
+              "albumName": "ヒプノシスマイク ナゴヤ・ディビジョン 「Bad Ass Temple Funky Sounds」",
+              "playParams": {
+                "id": "1486753966",
+                "kind": "song"
+              },
+              "trackNumber": 1
+            }
+          },
+          {
+            "id": "526022835",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/526022835",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/Music/df/36/63/mzi.yveayxcp.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3445,
+                "height": 3392,
+                "url": "https://is4-ssl.mzstatic.com/image/thumb/Music/v4/44/c1/3e/44c13e11-f52d-d11d-d13f-e3acd9524bc3/Niche_1M.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "ffffff",
+                "textColor1": "090805",
+                "textColor2": "1c1b1a",
+                "textColor3": "3a3937",
+                "textColor4": "494947"
+              },
+              "artistName": "ONE OK ROCK",
+              "url": "https://music.apple.com/jp/album/wherever-you-are/526022565?i=526022835",
+              "discNumber": 1,
+              "genreNames": [
+                "ロック",
+                "ミュージック",
+                "ワールド",
+                "J-Pop"
+              ],
+              "durationInMillis": 295600,
+              "releaseDate": "2010-06-09",
+              "name": "Wherever you are",
+              "isrc": "JPJ221000176",
+              "hasLyrics": true,
+              "albumName": "Nicheシンドローム",
+              "playParams": {
+                "id": "526022835",
+                "kind": "song"
+              },
+              "trackNumber": 9
+            }
+          },
+          {
+            "id": "1451570480",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1451570480",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview114/v4/db/46/17/db4617d7-d100-87e0-e745-a3cdb874a91d/mzaf_4558405059722069681.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3000,
+                "url": "https://is5-ssl.mzstatic.com/image/thumb/Music114/v4/87/20/46/872046b0-531a-745c-84df-9d9c02acc062/00602577303739.rgb.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "fae7eb",
+                "textColor1": "5a0f18",
+                "textColor2": "55161a",
+                "textColor3": "7a3a42",
+                "textColor4": "764043"
+              },
+              "artistName": "back number",
+              "url": "https://music.apple.com/jp/album/%E8%8A%B1%E6%9D%9F/1451570468?i=1451570480",
+              "discNumber": 1,
+              "genreNames": [
+                "J-Pop",
+                "ミュージック"
+              ],
+              "durationInMillis": 286053,
+              "releaseDate": "2011-06-15",
+              "name": "花束",
+              "isrc": "JPPO01131060",
+              "hasLyrics": true,
+              "albumName": "スーパースター",
+              "playParams": {
+                "id": "1451570480",
+                "kind": "song"
+              },
+              "trackNumber": 3,
+              "composerName": "清水依与吏"
+            }
+          },
+          {
+            "id": "1423513593",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1423513593",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview128/v4/da/43/cb/da43cb41-ca9f-3dd0-3c8d-d938f4d8f7be/mzaf_8814417601760290309.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3024,
+                "height": 3024,
+                "url": "https://is2-ssl.mzstatic.com/image/thumb/Music118/v4/f4/ff/b5/f4ffb5f4-acbb-3abe-763f-4daff6c4e19d/jacket_ESXX01913B01A_550.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "c0a8a2",
+                "textColor1": "141222",
+                "textColor2": "1b1926",
+                "textColor3": "36303c",
+                "textColor4": "3c353f"
+              },
+              "artistName": "wacci",
+              "url": "https://music.apple.com/jp/album/%E5%88%A5%E3%81%AE%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%E3%81%AB%E3%81%AA%E3%81%A3%E3%81%9F%E3%82%88/1423513584?i=1423513593",
+              "discNumber": 1,
+              "genreNames": [
+                "J-Pop",
+                "ミュージック"
+              ],
+              "durationInMillis": 303000,
+              "releaseDate": "2018-08-22",
+              "name": "別の人の彼女になったよ",
+              "isrc": "JPU901802225",
+              "hasLyrics": true,
+              "albumName": "別の人の彼女になったよ - Single",
+              "playParams": {
+                "id": "1423513593",
+                "kind": "song"
+              },
+              "trackNumber": 1,
+              "composerName": "橋口洋平"
+            }
+          },
+          {
+            "id": "1451566361",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1451566361",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview124/v4/e2/2d/ac/e22daced-2396-9689-045f-9ac06e8e44ee/mzaf_4153947838312817436.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3000,
+                "url": "https://is5-ssl.mzstatic.com/image/thumb/Music124/v4/92/95/11/929511e4-5938-ff07-919f-364d301ae5ea/00602577303906.rgb.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "88b1cb",
+                "textColor1": "121d21",
+                "textColor2": "112428",
+                "textColor3": "293b43",
+                "textColor4": "294148"
+              },
+              "artistName": "back number",
+              "url": "https://music.apple.com/jp/album/%E3%83%92%E3%83%AD%E3%82%A4%E3%83%B3/1451566360?i=1451566361",
+              "discNumber": 1,
+              "genreNames": [
+                "J-Pop",
+                "ミュージック"
+              ],
+              "durationInMillis": 270040,
+              "releaseDate": "2015-01-21",
+              "name": "ヒロイン",
+              "isrc": "JPPO01413047",
+              "hasLyrics": true,
+              "albumName": "ヒロイン - EP",
+              "playParams": {
+                "id": "1451566361",
+                "kind": "song"
+              },
+              "trackNumber": 1,
+              "composerName": "清水依与吏"
+            }
+          },
+          {
+            "id": "1488148847",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1488148847",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview113/v4/71/4d/5e/714d5e29-9fc7-dee7-13d0-9d0d6d4f0832/mzaf_1254856467070572009.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3000,
+                "url": "https://is4-ssl.mzstatic.com/image/thumb/Music123/v4/cd/88/57/cd885765-7aee-c1ba-2131-d79f3a8dd803/19UM1IM03476.rgb.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "c0d6ee",
+                "textColor1": "090b18",
+                "textColor2": "223647",
+                "textColor3": "2d3343",
+                "textColor4": "425668"
+              },
+              "artistName": "神田沙也加, 松たか子, 武内駿輔, 原慎一郎 & 『アナと雪の女王2』キャスト",
+              "url": "https://music.apple.com/jp/album/%E3%81%9A%E3%81%A3%E3%81%A8%E3%81%8B%E3%82%8F%E3%82%89%E3%81%AA%E3%81%84%E3%82%82%E3%81%AE/1488147908?i=1488148847",
+              "discNumber": 1,
+              "genreNames": [
+                "サウンドトラック",
+                "ミュージック"
+              ],
+              "durationInMillis": 210027,
+              "releaseDate": "2019-11-22",
+              "name": "ずっとかわらないもの",
+              "isrc": "USWD11995212",
+              "hasLyrics": true,
+              "albumName": "アナと雪の女王2 (オリジナル・サウンドトラック)",
+              "playParams": {
+                "id": "1488148847",
+                "kind": "song"
+              },
+              "trackNumber": 13,
+              "composerName": "クリステン・アンダーソン=ロペス & ロバート・ロペス"
+            }
+          },
+          {
+            "id": "1454643219",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1454643219",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview114/v4/2e/c2/31/2ec231d0-b577-f5eb-49f8-9c054050e376/mzaf_353860018727779896.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3000,
+                "url": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/f1/6e/aa/f16eaae6-0d9a-2c42-7129-07a3b7c0dde0/00602577530128.rgb.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "f7a6b7",
+                "textColor1": "000000",
+                "textColor2": "221416",
+                "textColor3": "312124",
+                "textColor4": "4c3136"
+              },
+              "artistName": "Mrs. GREEN APPLE",
+              "url": "https://music.apple.com/jp/album/%E3%83%AD%E3%83%9E%E3%83%B3%E3%83%81%E3%82%B7%E3%82%BA%E3%83%A0/1454643208?i=1454643219",
+              "discNumber": 1,
+              "genreNames": [
+                "ロック",
+                "ミュージック"
+              ],
+              "durationInMillis": 213747,
+              "releaseDate": "2019-03-15",
+              "name": "ロマンチシズム",
+              "isrc": "JPPO01900466",
+              "hasLyrics": true,
+              "albumName": "ロマンチシズム - EP",
+              "playParams": {
+                "id": "1454643219",
+                "kind": "song"
+              },
+              "trackNumber": 1,
+              "composerName": "大森元貴"
+            }
+          },
+          {
+            "id": "1488073962",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1488073962",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview123/v4/de/e6/e7/dee6e78a-c547-e977-e7ca-48907e2aae0d/mzaf_15520810878061678129.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3000,
+                "url": "https://is4-ssl.mzstatic.com/image/thumb/Music123/v4/96/95/4f/96954f84-b611-cff3-8a4f-51f5d5ba791b/jacket_SRCL11329B01A_550.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "212121",
+                "textColor1": "e4e4e4",
+                "textColor2": "f2d6cf",
+                "textColor3": "bdbdbd",
+                "textColor4": "c8b2ac"
+              },
+              "artistName": "UVERworld",
+              "url": "https://music.apple.com/jp/album/touch-off/1488073959?i=1488073962",
+              "discNumber": 1,
+              "genreNames": [
+                "ロック",
+                "ミュージック"
+              ],
+              "durationInMillis": 258707,
+              "releaseDate": "2019-02-27",
+              "name": "Touch off",
+              "isrc": "JPU901900310",
+              "hasLyrics": true,
+              "albumName": "UNSER",
+              "playParams": {
+                "id": "1488073962",
+                "kind": "song"
+              },
+              "trackNumber": 3,
+              "composerName": "UVERworld"
+            }
+          },
+          {
+            "id": "1487502476",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1487502476",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview123/v4/72/cf/5a/72cf5ad7-e1b3-d6ce-84b1-973d0b52d10b/mzaf_2144917941139718442.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3000,
+                "url": "https://is3-ssl.mzstatic.com/image/thumb/Music123/v4/85/57/85/855785ff-6433-a6b5-45e2-ccee55d608dc/19UM1IM00404.rgb.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "cfbe88",
+                "textColor1": "170206",
+                "textColor2": "482125",
+                "textColor3": "3c2820",
+                "textColor4": "634039"
+              },
+              "artistName": "ビリー・アイリッシュ",
+              "url": "https://music.apple.com/jp/album/everything-i-wanted/1487502456?i=1487502476",
+              "discNumber": 1,
+              "genreNames": [
+                "オルタナティブ",
+                "ミュージック"
+              ],
+              "durationInMillis": 245426,
+              "releaseDate": "2019-11-13",
+              "name": "everything i wanted",
+              "isrc": "USUM71922577",
+              "hasLyrics": true,
+              "albumName": "everything i wanted - Single",
+              "playParams": {
+                "id": "1487502476",
+                "kind": "song"
+              },
+              "trackNumber": 1,
+              "composerName": "ビリー・アイリッシュ & FINNEAS"
+            }
+          },
+          {
+            "id": "1488073965",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1488073965",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview123/v4/9f/e6/42/9fe64286-b546-0446-9ad8-270f380e5bea/mzaf_4097001023540418582.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3000,
+                "url": "https://is4-ssl.mzstatic.com/image/thumb/Music123/v4/96/95/4f/96954f84-b611-cff3-8a4f-51f5d5ba791b/jacket_SRCL11329B01A_550.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "212121",
+                "textColor1": "e4e4e4",
+                "textColor2": "f2d6cf",
+                "textColor3": "bdbdbd",
+                "textColor4": "c8b2ac"
+              },
+              "artistName": "UVERworld",
+              "url": "https://music.apple.com/jp/album/first-sight/1488073959?i=1488073965",
+              "discNumber": 1,
+              "genreNames": [
+                "ロック",
+                "ミュージック"
+              ],
+              "durationInMillis": 202013,
+              "releaseDate": "2019-12-04",
+              "name": "First Sight",
+              "isrc": "JPU901903014",
+              "hasLyrics": true,
+              "albumName": "UNSER",
+              "playParams": {
+                "id": "1488073965",
+                "kind": "song"
+              },
+              "trackNumber": 6,
+              "composerName": "TAKUYA∞ & 克哉"
+            }
+          },
+          {
+            "id": "1479397856",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1479397856",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview123/v4/cd/d8/bf/cdd8bff7-1097-4b5f-c475-e3c05911b12d/mzaf_12590180752401559601.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 1400,
+                "height": 1400,
+                "url": "https://is3-ssl.mzstatic.com/image/thumb/Music113/v4/9c/7d/88/9c7d883d-4477-bf68-f56f-a726030a63a2/PCCA_04822.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "3d635d",
+                "textColor1": "f1f3ed",
+                "textColor2": "f1efe2",
+                "textColor3": "cdd6d0",
+                "textColor4": "cdd3c7"
+              },
+              "artistName": "Official髭男dism",
+              "url": "https://music.apple.com/jp/album/amazing/1479397582?i=1479397856",
+              "discNumber": 1,
+              "genreNames": [
+                "J-Pop",
+                "ミュージック"
+              ],
+              "durationInMillis": 231065,
+              "releaseDate": "2019-09-11",
+              "name": "Amazing",
+              "isrc": "JPPC01900430",
+              "hasLyrics": true,
+              "albumName": "Traveler",
+              "playParams": {
+                "id": "1479397856",
+                "kind": "song"
+              },
+              "trackNumber": 3,
+              "composerName": "藤原聡"
+            }
+          },
+          {
+            "id": "1444834631",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1444834631",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview118/v4/94/11/f8/9411f80e-6dc6-6145-be82-2d4527f2fd75/mzaf_6640633617263208419.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3000,
+                "url": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/fc/3d/40/fc3d4018-1301-c2c8-2109-3595111ee4dc/jacket_BVCL00930B01A_550.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "fcfdff",
+                "textColor1": "030100",
+                "textColor2": "3c0c0d",
+                "textColor3": "353333",
+                "textColor4": "623c3d"
+              },
+              "artistName": "King Gnu",
+              "url": "https://music.apple.com/jp/album/flash/1444834388?i=1444834631",
+              "discNumber": 1,
+              "genreNames": [
+                "オルタナティブ",
+                "ミュージック"
+              ],
+              "durationInMillis": 162587,
+              "releaseDate": "2019-01-16",
+              "name": "Flash!!!",
+              "isrc": "JPU901803912",
+              "hasLyrics": true,
+              "albumName": "Sympa",
+              "playParams": {
+                "id": "1444834631",
+                "kind": "song"
+              },
+              "trackNumber": 3,
+              "composerName": "常田大希"
+            }
+          },
+          {
+            "id": "1488073963",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1488073963",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview123/v4/07/5c/6d/075c6d99-d8b9-104c-a93d-f5706e5eb1ef/mzaf_14227374792501492719.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3000,
+                "url": "https://is4-ssl.mzstatic.com/image/thumb/Music123/v4/96/95/4f/96954f84-b611-cff3-8a4f-51f5d5ba791b/jacket_SRCL11329B01A_550.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "212121",
+                "textColor1": "e4e4e4",
+                "textColor2": "f2d6cf",
+                "textColor3": "bdbdbd",
+                "textColor4": "c8b2ac"
+              },
+              "artistName": "UVERworld",
+              "url": "https://music.apple.com/jp/album/%E5%A2%83%E7%95%8C/1488073959?i=1488073963",
+              "discNumber": 1,
+              "genreNames": [
+                "ロック",
+                "ミュージック"
+              ],
+              "durationInMillis": 168093,
+              "releaseDate": "2019-12-04",
+              "name": "境界",
+              "isrc": "JPU901903012",
+              "hasLyrics": true,
+              "albumName": "UNSER",
+              "playParams": {
+                "id": "1488073963",
+                "kind": "song"
+              },
+              "trackNumber": 4,
+              "composerName": "TAKUYA∞"
+            }
+          },
+          {
+            "id": "1143992597",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1143992597",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview71/v4/f1/2e/45/f12e455c-032f-8bec-08f1-82d413bf2fa8/mzaf_9075125210557222811.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3524,
+                "height": 3000,
+                "url": "https://is3-ssl.mzstatic.com/image/thumb/Music71/v4/ea/18/34/ea1834cd-d472-abd4-c6ad-556075c3eee3/jacket_SECL01987B01A_550.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "c5d0d6",
+                "textColor1": "1e241f",
+                "textColor2": "1e2727",
+                "textColor3": "3f4644",
+                "textColor4": "3f484a"
+              },
+              "artistName": "Aimer",
+              "url": "https://music.apple.com/jp/album/%E3%82%AB%E3%82%BF%E3%82%AA%E3%83%A2%E3%82%A4/1143992407?i=1143992597",
+              "discNumber": 1,
+              "genreNames": [
+                "J-Pop",
+                "ミュージック"
+              ],
+              "durationInMillis": 207360,
+              "releaseDate": "2016-09-21",
+              "name": "カタオモイ",
+              "isrc": "JPU901602293",
+              "hasLyrics": true,
+              "albumName": "daydream",
+              "playParams": {
+                "id": "1143992597",
+                "kind": "song"
+              },
+              "trackNumber": 7,
+              "composerName": "内澤崇仁"
+            }
+          },
+          {
+            "id": "1479600902",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1479600902",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview113/v4/e4/e0/bd/e4e0bd21-a0be-1e2b-5fcb-0858c2c17e32/mzaf_6992892853273950307.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 6000,
+                "height": 6000,
+                "url": "https://is4-ssl.mzstatic.com/image/thumb/Music113/v4/ca/6e/a3/ca6ea33c-5fcb-c607-6c7e-409dfebc2bbb/19UMGIM64502.rgb.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "fdfcfa",
+                "textColor1": "180603",
+                "textColor2": "4c2913",
+                "textColor3": "463734",
+                "textColor4": "6f5341"
+              },
+              "artistName": "マルーン5",
+              "url": "https://music.apple.com/jp/album/memories/1479600900?i=1479600902",
+              "discNumber": 1,
+              "genreNames": [
+                "ポップ",
+                "ミュージック"
+              ],
+              "durationInMillis": 189486,
+              "releaseDate": "2019-09-20",
+              "name": "Memories",
+              "isrc": "USUM71913350",
+              "hasLyrics": true,
+              "albumName": "Memories - Single",
+              "playParams": {
+                "id": "1479600902",
+                "kind": "song"
+              },
+              "trackNumber": 1,
+              "composerName": "アダム・レヴィーン, Michael Pollack, Jonathan Bellion, Jordan Johnson, Stefan Johnson, ヴィンセント・フォード & Jacob Kasher Hindlin"
+            }
+          },
+          {
+            "id": "1464549844",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1464549844",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview113/v4/40/09/6a/40096ac6-abda-4704-d1f3-d2544998e105/mzaf_5633608309366046581.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 4000,
+                "height": 4000,
+                "url": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/ba/e2/2a/bae22a5e-c878-da64-0ecc-4a3584a1a139/190295411411.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "fafafa",
+                "textColor1": "000000",
+                "textColor2": "232323",
+                "textColor3": "323232",
+                "textColor4": "4e4e4e"
+              },
+              "artistName": "エド・シーラン & ジャスティン・ビーバー",
+              "url": "https://music.apple.com/jp/album/i-dont-care/1464549183?i=1464549844",
+              "discNumber": 1,
+              "genreNames": [
+                "ポップ",
+                "ミュージック"
+              ],
+              "durationInMillis": 219947,
+              "releaseDate": "2019-05-10",
+              "name": "I Don't Care",
+              "isrc": "GBAHS1900673",
+              "hasLyrics": true,
+              "albumName": "No.6 Collaborations Project",
+              "playParams": {
+                "id": "1464549844",
+                "kind": "song"
+              },
+              "trackNumber": 6,
+              "composerName": "エド・シーラン, ジャスティン・ビーバー, Fred Gibson, ジェイソン・ボイド, マックス・マーティン & シェルバック"
+            }
+          },
+          {
+            "id": "1488073964",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1488073964",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview113/v4/a9/cc/0c/a9cc0c82-d3c2-7558-4333-f84c21aa70b1/mzaf_16059108333907724059.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3000,
+                "url": "https://is4-ssl.mzstatic.com/image/thumb/Music123/v4/96/95/4f/96954f84-b611-cff3-8a4f-51f5d5ba791b/jacket_SRCL11329B01A_550.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "212121",
+                "textColor1": "e4e4e4",
+                "textColor2": "f2d6cf",
+                "textColor3": "bdbdbd",
+                "textColor4": "c8b2ac"
+              },
+              "artistName": "UVERworld",
+              "url": "https://music.apple.com/jp/album/stay-on/1488073959?i=1488073964",
+              "discNumber": 1,
+              "genreNames": [
+                "ロック",
+                "ミュージック"
+              ],
+              "durationInMillis": 240013,
+              "releaseDate": "2019-12-04",
+              "name": "stay on",
+              "isrc": "JPU901903013",
+              "hasLyrics": true,
+              "albumName": "UNSER",
+              "playParams": {
+                "id": "1488073964",
+                "kind": "song"
+              },
+              "trackNumber": 5,
+              "composerName": "TAKUYA∞"
+            }
+          },
+          {
+            "id": "1469320480",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1469320480",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview113/v4/72/d5/57/72d55725-3116-447a-8885-204226f2d108/mzaf_15066009479823790103.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3000,
+                "url": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/21/af/82/21af82bf-0df5-192d-7d15-31991d8f940c/19UMGIM43696.rgb.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "cde0c2",
+                "textColor1": "0a0c0e",
+                "textColor2": "0a0c0d",
+                "textColor3": "313632",
+                "textColor4": "313631"
+              },
+              "artistName": "BTS",
+              "url": "https://music.apple.com/jp/album/lights/1469320477?i=1469320480",
+              "discNumber": 1,
+              "genreNames": [
+                "K-Pop",
+                "ミュージック",
+                "ポップ"
+              ],
+              "durationInMillis": 292773,
+              "releaseDate": "2019-07-03",
+              "name": "Lights",
+              "isrc": "JPPO01902095",
+              "hasLyrics": true,
+              "albumName": "Lights/Boy With Luv - Single",
+              "playParams": {
+                "id": "1469320480",
+                "kind": "song"
+              },
+              "trackNumber": 1,
+              "composerName": "UTA, Yohei & Sunny Boy"
+            }
+          },
+          {
+            "id": "1488148072",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1488148072",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview113/v4/60/bb/41/60bb417e-48b6-af71-7f00-eec8ddd12d8d/mzaf_13636500331207084055.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3000,
+                "url": "https://is4-ssl.mzstatic.com/image/thumb/Music123/v4/cd/88/57/cd885765-7aee-c1ba-2131-d79f3a8dd803/19UM1IM03476.rgb.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "c0d6ee",
+                "textColor1": "090b18",
+                "textColor2": "223647",
+                "textColor3": "2d3343",
+                "textColor4": "425668"
+              },
+              "artistName": "イディナ・メンゼル & AURORA",
+              "url": "https://music.apple.com/jp/album/%E3%82%A4%E3%83%B3%E3%83%88%E3%82%A5-%E3%82%B8-%E3%82%A2%E3%83%B3%E3%83%8E%E3%82%A6%E3%83%B3/1488147908?i=1488148072",
+              "discNumber": 1,
+              "genreNames": [
+                "サウンドトラック",
+                "ミュージック"
+              ],
+              "durationInMillis": 194973,
+              "releaseDate": "2019-11-22",
+              "name": "イントゥ・ジ・アンノウン",
+              "isrc": "USWD11994667",
+              "hasLyrics": true,
+              "albumName": "アナと雪の女王2 (オリジナル・サウンドトラック)",
+              "playParams": {
+                "id": "1488148072",
+                "kind": "song"
+              },
+              "trackNumber": 3,
+              "composerName": "ロバート・ロペス & クリステン・アンダーソン=ロペス"
+            }
+          },
+          {
+            "id": "1485677117",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1485677117",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview123/v4/3f/7d/45/3f7d45d0-06bc-be62-7fa1-8242035cf20c/mzaf_14758440617459291750.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3000,
+                "url": "https://is3-ssl.mzstatic.com/image/thumb/Music113/v4/5d/b2/7a/5db27acd-6df8-ec07-8808-3e11098634f0/19UMGIM89810.rgb.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "b8b8b8",
+                "textColor1": "060607",
+                "textColor2": "272528",
+                "textColor3": "2a2a2a",
+                "textColor4": "444345"
+              },
+              "artistName": "椎名林檎",
+              "url": "https://music.apple.com/jp/album/%E5%85%AC%E7%84%B6%E3%81%AE%E7%A7%98%E5%AF%86/1485676874?i=1485677117",
+              "discNumber": 2,
+              "genreNames": [
+                "J-Pop",
+                "ミュージック"
+              ],
+              "durationInMillis": 181773,
+              "releaseDate": "2019-09-30",
+              "name": "公然の秘密",
+              "isrc": "JPPO01903935",
+              "hasLyrics": true,
+              "albumName": "ニュートンの林檎",
+              "playParams": {
+                "id": "1485677117",
+                "kind": "song"
+              },
+              "trackNumber": 1,
+              "composerName": "椎名林檎"
+            }
+          },
+          {
+            "id": "1486707477",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1486707477",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview113/v4/d1/bf/02/d1bf02e2-963c-e2c0-b10a-e5d2b36691bb/mzaf_10710143571899948814.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3000,
+                "url": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/84/60/00/846000cd-82a2-e550-5fc4-fceae4a3dbf1/jacket_BVXX01285B01A_550.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "ebc1d8",
+                "textColor1": "090a0f",
+                "textColor2": "001146",
+                "textColor3": "362e38",
+                "textColor4": "2f3463"
+              },
+              "artistName": "King Gnu",
+              "url": "https://music.apple.com/jp/album/%E9%A3%BE%E3%82%8A%E3%81%98%E3%82%83%E3%81%AA%E3%81%84%E3%81%AE%E3%82%88-%E6%B6%99%E3%81%AF/1486707476?i=1486707477",
+              "discNumber": 1,
+              "genreNames": [
+                "オルタナティブ",
+                "ミュージック"
+              ],
+              "durationInMillis": 188957,
+              "releaseDate": "2019-11-27",
+              "name": "飾りじゃないのよ 涙は",
+              "isrc": "JPU901902948",
+              "hasLyrics": true,
+              "albumName": "飾りじゃないのよ 涙は - Single",
+              "playParams": {
+                "id": "1486707477",
+                "kind": "song"
+              },
+              "trackNumber": 1,
+              "composerName": "井上陽水"
+            }
+          },
+          {
+            "id": "1458580455",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1458580455",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview113/v4/fc/f3/82/fcf382c6-18dc-ad62-1029-f846fb35fe61/mzaf_6012572674683339893.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3000,
+                "url": "https://is3-ssl.mzstatic.com/image/thumb/Music113/v4/44/db/10/44db1021-0d93-fe23-1d4c-1f4acee21da3/00602577693038.rgb.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "facbd3",
+                "textColor1": "0f0a09",
+                "textColor2": "3e2c2e",
+                "textColor3": "3e3031",
+                "textColor4": "644b4f"
+              },
+              "artistName": "BLACKPINK",
+              "url": "https://music.apple.com/jp/album/kill-this-love/1458580454?i=1458580455",
+              "discNumber": 1,
+              "genreNames": [
+                "K-Pop",
+                "ミュージック",
+                "ポップ"
+              ],
+              "durationInMillis": 189040,
+              "releaseDate": "2019-04-05",
+              "name": "Kill This Love",
+              "isrc": "KRA401900005",
+              "hasLyrics": true,
+              "albumName": "KILL THIS LOVE - EP",
+              "playParams": {
+                "id": "1458580455",
+                "kind": "song"
+              },
+              "trackNumber": 1,
+              "composerName": "TEDDY, R. Tee, 24 & Bekuh Boom"
+            }
+          },
+          {
+            "id": "1263790415",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1263790415",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview128/v4/49/cd/c8/49cdc8bf-9ffa-4312-88cf-ff12bf0e72a0/mzaf_7123693879677143341.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 2400,
+                "height": 2400,
+                "url": "https://is4-ssl.mzstatic.com/image/thumb/Music128/v4/23/1a/38/231a38d7-ad07-b9bb-6064-ee6c154a3069/TFCC-89632WW.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "0099dd",
+                "textColor1": "0d0e0e",
+                "textColor2": "161616",
+                "textColor3": "0b2a37",
+                "textColor4": "12313e"
+              },
+              "artistName": "DAOKO×米津玄師",
+              "url": "https://music.apple.com/jp/album/%E6%89%93%E4%B8%8A%E8%8A%B1%E7%81%AB/1263790414?i=1263790415",
+              "discNumber": 1,
+              "genreNames": [
+                "J-Pop",
+                "ミュージック",
+                "ロック"
+              ],
+              "durationInMillis": 289335,
+              "releaseDate": "2017-08-16",
+              "name": "打上花火",
+              "isrc": "JPTF01710201",
+              "hasLyrics": true,
+              "albumName": "打上花火 - Single",
+              "playParams": {
+                "id": "1263790415",
+                "kind": "song"
+              },
+              "trackNumber": 1,
+              "composerName": "米津玄師 & 米津玄師"
+            }
+          },
+          {
+            "id": "1384907002",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1384907002",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/df/10/89/df10894c-a144-5b9f-5b72-625ee5521e84/mzaf_411826891101031481.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3000,
+                "url": "https://is4-ssl.mzstatic.com/image/thumb/Music125/v4/9a/a8/69/9aa869e4-feb5-6622-c7c9-3f177a6b131b/00602567717843.rgb.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "151824",
+                "textColor1": "b0d5f5",
+                "textColor2": "d0cbef",
+                "textColor3": "91afcb",
+                "textColor4": "aaa8c6"
+              },
+              "artistName": "BTS",
+              "url": "https://music.apple.com/jp/album/fake-love/1384905573?i=1384907002",
+              "discNumber": 1,
+              "genreNames": [
+                "K-Pop",
+                "ミュージック",
+                "ポップ"
+              ],
+              "durationInMillis": 242333,
+              "releaseDate": "2018-05-18",
+              "name": "FAKE LOVE",
+              "isrc": "QM4TX1817912",
+              "hasLyrics": true,
+              "albumName": "LOVE YOURSELF 轉 'Tear'",
+              "playParams": {
+                "id": "1384907002",
+                "kind": "song"
+              },
+              "trackNumber": 2,
+              "composerName": "Pdogg, \"hitman\"bang & RM"
+            }
+          },
+          {
+            "id": "1488073966",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1488073966",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview123/v4/68/03/c5/6803c5a3-a592-3629-1d29-74928d913326/mzaf_15778321204745274740.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3000,
+                "url": "https://is4-ssl.mzstatic.com/image/thumb/Music123/v4/96/95/4f/96954f84-b611-cff3-8a4f-51f5d5ba791b/jacket_SRCL11329B01A_550.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "212121",
+                "textColor1": "e4e4e4",
+                "textColor2": "f2d6cf",
+                "textColor3": "bdbdbd",
+                "textColor4": "c8b2ac"
+              },
+              "artistName": "UVERworld",
+              "url": "https://music.apple.com/jp/album/odd-future/1488073959?i=1488073966",
+              "discNumber": 1,
+              "genreNames": [
+                "ロック",
+                "ミュージック"
+              ],
+              "durationInMillis": 226493,
+              "releaseDate": "2018-05-02",
+              "name": "ODD FUTURE",
+              "isrc": "JPU901801123",
+              "hasLyrics": true,
+              "albumName": "UNSER",
+              "playParams": {
+                "id": "1488073966",
+                "kind": "song"
+              },
+              "trackNumber": 7,
+              "composerName": "TAKUYA∞ & 克哉"
+            }
+          },
+          {
+            "id": "1488073973",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1488073973",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview113/v4/8d/f6/3a/8df63af6-b3c8-f235-a697-5261f4cdff64/mzaf_5960878269954030158.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3000,
+                "url": "https://is4-ssl.mzstatic.com/image/thumb/Music123/v4/96/95/4f/96954f84-b611-cff3-8a4f-51f5d5ba791b/jacket_SRCL11329B01A_550.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "212121",
+                "textColor1": "e4e4e4",
+                "textColor2": "f2d6cf",
+                "textColor3": "bdbdbd",
+                "textColor4": "c8b2ac"
+              },
+              "artistName": "UVERworld",
+              "url": "https://music.apple.com/jp/album/rob-the-frontier/1488073959?i=1488073973",
+              "discNumber": 1,
+              "genreNames": [
+                "ロック",
+                "ミュージック"
+              ],
+              "durationInMillis": 232773,
+              "releaseDate": "2019-10-16",
+              "name": "ROB THE FRONTIER",
+              "isrc": "JPU901902490",
+              "hasLyrics": true,
+              "albumName": "UNSER",
+              "playParams": {
+                "id": "1488073973",
+                "kind": "song"
+              },
+              "trackNumber": 13,
+              "composerName": "TAKUYA∞ & 信人"
+            }
+          },
+          {
+            "id": "1408505419",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1408505419",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/88/4b/4d/884b4db1-643e-57e2-7ff1-12828948db26/mzaf_81389253561089275.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3000,
+                "url": "https://is2-ssl.mzstatic.com/image/thumb/Music115/v4/b3/83/3a/b3833a63-a7d6-ddec-8eb5-e61e25ba3470/00602567787693.rgb.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "0063ac",
+                "textColor1": "fefcff",
+                "textColor2": "fff000",
+                "textColor3": "cbddee",
+                "textColor4": "ccd323"
+              },
+              "artistName": "Mrs. GREEN APPLE",
+              "url": "https://music.apple.com/jp/album/%E7%82%B9%E6%8F%8F%E3%81%AE%E5%94%84-feat-%E4%BA%95%E4%B8%8A%E8%8B%91%E5%AD%90/1408505088?i=1408505419",
+              "discNumber": 1,
+              "genreNames": [
+                "ロック",
+                "ミュージック"
+              ],
+              "durationInMillis": 307067,
+              "releaseDate": "2018-07-31",
+              "name": "点描の唄 (feat. 井上苑子)",
+              "isrc": "JPPO01802569",
+              "hasLyrics": true,
+              "albumName": "青と夏 - EP",
+              "playParams": {
+                "id": "1408505419",
+                "kind": "song"
+              },
+              "trackNumber": 2,
+              "composerName": "大森元貴"
+            }
+          },
+          {
+            "id": "1374109000",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1374109000",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview118/v4/94/e9/fd/94e9fd7c-82ff-6a3d-8179-dd32fc6651a6/mzaf_8417489116917817294.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 1419,
+                "height": 1407,
+                "url": "https://is2-ssl.mzstatic.com/image/thumb/Music128/v4/83/f7/9d/83f79d93-9969-d6cd-962b-b55bbcf83e37/makeinu_jacket_tujyo.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "221212",
+                "textColor1": "f7f7f9",
+                "textColor2": "d6b6b0",
+                "textColor3": "ccc9ca",
+                "textColor4": "b29590"
+              },
+              "artistName": "ヨルシカ",
+              "url": "https://music.apple.com/jp/album/%E3%81%9F%E3%81%A0%E5%90%9B%E3%81%AB%E6%99%B4%E3%82%8C/1374108987?i=1374109000",
+              "discNumber": 1,
+              "genreNames": [
+                "ロック",
+                "ミュージック"
+              ],
+              "durationInMillis": 198971,
+              "releaseDate": "2018-05-09",
+              "name": "ただ君に晴れ",
+              "isrc": "JPA651804024",
+              "hasLyrics": true,
+              "albumName": "負け犬にアンコールはいらない",
+              "playParams": {
+                "id": "1374109000",
+                "kind": "song"
+              },
+              "trackNumber": 7,
+              "composerName": "n-buna"
+            }
+          },
+          {
+            "id": "1468910018",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1468910018",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview113/v4/e2/da/72/e2da725f-adac-bbf3-77c4-94709bf6007e/mzaf_18197497350480811197.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3000,
+                "url": "https://is2-ssl.mzstatic.com/image/thumb/Music123/v4/0d/13/51/0d1351cc-298c-0c1e-f4e0-3745091b21ec/19UMGIM53914.rgb.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "340f16",
+                "textColor1": "f5cf9d",
+                "textColor2": "f4bf80",
+                "textColor3": "cea982",
+                "textColor4": "cd9c6b"
+              },
+              "artistName": "ショーン・メンデス & カミラ・カベロ",
+              "url": "https://music.apple.com/jp/album/se%C3%B1orita/1468910011?i=1468910018",
+              "discNumber": 1,
+              "genreNames": [
+                "ポップ",
+                "ミュージック"
+              ],
+              "durationInMillis": 190950,
+              "releaseDate": "2019-06-21",
+              "name": "Señorita",
+              "isrc": "USUM71911283",
+              "hasLyrics": true,
+              "albumName": "Señorita - Single",
+              "playParams": {
+                "id": "1468910018",
+                "kind": "song"
+              },
+              "trackNumber": 1,
+              "composerName": "ショーン・メンデス, カミラ・カベロ, Andrew Wotman, ベンジャミン・レヴィン, アリ・タンポジ, シャーロット・エマ・エイチソン, Jack Patterson & Magnus August Hoiberg"
+            }
+          },
+          {
+            "id": "1485847849",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1485847849",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview123/v4/5a/ae/6b/5aae6b56-c2a8-680d-fd45-a01910e96498/mzaf_9474253809697774361.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3000,
+                "url": "https://is4-ssl.mzstatic.com/image/thumb/Music123/v4/d1/82/74/d182744a-16fd-820b-f593-ae86f91eea02/194491538019.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "ffffff",
+                "textColor1": "121c1a",
+                "textColor2": "1c2823",
+                "textColor3": "424947",
+                "textColor4": "4a534f"
+              },
+              "artistName": "嵐",
+              "url": "https://music.apple.com/jp/album/happiness/1485847848?i=1485847849",
+              "discNumber": 1,
+              "genreNames": [
+                "J-Pop",
+                "ミュージック"
+              ],
+              "durationInMillis": 258251,
+              "releaseDate": "2007-09-05",
+              "name": "Happiness",
+              "isrc": "JPQ400700800",
+              "hasLyrics": true,
+              "albumName": "Happiness - Single",
+              "playParams": {
+                "id": "1485847849",
+                "kind": "song"
+              },
+              "trackNumber": 1,
+              "composerName": "Wonderland & 岡田実音"
+            }
+          },
+          {
+            "id": "1455955703",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1455955703",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview124/v4/3a/ff/89/3aff89ef-5cad-be99-3c71-6b56746508df/mzaf_8433092390001370579.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 2592,
+                "height": 2592,
+                "url": "https://is4-ssl.mzstatic.com/image/thumb/Music113/v4/dc/16/62/dc166244-b429-bd96-9974-452af23deaa1/DUED1267_JK.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "d2bfae",
+                "textColor1": "101010",
+                "textColor2": "281b15",
+                "textColor3": "373330",
+                "textColor4": "4a3c33"
+              },
+              "artistName": "ヨルシカ",
+              "url": "https://music.apple.com/jp/album/%E3%81%A0%E3%81%8B%E3%82%89%E5%83%95%E3%81%AF%E9%9F%B3%E6%A5%BD%E3%82%92%E8%BE%9E%E3%82%81%E3%81%9F/1455955689?i=1455955703",
+              "discNumber": 1,
+              "genreNames": [
+                "ロック",
+                "ミュージック"
+              ],
+              "durationInMillis": 242913,
+              "releaseDate": "2019-04-10",
+              "name": "だから僕は音楽を辞めた",
+              "isrc": "JPA651904585",
+              "hasLyrics": true,
+              "albumName": "だから僕は音楽を辞めた",
+              "playParams": {
+                "id": "1455955703",
+                "kind": "song"
+              },
+              "trackNumber": 14,
+              "composerName": "n-buna"
+            }
+          },
+          {
+            "id": "1444834632",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1444834632",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview128/v4/11/c4/37/11c4375d-4bfe-4f89-1b3d-b9c50545ad8a/mzaf_5078664599248719668.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3000,
+                "url": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/fc/3d/40/fc3d4018-1301-c2c8-2109-3595111ee4dc/jacket_BVCL00930B01A_550.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "fcfdff",
+                "textColor1": "030100",
+                "textColor2": "3c0c0d",
+                "textColor3": "353333",
+                "textColor4": "623c3d"
+              },
+              "artistName": "King Gnu",
+              "url": "https://music.apple.com/jp/album/sorrows/1444834388?i=1444834632",
+              "discNumber": 1,
+              "genreNames": [
+                "オルタナティブ",
+                "ミュージック"
+              ],
+              "durationInMillis": 220893,
+              "releaseDate": "2019-01-16",
+              "name": "Sorrows",
+              "isrc": "JPU901803913",
+              "hasLyrics": true,
+              "albumName": "Sympa",
+              "playParams": {
+                "id": "1444834632",
+                "kind": "song"
+              },
+              "trackNumber": 4,
+              "composerName": "常田大希"
+            }
+          },
+          {
+            "id": "1481229017",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1481229017",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview123/v4/4b/95/2e/4b952e16-7702-0e4b-f3f3-eb572577e7de/mzaf_17002339499384423335.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3000,
+                "url": "https://is5-ssl.mzstatic.com/image/thumb/Music123/v4/bb/dd/a5/bbdda589-280b-b84c-aa29-c0927ba7706d/054391940995.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "6cfcc8",
+                "textColor1": "16070b",
+                "textColor2": "140a0b",
+                "textColor3": "273831",
+                "textColor4": "263a31"
+              },
+              "artistName": "Dan + Shay & ジャスティン・ビーバー",
+              "url": "https://music.apple.com/jp/album/10-000-hours/1481229016?i=1481229017",
+              "discNumber": 1,
+              "genreNames": [
+                "カントリー",
+                "ミュージック"
+              ],
+              "durationInMillis": 167693,
+              "releaseDate": "2019-10-04",
+              "name": "10,000 Hours",
+              "isrc": "USWB11902408",
+              "hasLyrics": true,
+              "albumName": "10,000 Hours - Single",
+              "playParams": {
+                "id": "1481229017",
+                "kind": "song"
+              },
+              "trackNumber": 1,
+              "composerName": "ジャスティン・ビーバー, Dan Smyers, ジェイソン・ボイド, Jessie Jo Dillon, Jordan Reynolds & Shay Mooney"
+            }
+          },
+          {
+            "id": "1023311584",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1023311584",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/Music7/v4/03/7c/cf/037ccf09-4985-3ae2-cd4e-561854bb60e3/mzaf_1874573963540352457.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 1400,
+                "height": 1400,
+                "url": "https://is5-ssl.mzstatic.com/image/thumb/Music60/v4/f8/cf/e5/f8cfe5bf-1fda-0805-f18f-782a248d68e8/mzm.fqtdkkfw.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "dedddb",
+                "textColor1": "100e0d",
+                "textColor2": "292828",
+                "textColor3": "393736",
+                "textColor4": "4d4c4c"
+              },
+              "artistName": "あいみょん",
+              "url": "https://music.apple.com/jp/album/%E8%B2%B4%E6%96%B9%E8%A7%A3%E5%89%96%E7%B4%94%E6%84%9B%E6%AD%8C-%E6%AD%BB%E3%81%AD/1023311576?i=1023311584",
+              "discNumber": 1,
+              "genreNames": [
+                "ロック",
+                "ミュージック"
+              ],
+              "durationInMillis": 266520,
+              "releaseDate": "2015-05-20",
+              "name": "貴方解剖純愛歌~死ね~",
+              "isrc": "JPC841501501",
+              "hasLyrics": true,
+              "albumName": "tamago",
+              "playParams": {
+                "id": "1023311584",
+                "kind": "song"
+              },
+              "trackNumber": 1,
+              "composerName": "あいみょん & あいみょん"
+            }
+          },
+          {
+            "id": "1460387516",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1460387516",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview113/v4/6d/d9/26/6dd9263c-1c29-4f6c-a5e6-775739d11169/mzaf_6989956008708469729.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3000,
+                "url": "https://is4-ssl.mzstatic.com/image/thumb/Music123/v4/16/79/f5/1679f584-be7e-859a-2fe5-5f2bb9f54a35/190295429072.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "fbd6bc",
+                "textColor1": "3a242a",
+                "textColor2": "482c30",
+                "textColor3": "604747",
+                "textColor4": "6c4e4c"
+              },
+              "artistName": "TWICE",
+              "url": "https://music.apple.com/jp/album/fancy/1460387455?i=1460387516",
+              "discNumber": 1,
+              "genreNames": [
+                "K-Pop",
+                "ミュージック",
+                "ポップ"
+              ],
+              "durationInMillis": 213886,
+              "releaseDate": "2019-04-22",
+              "name": "FANCY",
+              "isrc": "US5TA1900042",
+              "hasLyrics": true,
+              "albumName": "FANCY YOU - EP",
+              "playParams": {
+                "id": "1460387516",
+                "kind": "song"
+              },
+              "trackNumber": 1,
+              "composerName": "Black Eyed Pilseung & Jeon Goon"
+            }
+          },
+          {
+            "id": "1479397867",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1479397867",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview123/v4/9e/30/6c/9e306c3f-1545-a5a0-8381-00600d2ce572/mzaf_14700719889912068925.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 1400,
+                "height": 1400,
+                "url": "https://is3-ssl.mzstatic.com/image/thumb/Music113/v4/9c/7d/88/9c7d883d-4477-bf68-f56f-a726030a63a2/PCCA_04822.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "3d635d",
+                "textColor1": "f1f3ed",
+                "textColor2": "f1efe2",
+                "textColor3": "cdd6d0",
+                "textColor4": "cdd3c7"
+              },
+              "artistName": "Official髭男dism",
+              "url": "https://music.apple.com/jp/album/fire-ground/1479397582?i=1479397867",
+              "discNumber": 1,
+              "genreNames": [
+                "J-Pop",
+                "ミュージック"
+              ],
+              "durationInMillis": 223416,
+              "releaseDate": "2019-09-11",
+              "name": "FIRE GROUND",
+              "isrc": "JPPC01801628",
+              "hasLyrics": true,
+              "albumName": "Traveler",
+              "playParams": {
+                "id": "1479397867",
+                "kind": "song"
+              },
+              "trackNumber": 9,
+              "composerName": "藤原聡"
+            }
+          },
+          {
+            "id": "1394013616",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1394013616",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/54/f6/40/54f640d1-ef48-c454-a62c-c1660dd725de/mzaf_1825670187536855626.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 2000,
+                "height": 2000,
+                "url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/e6/df/22/e6df22c6-4e4e-8ba4-1ab9-2cd939149a91/jk.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "ffffff",
+                "textColor1": "0d0d0d",
+                "textColor2": "191919",
+                "textColor3": "3d3e3d",
+                "textColor4": "474747"
+              },
+              "artistName": "Official髭男dism",
+              "url": "https://music.apple.com/jp/album/escapade/1394013451?i=1394013616",
+              "discNumber": 1,
+              "genreNames": [
+                "J-Pop",
+                "ミュージック"
+              ],
+              "durationInMillis": 262685,
+              "releaseDate": "2018-04-11",
+              "name": "ESCAPADE",
+              "isrc": "JPC841800603",
+              "hasLyrics": true,
+              "albumName": "エスカパレード",
+              "playParams": {
+                "id": "1394013616",
+                "kind": "song"
+              },
+              "trackNumber": 3,
+              "composerName": "藤原聡"
+            }
+          },
+          {
+            "id": "1441633609",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1441633609",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview118/v4/df/fa/d6/dffad605-e7b5-151b-20c7-bfcf33ba8b72/mzaf_3810334316343060181.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3000,
+                "url": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/f9/e0/af/f9e0afca-db4f-8e09-87b0-0ebea8925123/dj.upqukhjk.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "fffeff",
+                "textColor1": "00000a",
+                "textColor2": "1b2d55",
+                "textColor3": "33323b",
+                "textColor4": "495777"
+              },
+              "artistName": "ONE OK ROCK",
+              "url": "https://music.apple.com/jp/album/change/1441633532?i=1441633609",
+              "discNumber": 1,
+              "genreNames": [
+                "ロック",
+                "ミュージック"
+              ],
+              "durationInMillis": 176947,
+              "releaseDate": "2018-02-16",
+              "name": "Change",
+              "isrc": "JPJ221801085",
+              "hasLyrics": true,
+              "albumName": "Eye of the Storm",
+              "playParams": {
+                "id": "1441633609",
+                "kind": "song"
+              },
+              "trackNumber": 7,
+              "composerName": "TAKA, Pete Nappi, Joshua Lewis Golden, Ethan Thompson & Jamil Kazmi"
+            }
+          },
+          {
+            "id": "1465208772",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1465208772",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview113/v4/88/ed/24/88ed2444-4408-cbab-75ad-04d14d92c8e1/mzaf_9612638030117413797.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 1400,
+                "height": 1400,
+                "url": "https://is5-ssl.mzstatic.com/image/thumb/Music123/v4/e6/26/84/e62684bc-e582-de6a-a9cb-3279deca3967/VICL-65194.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "005c7f",
+                "textColor1": "fefeff",
+                "textColor2": "e8f9ff",
+                "textColor3": "cbdde5",
+                "textColor4": "b9d9e5"
+              },
+              "artistName": "サカナクション",
+              "url": "https://music.apple.com/jp/album/%E6%96%B0%E5%AE%9D%E5%B3%B6/1465208767?i=1465208772",
+              "discNumber": 1,
+              "genreNames": [
+                "ロック",
+                "ミュージック",
+                "J-Pop"
+              ],
+              "durationInMillis": 305000,
+              "releaseDate": "2018-03-28",
+              "name": "新宝島",
+              "isrc": "JPVI01527970",
+              "hasLyrics": true,
+              "albumName": "834.194",
+              "playParams": {
+                "id": "1465208772",
+                "kind": "song"
+              },
+              "trackNumber": 5,
+              "composerName": "山口一郎 & 山口一郎"
+            }
+          },
+          {
+            "id": "1468137287",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1468137287",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview113/v4/89/5e/00/895e00ec-5027-1e10-268b-e92dc9a6333c/mzaf_3946459416362520903.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 2340,
+                "height": 2340,
+                "url": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/c6/e5/10/c6e5103f-3aab-fed5-1fce-b0cc0971a181/190295402242.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "faf4f4",
+                "textColor1": "0b0909",
+                "textColor2": "0b0a0a",
+                "textColor3": "3b3838",
+                "textColor4": "3b3939"
+              },
+              "artistName": "ちゃんみな",
+              "url": "https://music.apple.com/jp/album/never-grow-up/1468137281?i=1468137287",
+              "discNumber": 1,
+              "genreNames": [
+                "ヒップホップ／ラップ",
+                "ミュージック"
+              ],
+              "durationInMillis": 196253,
+              "releaseDate": "2019-07-19",
+              "name": "Never Grow Up",
+              "isrc": "JPWP01970529",
+              "hasLyrics": true,
+              "albumName": "Never Grow Up",
+              "playParams": {
+                "id": "1468137287",
+                "kind": "song"
+              },
+              "trackNumber": 4,
+              "composerName": "ちゃんみな & Ryosuke \"Dr.R\" Sakai"
+            }
+          },
+          {
+            "id": "1488073967",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1488073967",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview113/v4/29/d0/47/29d0479f-9d3d-7ae6-4dca-40e4eb811370/mzaf_11839947292238933329.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3000,
+                "url": "https://is4-ssl.mzstatic.com/image/thumb/Music123/v4/96/95/4f/96954f84-b611-cff3-8a4f-51f5d5ba791b/jacket_SRCL11329B01A_550.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "212121",
+                "textColor1": "e4e4e4",
+                "textColor2": "f2d6cf",
+                "textColor3": "bdbdbd",
+                "textColor4": "c8b2ac"
+              },
+              "artistName": "UVERworld",
+              "url": "https://music.apple.com/jp/album/%E7%84%A1%E6%84%8F%E5%91%B3%E3%81%AB%E3%81%AA%E3%82%8B%E5%A4%9C/1488073959?i=1488073967",
+              "discNumber": 1,
+              "genreNames": [
+                "ロック",
+                "ミュージック"
+              ],
+              "durationInMillis": 222373,
+              "releaseDate": "2019-12-04",
+              "name": "無意味になる夜",
+              "isrc": "JPU901903015",
+              "hasLyrics": true,
+              "albumName": "UNSER",
+              "playParams": {
+                "id": "1488073967",
+                "kind": "song"
+              },
+              "trackNumber": 8,
+              "composerName": "TAKUYA∞"
+            }
+          },
+          {
+            "id": "1485856827",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1485856827",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview123/v4/7a/89/c3/7a89c3ad-ca10-fb59-385a-a23169f89095/mzaf_16478075384951499904.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3000,
+                "url": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/70/81/20/708120e3-ad2e-7841-b041-8a3dd709bb9e/dj.jalxiojo.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "ffffff",
+                "textColor1": "060504",
+                "textColor2": "442b1f",
+                "textColor3": "383736",
+                "textColor4": "69554b"
+              },
+              "artistName": "嵐",
+              "url": "https://music.apple.com/jp/album/a-ra-shi/1485856826?i=1485856827",
+              "discNumber": 1,
+              "genreNames": [
+                "J-Pop",
+                "ミュージック"
+              ],
+              "durationInMillis": 267069,
+              "releaseDate": "1999-11-03",
+              "name": "A・RA・SHI",
+              "isrc": "JPQ400200070",
+              "hasLyrics": true,
+              "albumName": "A・RA・SHI - Single",
+              "playParams": {
+                "id": "1485856827",
+                "kind": "song"
+              },
+              "trackNumber": 1,
+              "composerName": "JT & 馬飼野康二"
+            }
+          },
+          {
+            "id": "1488073970",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1488073970",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview123/v4/c6/e5/53/c6e55348-2f86-cabf-eb81-748d54487b40/mzaf_4749874767165602915.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3000,
+                "url": "https://is4-ssl.mzstatic.com/image/thumb/Music123/v4/96/95/4f/96954f84-b611-cff3-8a4f-51f5d5ba791b/jacket_SRCL11329B01A_550.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "212121",
+                "textColor1": "e4e4e4",
+                "textColor2": "f2d6cf",
+                "textColor3": "bdbdbd",
+                "textColor4": "c8b2ac"
+              },
+              "artistName": "UVERworld",
+              "url": "https://music.apple.com/jp/album/oxymoron/1488073959?i=1488073970",
+              "discNumber": 1,
+              "genreNames": [
+                "ロック",
+                "ミュージック"
+              ],
+              "durationInMillis": 267893,
+              "releaseDate": "2019-12-04",
+              "name": "OXYMORON",
+              "isrc": "JPU901903016",
+              "hasLyrics": true,
+              "albumName": "UNSER",
+              "playParams": {
+                "id": "1488073970",
+                "kind": "song"
+              },
+              "trackNumber": 11,
+              "composerName": "UVERworld, Erik Ron & ドリュー・ライアン・スコット"
+            }
+          },
+          {
+            "id": "1479397858",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1479397858",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview123/v4/b2/f0/e3/b2f0e304-16db-d1ad-10c0-ee3c87422ffc/mzaf_14922453653677403074.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 1400,
+                "height": 1400,
+                "url": "https://is3-ssl.mzstatic.com/image/thumb/Music113/v4/9c/7d/88/9c7d883d-4477-bf68-f56f-a726030a63a2/PCCA_04822.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "3d635d",
+                "textColor1": "f1f3ed",
+                "textColor2": "f1efe2",
+                "textColor3": "cdd6d0",
+                "textColor4": "cdd3c7"
+              },
+              "artistName": "Official髭男dism",
+              "url": "https://music.apple.com/jp/album/rowan/1479397582?i=1479397858",
+              "discNumber": 1,
+              "genreNames": [
+                "J-Pop",
+                "ミュージック"
+              ],
+              "durationInMillis": 284224,
+              "releaseDate": "2019-10-09",
+              "name": "Rowan",
+              "isrc": "JPPC01901539",
+              "hasLyrics": true,
+              "albumName": "Traveler",
+              "playParams": {
+                "id": "1479397858",
+                "kind": "song"
+              },
+              "trackNumber": 4,
+              "composerName": "小笹大輔"
+            }
+          },
+          {
+            "id": "1488717010",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1488717010",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview123/v4/a3/37/0a/a3370a51-ad45-6130-073c-3e12f2c2f6bf/mzaf_11195978175611758497.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 2400,
+                "height": 2400,
+                "url": "https://is4-ssl.mzstatic.com/image/thumb/Music113/v4/e1/ab/88/e1ab8835-6e28-751d-56f4-df31540f905d/ANTCD-A0000000665.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "aeb0b2",
+                "textColor1": "131313",
+                "textColor2": "232322",
+                "textColor3": "323233",
+                "textColor4": "3e3f3e"
+              },
+              "artistName": "三代目 J SOUL BROTHERS from EXILE TRIBE",
+              "url": "https://music.apple.com/jp/album/white-wings/1488716735?i=1488717010",
+              "discNumber": 1,
+              "genreNames": [
+                "J-Pop",
+                "ミュージック"
+              ],
+              "durationInMillis": 325333,
+              "name": "White Wings",
+              "isrc": "JPB601903712",
+              "hasLyrics": true,
+              "albumName": "冬空 / White Wings - Single",
+              "playParams": {
+                "id": "1488717010",
+                "kind": "song"
+              },
+              "trackNumber": 2,
+              "composerName": "Mike Macdermid, Carlos Okabe, Toshiya Hosokawa & 小竹 正人"
+            }
+          },
+          {
+            "id": "1440880819",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1440880819",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview128/v4/8b/3f/52/8b3f52f2-4eaf-0387-657b-c8d4338a1fae/mzaf_6265233365961352615.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3000,
+                "url": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/01/4e/34/014e34ac-868b-90a0-5ba7-6f9e35bdee8b/00602567045779.rgb.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "f5f8fd",
+                "textColor1": "140f11",
+                "textColor2": "120f12",
+                "textColor3": "413d40",
+                "textColor4": "3f3e41"
+              },
+              "artistName": "BTS",
+              "url": "https://music.apple.com/jp/album/dna/1440880644?i=1440880819",
+              "discNumber": 1,
+              "genreNames": [
+                "K-Pop",
+                "ミュージック",
+                "ポップ"
+              ],
+              "durationInMillis": 223133,
+              "releaseDate": "2017-09-18",
+              "name": "DNA",
+              "isrc": "KRA381702187",
+              "hasLyrics": true,
+              "albumName": "LOVE YOURSELF 承 'Her'",
+              "playParams": {
+                "id": "1440880819",
+                "kind": "song"
+              },
+              "trackNumber": 2,
+              "composerName": "pdogg, \"hitman\"bang, RM, KASS, Supreme Boi & Agust D"
+            }
+          },
+          {
+            "id": "1485867808",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1485867808",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview113/v4/a9/69/58/a9695842-bddf-ac06-7818-2bc6d3fc0f69/mzaf_1971156479025596639.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3000,
+                "url": "https://is3-ssl.mzstatic.com/image/thumb/Music113/v4/4d/63/a4/4d63a421-3c4b-5fb2-d5e8-f8fa0bee1b5f/194491538262.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "151412",
+                "textColor1": "ffffff",
+                "textColor2": "fae8dd",
+                "textColor3": "d0cfcf",
+                "textColor4": "ccbdb5"
+              },
+              "artistName": "嵐",
+              "url": "https://music.apple.com/jp/album/monster/1485867805?i=1485867808",
+              "discNumber": 1,
+              "genreNames": [
+                "J-Pop",
+                "ミュージック"
+              ],
+              "durationInMillis": 267515,
+              "releaseDate": "2010-05-19",
+              "name": "Monster",
+              "isrc": "JPQ401000280",
+              "hasLyrics": true,
+              "albumName": "Monster - Single",
+              "playParams": {
+                "id": "1485867808",
+                "kind": "song"
+              },
+              "trackNumber": 1,
+              "composerName": "Unite, Sean-D & Chi-Mey"
+            }
+          }
+        ],
+        "href": "/v1/catalog/jp/playlists/pl.043a2c9876114d95a4659988497567be/tracks"
+      }
+    }
+  }

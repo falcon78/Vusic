@@ -1,0 +1,95 @@
+{
+    "id": "1481874613",
+    "type": "albums",
+    "href": "/v1/catalog/jp/albums/1481874613",
+    "attributes": {
+      "artwork": {
+        "width": 3000,
+        "height": 3000,
+        "url": "https://is2-ssl.mzstatic.com/image/thumb/Music113/v4/d0/87/6b/d0876ba0-d745-fb70-ba78-7f176e570f9e/886448042792.jpg/{w}x{h}bb.jpeg",
+        "bgColor": "394f74",
+        "textColor1": "e6e4e8",
+        "textColor2": "becbe4",
+        "textColor3": "c4c6d0",
+        "textColor4": "a3b2ce"
+      },
+      "artistName": "トラヴィス・スコット",
+      "isSingle": true,
+      "url": "https://music.apple.com/jp/album/highest-in-the-room-single/1481874613",
+      "isComplete": true,
+      "genreNames": [
+        "ヒップホップ／ラップ",
+        "ミュージック"
+      ],
+      "trackCount": 1,
+      "isMasteredForItunes": false,
+      "releaseDate": "2019-10-04",
+      "name": "HIGHEST IN THE ROOM - Single",
+      "recordLabel": "Cactus Jack / Epic",
+      "copyright": "℗ 2019 Epic Records. With Cactus Jack.",
+      "playParams": {
+        "id": "1481874613",
+        "kind": "album"
+      },
+      "contentRating": "explicit"
+    },
+    "relationships": {
+      "tracks": {
+        "data": [
+          {
+            "id": "1481874619",
+            "type": "songs",
+            "href": "/v1/catalog/jp/songs/1481874619",
+            "attributes": {
+              "previews": [
+                {
+                  "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview113/v4/45/46/8c/45468c5d-4ff9-e2d7-b713-33bc8769ef76/mzaf_922520309651411660.plus.aac.p.m4a"
+                }
+              ],
+              "artwork": {
+                "width": 3000,
+                "height": 3000,
+                "url": "https://is2-ssl.mzstatic.com/image/thumb/Music113/v4/d0/87/6b/d0876ba0-d745-fb70-ba78-7f176e570f9e/886448042792.jpg/{w}x{h}bb.jpeg",
+                "bgColor": "394f74",
+                "textColor1": "e6e4e8",
+                "textColor2": "becbe4",
+                "textColor3": "c4c6d0",
+                "textColor4": "a3b2ce"
+              },
+              "artistName": "トラヴィス・スコット",
+              "url": "https://music.apple.com/jp/album/highest-in-the-room/1481874613?i=1481874619",
+              "discNumber": 1,
+              "genreNames": [
+                "ヒップホップ／ラップ",
+                "ミュージック"
+              ],
+              "durationInMillis": 175721,
+              "releaseDate": "2019-10-04",
+              "name": "HIGHEST IN THE ROOM",
+              "isrc": "USSM11904276",
+              "hasLyrics": true,
+              "albumName": "HIGHEST IN THE ROOM - Single",
+              "playParams": {
+                "id": "1481874619",
+                "kind": "song"
+              },
+              "trackNumber": 1,
+              "composerName": "Jacques Webster",
+              "contentRating": "explicit"
+            }
+          }
+        ],
+        "href": "/v1/catalog/jp/albums/1481874613/tracks"
+      },
+      "artists": {
+        "data": [
+          {
+            "id": "549236696",
+            "type": "artists",
+            "href": "/v1/catalog/jp/artists/549236696"
+          }
+        ],
+        "href": "/v1/catalog/jp/albums/1481874613/artists"
+      }
+    }
+  }
