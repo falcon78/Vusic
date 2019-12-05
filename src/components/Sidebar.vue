@@ -31,7 +31,7 @@
 <script>
 import { MusicIcon, DiscIcon } from 'vue-feather-icons';
 import routerConstants from '../router/routerConstants';
-import MusicPlayer from '@/components/MusicPlayer.vue';
+import MusicPlayer from '@/components/Player/MusicPlayer.vue';
 
 export default {
   name: 'sidebar',
