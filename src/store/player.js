@@ -1,9 +1,6 @@
 import helpers from '@/store/helpers';
 
-const { getSafe } = helpers;
-// eslint-disable-next-line no-undef
-const sdk = MusicKit;
-const musicKit = sdk.getInstance();
+const { getSafe, debounce } = helpers;
 // eslint-disable-next-line operator-linebreak
 const fakeArtwork =
   'https://is1-ssl.mzstatic.com/image/thumb/Features127/v4/75/f9/6f/75f96fa5-99ca-0854-3aae-8f76f5cb7fb5/source/100x100bb.jpeg';
@@ -35,19 +32,18 @@ const playerState = {
 const getters = {
   getNowPlayingStatus(state) {
     const currentPlaying = state.currentlyPlaying;
-    // @TODO: Separate playback info to different place
-    const currentlyPlayingItem = {
+    if (!currentPlaying) return { title: 'Not Playing', artwork: fakeArtwork };
+    return {
       id: getSafe(() => currentPlaying.id),
-      title: getSafe(() => currentPlaying.title) || 'Not Playing',
+      title: getSafe(() => currentPlaying.title),
       trackNumber: getSafe(() => currentPlaying.trackNumber),
       albumName: getSafe(() => currentPlaying.albumName),
       albumInfo: getSafe(() => currentPlaying.albumInfo),
       artistName: getSafe(() => currentPlaying.artistName),
       isLoading: getSafe(() => currentPlaying.isLoading),
-      artwork: getSafe(() => sdk.formatArtworkURL(currentPlaying.artwork, 140, 140)) || fakeArtwork,
+      artwork: getSafe(() => MusicKit.formatArtworkURL(currentPlaying.artwork, 140, 140)),
       isPlaying: getSafe(() => currentPlaying.isPlaying),
     };
-    return currentlyPlayingItem;
   },
 };
 
@@ -97,32 +93,42 @@ const actions = {
     dispatch('setShuffle', local.shuffle);
     dispatch('setRepeatStatus', local.repeat);
 
-    musicKit.bitrate = 256;
-    commit('setDrmStatus', { state: musicKit.player.canSupportDRM });
-    commit('music/setStoreFront', { storefront: musicKit.storefrontId }, { root: true });
-    commit('music/setAuth', { auth: musicKit.isAuthorized }, { root: true });
+    MusicKit.getInstance().bitrate = 256;
+    commit('setDrmStatus', { state: MusicKit.getInstance().player.canSupportDRM });
+    commit(
+      'music/setStoreFront',
+      { storefront: MusicKit.getInstance().storefrontId },
+      { root: true },
+    );
+    commit('music/setAuth', { auth: MusicKit.getInstance().isAuthorized }, { root: true });
   },
 
   changePlaybackTime(_, { time }) {
-    return musicKit.player.seekToTime(time);
+    // @TODO: Debouncer , 100ms
+    return MusicKit.getInstance().player.seekToTime(time);
   },
 
   setRepeatStatus({ commit }, repeat = 'toggle') {
     if (repeat === 'toggle') {
       // eslint-disable-next-line operator-linebreak
-      musicKit.player.repeatMode =
-        musicKit.player.repeatMode === 0 ? 2 : musicKit.player.repeatMode - 1;
+      MusicKit.getInstance().player.repeatMode =
+        MusicKit.getInstance().player.repeatMode === 0
+          ? 2
+          : MusicKit.getInstance().player.repeatMode - 1;
     } else {
-      musicKit.player.repeatMode = repeat;
+      MusicKit.getInstance().player.repeatMode = repeat;
     }
-    commit('setRepeat', { repeat: musicKit.player.repeat });
+    commit('setRepeat', { repeat: MusicKit.getInstance().player.repeat });
     if (window.localStorage) {
-      window.localStorage.setItem('repeat', JSON.stringify(musicKit.player.repeatMode));
+      window.localStorage.setItem(
+        'repeat',
+        JSON.stringify(MusicKit.getInstance().player.repeatMode),
+      );
     }
   },
   setVolume({ commit }, { volume }) {
     const volumeValue = parseFloat(volume);
-    musicKit.player.volume = volumeValue;
+    MusicKit.getInstance().player.volume = volumeValue;
     commit('setVolume', { volume: volumeValue });
     if (window.localStorage) {
       window.localStorage.setItem('volume', JSON.stringify(volumeValue));
@@ -132,12 +138,12 @@ const actions = {
   setShuffle({ state, commit }, shuffle = 'toggle') {
     let shuffleBool;
     if (shuffle === 'toggle') {
-      musicKit.player.shuffle = state.shuffle === 0 ? 1 : 0;
-      commit('setShuffle', { shuffle: musicKit.player.shuffleMode });
+      MusicKit.getInstance().player.shuffle = state.shuffle === 0 ? 1 : 0;
+      commit('setShuffle', { shuffle: MusicKit.getInstance().player.shuffleMode });
       shuffleBool = state.shuffle === 1;
     } else {
-      musicKit.player.shuffle = shuffle;
-      commit('setShuffle', { shuffle: musicKit.player.shuffleMode });
+      MusicKit.getInstance().player.shuffle = shuffle;
+      commit('setShuffle', { shuffle: MusicKit.getInstance().player.shuffleMode });
       shuffleBool = state.shuffle === 1;
     }
     if (window.localStorage) {
@@ -145,7 +151,7 @@ const actions = {
     }
   },
   play() {
-    return musicKit.player.play();
+    return MusicKit.getInstance().player.play();
   },
 };
 

@@ -7,6 +7,11 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
+  "eslintConfig": {
+    "globals": {
+      "MusicKit": true
+    }
+  },
   "dependencies": {
     "core-js": "^3.3.2",
     "eslint-plugin-prettier": "^3.1.1",

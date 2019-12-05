@@ -3,24 +3,35 @@
     <div class="image-and-titles">
       <img :src="getNowPlayingStatus.artwork" alt="" />
       <div class="image-and-titles__label-container">
-        <div class="truncate">{{ getNowPlayingStatus.title }}</div>
-        <div class="truncate link-color-text">{{ getNowPlayingStatus.albumName }}</div>
-        <div class="truncate link-color-text">{{ getNowPlayingStatus.artistName }}</div>
+        <div :title="getNowPlayingStatus.title" class="truncate">
+          {{ getNowPlayingStatus.title }}
+        </div>
+        <div :title="getNowPlayingStatus.albumName" class="truncate link-color-text">
+          {{ getNowPlayingStatus.albumName }}
+        </div>
+        <div :title="getNowPlayingStatus.artistName" class="truncate link-color-text">
+          {{ getNowPlayingStatus.artistName }}
+        </div>
       </div>
     </div>
-    <div class="play-status">
+    <div v-if="getNowPlayingStatus.isPlaying && currentTimeInMinutes === '0:00'">
+      loading
+    </div>
+    <div v-else class="play-status">
       <div>
         <vue-slider
           :value="playbackTimeInfo.currentPlaybackTime"
-          :min="1"
+          :min="0"
           :max="playbackTimeInfo.currentPlaybackDuration || 3"
+          :tooltip-formatter="convertToMinutes"
           @change="changePlayPosition"
+          :lazy="true"
           class="scrubber"
         />
       </div>
       <div class="play-time-labels">
-        <div>{{ currentTimeInMinutes.currentTime }}</div>
-        <div>{{ currentTimeInMinutes.duration }}</div>
+        <div>{{ currentTimeInMinutes }}</div>
+        <div>{{ currentDurationInMinutes || '0:00' }}</div>
       </div>
     </div>
     <div class="controls"></div>
@@ -44,12 +55,10 @@ export default {
       playbackTimeInfo: (state) => state.playbackTimeInfo,
     }),
     currentTimeInMinutes() {
-      const duration = this.playbackTimeInfo.currentPlaybackDuration;
-      const currentTime = this.playbackTimeInfo.currentPlaybackTime;
-      return {
-        duration: `${Math.floor(duration / 60)}:${duration % 60}`,
-        currentTime: `${Math.floor(currentTime / 60)}:${currentTime % 60}`,
-      };
+      return MusicKit.formatMediaTime(this.playbackTimeInfo.currentPlaybackTime);
+    },
+    currentDurationInMinutes() {
+      return MusicKit.formatMediaTime(this.playbackTimeInfo.currentPlaybackDuration || 0);
     },
   },
   methods: {
@@ -58,6 +67,9 @@ export default {
     }),
     async changePlayPosition(time) {
       await this.changePlaybackTime({ time });
+    },
+    convertToMinutes(sec) {
+      return (sec - (sec %= 60)) / 60 + (9 < sec ? ':' : ':0') + sec;
     },
   },
 };

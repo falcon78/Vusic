@@ -31,7 +31,6 @@ button,
   }
   .artwork {
     @include bg-image-center;
-    border-radius: 4px;
     box-shadow: $artwork-box-shadow;
     flex-shrink: 0;
     width: $artwork-width;

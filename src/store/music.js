@@ -10,10 +10,6 @@ MusicKit.configure({
   },
 });
 
-// eslint-disable-next-line no-undef
-const sdk = MusicKit;
-const musicKit = sdk.getInstance();
-
 const musicState = {
   storeFront: '',
   auth: {
@@ -41,7 +37,7 @@ const actions = {
     console.log('music state init');
   },
   showLoginPage() {
-    return musicKit.authorize();
+    return MusicKit.getInstance().authorize();
   },
 };
 
