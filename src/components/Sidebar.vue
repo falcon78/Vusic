@@ -17,13 +17,13 @@
                 category.routeName === active.category && label.routeName === active.label,
             }"
           >
-            <router-link :to="label.routeName">{{ label.name }}</router-link>
+            <router-link :to="{ name: label.routeName }">{{ label.name }}</router-link>
           </li>
         </ul>
       </div>
     </nav>
     <div class="player">
-      <MusicPlayer/>
+      <MusicPlayer />
     </div>
   </div>
 </template>

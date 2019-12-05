@@ -39,6 +39,7 @@ MusicKit.getInstance().addEventListener(MusicKit.Events.playbackTimeDidChange, (
   store.commit('player/setPlaybackTime', {
     playtimeInfo: event,
   });
+  store.commit('player/setIsPlaying', { isPlaying: MusicKit.getInstance().player.isPlaying });
 });
 MusicKit.getInstance().addEventListener(MusicKit.Events.queueItemsDidChange, (event) => {
   store.commit('player/setQueue', { items: event });

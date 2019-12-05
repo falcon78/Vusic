@@ -13,11 +13,11 @@ const routes = [
     category: 'LIBRARY',
     icon: 'save',
     labels: [
-      { name: 'Recently Added', routeName: '/library/recently-added' },
-      { name: 'Artists', routeName: '/library/my-artists' },
-      { name: 'Albums', routeName: '/library/my-albums' },
-      { name: 'Songs', routeName: '/library/songs' },
-      { name: 'Playlists', routeName: '/library/playlists' },
+      { name: 'Recently Added', routeName: 'recently-added' },
+      { name: 'Artists', routeName: 'library-artists' },
+      { name: 'Albums', routeName: 'library-albums' },
+      { name: 'Songs', routeName: 'library-songs' },
+      { name: 'Playlists', routeName: 'library-playlists' },
     ],
   },
 ];

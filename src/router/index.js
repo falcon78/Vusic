@@ -18,11 +18,6 @@ const routes = [
     component: Albums,
   },
   {
-    path: routerConstants[0].routeName,
-    name: routerConstants[0].routeName,
-    component: ForYou,
-  },
-  {
     path: routerConstants[0].labels[0].routeName,
     name: routerConstants[0].labels[0].routeName,
     component: ForYou,
@@ -33,34 +28,40 @@ const routes = [
     component: Browse,
   },
   {
-    path: routerConstants[1].routeName,
-    name: routerConstants[1].routeName,
-    component: ForYou,
-  },
-  {
-    path: routerConstants[1].labels[0].routeName,
-    name: routerConstants[1].labels[0].routeName,
-    component: RecentlyAdded,
-  },
-  {
-    path: routerConstants[1].labels[1].routeName,
-    name: routerConstants[1].labels[1].routeName,
-    component: Artists,
-  },
-  {
-    path: routerConstants[1].labels[2].routeName,
-    name: routerConstants[1].labels[2].routeName,
-    component: Albums,
-  },
-  {
-    path: routerConstants[1].labels[3].routeName,
-    name: routerConstants[1].labels[3].routeName,
-    component: Songs,
-  },
-  {
-    path: routerConstants[1].labels[4].routeName,
-    name: routerConstants[1].labels[4].routeName,
-    component: Playlists,
+    path: '/library',
+    name: 'library',
+    component: {
+      render(c) {
+        return c('router-view');
+      },
+    },
+    children: [
+      {
+        path: 'recently-added',
+        name: 'recently-added',
+        component: RecentlyAdded,
+      },
+      {
+        path: 'artists',
+        name: 'library-artists',
+        component: Artists,
+      },
+      {
+        path: 'albums',
+        name: 'library-albums',
+        component: Albums,
+      },
+      {
+        path: 'songs',
+        name: 'library-songs',
+        component: Songs,
+      },
+      {
+        path: 'playlists',
+        name: 'library-playlists',
+        component: Playlists,
+      },
+    ],
   },
 ];
 

@@ -27,6 +27,7 @@ const playerState = {
   queuePosition: 0, // done commit and action
   history: [],
   drmSupport: true,
+  isPlaying: false,
 };
 
 const getters = {
@@ -42,7 +43,6 @@ const getters = {
       artistName: getSafe(() => currentPlaying.artistName),
       isLoading: getSafe(() => currentPlaying.isLoading),
       artwork: getSafe(() => MusicKit.formatArtworkURL(currentPlaying.artwork, 140, 140)),
-      isPlaying: getSafe(() => currentPlaying.isPlaying),
     };
   },
 };
@@ -75,6 +75,9 @@ const mutations = {
   },
   setPlaybackTime(state, { playtimeInfo }) {
     state.playbackTimeInfo = playtimeInfo;
+  },
+  setIsPlaying(state, { isPlaying }) {
+    state.isPlaying = isPlaying;
   },
 };
 
