@@ -1,0 +1,258 @@
+[
+    {
+      "id": "p.QvDQ8gbuYRl294",
+      "type": "library-playlists",
+      "href": "/v1/me/library/playlists/p.QvDQ8gbuYRl294",
+      "attributes": {
+        "dateAdded": "2019-11-11T07:54:41Z",
+        "artwork": {
+          "width": null,
+          "height": null,
+          "url": "https://is4-ssl.mzstatic.com/image/thumb/Features113/v4/df/5a/7f/df5a7f87-1d6d-e7bb-3a08-83a63d5daedd/source/{w}x{h}cc.jpeg"
+        },
+        "playParams": {
+          "id": "p.QvDQ8gbuYRl294",
+          "kind": "playlist",
+          "isLibrary": true,
+          "globalId": "pl.f54198ad42404535be13eabf3835fb22"
+        },
+        "hasCatalog": true,
+        "name": "BEATstrumentals",
+        "canEdit": false,
+        "description": {
+          "standard": "世界中から厳選した、最高に心地よいヒップホップのインストゥルメンタル。"
+        }
+      }
+    },
+    {
+      "id": "p.gek1RvzfQvK19V",
+      "type": "library-playlists",
+      "href": "/v1/me/library/playlists/p.gek1RvzfQvK19V",
+      "attributes": {
+        "dateAdded": "2019-11-14T10:57:28Z",
+        "artwork": {
+          "width": null,
+          "height": null,
+          "url": "https://is4-ssl.mzstatic.com/image/thumb/Features113/v4/a2/66/cd/a266cdb9-f47f-3806-7bba-0bf7adc6634e/source/{w}x{h}cc.jpeg"
+        },
+        "playParams": {
+          "id": "p.gek1RvzfQvK19V",
+          "kind": "playlist",
+          "isLibrary": true,
+          "globalId": "pl.51abcc1adb164991acbaacfc11c0d5ea"
+        },
+        "hasCatalog": true,
+        "name": "カフェミュージック",
+        "canEdit": false,
+        "description": {
+          "standard": "スタイリッシュでエレガントなくつろぎを誘う、心地よい音楽と柔らかな時間。"
+        }
+      }
+    },
+    {
+      "id": "p.qQXL6RzhdOmxJZ",
+      "type": "library-playlists",
+      "href": "/v1/me/library/playlists/p.qQXL6RzhdOmxJZ",
+      "attributes": {
+        "dateAdded": "2019-07-12T13:50:08Z",
+        "playParams": {
+          "id": "p.qQXL6RzhdOmxJZ",
+          "kind": "playlist",
+          "isLibrary": true
+        },
+        "hasCatalog": false,
+        "name": "Classic ",
+        "canEdit": true,
+        "description": {
+          "standard": "80s"
+        }
+      }
+    },
+    {
+      "id": "p.qQXL6ODhdOmxJZ",
+      "type": "library-playlists",
+      "href": "/v1/me/library/playlists/p.qQXL6ODhdOmxJZ",
+      "attributes": {
+        "dateAdded": "2019-11-14T04:39:38Z",
+        "artwork": {
+          "width": null,
+          "height": null,
+          "url": "https://is1-ssl.mzstatic.com/image/thumb/Features113/v4/8c/db/23/8cdb2328-b416-9e47-c2ee-c2bdec51c505/source/{w}x{h}cc.jpeg"
+        },
+        "playParams": {
+          "id": "p.qQXL6ODhdOmxJZ",
+          "kind": "playlist",
+          "isLibrary": true,
+          "globalId": "pl.62c4baa9e94240aab4768456fc9d5027"
+        },
+        "hasCatalog": true,
+        "name": "癒しの洋楽：オランダ",
+        "canEdit": false,
+        "description": {
+          "standard": "R&Bやポップ、フォークなど、幅広いジャンルのドリーミーな音世界を堪能。"
+        }
+      }
+    },
+    {
+      "id": "p.gek1RX6HQvK19V",
+      "type": "library-playlists",
+      "href": "/v1/me/library/playlists/p.gek1RX6HQvK19V",
+      "attributes": {
+        "dateAdded": "2019-08-20T17:25:54Z",
+        "playParams": {
+          "id": "p.gek1RX6HQvK19V",
+          "kind": "playlist",
+          "isLibrary": true
+        },
+        "hasCatalog": false,
+        "name": "Electro",
+        "canEdit": true
+      }
+    },
+    {
+      "id": "p.LV0PBWquYdvrQ6",
+      "type": "library-playlists",
+      "href": "/v1/me/library/playlists/p.LV0PBWquYdvrQ6",
+      "attributes": {
+        "dateAdded": "2019-12-03T08:00:16Z",
+        "playParams": {
+          "id": "p.LV0PBWquYdvrQ6",
+          "kind": "playlist",
+          "isLibrary": true
+        },
+        "hasCatalog": false,
+        "name": "Electronic ",
+        "canEdit": true
+      }
+    },
+    {
+      "id": "p.PkxV8QVUBRlgGD",
+      "type": "library-playlists",
+      "href": "/v1/me/library/playlists/p.PkxV8QVUBRlgGD",
+      "attributes": {
+        "dateAdded": "2019-11-21T12:06:46Z",
+        "artwork": {
+          "width": null,
+          "height": null,
+          "url": "https://is1-ssl.mzstatic.com/image/thumb/Features128/v4/f9/30/e9/f930e902-c3df-3d85-884f-9a2170e6db2b/source/{w}x{h}cc.jpeg"
+        },
+        "playParams": {
+          "id": "p.PkxV8QVUBRlgGD",
+          "kind": "playlist",
+          "isLibrary": true,
+          "globalId": "pl.2a0b1ea7704842f4b956e959067b8389"
+        },
+        "hasCatalog": true,
+        "name": "一人の時間",
+        "canEdit": false,
+        "description": {
+          "standard": "ムーディーなポップソングに包まれて、自分の心の中を見つめる時間。"
+        }
+      }
+    },
+    {
+      "id": "p.PkxV8JvhBRlgGD",
+      "type": "library-playlists",
+      "href": "/v1/me/library/playlists/p.PkxV8JvhBRlgGD",
+      "attributes": {
+        "dateAdded": "2019-08-20T17:27:39Z",
+        "artwork": {
+          "width": null,
+          "height": null,
+          "url": "https://is5-ssl.mzstatic.com/image/thumb/Features128/v4/07/78/5c/07785c39-2b6c-a8db-776f-ac375fdea7d4/source/{w}x{h}cc.jpeg"
+        },
+        "playParams": {
+          "id": "p.PkxV8JvhBRlgGD",
+          "kind": "playlist",
+          "isLibrary": true,
+          "globalId": "pl.4705ab1ed97c4f4bb54f48940faf5623"
+        },
+        "hasCatalog": true,
+        "name": "LOOPS：エレクトロニック",
+        "canEdit": false,
+        "description": {
+          "standard": "シーンの最先端を行く革新的なエレクトロニック・ミュージックをチェック。"
+        }
+      }
+    },
+    {
+      "id": "p.qQXL68LHdOmxJZ",
+      "type": "library-playlists",
+      "href": "/v1/me/library/playlists/p.qQXL68LHdOmxJZ",
+      "attributes": {
+        "dateAdded": "2019-08-16T03:13:56Z",
+        "artwork": {
+          "width": null,
+          "height": null,
+          "url": "https://is5-ssl.mzstatic.com/image/thumb/SG-MQ-US-001-Image000001/v4/e9/1e/b2/e91eb23d-55ec-654a-cbdd-ab24f39b94b2/image/{w}x{h}cc.jpeg"
+        },
+        "playParams": {
+          "id": "p.qQXL68LHdOmxJZ",
+          "kind": "playlist",
+          "isLibrary": true,
+          "globalId": "pl.u-mJy814PtY4gE4k"
+        },
+        "hasCatalog": true,
+        "name": "Low Fye",
+        "canEdit": false
+      }
+    },
+    {
+      "id": "p.gek1RKqCQvK19V",
+      "type": "library-playlists",
+      "href": "/v1/me/library/playlists/p.gek1RKqCQvK19V",
+      "attributes": {
+        "dateAdded": "2019-08-06T14:19:43Z",
+        "playParams": {
+          "id": "p.gek1RKqCQvK19V",
+          "kind": "playlist",
+          "isLibrary": true
+        },
+        "hasCatalog": false,
+        "name": "Relax",
+        "canEdit": true,
+        "description": {
+          "standard": "Relax"
+        }
+      }
+    },
+    {
+      "id": "p.LV0PvqEuYdvrQ6",
+      "type": "library-playlists",
+      "href": "/v1/me/library/playlists/p.LV0PvqEuYdvrQ6",
+      "attributes": {
+        "dateAdded": "2019-12-02T07:40:54Z",
+        "playParams": {
+          "id": "p.LV0PvqEuYdvrQ6",
+          "kind": "playlist",
+          "isLibrary": true,
+          "globalId": "pl.u-DdAN8PauqpkGrV"
+        },
+        "hasCatalog": true,
+        "name": "Vocal Relax",
+        "canEdit": true
+      }
+    },
+    {
+      "id": "p.QvDQ8MRiYRl294",
+      "type": "library-playlists",
+      "href": "/v1/me/library/playlists/p.QvDQ8MRiYRl294",
+      "attributes": {
+        "dateAdded": "2019-12-03T01:36:12Z",
+        "artwork": {
+          "width": null,
+          "height": null,
+          "url": "https://is2-ssl.mzstatic.com/image/thumb/Features113/v4/1d/5d/73/1d5d7323-ec85-a3a1-1b67-5f249169bf98/source/{w}x{h}cc.jpeg"
+        },
+        "playParams": {
+          "id": "p.QvDQ8MRiYRl294",
+          "kind": "playlist",
+          "isLibrary": true,
+          "globalId": "pl.0f5d2ac135ef4c18b165af74c1e14a37"
+        },
+        "hasCatalog": true,
+        "name": "Zane Lowe’s Playlist",
+        "canEdit": false
+      }
+    }
+  ]
