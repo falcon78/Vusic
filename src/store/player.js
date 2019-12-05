@@ -28,12 +28,13 @@ const playerState = {
   history: [],
   drmSupport: true,
   isPlaying: false,
+  fakeLoading: false,
 };
 
 const getters = {
   getNowPlayingStatus(state) {
     const currentPlaying = state.currentlyPlaying;
-    if (!currentPlaying) return { title: 'Not Playing', artwork: fakeArtwork };
+    if (!currentPlaying) return { artwork: fakeArtwork };
     return {
       id: getSafe(() => currentPlaying.id),
       title: getSafe(() => currentPlaying.title),
@@ -78,6 +79,9 @@ const mutations = {
   },
   setIsPlaying(state, { isPlaying }) {
     state.isPlaying = isPlaying;
+  },
+  setFakeLoading(state, { loading }) {
+    state.fakeLoading = loading;
   },
 };
 
@@ -153,8 +157,25 @@ const actions = {
       window.localStorage.setItem('shuffle', JSON.stringify(shuffleBool));
     }
   },
-  play() {
-    return MusicKit.getInstance().player.play();
+  async play({ commit }) {
+    commit('setFakeLoading', { loading: true });
+    await MusicKit.getInstance().player.prepareToPlay();
+    await MusicKit.getInstance().player.play();
+    setTimeout(() => commit('setFakeLoading', { loading: false }), 1000);
+  },
+  async next() {
+    await MusicKit.getInstance().player.skipToNextItem();
+  },
+  async previous() {
+    await MusicKit.getInstance().player.skipToPreviousItem();
+  },
+  async pause() {
+    await MusicKit.getInstance().player.pause();
+  },
+  async togglePlayPause({ state, dispatch }) {
+    if (state.isPlaying) return dispatch('pause');
+    await MusicKit.getInstance().player.prepareToPlay();
+    await MusicKit.getInstance().player.play();
   },
 };
 

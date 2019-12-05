@@ -25,6 +25,11 @@ li {
     }
     margin-left: 1em;
   }
+  &:active {
+    @include transition-animation(0.1);
+    transform: scale(1.15);
+    background: $primary-purple;
+  }
 }
 
 .sidebar {
