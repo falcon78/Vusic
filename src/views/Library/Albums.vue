@@ -9,6 +9,7 @@
       :artist="album.artist"
       :title="album.title"
       :artwork="album.artwork"
+      :type="'album'"
     />
   </div>
 </template>

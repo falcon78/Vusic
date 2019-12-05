@@ -157,7 +157,10 @@ const actions = {
       window.localStorage.setItem('shuffle', JSON.stringify(shuffleBool));
     }
   },
-  async play({ commit }) {
+  async play({ commit, rootState }) {
+    if (!rootState.music.auth.isAuthorized) {
+      return MusicKit.getInstance().player.play();
+    }
     commit('setFakeLoading', { loading: true });
     await MusicKit.getInstance().player.prepareToPlay();
     await MusicKit.getInstance().player.play();
@@ -172,8 +175,11 @@ const actions = {
   async pause() {
     await MusicKit.getInstance().player.pause();
   },
-  async togglePlayPause({ state, dispatch }) {
+  async togglePlayPause({ state, dispatch, rootState }) {
     if (state.isPlaying) return dispatch('pause');
+    if (!rootState.music.auth.isAuthorized) {
+      return MusicKit.getInstance().player.play();
+    }
     await MusicKit.getInstance().player.prepareToPlay();
     await MusicKit.getInstance().player.play();
   },

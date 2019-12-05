@@ -6,6 +6,7 @@ const libraryState = {
   artists: [],
   songs: [],
   albums: [],
+  playlists: [],
 };
 
 const getters = {
@@ -34,16 +35,29 @@ const mutations = {
   setStoreFront(state, { storefront }) {
     state.storeFront = storefront;
   },
+  setLibraryPlaylists(state, { playlists }) {
+    state.playlists = playlists;
+  },
+  setLibrarySongs(state, { songs }) {
+    state.songs = songs;
+  },
 };
 
 const actions = {
   async getAlbums({ commit }) {
-    const albums = await MusicKit.getInstance().api.library.albums({ limit: 500 });
+    const albums = await MusicKit.getInstance().api.library.albums({ limit: 10000 });
     commit('setLibraryAlbums', { albums });
   },
-  // eslint-disable-next-line no-unused-vars
-  addQueueAlbum({ commit }, { id }) {
-    return MusicKit.getInstance().setQueue({ album: id });
+  async getPlaylists({ commit }) {
+    const playlists = await MusicKit.getInstance().api.library.playlists({ limit: 10000 });
+    commit('setLibraryPlaylists', { playlists });
+  },
+  async getSongs({ commit }) {
+    const songs = await MusicKit.getInstance().api.library.songs({ limit: 10000 });
+    commit('setLibrarySongs', { songs });
+  },
+  addQueue(_, { type, id }) {
+    return MusicKit.getInstance().setQueue({ [type]: id });
   },
 };
 

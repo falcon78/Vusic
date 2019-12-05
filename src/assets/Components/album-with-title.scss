@@ -60,6 +60,7 @@ button,
     position: absolute;
     top: 10%;
     width: $artwork-width;
+    z-index: 2;
     .button {
       .button-svg {
         @include box-shadow;
@@ -84,16 +85,25 @@ button,
     flex-direction: column;
     justify-content: center;
     color: white;
+    a{
+      text-decoration: none;
+      color: white;
+    }
     .album-title {
       @include truncate-text;
       font-size: $regular-font-size;
+      &:hover {
+        transform: scale(1.03);
+        text-decoration: underline;
+      }
     }
     .album-artist {
       @include truncate-text;
       font-size: $tiny-font-size;
       color: $sub-text-color;
       &:hover {
-        transform: scale(1.1);
+        transform: scale(1.02);
+        text-decoration: underline;
       }
     }
   }
