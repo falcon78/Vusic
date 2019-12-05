@@ -23,7 +23,7 @@
         <vue-slider
           :value="playbackTimeInfo.currentPlaybackTime"
           :min="0"
-          :max="playbackTimeInfo.currentPlaybackDuration || 3"
+          :max="playbackTimeInfo.currentPlaybackDuration || 10"
           :tooltip-formatter="convertToMinutes"
           @change="changePlayPosition"
           :lazy="true"
