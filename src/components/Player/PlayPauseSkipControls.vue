@@ -9,18 +9,19 @@
       <div class="double-bounce1"></div>
       <div class="double-bounce2"></div>
     </div>
-    <pause-icon
-      v-else-if="isPlaying"
-      size="2.5x"
-      class="play-pause-skip-controls__icons"
-      @click="togglePlayPause"
-    ></pause-icon>
     <play-icon
       v-else-if="!isPlaying"
       size="2.5x"
       class="play-pause-skip-controls__icons"
       @click="togglePlayPause"
     ></play-icon>
+    <pause-icon
+      v-else
+      size="2.5x"
+      class="play-pause-skip-controls__icons"
+      @click="togglePlayPause"
+    ></pause-icon>
+
     <arrow-right-icon
       size="2.5x"
       class="play-pause-skip-controls__icons"
