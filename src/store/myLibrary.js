@@ -1,9 +1,5 @@
 import helpers from './helpers';
 
-// eslint-disable-next-line no-undef
-const sdk = MusicKit;
-const musicKit = sdk.getInstance();
-
 const libraryState = {
   storeFront: '',
   recentlyAdded: [],
@@ -22,7 +18,7 @@ const getters = {
         artist: getSafe(() => album.attributes.artistName),
         title: getSafe(() => album.attributes.name),
         artwork: getSafe(
-          () => sdk.formatArtworkURL(album.attributes.artwork, 100, 100),
+          () => MusicKit.formatArtworkURL(album.attributes.artwork, 100, 100),
           'https://is1-ssl.mzstatic.com/image/thumb/Features127/v4/75/f9/6f/75f96fa5-99ca-0854-3aae-8f76f5cb7fb5/source/100x100bb.jpeg',
         ),
       });
@@ -42,12 +38,12 @@ const mutations = {
 
 const actions = {
   async getAlbums({ commit }) {
-    const albums = await musicKit.api.library.albums({ limit: 500 });
+    const albums = await MusicKit.getInstance().api.library.albums({limit: 500});
     commit('setLibraryAlbums', { albums });
   },
   // eslint-disable-next-line no-unused-vars
   addQueueAlbum({ commit }, { id }) {
-    return musicKit.setQueue({ album: id });
+    return MusicKit.getInstance().setQueue({ album: id });
   },
 };
 

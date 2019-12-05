@@ -6,10 +6,6 @@ import myLibrary from './myLibrary';
 
 Vue.use(Vuex);
 
-// eslint-disable-next-line no-undef
-const sdk = MusicKit;
-const musicKit = sdk.getInstance();
-
 const store = new Vuex.Store({
   modules: {
     music,
@@ -18,34 +14,36 @@ const store = new Vuex.Store({
   },
 });
 
-if (!musicKit.isAuthorized) musicKit.authorize();
-store.commit('music/setStoreFront', musicKit.storefrontId);
+if (!MusicKit.getInstance().isAuthorized) MusicKit.getInstance().authorize();
+store.commit('music/setStoreFront', MusicKit.getInstance().storefrontId);
 
 document.addEventListener('musickitloaded', () => {
   store.dispatch('player/initializeState');
   store.dispatch('music/initializeState');
 });
-musicKit.addEventListener(sdk.Events.authorizationStatusDidChange, () => {
-  store.commit('music/setAuth', { auth: musicKit.isAuthorized });
+MusicKit.getInstance().addEventListener(MusicKit.Events.authorizationStatusDidChange, () => {
+  store.commit('music/setAuth', { auth: MusicKit.getInstance().isAuthorized });
 });
-musicKit.addEventListener(sdk.Events.playbackStateDidChange, (event) => {
+MusicKit.getInstance().addEventListener(MusicKit.Events.playbackStateDidChange, (event) => {
   store.commit('player/setPlaybackState', { playbackState: event.state });
 });
-musicKit.addEventListener(sdk.Events.mediaItemDidChange, (event) => {
+MusicKit.getInstance().addEventListener(MusicKit.Events.mediaItemDidChange, (event) => {
   store.commit('player/setCurrentlyPlaying', { currentlyPlaying: event.item });
 });
-// musicKit.addEventListener(sdk.Events.playbackProgressDidChange, (event) => {
+
+// 0 to 1 range of how much current item has played
+// MusicKit.getInstance().addEventListener(MusicKit.Events.playbackProgressDidChange, (event) => {
 // store.commit('player/setPlayProgress', { progress: event.progress });
 // });
-musicKit.addEventListener(sdk.Events.playbackTimeDidChange, (event) => {
+MusicKit.getInstance().addEventListener(MusicKit.Events.playbackTimeDidChange, (event) => {
   store.commit('player/setPlaybackTime', {
     playtimeInfo: event,
   });
 });
-musicKit.addEventListener(sdk.Events.queueItemsDidChange, (event) => {
+MusicKit.getInstance().addEventListener(MusicKit.Events.queueItemsDidChange, (event) => {
   store.commit('player/setQueue', { items: event });
 });
-musicKit.addEventListener(sdk.Events.queuePositionDidChange, (event) => {
+MusicKit.getInstance().addEventListener(MusicKit.Events.queuePositionDidChange, (event) => {
   store.commit('player/setQueuePosition', { position: event });
 });
 
