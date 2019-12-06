@@ -4,19 +4,28 @@
   width: 40px;
   height: 40px;
   position: relative;
+  &__big {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .double-bounce1,
 .double-bounce2 {
   width: 70%;
   height: 70%;
-  border-radius: 50%;
-  background-color: lighten($primary-color, 20%);
-  opacity: 0.6;
   position: absolute;
   top: 6px;
   left: 6px;
-
+  &__big{
+    width: 70px;
+    height: 70px;
+    top: 10%;
+    left: 45%;
+  }
+  border-radius: 50%;
+  background-color: lighten($primary-color, 20%);
+  opacity: 0.6;
   -webkit-animation: sk-bounce 2s infinite ease-in-out;
   animation: sk-bounce 2s infinite ease-in-out;
 }

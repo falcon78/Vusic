@@ -85,7 +85,7 @@ button,
     flex-direction: column;
     justify-content: center;
     color: white;
-    a{
+    a {
       text-decoration: none;
       color: white;
     }
@@ -98,9 +98,11 @@ button,
       }
     }
     .album-artist {
-      @include truncate-text;
       font-size: $tiny-font-size;
-      color: $sub-text-color;
+      @include truncate-text;
+      .sub-text {
+        color: $sub-text-color;
+      }
       &:hover {
         transform: scale(1.02);
         text-decoration: underline;

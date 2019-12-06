@@ -1,10 +1,6 @@
 <template>
   <div class="play-pause-skip-controls">
-    <arrow-left-icon
-      size="2.5x"
-      class="play-pause-skip-controls__icons"
-      @click="previous"
-    ></arrow-left-icon>
+    <arrow-left-icon size="2.5x" class="play-pause-skip-controls__icons" @click="previous" />
     <div v-if="getNowPlayingStatus.isLoading || fakeLoading" class="spinner">
       <div class="double-bounce1"></div>
       <div class="double-bounce2"></div>
@@ -14,19 +10,14 @@
       size="2.5x"
       class="play-pause-skip-controls__icons"
       @click="togglePlayPause"
-    ></play-icon>
+    />
     <pause-icon
       v-else
       size="2.5x"
       class="play-pause-skip-controls__icons"
       @click="togglePlayPause"
-    ></pause-icon>
-
-    <arrow-right-icon
-      size="2.5x"
-      class="play-pause-skip-controls__icons"
-      @click="next"
-    ></arrow-right-icon>
+    />
+    <arrow-right-icon size="2.5x" class="play-pause-skip-controls__icons" @click="next" />
   </div>
 </template>
 

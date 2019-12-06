@@ -13,10 +13,9 @@
       <router-link class="album-title" :to="{ name: to, params: { id: 'abc123' } }" :title="title">
         {{ title }}
       </router-link>
-      <a v-if="artist && artist.length" href="#" class="album-artist" :title="artist">{{
-        artist
-      }}</a>
-      <p v-else class="album-artist">{{ type.charAt(0).toUpperCase() + type.slice(1) }}</p>
+      <div class="album-artist">
+        <a v-if="artist && artist.length" class="sub-text" href="#" :title="artist">{{ artist }}</a>
+      </div>
     </div>
   </div>
 </template>
