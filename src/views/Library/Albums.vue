@@ -1,6 +1,8 @@
 <template>
   <div class="albums-page scrollWrapper">
+    <full-page-loader v-if="!albums.length" />
     <thumbnail-and-title
+      v-else
       class="margin"
       v-for="album in albums"
       :key="album.id"
@@ -18,6 +20,7 @@
 <script>
 import helpers from '../../store/helpers';
 import ThumbnailAndTitle from '@/components/ThumbnailAndTitle.vue';
+import FullPageLoader from '@/components/Player/FullPageLoader';
 
 export default {
   name: 'albums-page',
@@ -27,6 +30,7 @@ export default {
     };
   },
   components: {
+    FullPageLoader,
     ThumbnailAndTitle,
   },
   methods: {

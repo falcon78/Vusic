@@ -15,11 +15,16 @@ import Home from '@/views/Home.vue';
 export default {
   components: { Home },
   mounted() {
-    document.body.onkeyup = (e) => {
-      if (e.keyCode == 32) {
+    document.documentElement.addEventListener(
+      'keydown',
+      (e) => {
+        if ((e.keyCode || e.which || e.code) === 32) {
+          e.preventDefault();
+        }
         this.$store.dispatch('player/togglePlayPause');
-      }
-    };
+      },
+      false,
+    );
   },
 };
 </script>

@@ -1,5 +1,6 @@
 <template>
   <div class="albums-page scrollWrapper">
+    <full-page-loader v-if="!playlists.length" />
     <thumbnail-and-title
       class="margin"
       v-for="playlist in playlists"
@@ -15,46 +16,31 @@
     />
   </div>
 </template>
-<!--
-<template>
-  <div class="albums-page scrollWrapper">
-    <thumbnail-and-title
-      class="margin"
-      v-for="album in fetchedAlbums"
-      :key="album.id"
-      :id="album.id"
-      :size="'small'"
-      :artist="album.attributes.artistName"
-      :title="album.attributes.name"
-      :artwork="getUrl(album.attributes.artwork, 100)"
-      :type="getType(album.type)"
-    />
-  </div>
-</template>
--->
 
 <script>
-  import helpers from '../../store/helpers';
-  import ThumbnailAndTitle from '@/components/ThumbnailAndTitle.vue';
+import helpers from '../../store/helpers';
+import ThumbnailAndTitle from '@/components/ThumbnailAndTitle.vue';
+import FullPageLoader from '@/components/Player/FullPageLoader';
 
-  export default {
-    name: 'library-playlist',
-    data() {
-      return {
-        playlists: [],
-      };
-    },
-    components: {
-      ThumbnailAndTitle,
-    },
-    methods: {
-      getUrl: helpers.getUrl,
-      getType: helpers.getType,
-    },
-    mounted() {
-      MusicKit.getInstance()
-        .api.library.playlists(null, { limit: 100 })
-        .then((playlists) => (this.playlists = playlists));
-    },
-  };
+export default {
+  name: 'library-playlist',
+  data() {
+    return {
+      playlists: [],
+    };
+  },
+  components: {
+    FullPageLoader,
+    ThumbnailAndTitle,
+  },
+  methods: {
+    getUrl: helpers.getUrl,
+    getType: helpers.getType,
+  },
+  mounted() {
+    MusicKit.getInstance()
+      .api.library.playlists(null, { limit: 100 })
+      .then((playlists) => (this.playlists = playlists));
+  },
+};
 </script>

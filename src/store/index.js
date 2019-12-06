@@ -15,14 +15,15 @@ const store = new Vuex.Store({
   },
 });
 
+MusicKit.configure({
+  developerToken: keys.appleMusic.developerToken,
+  app: {
+    name: 'My Cool Web App',
+    build: '1978.4.1',
+  },
+});
+
 document.addEventListener('musickitloaded', () => {
-  MusicKit.configure({
-    developerToken: keys.appleMusic.developerToken,
-    app: {
-      name: 'My Cool Web App',
-      build: '1978.4.1',
-    },
-  });
   store.dispatch('player/initializeState');
   store.dispatch('music/initializeState');
 });

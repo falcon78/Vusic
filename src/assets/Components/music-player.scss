@@ -71,7 +71,7 @@ $image-width-height: 100px;
     @include transition-animation(0.1);
     &:hover {
       transform: scale(1.2);
-      stroke: $primary-purple;
+      stroke: $owl-pink-dark;
     }
     &:active {
       transform: scale(1.4);
