@@ -43,7 +43,7 @@ const getters = {
       albumInfo: getSafe(() => currentPlaying.albumInfo),
       artistName: getSafe(() => currentPlaying.artistName),
       isLoading: getSafe(() => currentPlaying.isLoading),
-      artwork: getSafe(() => MusicKit.formatArtworkURL(currentPlaying.artwork, 140, 140)),
+      artwork: getSafe(() => MusicKit.formatArtworkURL(currentPlaying.artwork, 100, 100)),
     };
   },
 };

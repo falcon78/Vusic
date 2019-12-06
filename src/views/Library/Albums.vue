@@ -6,35 +6,37 @@
       :key="album.id"
       :id="album.id"
       :size="'small'"
-      :artist="album.artist"
-      :title="album.title"
-      :artwork="album.artwork"
-      :type="'album'"
+      :artist="album.attributes.artistName"
+      :title="album.attributes.name"
+      :artwork="getUrl(album.attributes.artwork, 100)"
+      :type="getType(album.type)"
+      :play-params="album.attributes.playParams"
     />
   </div>
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex';
+import helpers from '../../store/helpers';
 import ThumbnailAndTitle from '@/components/ThumbnailAndTitle.vue';
 
 export default {
   name: 'albums-page',
+  data() {
+    return {
+      albums: [],
+    };
+  },
   components: {
     ThumbnailAndTitle,
   },
   methods: {
-    ...mapActions('myLibrary', {
-      getAlbums: 'getAlbums',
-    }),
-  },
-  computed: {
-    ...mapGetters('myLibrary', {
-      albums: 'getLibraryAlbums',
-    }),
+    getUrl: helpers.getUrl,
+    getType: helpers.getType,
   },
   mounted() {
-    this.getAlbums();
+    MusicKit.getInstance()
+      .api.library.albums(null, { limit: 100 })
+      .then((albums) => (this.albums = albums));
   },
 };
 </script>

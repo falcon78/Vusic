@@ -37,25 +37,18 @@ export default {
     url: String,
     type: String,
     to: String,
+    playParams: Object,
   },
   data() {
     return {};
   },
   methods: {
-    ...mapActions('myLibrary', {
-      addQueue: 'addQueue',
-    }),
     ...mapActions('player', {
       play: 'play',
     }),
-    async playItem(type, id) {
-      await this.addQueue({ type, id });
-      await this.play().catch((err) => {
-        // @TODO: add error handle
-        if (err.message === 'Not Playable.') {
-          console.log(err.message);
-        }
-      });
+    async playItem() {
+      await MusicKit.getInstance().setQueue({ [this.playParams.kind]: this.playParams.id });
+      this.play();
     },
   },
 };

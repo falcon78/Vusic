@@ -3,6 +3,7 @@ import Vuex from 'vuex';
 import music from './music';
 import player from './player';
 import myLibrary from './myLibrary';
+import keys from '../../apiKeys';
 
 Vue.use(Vuex);
 
@@ -15,11 +16,17 @@ const store = new Vuex.Store({
 });
 
 document.addEventListener('musickitloaded', () => {
+  MusicKit.configure({
+    developerToken: keys.appleMusic.developerToken,
+    app: {
+      name: 'My Cool Web App',
+      build: '1978.4.1',
+    },
+  });
   store.dispatch('player/initializeState');
   store.dispatch('music/initializeState');
 });
 
-if (!MusicKit.getInstance().isAuthorized) MusicKit.getInstance().authorize();
 store.commit('music/setStoreFront', MusicKit.getInstance().storefrontId);
 store.commit('music/setAuth', { auth: MusicKit.getInstance().isAuthorized });
 

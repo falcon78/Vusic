@@ -7,39 +7,54 @@
       :id="playlist.id"
       :size="'small'"
       :title="playlist.attributes.name"
-      :artwork="formatUrl(playlist.attributes.artwork)"
+      :artwork="getUrl(playlist.attributes.artwork, 100)"
+      :play-params="playlist.attributes.playParams"
       :url="playlist.href"
       :type="'playlist'"
       :to="''"
     />
   </div>
 </template>
+<!--
+<template>
+  <div class="albums-page scrollWrapper">
+    <thumbnail-and-title
+      class="margin"
+      v-for="album in fetchedAlbums"
+      :key="album.id"
+      :id="album.id"
+      :size="'small'"
+      :artist="album.attributes.artistName"
+      :title="album.attributes.name"
+      :artwork="getUrl(album.attributes.artwork, 100)"
+      :type="getType(album.type)"
+    />
+  </div>
+</template>
+-->
 
 <script>
-import { mapState, mapActions } from 'vuex';
-import ThumbnailAndTitle from '@/components/ThumbnailAndTitle.vue';
-import helpers from '../../store/helpers';
+  import helpers from '../../store/helpers';
+  import ThumbnailAndTitle from '@/components/ThumbnailAndTitle.vue';
 
-export default {
-  name: 'albums-page',
-  components: {
-    ThumbnailAndTitle,
-  },
-  methods: {
-    ...mapActions('myLibrary', {
-      getPlaylists: 'getPlaylists',
-    }),
-    formatUrl(url) {
-      return helpers.getSafe(() => MusicKit.formatArtworkURL(url, 100, 100), helpers.fakeArtwork);
+  export default {
+    name: 'library-playlist',
+    data() {
+      return {
+        playlists: [],
+      };
     },
-  },
-  computed: {
-    ...mapState('myLibrary', {
-      playlists: (state) => state.playlists,
-    }),
-  },
-  mounted() {
-    this.getPlaylists();
-  },
-};
+    components: {
+      ThumbnailAndTitle,
+    },
+    methods: {
+      getUrl: helpers.getUrl,
+      getType: helpers.getType,
+    },
+    mounted() {
+      MusicKit.getInstance()
+        .api.library.playlists(null, { limit: 100 })
+        .then((playlists) => (this.playlists = playlists));
+    },
+  };
 </script>

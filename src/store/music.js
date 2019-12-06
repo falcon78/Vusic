@@ -2,13 +2,7 @@ import keys from '../../apiKeys';
 // import helpers from './helpers';
 
 // eslint-disable-next-line no-undef
-MusicKit.configure({
-  developerToken: keys.appleMusic.developerToken,
-  app: {
-    name: 'My Cool Web App',
-    build: '1978.4.1',
-  },
-});
+
 
 const musicState = {
   storeFront: '',
