@@ -3,9 +3,12 @@
 </template>
 
 <script>
-export default {
-  name: 'Artists',
-};
+  export default {
+    name: 'Artists',
+    created() {
+      console.log('this is mounted');
+    },
+  };
 </script>
 
 <style scoped></style>
