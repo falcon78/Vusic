@@ -34,6 +34,7 @@ li {
 
 .sidebar {
   @include box-shadow;
+  position: relative;
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
@@ -43,11 +44,16 @@ li {
   position: sticky;
   top: 0;
   height: 100vh;
-  overflow-y: hidden;
   overflow-x: hidden;
+  overflow-y:scroll;
   width: $sidebar-width;
+  nav{
+    height: calc(100% - 280px);
+    overflow-y:scroll;
+  }
   .padding-div {
     padding-left: 1em;
+    
   }
 
   &__category {
