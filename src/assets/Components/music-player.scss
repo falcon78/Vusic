@@ -4,10 +4,13 @@ $player-height: 280px;
 $image-width-height: 100px;
 
 .player {
+  position: absolute;
+  bottom: 0;
   display: flex;
   flex-direction: column;
   align-content: center;
   align-items: center;
+  flex-shrink: 0;
   justify-content: flex-start;
   height: $player-height;
   margin-top: auto;
