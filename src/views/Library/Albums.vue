@@ -11,7 +11,7 @@
       :artist="album.attributes.artistName"
       :title="album.attributes.name"
       :artwork="getUrl(album.attributes.artwork, 100)"
-      :type="getType(album.type)"
+      :type="album.type"
       :play-params="album.attributes.playParams"
     />
   </div>
@@ -35,7 +35,6 @@ export default {
   },
   methods: {
     getUrl: helpers.getUrl,
-    getType: helpers.getType,
   },
   mounted() {
     MusicKit.getInstance()

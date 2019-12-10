@@ -10,7 +10,7 @@
       </button>
     </div>
     <div class="info">
-      <router-link class="album-title" :to="{ name: to, params: { id: 'abc123' } }" :title="title">
+      <router-link class="album-title" :to="{ name: type, params: { id: id } }" :title="title">
         {{ title }}
       </router-link>
       <div class="album-artist">
@@ -26,16 +26,17 @@ import { mapActions } from 'vuex';
 
 export default {
   name: 'thumbnail-and-title',
-  components: { HeartIcon, PlayCircleIcon },
+  components: {
+    HeartIcon,
+    PlayCircleIcon,
+  },
   props: {
     size: String, // small or big
     title: String,
     artist: String,
     artwork: String,
     id: String,
-    url: String,
     type: String,
-    to: String,
     playParams: Object,
   },
   data() {
