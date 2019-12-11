@@ -9,25 +9,6 @@ const libraryState = {
   playlists: [],
 };
 
-const getters = {
-  getLibraryAlbums: (state) => {
-    const albums = [];
-    const { getSafe } = helpers;
-    state.albums.forEach((album) => {
-      albums.push({
-        id: getSafe(() => album.id),
-        artist: getSafe(() => album.attributes.artistName),
-        title: getSafe(() => album.attributes.name),
-        artwork: getSafe(
-          () => MusicKit.formatArtworkURL(album.attributes.artwork, 100, 100),
-          'https://is1-ssl.mzstatic.com/image/thumb/Features127/v4/75/f9/6f/75f96fa5-99ca-0854-3aae-8f76f5cb7fb5/source/100x100bb.jpeg',
-        ),
-      });
-    });
-    return albums;
-  },
-};
-
 const mutations = {
   setLibraryAlbums(state, { albums }) {
     state.albums = albums;
@@ -65,6 +46,5 @@ export default {
   namespaced: true,
   state: libraryState,
   mutations,
-  getters,
   actions,
 };

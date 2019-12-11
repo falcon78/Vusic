@@ -1,6 +1,6 @@
 <template>
   <div class="sidebar scrollWrapper">
-    <nav>
+    <nav class="scrollWrapper">
       <div class="padding-div" v-for="(category, index) in categories" :key="index">
         <h2 class="sidebar__category svg-container">
           <MusicIcon v-if="category.icon === 'music'" size="1.5" class="svg" />
