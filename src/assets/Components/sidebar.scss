@@ -1,5 +1,5 @@
 $title-margin: 6px;
-$li-padding: 6px;
+$li-padding: 6px 6px;
 
 $sidebar-background-color: black;
 $sidebar-width: 260px;
@@ -12,22 +12,24 @@ ul {
 li {
   @include truncate-text;
   @include transition-animation(0.2);
-  margin: 6px 10px 6px 12px;
-  padding: $li-padding;
   border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  margin: 4px 0 0 12px;
+  div {
+    padding: $li-padding;
+    width: 100%;
+  }
   &:hover {
     @include box-shadow;
-    color: $pastel-purple;
     background: $primary-color;
-    transform: scale(1.1);
-    a {
-      color: rgba(white, 0.9);
-    }
+    transform: scale(1.08);
+    color: rgba(white, 0.9);
     margin-left: 1em;
   }
   &:active {
     @include transition-animation(0.1);
-    transform: scale(1.15);
+    transform: scale(1.11);
     background: $primary-purple;
   }
 }
@@ -64,16 +66,12 @@ li {
 
   &__li {
     width: 80%;
-    a {
-      color: $main-font-color;
-    }
+    color: $main-font-color;
 
     &__isActive {
       @include big-box-shadow;
       background: $secondary-color;
-      a {
-        color: white;
-      }
+      color: white;
     }
   }
 }

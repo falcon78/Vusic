@@ -13,11 +13,10 @@
             :key="index"
             class="sidebar__li"
             :class="{
-              sidebar__li__isActive:
-                category.routeName === active.category && label.routeName === active.label,
+              sidebar__li__isActive: isActive(label.routeName),
             }"
           >
-            <router-link :to="{ name: label.routeName }">{{ label.name }}</router-link>
+            <div @click="routeTo(label.routeName)">{{ label.name }}</div>
           </li>
         </ul>
       </div>
@@ -50,6 +49,15 @@ export default {
       categories: routerConstants,
       playlists: ['BeatsTrumental', 'Hiphops', 'New Releases'],
     };
+  },
+  methods: {
+    routeTo(name) {
+      if (this.$route.name === name) return;
+      this.$router.push({ name });
+    },
+    isActive(name) {
+      return this.$route.name === name;
+    },
   },
 };
 </script>
