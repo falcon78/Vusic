@@ -5,10 +5,11 @@
       <div class="double-bounce1"></div>
       <div class="double-bounce2"></div>
     </div>
-    <play-icon
-      v-else-if="!isPlaying"
-      size="2.5x"
+    <font-awesome-icon
       class="play-pause-skip-controls__icons"
+      v-else-if="!isPlaying"
+      size="2x"
+      icon="play"
       @click="togglePlayPause"
     />
     <pause-icon
@@ -22,12 +23,11 @@
 </template>
 
 <script>
-import { PlayIcon, PauseIcon, ArrowRightIcon, ArrowLeftIcon } from 'vue-feather-icons';
+import { PauseIcon, ArrowRightIcon, ArrowLeftIcon } from 'vue-feather-icons';
 import { mapState, mapActions, mapGetters } from 'vuex';
 export default {
   name: 'play-pause-skip-controls',
   components: {
-    PlayIcon,
     PauseIcon,
     ArrowRightIcon,
     ArrowLeftIcon,
