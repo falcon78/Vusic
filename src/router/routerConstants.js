@@ -4,8 +4,8 @@ const routes = [
     category: 'APPLE MUSIC',
     icon: 'music',
     labels: [
-      { name: 'For You', routeName: '/library/for-you' },
-      { name: 'Browse', routeName: '/library/browse' },
+      { name: 'For You', routeName: 'for-you' },
+      { name: 'Browse', routeName: 'browse' },
     ],
   },
   {

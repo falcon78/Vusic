@@ -14,18 +14,13 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: '/',
-    name: 'test',
-    component: Albums,
-  },
-  {
-    path: routerConstants[0].labels[0].routeName,
-    name: routerConstants[0].labels[0].routeName,
-    component: ForYou,
-  },
-  {
-    path: routerConstants[0].labels[1].routeName,
-    name: routerConstants[0].labels[1].routeName,
+    name: 'browse',
     component: Browse,
+  },
+  {
+    path: '/for-you',
+    name: 'for-you',
+    component: ForYou,
   },
   {
     path: '/library',
