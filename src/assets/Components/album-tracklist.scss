@@ -1,8 +1,24 @@
-* {
-  box-sizing: border-box;
-}
 .album-details {
-  width: 90%;
+  box-sizing: border-box;
+  width: 100%;
+  height: 300px;
   display: flex;
-
+  align-items: center;
+  background-color: $card-background-color;
+  padding: 1em;
+  img {
+    box-shadow: $artwork-box-shadow;
+    border-radius: 8px;
+  }
 }
+
+.album-metadata {
+  margin-left: 1em;
+  p{
+    margin: 0;
+  }
+  h1,h2,h3,h4 {
+    margin: 10px;
+  }
+}
+

@@ -1,5 +1,6 @@
 <template>
   <div>
+    <full-page-loader v-if="!album" />
     <Album
       v-if="album"
       :id="album.id"
@@ -18,9 +19,11 @@
 <script>
 import Album from '@/components/Album';
 import helpers from '@/store/helpers';
+import FullPageLoader from '@/components/Player/FullPageLoader';
 export default {
   name: 'LibraryAlbum',
   components: {
+    FullPageLoader,
     Album,
   },
   data() {

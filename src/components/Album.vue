@@ -3,9 +3,10 @@
     <div class="album-details">
       <img :src="artwork" alt="artwork of currently viewing album" />
       <div class="album-metadata">
-        <p>{{ title }}</p>
-        <p>{{ artistName }}</p>
-        <p>{{ releaseDate }}</p>
+        <h1>{{ title }}</h1>
+        <h3>{{ artistName }}</h3>
+        <h4>{{ releaseDate }}</h4>
+        <font-awesome-icon icon="user-secret" size="2x" />
       </div>
       <div class="song-list"></div>
     </div>

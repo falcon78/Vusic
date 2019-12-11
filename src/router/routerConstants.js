@@ -15,7 +15,7 @@ const routes = [
     labels: [
       { name: 'Recently Added', routeName: 'recently-added' },
       { name: 'Artists', routeName: 'library-artists' },
-      { name: 'Albums', routeName: 'library-albums' },
+      { name: 'Albums', routeName: 'library-albums-list' },
       { name: 'Songs', routeName: 'library-songs' },
       { name: 'Playlists', routeName: 'library-playlists' },
     ],
