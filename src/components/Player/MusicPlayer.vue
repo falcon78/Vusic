@@ -14,10 +14,7 @@
         </div>
       </div>
     </div>
-    <div v-if="getNowPlayingStatus.isPlaying && currentTimeInMinutes === '0:00'">
-      loading
-    </div>
-    <div v-else class="play-status">
+    <div class="play-status">
       <play-pause-skip-controls></play-pause-skip-controls>
       <div>
         <vue-slider

@@ -1,17 +1,18 @@
 <template>
   <div class="albums-page scrollWrapper">
     <full-page-loader v-if="!albums.length" />
-    <thumbnail-and-title
+    <artwork-and-title
       v-else
       class="margin"
       v-for="album in albums"
+      :item="album"
       :key="album.id"
       :id="album.id"
       :size="'small'"
       :artist="album.attributes.artistName"
       :title="album.attributes.name"
       :artwork="getUrl(album.attributes.artwork, 100)"
-      :type="album.type"
+      :type="'library-album'"
       :play-params="album.attributes.playParams"
     />
   </div>
@@ -19,11 +20,11 @@
 
 <script>
 import helpers from '../../store/helpers';
-import ThumbnailAndTitle from '@/components/ThumbnailAndTitle.vue';
+import ArtworkAndTitle from '@/components/ArtworkAndTitle.vue';
 import FullPageLoader from '@/components/Player/FullPageLoader';
 
 export default {
-  name: 'albums-page',
+  name: 'albums',
   data() {
     return {
       albums: [],
@@ -31,7 +32,7 @@ export default {
   },
   components: {
     FullPageLoader,
-    ThumbnailAndTitle,
+    ArtworkAndTitle,
   },
   methods: {
     getUrl: helpers.getUrl,

@@ -4,11 +4,11 @@ import Albums from '@/views/Library/Albums.vue';
 import ForYou from '@/views/ForYou.vue';
 import Browse from '@/views/Browse.vue';
 import RecentlyAdded from '@/views/RecentlyAdded.vue';
-import routerConstants from './routerConstants';
 import Artists from '@/views/Artists.vue';
 import Songs from '@/views/Songs.vue';
 import Playlists from '@/views/Library/Playlists.vue';
 import LibraryAlbum from '@/views/Library/LibraryAlbum';
+import LibraryPlaylist from '@/views/Library/LibraryPlaylist';
 
 Vue.use(VueRouter);
 
@@ -22,6 +22,11 @@ const routes = [
     path: '/for-you',
     name: 'for-you',
     component: ForYou,
+  },
+  {
+    path: '/album/:id' ,
+    name: 'album',
+    component: LibraryAlbum
   },
   {
     path: '/library',
@@ -44,7 +49,7 @@ const routes = [
       },
       {
         path: 'albums',
-        name: 'library-albums-list',
+        name: 'library-albums',
         component: Albums,
       },
       {
@@ -58,8 +63,13 @@ const routes = [
         component: Playlists,
       },
       {
+        path: 'playlists/:id',
+        name: 'library-playlist',
+        component: LibraryPlaylist,
+      },
+      {
         path: 'album/:id',
-        name: 'library-albums',
+        name: 'library-album',
         component: LibraryAlbum,
       },
     ],

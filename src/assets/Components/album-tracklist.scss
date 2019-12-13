@@ -9,6 +9,8 @@
   img {
     box-shadow: $artwork-box-shadow;
     border-radius: 8px;
+    width: 200px;
+    height: 200px;
   }
 }
 
@@ -22,3 +24,8 @@
   }
 }
 
+.song-list {
+  margin: 1em 0;
+  display: flex;
+  flex-direction: column;
+}
