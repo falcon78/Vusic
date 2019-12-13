@@ -36,7 +36,6 @@ li {
 
 .sidebar {
   @include box-shadow;
-  position: relative;
   flex-shrink: 0;
   display: flex;
   flex-direction: column;

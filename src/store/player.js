@@ -44,6 +44,7 @@ const getters = {
       artistName: getSafe(() => currentPlaying.artistName),
       isLoading: getSafe(() => currentPlaying.isLoading),
       artwork: getSafe(() => MusicKit.formatArtworkURL(currentPlaying.artwork, 100, 100)),
+      isPlaying: getSafe(() => state.isPlaying),
     };
   },
 };
@@ -59,7 +60,7 @@ const mutations = {
     state.repeat = repeat;
   },
   setCurrentlyPlaying(state, { currentlyPlaying }) {
-    state.currentlyPlaying = currentlyPlaying;
+    state.currentlyPlaying = Object.assign(currentlyPlaying);
   },
   setQueue(state, { items }) {
     state.queue = items;

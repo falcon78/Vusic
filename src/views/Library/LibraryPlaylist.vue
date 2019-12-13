@@ -1,16 +1,15 @@
 <template>
   <div class="scrollWrapper">
-    <full-page-loader v-if="!album" />
-    <album-playlist-songs v-if="album" :item="album" />
+    <full-page-loader v-if="!playlist" />
+    <album-playlist-songs v-if="playlist" :item="playlist" />
   </div>
 </template>
 
 <script>
 import AlbumPlaylistSongs from '@/components/AlbumPlaylistSongs';
 import FullPageLoader from '@/components/Player/FullPageLoader';
-import helpers from '@/store/helpers';
 export default {
-  name: 'LibraryAlbum',
+  name: 'LibraryPlaylist',
   components: {
     AlbumPlaylistSongs,
     FullPageLoader,
@@ -18,18 +17,18 @@ export default {
   data() {
     return {
       id: this.$route.params.id,
-      album: null,
-      library: this.$route.name === 'library-album',
+      playlist: null,
     };
   },
   methods: {
-    getApi: helpers.getApi,
-    getAlbumInfo() {
-      this.getApi(this.library).album(this.id).then((album) => (this.album = album));
+    getPlaylistInfo() {
+      MusicKit.getInstance()
+        .api.library.playlist(this.id)
+        .then((playlist) => (this.playlist = playlist));
     },
   },
   mounted() {
-    this.getAlbumInfo();
+    this.getPlaylistInfo();
   },
 };
 </script>

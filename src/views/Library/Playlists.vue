@@ -1,25 +1,20 @@
 <template>
   <div class="albums-page scrollWrapper">
     <full-page-loader v-if="!playlists.length" />
-    <thumbnail-and-title
+    <artwork-and-title
       class="margin"
       v-for="playlist in playlists"
       :key="playlist.id"
-      :id="playlist.id"
       :size="'small'"
-      :title="playlist.attributes.name"
-      :artwork="getUrl(playlist.attributes.artwork, 100)"
-      :play-params="playlist.attributes.playParams"
-      :url="playlist.href"
-      :type="'playlist'"
-      :to="''"
+      :item="playlist"
+      :type="'library-playlist'"
     />
   </div>
 </template>
 
 <script>
 import helpers from '../../store/helpers';
-import ThumbnailAndTitle from '@/components/ThumbnailAndTitle.vue';
+import ArtworkAndTitle from '@/components/ArtworkAndTitle.vue';
 import FullPageLoader from '@/components/Player/FullPageLoader';
 
 export default {
@@ -31,7 +26,7 @@ export default {
   },
   components: {
     FullPageLoader,
-    ThumbnailAndTitle,
+    ArtworkAndTitle,
   },
   methods: {
     getUrl: helpers.getUrl,

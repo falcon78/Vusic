@@ -99,6 +99,7 @@ button,
     }
     .album-artist {
       font-size: $tiny-font-size;
+      height: 15px;
       @include truncate-text;
       .sub-text {
         color: $sub-text-color;

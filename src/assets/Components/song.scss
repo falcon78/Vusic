@@ -1,0 +1,69 @@
+.song {
+  box-sizing: border-box;
+  display: flex;
+  padding: 8px;
+  border-radius: 8px;
+  width: 95%;
+  max-width: 800px;
+  margin-left: 1em;
+}
+
+.song-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  position: relative;
+  background-color: $card-background-color;
+}
+
+.song-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+  a,
+  p {
+    padding: 0;
+    margin: 0;
+    color: white;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  .song-album {
+    font-size: $tiny-font-size;
+    color: $sub-text-color;
+  }
+}
+
+.song-play-button {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  left: 6.6%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.track-number {
+  p {
+    margin: 0;
+    padding: 0;
+    color: lighten($primary-color, 10%);
+  }
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: 20px;
+  margin: 0 10px 0 0;
+}
+
+.song-time-stamp {
+  margin-left: auto;
+  align-self: center;
+}
