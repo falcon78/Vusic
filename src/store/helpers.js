@@ -39,7 +39,11 @@ const helpers = {
   },
   async playSongFromItems(playParams, startPosition = 0) {
     const music = MusicKit.getInstance();
-    await music.setQueue({ [playParams.kind]: playParams.id });
+    if (playParams.kind === 'album' || playParams.kind === 'playlist') {
+      await music.setQueue({ [playParams.kind]: playParams.id });
+    } else {
+      await music.setQueue(playParams);
+    }
     await music.player.changeToMediaAtIndex(startPosition);
   },
   setQueue(playParams) {

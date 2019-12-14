@@ -27,7 +27,7 @@
 import Song from './Song';
 import helpers from '../store/helpers';
 export default {
-  name: 'album-playlist-songs',
+  name: 'songs-list',
   components: { Song },
   props: {
     item: Object,
