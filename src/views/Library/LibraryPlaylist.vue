@@ -1,34 +1,41 @@
 <template>
-  <div class="scrollWrapper">
-    <full-page-loader v-if="!playlist" />
-    <album-playlist-songs v-if="playlist" :item="playlist" />
+  <div class="albums-page scrollWrapper">
+    <full-page-loader v-if="!playlists.length" />
+    <artwork-and-title
+      class="margin"
+      v-for="playlist in playlists"
+      :key="playlist.id"
+      :size="'small'"
+      :item="playlist"
+      :type="'library-playlist'"
+    />
   </div>
 </template>
 
 <script>
-import AlbumPlaylistSongs from '@/components/AlbumPlaylistSongs';
-import FullPageLoader from '@/components/Player/FullPageLoader';
+import helpers from '../../store/helpers';
+import ArtworkAndTitle from '@/components/ArtworkAndTitle.vue';
+import FullPageLoader from '@/components/FullPageLoader';
+
 export default {
-  name: 'LibraryPlaylist',
-  components: {
-    AlbumPlaylistSongs,
-    FullPageLoader,
-  },
+  name: 'library-playlist',
   data() {
     return {
-      id: this.$route.params.id,
-      playlist: null,
+      playlists: [],
     };
   },
+  components: {
+    FullPageLoader,
+    ArtworkAndTitle,
+  },
   methods: {
-    getPlaylistInfo() {
-      MusicKit.getInstance()
-        .api.library.playlist(this.id)
-        .then((playlist) => (this.playlist = playlist));
-    },
+    getUrl: helpers.getUrl,
+    getType: helpers.getType,
   },
   mounted() {
-    this.getPlaylistInfo();
+    MusicKit.getInstance()
+      .api.library.playlists(null, { limit: 100 })
+      .then((playlists) => (this.playlists = playlists));
   },
 };
 </script>

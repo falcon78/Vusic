@@ -2,7 +2,11 @@
   <div class="home ">
     <sidebar />
     <div class="main-view ">
-      <router-view id="main-body" />
+      <transition>
+        <keep-alive>
+          <router-view id="main-body"></router-view>
+        </keep-alive>
+      </transition>
     </div>
   </div>
 </template>

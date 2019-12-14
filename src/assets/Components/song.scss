@@ -9,9 +9,12 @@
 }
 
 .song-image {
-  width: 40px;
   height: 40px;
-  border-radius: 6px;
+  img {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+  }
   position: relative;
   background-color: $card-background-color;
 }
@@ -39,9 +42,10 @@
 
 .song-play-button {
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 2;
-  left: 6.6%;
+  left: 0;
+  top: 0;
   width: 40px;
   height: 40px;
   display: flex;
@@ -59,7 +63,7 @@
   justify-content: center;
   align-content: center;
   align-items: center;
-  width: 20px;
+  width: 30px;
   margin: 0 10px 0 0;
 }
 

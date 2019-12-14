@@ -5,32 +5,34 @@
     @mouseleave="hover = false"
     :style="isSelfPlaying && { backgroundColor: '#282828' }"
   >
-    <div class="track-number">
-      <p v-if="isPlaylist">{{ index + 1 }}</p>
-      <p v-else>{{ track.attributes.trackNumber }}</p>
+    <div v-if="!playParams.kind === 'song'" class="track-number">
+      <p v-if="playParams.kind === 'album'">{{ track.attributes.trackNumber }}</p>
+      <p v-else-if="playParams.kind === 'playlist'">{{ index + 1 }}</p>
     </div>
-    <div
-      class="song-image"
-      :style="{ backgroundImage: `url('${getUrl(track.attributes.artwork, 40)}')` }"
-      :alt="`artwork of track ${track.attributes.name}`"
-    />
-    <div class="song-play-button" v-if="isSelfPlaying">
-      <font-awesome-icon
-        v-if="nowPlaying.isPlaying"
-        class="play-pause-skip-controls__icons"
-        icon="pause"
-        @click="togglePlayPause"
+    <div class="song-image">
+      <img
+        :src="getUrl(track.attributes.artwork, 40)"
+        alt="`artwork of track ${track.attributes.name}`"
       />
-      <font-awesome-icon
-        v-else
-        class="play-pause-skip-controls__icons"
-        icon="play"
-        @click="togglePlayPause"
-      />
+      <div class="song-play-button" v-if="isSelfPlaying">
+        <font-awesome-icon
+          v-if="nowPlaying.isPlaying"
+          class="play-pause-skip-controls__icons"
+          icon="pause"
+          @click="togglePlayPause"
+        />
+        <font-awesome-icon
+          v-else
+          class="play-pause-skip-controls__icons"
+          icon="play"
+          @click="togglePlayPause"
+        />
+      </div>
+      <div class="song-play-button" v-else-if="hover" @click="play(playParams, index)">
+        <font-awesome-icon class="play-pause-skip-controls__icons" icon="play" />
+      </div>
     </div>
-    <div class="song-play-button" v-else-if="hover" @click="play(playParams, index)">
-      <font-awesome-icon class="play-pause-skip-controls__icons" icon="play" />
-    </div>
+
     <div class="song-details">
       <p class="song-track-name">{{ track.attributes.name }}</p>
       <a @click="routeToAlbum" class="song-album">{{ track.attributes.albumName }}</a>
@@ -71,9 +73,8 @@ export default {
         this.track.attributes.artistName,
         this.track.attributes.albumName,
       );
-      console.log(id);
       if (!id) return false;
-      this.$router.push({ name: 'album', params: { id: id } });
+      this.$router.push({ name: 'album', params: { id } });
     },
   },
   computed: {
@@ -83,9 +84,6 @@ export default {
     ...mapState('player', {
       isPlaying: (state) => state.isPlaying,
     }),
-    isPlaylist() {
-      return this.playParams.kind === 'playlist';
-    },
     isSelfPlaying() {
       if (this.isLibrary) {
         return (

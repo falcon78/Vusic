@@ -1,14 +1,14 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Albums from '@/views/Library/Albums.vue';
+import Albums from '@/views/Library/LibraryAlbums.vue';
 import ForYou from '@/views/ForYou.vue';
 import Browse from '@/views/Browse.vue';
 import RecentlyAdded from '@/views/RecentlyAdded.vue';
 import Artists from '@/views/Artists.vue';
-import Songs from '@/views/Songs.vue';
-import Playlists from '@/views/Library/Playlists.vue';
-import LibraryAlbum from '@/views/Library/LibraryAlbum';
-import LibraryPlaylist from '@/views/Library/LibraryPlaylist';
+import Songs from '@/views/Library/LibrarySongs.vue';
+import Playlists from '@/views/Library/LibraryPlaylist.vue';
+import LibraryAlbum from '@/components/Album';
+import LibraryPlaylist from '@/components/Playlist';
 
 Vue.use(VueRouter);
 
@@ -24,9 +24,9 @@ const routes = [
     component: ForYou,
   },
   {
-    path: '/album/:id' ,
+    path: '/album/:id',
     name: 'album',
-    component: LibraryAlbum
+    component: LibraryAlbum,
   },
   {
     path: '/library',
@@ -80,6 +80,14 @@ const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      console.log(savedPosition);
+      return savedPosition;
+    } else {
+      return { x: 0, y: 0 };
+    }
+  },
 });
 
 export default router;

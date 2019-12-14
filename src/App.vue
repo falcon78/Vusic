@@ -18,10 +18,19 @@ export default {
     document.documentElement.addEventListener(
       'keydown',
       (e) => {
-        if ((e.keyCode || e.which || e.code) === 32) {
+        if (e.code === 32) {
           e.preventDefault();
         }
         this.$store.dispatch('player/togglePlayPause');
+      },
+      false,
+    );
+    document.addEventListener(
+      'mousedown',
+      function(event) {
+        if (event.detail > 1) {
+          event.preventDefault();
+        }
       },
       false,
     );
