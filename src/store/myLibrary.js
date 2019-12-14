@@ -41,7 +41,6 @@ const actions = {
     { commit, state },
     { refresh = false, item, options = null, library = true },
   ) {
-    console.log(item)
     const name = item.charAt(0).toLocaleUpperCase() + item.substr(1);
     if (refresh) commit(`setLibrary${name}`, []);
     if (state[item].length) return;
