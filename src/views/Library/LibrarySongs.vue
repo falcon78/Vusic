@@ -16,18 +16,28 @@
 import Song from '@/components/Song';
 import FullPageLoader from '@/components/FullPageLoader';
 import songFetcherMixin from '@/components/Mixins/SongFetcherMixin';
+import { mapActions, mapState } from 'vuex';
 export default {
   name: 'Songs',
   components: { FullPageLoader, Song },
   mixins: [songFetcherMixin],
   data() {
     return {
-      songs: [],
       fetchingData: true,
     };
   },
   mounted() {
-    this.fetchAllItems(true, 'songs', null);
+    this.fetchAllItems({ refresh: false, item: 'songs', options: null, library: true });
+  },
+  methods: {
+    ...mapActions('myLibrary', {
+      fetchAllItems: 'fetchAllItems',
+    }),
+  },
+  computed: {
+    ...mapState('myLibrary', {
+      songs: (state) => state.songs,
+    }),
   },
 };
 </script>
