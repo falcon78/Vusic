@@ -17,25 +17,29 @@
 import helpers from '../../store/helpers';
 import ArtworkAndTitle from '@/components/ArtworkAndTitle.vue';
 import FullPageLoader from '@/components/FullPageLoader';
+import { mapActions, mapState } from 'vuex';
 
 export default {
   name: 'albums',
   data() {
-    return {
-      albums: [],
-    };
+    return {};
   },
   components: {
     FullPageLoader,
     ArtworkAndTitle,
   },
   methods: {
-    getUrl: helpers.getUrl,
+    ...mapActions('myLibrary', {
+      fetchAllItems: 'fetchAllItems',
+    }),
+  },
+  computed: {
+    ...mapState('myLibrary', {
+      albums: (state) => state.albums,
+    }),
   },
   mounted() {
-    MusicKit.getInstance()
-      .api.library.albums(null, { limit: 100 })
-      .then((albums) => (this.albums = albums));
+    this.fetchAllItems({ refresh: false, item: 'albums', options: null, library: true });
   },
 };
 </script>

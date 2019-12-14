@@ -81,12 +81,15 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes,
   scrollBehavior(to, from, savedPosition) {
+    console.log('i was here ');
+    console.log(savedPosition);
     if (savedPosition) {
-      console.log(savedPosition);
       return savedPosition;
-    } else {
-      return { x: 0, y: 0 };
     }
+    if (to.hash) {
+      return { selector: to.hash };
+    }
+    return { x: 0, y: 0 };
   },
 });
 

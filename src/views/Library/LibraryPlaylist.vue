@@ -16,13 +16,12 @@
 import helpers from '../../store/helpers';
 import ArtworkAndTitle from '@/components/ArtworkAndTitle.vue';
 import FullPageLoader from '@/components/FullPageLoader';
+import { mapActions, mapState } from 'vuex';
 
 export default {
   name: 'library-playlist',
   data() {
-    return {
-      playlists: [],
-    };
+    return {};
   },
   components: {
     FullPageLoader,
@@ -31,11 +30,17 @@ export default {
   methods: {
     getUrl: helpers.getUrl,
     getType: helpers.getType,
+    ...mapActions('myLibrary', {
+      fetchAllItems: 'fetchAllItems',
+    }),
+  },
+  computed: {
+    ...mapState('myLibrary', {
+      playlists: (state) => state.playlists,
+    }),
   },
   mounted() {
-    MusicKit.getInstance()
-      .api.library.playlists(null, { limit: 100 })
-      .then((playlists) => (this.playlists = playlists));
+    this.fetchAllItems({ refresh: false, item: 'playlists', options: null, library: true });
   },
 };
 </script>
