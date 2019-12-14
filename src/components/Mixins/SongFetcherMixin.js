@@ -1,19 +1,21 @@
 const songFetcherMixin = {
   data() {
     return {
-      offset: 0,
+      offset: 200,
     };
   },
   methods: {
     async fetchAllItems(library = true, item = 'songs', options = null) {
       const music = library ? MusicKit.getInstance().api.library : MusicKit.getInstance().api;
-      while (this.fetchingData) {
+      let fetchingData = true;
+      while (fetchingData) {
         try {
-          await music[item](options, { offset: this.offset, limit: 100 }).then((songs) => {
-            this.fetchingData = !!songs.length;
-            this[item].push(...songs);
+          await music[item](options, {offset: 100}).then((songs) => {
+            fetchingData = !!songs.length;
+            this[item] = songs;
+            console.log(songs);
+            this.offset += songs.length;
           });
-          this.offset += 100;
         } catch (e) {
           console.log(e);
         }
