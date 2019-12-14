@@ -3,9 +3,7 @@
     <sidebar />
     <div class="main-view ">
       <transition>
-        <keep-alive>
-          <router-view id="main-body"></router-view>
-        </keep-alive>
+        <router-view id="main-body" />
       </transition>
     </div>
   </div>
