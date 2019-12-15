@@ -34,7 +34,7 @@
     </div>
 
     <div class="song-details">
-      <p class="song-track-name">{{ track.attributes.name }}</p>
+      <p class="song-track-name" :title="track.attributes.name">{{ track.attributes.name }}</p>
       <a @click="routeToAlbum" class="song-album">{{ track.attributes.albumName }}</a>
     </div>
     <div class="song-time-stamp">

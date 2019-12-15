@@ -39,7 +39,7 @@ import { mapActions } from 'vuex';
 import helpers from '@/store/helpers';
 
 export default {
-  name: 'thumbnail-and-title',
+  name: 'artwork-and-title',
   components: {
     HeartIcon,
     PlayCircleIcon,

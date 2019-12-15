@@ -6,9 +6,10 @@ import Browse from '@/views/Browse.vue';
 import RecentlyAdded from '@/views/Library/RecentlyAdded.vue';
 import Songs from '@/views/Library/LibrarySongs.vue';
 import Playlists from '@/views/Library/LibraryPlaylist.vue';
-import LibraryAlbum from '@/components/Album';
+import Album from '@/components/Album';
 import LibraryPlaylist from '@/components/Playlist';
 import LibraryArtists from '@/views/Library/LibraryArtists';
+import Playlist from '../components/Playlist';
 
 Vue.use(VueRouter);
 
@@ -26,7 +27,12 @@ const routes = [
   {
     path: '/album/:id',
     name: 'album',
-    component: LibraryAlbum,
+    component: Album,
+  },
+  {
+    path: '/playlist/:id',
+    name: 'playlist',
+    component: Playlist,
   },
   {
     path: '/library',
@@ -70,7 +76,7 @@ const routes = [
       {
         path: 'album/:id',
         name: 'library-album',
-        component: LibraryAlbum,
+        component: Album,
       },
     ],
   },

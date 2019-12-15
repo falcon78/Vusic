@@ -8,23 +8,27 @@
 <script>
 import SongsList from '@/components/SongsList';
 import FullPageLoader from '@/components/FullPageLoader';
+import getSafeMixin from './Mixins/getSafeMixin';
 export default {
   name: 'LibraryPlaylist',
   components: {
     SongsList,
     FullPageLoader,
   },
+  mixins: [getSafeMixin],
   data() {
     return {
       id: this.$route.params.id,
       playlist: null,
+      isLibrary: this.getSafe(() => this.$route.name.match(/library/gi)[0]),
     };
   },
   methods: {
     getPlaylistInfo() {
-      MusicKit.getInstance()
-        .api.library.playlist(this.id)
-        .then((playlist) => (this.playlist = playlist));
+      const music = this.isLibrary
+        ? MusicKit.getInstance().api.library
+        : MusicKit.getInstance().api;
+      music.playlist(this.id).then((playlist) => (this.playlist = playlist));
     },
   },
   mounted() {

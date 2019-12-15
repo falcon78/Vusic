@@ -2,7 +2,7 @@
   <div class="scrollWrapper">
     <div class="artists-name-container scrollWrapper">
       <full-page-loader v-if="!artists.length" />
-      <artist-profile v-else v-for="artist in artists" :artist="artist" :key="artist" />
+      <artist-profile v-else v-for="artist in artists" :artist="artist" :key="artist.id" />
     </div>
     <router-view />
   </div>

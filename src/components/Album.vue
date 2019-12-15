@@ -10,7 +10,7 @@ import SongsList from '@/components/SongsList';
 import FullPageLoader from '@/components/FullPageLoader';
 import helpers from '@/store/helpers';
 export default {
-  name: 'LibraryAlbum',
+  name: 'album',
   components: {
     SongsList,
     FullPageLoader,
