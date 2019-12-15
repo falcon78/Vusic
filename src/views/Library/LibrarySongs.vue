@@ -1,6 +1,6 @@
 <template>
   <div class="library-songs scrollWrapper">
-    <full-page-loader v-if="!songs" />
+    <full-page-loader v-if="!songs.length" />
     <song
       v-else
       v-for="(song, index) in songs"
@@ -44,6 +44,7 @@ export default {
 
 <style lang="scss">
 .library-songs {
+  width: 30%;
   margin: 2em 0;
   box-sizing: border-box;
 }

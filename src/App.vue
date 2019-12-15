@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="is-fullheight scrollbar">
+  <div id="app" class="is-fullheight ">
     <home />
   </div>
 </template>
