@@ -26,7 +26,7 @@ export default {
       fetchingData: true,
     };
   },
-  mounted() {
+  created() {
     this.fetchAllItems({ refresh: false, item: 'songs', options: null, library: true });
   },
   methods: {

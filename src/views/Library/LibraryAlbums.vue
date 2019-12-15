@@ -38,7 +38,7 @@ export default {
       albums: (state) => state.albums,
     }),
   },
-  mounted() {
+  created() {
     this.fetchAllItems({ refresh: false, item: 'albums', options: null, library: true });
   },
 };

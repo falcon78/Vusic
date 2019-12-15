@@ -62,7 +62,7 @@ export default {
         });
     },
   },
-  mounted() {
+  created() {
     this.fetchTopCharts();
   },
 };

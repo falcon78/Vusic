@@ -39,7 +39,7 @@ export default {
       playlists: (state) => state.playlists,
     }),
   },
-  mounted() {
+  created() {
     this.fetchAllItems({ refresh: false, item: 'playlists', options: null, library: true });
   },
 };
