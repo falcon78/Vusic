@@ -9,8 +9,10 @@
   img {
     box-shadow: $artwork-box-shadow;
     border-radius: 8px;
+    display: inline-block;
     width: 200px;
     height: 200px;
+    flex-shrink: 0;
   }
 }
 

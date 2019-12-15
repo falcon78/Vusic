@@ -2,7 +2,6 @@ $title-margin: 6px;
 $li-padding: 6px 6px;
 
 $sidebar-background-color: black;
-$sidebar-width: 260px;
 
 ul {
   @include no-margin-padding;
@@ -43,18 +42,16 @@ li {
   background: $sidebar-background-color;
   padding: 1em 0 0 0;
   position: sticky;
-  top: 0;
   height: 100vh;
   overflow-x: hidden;
-  overflow-y:scroll;
   width: $sidebar-width;
   nav{
     height: calc(100% - 280px);
-    overflow-y:scroll;
+    overflow-y:auto;
   }
   .padding-div {
     padding-left: 1em;
-    
+
   }
 
   &__category {
