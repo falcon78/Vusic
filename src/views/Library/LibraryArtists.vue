@@ -1,14 +1,45 @@
 <template>
-  <p>Artists</p>
+  <div class="scrollWrapper">
+    <div class="artists-name-container scrollWrapper">
+      <full-page-loader v-if="!artists.length" />
+      <artist-profile v-else v-for="artist in artists" :artist="artist" :key="artist" />
+    </div>
+    <router-view />
+  </div>
 </template>
 
 <script>
-  export default {
-    name: 'Artists',
-    created() {
-      console.log('this is mounted');
+import ArtistProfile from '@/components/ArtistProfile';
+import FullPageLoader from '@/components/FullPageLoader';
+export default {
+  name: 'Artists',
+  components: { FullPageLoader, ArtistProfile },
+  data() {
+    return {
+      artists: [],
+    };
+  },
+  methods: {
+    async fetchAllArtists() {
+      const music = MusicKit.getInstance().api.library;
+      let fetchingData = true;
+      let offset = 0;
+      while (fetchingData) {
+        try {
+          const artists = await music.artists(null, { limit: 100, offset });
+          offset += 100;
+          fetchingData = !!artists.length;
+          this.artists.push(...artists);
+        } catch (e) {
+          console.log(e);
+        }
+      }
     },
-  };
+  },
+  mounted() {
+    this.fetchAllArtists();
+  },
+};
 </script>
 
-<style scoped></style>
+<style scoped />

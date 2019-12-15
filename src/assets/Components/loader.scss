@@ -5,8 +5,9 @@
   height: 40px;
   position: relative;
   &__big {
+    margin-top: 1em;
     width: 100%;
-    height: 100%;
+    height: 100px;
   }
 }
 
@@ -20,8 +21,7 @@
   &__big{
     width: 70px;
     height: 70px;
-    top: 10%;
-    left: 45%;
+    left: 35%;
   }
   border-radius: 50%;
   background-color: lighten($primary-color, 20%);

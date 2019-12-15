@@ -1,0 +1,30 @@
+.artists-name-container {
+  box-sizing: border-box;
+  background-color: $card-background-color;
+  height: 100vh;
+  width: 230px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.artist-name {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 180px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  @include transition-animation(0.2);
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.03);
+    color: $primary-color;
+  }
+  &:active {
+    transform: scale(1.08);
+  }
+  p {
+    @include truncate-text;
+    padding: 0;
+    margin: 0;
+  }
+}
