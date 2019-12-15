@@ -1,6 +1,7 @@
 $player-height: 2em;
 $main-view-width: 100%;
 $main-body-height: 100vh;
+$sidebar-width: 260px;
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
@@ -14,7 +15,7 @@ body {
 
 .home {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   width: 100vw;
 }
 
@@ -51,7 +52,8 @@ a {
 .main-view {
   padding: 0;
   height: 100vh;
-  width: $main-view-width;
+  // $sidebar-width --> 260px;
+  width: calc(100vw - 260px);
   @include flex-all-center;
 
   #player {

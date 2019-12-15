@@ -16,6 +16,7 @@ button,
 }
 
 .thumbnail-and-title {
+  box-sizing: content-box;
   background-color: $card-background-color;
   display: flex;
   flex-direction: column;

@@ -1,0 +1,20 @@
+.browse-page-category {
+  color: $primary-color;
+  margin-left: 1em;
+}
+
+.top-songs {
+  max-height: 400px ;
+  overflow: scroll;
+  max-width: 800px;
+}
+
+.albums-list {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.albums-margin{
+  margin: 10px;
+}

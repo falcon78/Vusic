@@ -4,6 +4,7 @@ $player-height: 280px;
 $image-width-height: 100px;
 
 .player {
+  box-sizing: border-box;
   position: absolute;
   bottom: 0;
   display: flex;
