@@ -10,7 +10,6 @@
         :key="song.id"
       />
     </div>
-
     <h2 class="browse-page-category">{{ albums.name }}</h2>
     <div class="albums-list">
       <full-page-loader v-if="!albums" />
@@ -41,6 +40,7 @@
 import Song from '../components/Song';
 import ArtworkAndTitle from '../components/ArtworkAndTitle';
 import FullPageLoader from '../components/FullPageLoader';
+
 export default {
   name: 'Browse',
   components: { FullPageLoader, ArtworkAndTitle, Song },
