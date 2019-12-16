@@ -46,15 +46,12 @@ const actions = {
     if (state[item].length) return;
     let offset = 0;
     const music = library ? MusicKit.getInstance().api.library : MusicKit.getInstance().api;
-    let loop = 0;
     let noMoreData = false;
-    for (; !noMoreData; ) {
-      await music[item](options, { offset, limit: 100 }).then((items) => {
-        commit(`mergeLibrary${name}`, items);
-        noMoreData = !items.length;
-      });
+    while (!noMoreData) {
+      const items = await music[item](!!options, { offset, limit: 100 });
+      commit(`mergeLibrary${name}`, items);
+      noMoreData = !items.length;
       offset += 100;
-      loop++;
     }
   },
 };
