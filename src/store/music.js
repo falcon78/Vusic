@@ -28,7 +28,6 @@ const mutations = {
 
 const actions = {
   initializeState() {
-    console.log('music state init');
   },
   showLoginPage() {
     return MusicKit.getInstance().authorize();

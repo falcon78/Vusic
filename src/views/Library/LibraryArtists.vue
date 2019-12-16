@@ -31,7 +31,6 @@ export default {
           fetchingData = !!artists.length;
           this.artists.push(...artists);
         } catch (e) {
-          console.log(e);
         }
       }
     },

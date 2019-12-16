@@ -16,14 +16,14 @@
             @click="playSongFromItems(item.attributes.playParams, 0)"
             class="button "
           >
-            <font-awesome-icon icon="play" size="1x" /> Play
+            <font-awesome-icon icon="play" size="1x" /> <span>Play</span>
           </div>
           <div v-else>
             <div v-if="isPlaying" @click="togglePlayPause" class="button ">
-              <font-awesome-icon icon="pause" size="1x" /> Pause
+              <font-awesome-icon icon="pause" size="1x" /> <span>Pause</span>
             </div>
             <div v-else @click="togglePlayPause" class="button ">
-              <font-awesome-icon icon="play" size="1x" /> Play
+              <font-awesome-icon icon="play" size="1x" /> <span>Play</span>
             </div>
           </div>
         </div>
@@ -79,3 +79,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.button {
+  width: 100px !important;
+}
+</style>

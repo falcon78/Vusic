@@ -1,16 +1,18 @@
 .button {
   @include transition-animation(0.2);
   @include box-shadow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   box-sizing: border-box;
   background: $primary-color;
-  width: max-content;
   background: linear-gradient(
     45deg,
     rgba(242, 127, 156, 1) 0%,
     rgba(255, 117, 151, 1) 46%,
     rgba(241, 185, 74, 1) 100%
   );
-  padding: 10px 1.5em;
+  padding: 10px 0;
   color: whitesmoke;
   border-radius: 10px;
   font-weight: 600;
@@ -23,4 +25,8 @@
     transform: scale(0.9);
   }
   z-index: 99999999;
+  span {
+    margin: 0  0 0 6px;
+    display: inline-block;
+  }
 }
