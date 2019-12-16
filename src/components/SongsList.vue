@@ -82,6 +82,10 @@ export default {
 
 <style scoped>
 .button {
-  width: 100px !important;
+  width: 100px;
+}
+span {
+  margin: 0 0 0 6px;
+  display: inline-block;
 }
 </style>
