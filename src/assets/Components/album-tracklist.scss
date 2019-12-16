@@ -18,11 +18,22 @@
 
 .album-metadata {
   margin-left: 1em;
-  p{
+  height: 190px;
+  p {
     margin: 0;
   }
-  h1,h2,h3,h4 {
-    margin: 10px;
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin: 0 0 10px 0;
+  }
+  display: flex;
+  flex-direction: column;
+  .albums-attributes {
+  }
+  .album-buttons {
+    margin-top: auto;
   }
 }
 
