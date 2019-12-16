@@ -13,11 +13,9 @@ const songFetcherMixin = {
           await music[item](options, {offset: 100}).then((songs) => {
             fetchingData = !!songs.length;
             this[item] = songs;
-            console.log(songs);
             this.offset += songs.length;
           });
         } catch (e) {
-          console.log(e);
         }
       }
     },
