@@ -12,6 +12,7 @@ import LibraryArtists from '@/views/Library/LibraryArtists';
 import Playlist from '../components/AlbumOrPlaylistItems';
 import store from '@/store';
 import Login from '@/views/Login';
+import LibraryAlbums from '@/views/Library/LibraryAlbums';
 
 Vue.use(VueRouter);
 
@@ -69,8 +70,8 @@ const routes = [
       {
         path: 'albums',
         name: 'library-albums',
-        meta: { album: true, isLibrary: true },
-        component: Playlist,
+        meta: { isLibrary: true },
+        component: LibraryAlbums,
       },
       {
         path: 'songs',
@@ -93,8 +94,8 @@ const routes = [
       {
         path: 'album/:id',
         name: 'library-album',
-        meta: { isLibrary: true },
-        component: Album,
+        meta: { isLibrary: true, album: true },
+        component: Playlist,
       },
     ],
   },

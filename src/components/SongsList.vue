@@ -9,22 +9,11 @@
           <h4 v-if="!isPlaylist">
             {{ getSafe(() => item.relationships.tracks.data[0].attributes.releaseDate) }}
           </h4>
+          <h4 v-else>{{ getSafe(() => item.attributes.description.standard) }}</h4>
         </div>
         <div class="album-buttons">
-          <div
-            v-if="!isCurrentlyPlaying"
-            @click="playSongFromItems(item.attributes.playParams, 0)"
-            class="button "
-          >
+          <div @click="playSongFromItems(item.attributes.playParams, 0)" class="button ">
             <font-awesome-icon icon="play" size="1x" /> <span>Play</span>
-          </div>
-          <div v-else>
-            <div v-if="isPlaying" @click="togglePlayPause" class="button ">
-              <font-awesome-icon icon="pause" size="1x" /> <span>Pause</span>
-            </div>
-            <div v-else @click="togglePlayPause" class="button ">
-              <font-awesome-icon icon="play" size="1x" /> <span>Play</span>
-            </div>
           </div>
         </div>
       </div>
@@ -71,10 +60,7 @@ export default {
       isPlaying: (state) => state.isPlaying,
     }),
     isCurrentlyPlaying() {
-      return (
-        this.item.attributes.name === this.getNowPlayingStatus.albumName &&
-        this.item.attributes.artistName === this.getNowPlayingStatus.artistName
-      );
+      return this.item.attributes.name === this.getNowPlayingStatus.albumName;
     },
   },
 };
