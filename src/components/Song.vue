@@ -74,6 +74,7 @@ export default {
         this.track.attributes.albumName,
       );
       if (!id) return false;
+      if (this.$route.params.id === id) return false;
       this.$router.push({ name: 'album', params: { id } });
     },
   },
