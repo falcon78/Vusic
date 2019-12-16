@@ -6,6 +6,12 @@
   height: 100%;
   color: $primary-color;
   margin-top: 3em;
+  .button {
+    width: 100px !important;
+    span {
+      margin: 0 !important;
+    }
+  }
 }
 
 .login-image {
