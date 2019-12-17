@@ -67,12 +67,14 @@ const routes = [
         name: 'library-artists',
         meta: { isLibrary: true },
         component: LibraryArtists,
-        children: [{
-          path: ':id',
-          name: 'library-artist-items',
-          meta: { isLibrary: true },
-          component: MultipleAlbumItems
-        }],
+        children: [
+          {
+            path: ':id',
+            name: 'library-artist-items',
+            meta: { isLibrary: true },
+            component: MultipleAlbumItems,
+          },
+        ],
       },
       {
         path: 'albums',
@@ -112,6 +114,13 @@ const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes,
+  scrollBehavior(to, from, savedPosition) {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve({ x: 0, y: 0 });
+      }, 500);
+    });
+  },
 });
 
 router.beforeEach((to, from, next) => {

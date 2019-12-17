@@ -29,7 +29,6 @@ export default {
   },
   methods: {
     getUrl: helpers.getUrl,
-    getType: helpers.getType,
     ...mapActions('myLibrary', {
       fetchAllItems: 'fetchAllItems',
     }),
