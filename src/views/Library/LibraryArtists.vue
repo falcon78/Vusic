@@ -1,10 +1,10 @@
 <template>
-  <div class="scrollWrapper">
+  <div class="scrollWrapper library-artist-container">
     <div class="artists-name-container scrollWrapper">
       <full-page-loader v-if="!artists.length" />
       <artist-profile v-else v-for="artist in artists" :artist="artist" :key="artist.id" />
     </div>
-    <router-view />
+    <router-view class="library-artist-items" />
   </div>
 </template>
 
@@ -17,6 +17,7 @@ export default {
   data() {
     return {
       artists: [],
+      selected: this.$route.params.id
     };
   },
   methods: {

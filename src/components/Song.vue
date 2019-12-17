@@ -28,14 +28,18 @@
           @click="togglePlayPause"
         />
       </div>
-      <div class="song-play-button" v-else-if="hover" @click="play(playParams, index)">
+      <div class="song-play-button" v-else-if="hover" @click="playSongFromItems(playParams, index)">
         <font-awesome-icon class="play-pause-skip-controls__icons" icon="play" />
       </div>
     </div>
 
     <div class="song-details">
       <p class="song-track-name" :title="track.attributes.name">{{ track.attributes.name }}</p>
-      <a @click="routeToAlbum" class="song-album">{{ track.attributes.albumName }}</a>
+      <a
+        @click="routeToAlbum(track.attributes.artistName, track.attributes.albumName)"
+        class="song-album"
+        >{{ track.attributes.albumName }}</a
+      >
     </div>
     <div class="song-time-stamp">
       {{ milliToMinutes(track.attributes.durationInMillis) }}
@@ -46,6 +50,7 @@
 <script>
 import helpers from '@/store/helpers';
 import { mapActions, mapGetters, mapState } from 'vuex';
+import musicMixin from '@/components/Mixins/musicMixin';
 export default {
   name: 'song',
   props: {
@@ -53,30 +58,19 @@ export default {
     index: Number,
     playParams: Object,
   },
+  mixins: [musicMixin],
   data() {
     return {
       hover: false,
-      isLibrary: helpers.getSafe(() => this.$route.name.match(/library/gi)[0]),
+      isLibrary: helpers.getSafe(() => this.$route.meta.isLibrary),
     };
   },
   methods: {
     getUrl: helpers.getUrl,
     getSafe: helpers.getSafe,
-    play: helpers.playSongFromItems,
-    findAlbum: helpers.findAlbumId,
-    milliToMinutes: helpers.milliToMinutes,
     ...mapActions('player', {
       togglePlayPause: 'togglePlayPause',
     }),
-    async routeToAlbum() {
-      const id = await this.findAlbum(
-        this.track.attributes.artistName,
-        this.track.attributes.albumName,
-      );
-      if (!id) return false;
-      if (this.$route.params.id === id) return false;
-      this.$router.push({ name: 'album', params: { id } });
-    },
   },
   computed: {
     ...mapGetters('player', {
@@ -88,10 +82,10 @@ export default {
     isSelfPlaying() {
       if (this.isLibrary) {
         return (
-          this.nowPlaying.id === this.getSafe(() => this.track.attributes.playParams.catalogId)
+          this.nowPlaying.id === this.getSafe(() => this.track.attributes.playParams.catalogId, 0)
         );
       }
-      return this.nowPlaying.id === this.getSafe(() => this.track.attributes.playParams.id);
+      return this.nowPlaying.id === this.getSafe(() => this.track.attributes.playParams.id, 0);
     },
   },
 };

@@ -112,7 +112,6 @@ const actions = {
   },
 
   changePlaybackTime(_, { time }) {
-    // @TODO: Debouncer , 100ms
     return MusicKit.getInstance().player.seekToTime(time);
   },
 

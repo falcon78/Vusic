@@ -4,8 +4,9 @@ export default {
   name: 'playMixin',
   data() {
     return {
-      isLibrary: this.$route.meta.isLibrary,
-      music: this.isLibrary ? MusicKit.getInstance().api.library : MusicKit.getInstance().api,
+      music: this.$route.meta.isLibrary
+        ? MusicKit.getInstance().api.library
+        : MusicKit.getInstance().api,
     };
   },
   methods: {
