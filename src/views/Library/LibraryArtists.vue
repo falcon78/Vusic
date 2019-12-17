@@ -17,7 +17,7 @@ export default {
   data() {
     return {
       artists: [],
-      selected: this.$route.params.id
+      selected: this.$route.params.id,
     };
   },
   methods: {
@@ -31,13 +31,13 @@ export default {
           offset += 100;
           fetchingData = !!artists.length;
           this.artists.push(...artists);
-        } catch (e) {
-        }
+        } catch (e) {}
       }
+      await this.$router.push({ name: 'library-artist-items', params: { id: this.artists[0].id } });
     },
   },
-  created() {
-    this.fetchAllArtists();
+  async mounted() {
+    await this.fetchAllArtists();
   },
 };
 </script>
