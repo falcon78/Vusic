@@ -82,7 +82,7 @@ export default {
       return {
         background:
           'linear-gradient(45deg,rgba(242, 127, 156, 1) 0%,rgba(255, 117, 151, 1) 46%,' +
-          `#${getSafe(() => this.item.attributes.artwork.bgColor, 'F1B94A')} 100%) `,
+          `#${this.getSafe(() => this.item.attributes.artwork.bgColor, 'F1B94A')} 100%) `,
       };
     },
   },
