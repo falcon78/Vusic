@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="is-fullheight ">
+  <div id="app" class="is-fullheight">
     <home />
   </div>
 </template>
@@ -15,13 +15,13 @@ import Home from '@/views/Home.vue';
 export default {
   components: { Home },
   mounted() {
-    document.documentElement.addEventListener(
-      'keydown',
+    document.body.addEventListener(
+      'keyup',
       (e) => {
-        if (e.code === 32) {
+        if (e.code == 32 || e.keyCode == 32) {
           e.preventDefault();
+          this.$store.dispatch('player/togglePlayPause');
         }
-        this.$store.dispatch('player/togglePlayPause');
       },
       false,
     );
