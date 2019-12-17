@@ -4,12 +4,14 @@
       <img :src="getUrl(item.attributes.artwork, 200)" alt="artwork of currently viewing item" />
       <div class="album-metadata">
         <div class="albums-attributes">
-          <h1>{{ item.attributes.name }}</h1>
-          <h3>{{ item.attributes.artistName }}</h3>
-          <h4 v-if="!isPlaylist">
+          <h2>{{ item.attributes.name }}</h2>
+          <h4>{{ item.attributes.artistName }}</h4>
+          <h5 v-if="!isPlaylist">
             {{ getSafe(() => item.relationships.tracks.data[0].attributes.releaseDate) }}
-          </h4>
-          <h4 v-else>{{ getSafe(() => item.attributes.description.standard) }}</h4>
+          </h5>
+          <p v-else class="scrollWrapper">
+            {{ getSafe(() => item.attributes.description.standard) }}
+          </p>
         </div>
         <div class="album-buttons">
           <div @click="playSongFromItems(item.attributes.playParams, 0)" class="button ">
@@ -69,6 +71,7 @@ export default {
 <style scoped>
 .button {
   width: 100px;
+  margin-top: 1em;
 }
 span {
   margin: 0 0 0 6px;
