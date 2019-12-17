@@ -33,7 +33,11 @@ export default {
           this.artists.push(...artists);
         } catch (e) {}
       }
-      await this.$router.push({ name: 'library-artist-items', params: { id: this.artists[0].id } });
+      if (!this.$route.params.id)
+        await this.$router.push({
+          name: 'library-artist-items',
+          params: { id: this.artists[0].id },
+        });
     },
   },
   async mounted() {
