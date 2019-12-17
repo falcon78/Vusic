@@ -3,7 +3,6 @@ const helpers = {
     try {
       return fn();
     } catch (_) {
-      console.error(`cant access property: ${fn}`);
       return defaultVal;
     }
   },

@@ -1,20 +1,28 @@
 <template>
   <div>
-    <div class="album-details scrollWrapper">
+    <div class="album-details scrollWrapper" :style="getBackground()">
       <img :src="getUrl(item.attributes.artwork, 200)" alt="artwork of currently viewing item" />
       <div class="album-metadata">
         <div class="albums-attributes">
-          <h2>{{ item.attributes.name }}</h2>
-          <h4>{{ item.attributes.artistName }}</h4>
-          <h5 v-if="!isPlaylist">
+          <h2 :style="getColor('textColor1')">
+            {{ item.attributes.name }}
+          </h2>
+          <h4 :style="getColor('textColor2')">
+            {{ item.attributes.artistName }}
+          </h4>
+          <h5 :style="getColor('textColor3')" v-if="!isPlaylist">
             {{ getSafe(() => item.attributes.releaseDate, '') }}
           </h5>
-          <p v-else class="scrollWrapper">
+          <p :style="getColor('textColor4')" v-else class="scrollWrapper">
             {{ getSafe(() => item.attributes.description.standard) }}
           </p>
         </div>
         <div class="album-buttons">
-          <div @click="playSongFromItems(item.attributes.playParams, 0)" class="button ">
+          <div
+            :style="gradientBackground()"
+            @click="playSongFromItems(item.attributes.playParams, 0)"
+            class="button "
+          >
             <font-awesome-icon icon="play" size="1x" /> <span>Play</span>
           </div>
           <div
@@ -57,6 +65,26 @@ export default {
     ...mapActions('player', {
       togglePlayPause: 'togglePlayPause',
     }),
+    getColor(type) {
+      return {
+        color: `#${this.getSafe(() => this.item.attributes.artwork[type], 'white')} !important`,
+      };
+    },
+    getBackground() {
+      return {
+        backgroundColor: `#${this.getSafe(
+          () => this.item.attributes.artwork.bgColor,
+          '#282828',
+        )} !important`,
+      };
+    },
+    gradientBackground() {
+      return {
+        background:
+          'linear-gradient(45deg,rgba(242, 127, 156, 1) 0%,rgba(255, 117, 151, 1) 46%,' +
+          `#${this.item.attributes.artwork.bgColor} 100%) `,
+      };
+    },
   },
   computed: {
     isPlaylist() {
