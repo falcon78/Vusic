@@ -25,9 +25,20 @@ const musicMixin = {
         });
       return albumId;
     },
-    getApi(library = false) {
-      if (library) return MusicKit.getInstance().api.library;
-      return MusicKit.getInstance().api;
+    async routeToAlbum(artistName, albumName) {
+      const id = await this.findAlbumId(artistName, albumName);
+      if (!id) return false;
+      if (this.$route.params.id === id) return false;
+      await this.$router.push({
+        name: 'album',
+        params: { id },
+      });
+    },
+
+    getApi() {
+      return this.$route.meta.isLibrary
+        ? MusicKit.getInstance().api.library
+        : MusicKit.getInstance().api;
     },
   },
 };

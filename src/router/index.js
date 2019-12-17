@@ -13,6 +13,7 @@ import Playlist from '../components/AlbumOrPlaylistItems';
 import store from '@/store';
 import Login from '@/views/Login';
 import LibraryAlbums from '@/views/Library/LibraryAlbums';
+import MultipleAlbumItems from '@/components/MultipleAlbumItems';
 
 Vue.use(VueRouter);
 
@@ -66,6 +67,12 @@ const routes = [
         name: 'library-artists',
         meta: { isLibrary: true },
         component: LibraryArtists,
+        children: [{
+          path: ':id',
+          name: 'library-artist-items',
+          meta: { isLibrary: true },
+          component: MultipleAlbumItems
+        }],
       },
       {
         path: 'albums',

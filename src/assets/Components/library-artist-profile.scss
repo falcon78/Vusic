@@ -1,3 +1,7 @@
+.library-artist-container {
+  display: flex;
+}
+
 .artists-name-container {
   box-sizing: border-box;
   background-color: $card-background-color;
@@ -29,5 +33,23 @@
     @include truncate-text;
     padding: 0;
     margin: 0;
+  }
+}
+
+.library-artist-items {
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(100% - 220px);
+  padding: 0 10px;
+  .thumbnail-and-title {
+    margin: 10px;
+  }
+  align-content: flex-start;
+}
+
+.active-artist {
+  background: $secondary-color;
+  &:hover {
+    color: white;
   }
 }

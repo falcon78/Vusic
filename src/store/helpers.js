@@ -31,39 +31,12 @@ const helpers = {
       helpers.fakeArtwork,
     );
   },
-  getType(type) {
-    const albumRegex = /album/gm;
-    const playlistRegex = /playlist/gm;
-    if (type.match(albumRegex)) return 'album';
-    if (type.match(playlistRegex)) return 'playlist';
-  },
-  async playSongFromItems(playParams, startPosition = 0) {
-    const music = MusicKit.getInstance();
-    if (playParams.kind === 'album' || playParams.kind === 'playlist') {
-      await music.setQueue({ [playParams.kind]: playParams.id });
-    } else {
-      await music.setQueue(playParams);
-    }
-    await music.player.changeToMediaAtIndex(startPosition);
-  },
+
   setQueue(playParams) {
     return MusicKit.getInstance().setQueue({ [playParams.kind]: playParams.id });
   },
   milliToMinutes(millis) {
     return MusicKit.formatMediaTime(millis / 1000);
-  },
-  async findAlbumId(albumName, artistName) {
-    let albumId;
-    await MusicKit.getInstance()
-      .api.search(`${artistName} ${albumName}`)
-      .then((result) => {
-        result = Object.assign(result);
-        albumId = result.albums.data[0].id;
-      })
-      .catch(() => {
-        albumId = false;
-      });
-    return albumId;
   },
   getApi(library = false) {
     if (library) return MusicKit.getInstance().api.library;

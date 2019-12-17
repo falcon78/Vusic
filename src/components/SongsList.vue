@@ -7,7 +7,7 @@
           <h2>{{ item.attributes.name }}</h2>
           <h4>{{ item.attributes.artistName }}</h4>
           <h5 v-if="!isPlaylist">
-            {{ getSafe(() => item.relationships.tracks.data[0].attributes.releaseDate) }}
+            {{ getSafe(() => item.attributes.releaseDate, '') }}
           </h5>
           <p v-else class="scrollWrapper">
             {{ getSafe(() => item.attributes.description.standard) }}
@@ -16,6 +16,13 @@
         <div class="album-buttons">
           <div @click="playSongFromItems(item.attributes.playParams, 0)" class="button ">
             <font-awesome-icon icon="play" size="1x" /> <span>Play</span>
+          </div>
+          <div
+            v-if="$route.meta.album && $route.meta.isLibrary"
+            @click="routeToAlbum(item.attributes.artistName, item.attributes.name)"
+            class="button "
+          >
+            <font-awesome-icon icon="record-vinyl" size="1x" /> <span>Complete Album</span>
           </div>
         </div>
       </div>
@@ -70,8 +77,10 @@ export default {
 
 <style scoped>
 .button {
-  width: 100px;
-  margin-top: 1em;
+  min-width: 100px;
+  width: max-content;
+  margin: 1em 0 0 10px;
+  padding: 10px 10px;
 }
 span {
   margin: 0 0 0 6px;
