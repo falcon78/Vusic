@@ -1,6 +1,6 @@
 <template>
   <div>
-    <full-page-loader v-if="!items" />
+    <full-page-loader v-if="!items.length" />
     <artwork-and-title
       v-else
       v-for="item in items"

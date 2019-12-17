@@ -1,5 +1,6 @@
 <template>
-  <div class="scrollWrapper">
+  <full-page-loader v-if="loading" />
+  <div v-else class="scrollWrapper">
     <h2 class="browse-page-category">{{ songs.name }}</h2>
     <div class="top-songs scrollWrapper">
       <song
@@ -12,9 +13,7 @@
     </div>
     <h2 class="browse-page-category">{{ albums.name }}</h2>
     <div class="albums-list">
-      <full-page-loader v-if="!albums" />
       <artwork-and-title
-        v-else
         class="albums-margin"
         v-for="album in albums.data"
         :item="album"
@@ -49,6 +48,7 @@ export default {
       songs: null,
       albums: null,
       playlists: null,
+      loading: true,
     };
   },
   methods: {
@@ -59,6 +59,7 @@ export default {
           this.albums = charts.albums.pop();
           this.playlists = charts.playlists.pop();
           this.songs = charts.songs.pop();
+          this.loading = false;
         });
     },
   },
