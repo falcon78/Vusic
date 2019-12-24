@@ -28,7 +28,7 @@
           @click="togglePlayPause"
         />
       </div>
-      <div class="song-play-button" v-else-if="hover" @click="playSongFromItems(playParams, index)">
+      <div class="song-play-button" v-else-if="hover" @click="playSongFromItems(playItems, index)">
         <font-awesome-icon class="play-pause-skip-controls__icons" icon="play" />
       </div>
     </div>
@@ -51,14 +51,16 @@
 import helpers from '@/store/helpers';
 import { mapActions, mapGetters, mapState } from 'vuex';
 import musicMixin from '@/components/Mixins/musicMixin';
+import playMixin from '@/components/Mixins/playMixin';
 export default {
   name: 'song',
   props: {
     track: Object,
     index: Number,
-    playParams: Object,
+    playItems: Array,
+    playParams: Object
   },
-  mixins: [musicMixin],
+  mixins: [musicMixin, playMixin],
   data() {
     return {
       hover: false,

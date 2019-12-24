@@ -7,6 +7,7 @@
       :track="song"
       :index="index"
       :play-params="{ items: songs }"
+      :play-items="songs"
       :key="song.id"
     />
   </div>
