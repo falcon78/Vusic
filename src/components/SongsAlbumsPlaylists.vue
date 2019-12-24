@@ -8,6 +8,7 @@
           :track="song"
           :index="index"
           :play-params="{ items: songs.data }"
+          :play-items="songs.data"
           :key="song.id"
         />
       </div>
@@ -44,6 +45,7 @@
 <script>
 import Song from '../components/Song';
 import ArtworkAndTitle from '../components/ArtworkAndTitle';
+import playMixin from '@/components/Mixins/playMixin';
 export default {
   name: 'songs-albums-playlists',
   components: { ArtworkAndTitle, Song },

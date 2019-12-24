@@ -1,14 +1,5 @@
 const musicMixin = {
   methods: {
-    async playSongFromItems(playParams, startPosition = 0) {
-      const music = MusicKit.getInstance();
-      if (playParams.kind === 'album' || playParams.kind === 'playlist') {
-        await music.setQueue({ [playParams.kind]: playParams.id });
-      } else {
-        await music.setQueue(playParams);
-      }
-      await music.player.changeToMediaAtIndex(startPosition);
-    },
     milliToMinutes(millis) {
       return MusicKit.formatMediaTime(millis / 1000);
     },

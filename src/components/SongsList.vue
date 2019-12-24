@@ -20,7 +20,7 @@
         <div class="album-buttons">
           <div
             :style="gradientBackground()"
-            @click="playSongFromItems(item.attributes.playParams, 0)"
+            @click="playSongFromItems(item.relationships.tracks.data)"
             class="button "
           >
             <font-awesome-icon icon="play" size="1x" /> <span>Play</span>
@@ -40,7 +40,8 @@
         v-for="(track, index) in item.relationships.tracks.data"
         :track="track"
         :index="index"
-        :play-params="item.attributes.playParams"
+        :playItems="item.relationships.tracks.data"
+        :playParams="item.attributes.playParams"
         :key="track.id"
       />
     </div>
@@ -52,13 +53,14 @@ import Song from './Song';
 import helpers from '../store/helpers';
 import musicMixin from '@/components/Mixins/musicMixin';
 import { mapActions, mapGetters, mapState } from 'vuex';
+import playMixin from '@/components/Mixins/playMixin';
 export default {
   name: 'songs-list',
   components: { Song },
   props: {
     item: Object,
   },
-  mixins: [musicMixin],
+  mixins: [musicMixin, playMixin],
   methods: {
     getSafe: helpers.getSafe,
     getUrl: helpers.getUrl,
