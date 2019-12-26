@@ -25,6 +25,7 @@ button,
   padding: 20px;
   width: $card-width;
   height: $card-height;
+
   &__big {
     width: 200px;
     height: 200px;
@@ -106,4 +107,20 @@ button,
       }
     }
   }
+}
+
+.explicit-content-album {
+  position: relative;
+}
+.explicit-content-album::after {
+  position: absolute;
+  content: 'E';
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 5px;
+  background-color: hsl(0, 0%, 29%);
+  margin-left: 6px;
+  border-radius: 2px;
+  bottom: 80px;
+  right: 25px;
 }

@@ -6,6 +6,21 @@
   width: 100%;
   max-width: 90%;
   margin-left: 1em;
+
+  .explicit-content {
+    position: relative;
+  }
+  .explicit-content::after {
+    position: absolute;
+    content: 'E';
+    top: 3px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0.5px 4px;
+    background-color: hsla(0, 0%, 70.6%, 0.6);
+    margin-left: 6px;
+    border-radius: 2px;
+  }
 }
 
 .song-image {
