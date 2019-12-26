@@ -1,6 +1,6 @@
 <template>
   <div class="scrollWrapper">
-    <h2>{{artistInfo.attributes.name}}</h2>
+    <h2>{{ artistInfo.attributes.name }}</h2>
     <songs-albums-playlists
       :albums="{ name: 'Albums', data: albums }"
       :songs="{ name: 'Songs', data: songs }"

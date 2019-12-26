@@ -2,7 +2,7 @@
   <div
     v-if="item.type !== 'stations'"
     class="thumbnail-and-title icon-buttons"
-    :class="`thumbnail-and-title__${size}`"
+    :class="{ [`thumbnail-and-title__${size}`]: true, 'explicit-content-album': isExplicit }"
   >
     <div
       class="artwork"
@@ -67,6 +67,11 @@ export default {
     async playItem() {
       await this.setQueue(this.item.attributes.playParams);
       this.play();
+    },
+  },
+  computed: {
+    isExplicit() {
+      return this.getSafe(() => this.item.attributes.contentRating === 'explicit', false);
     },
   },
 };
