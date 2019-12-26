@@ -36,10 +36,11 @@
     <div class="song-details">
       <p class="song-track-name" :title="track.attributes.name">{{ track.attributes.name }}</p>
       <a
-        @click="routeToAlbum(track.attributes.artistName, track.attributes.albumName)"
+        @click="routeToAlbum(track.attributes.artistName, track.attributes.albumName, ownId)"
         class="song-album"
-        >{{ track.attributes.albumName }}</a
       >
+        {{ track.attributes.albumName }}
+      </a>
     </div>
     <div class="song-time-stamp">
       {{ milliToMinutes(track.attributes.durationInMillis) }}
@@ -58,7 +59,7 @@ export default {
     track: Object,
     index: Number,
     playItems: Array,
-    playParams: Object
+    playParams: Object,
   },
   mixins: [musicMixin, playMixin],
   data() {
@@ -81,13 +82,17 @@ export default {
     ...mapState('player', {
       isPlaying: (state) => state.isPlaying,
     }),
-    isSelfPlaying() {
+    ownId() {
+      let id = null;
       if (this.isLibrary) {
-        return (
-          this.nowPlaying.id === this.getSafe(() => this.track.attributes.playParams.catalogId, 0)
-        );
+        id = this.getSafe(() => this.track.attributes.playParams.catalogId, 0);
+      } else {
+        id = this.getSafe(() => this.track.attributes.playParams.id, 0);
       }
-      return this.nowPlaying.id === this.getSafe(() => this.track.attributes.playParams.id, 0);
+      return id;
+    },
+    isSelfPlaying() {
+      return this.nowPlaying.id === this.ownId;
     },
   },
 };

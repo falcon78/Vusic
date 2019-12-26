@@ -3,8 +3,13 @@
     <nav class="">
       <div class="padding-div" v-for="(category, index) in categories" :key="index">
         <h2 class="sidebar__category svg-container">
-          <MusicIcon v-if="category.icon === 'music'" size="1.5" class="svg" />
-          <DiscIcon v-else size="1.5" class="svg" />
+          <font-awesome-icon
+            class="icon"
+            v-if="category.icon === 'music'"
+            icon="apple-alt"
+            size="1x"
+          />
+          <font-awesome-icon class="icon" v-else icon="headphones" size="1x" />
           {{ category.category }}
         </h2>
         <ul class="sidebar__ul">
@@ -28,15 +33,12 @@
 </template>
 
 <script>
-import { MusicIcon, DiscIcon } from 'vue-feather-icons';
 import routerConstants from '../router/routerConstants';
 import MusicPlayer from '@/components/Player/MusicPlayer.vue';
 
 export default {
   name: 'sidebar',
   components: {
-    MusicIcon,
-    DiscIcon,
     MusicPlayer,
   },
   data() {

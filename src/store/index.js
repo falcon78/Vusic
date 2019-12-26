@@ -23,10 +23,8 @@ MusicKit.configure({
   },
 });
 
-document.addEventListener('musickitloaded', () => {
-  store.dispatch('player/initializeState');
-  store.dispatch('music/initializeState');
-});
+store.dispatch('player/initializeState');
+store.dispatch('music/initializeState');
 
 store.commit('music/setStoreFront', MusicKit.getInstance().storefrontId);
 store.commit('music/setAuth', { auth: MusicKit.getInstance().isAuthorized });

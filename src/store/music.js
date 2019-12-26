@@ -3,7 +3,6 @@ import keys from '../../apiKeys';
 
 // eslint-disable-next-line no-undef
 
-
 const musicState = {
   storeFront: '',
   auth: {
@@ -27,8 +26,7 @@ const mutations = {
 };
 
 const actions = {
-  initializeState() {
-  },
+  initializeState() {},
   showLoginPage() {
     return MusicKit.getInstance().authorize();
   },

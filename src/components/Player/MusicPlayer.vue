@@ -31,6 +31,7 @@
         <div>{{ currentTimeInMinutes }}</div>
         <div>{{ currentDurationInMinutes || '0:00' }}</div>
       </div>
+      <player-buttons />
     </div>
     <div class="controls"></div>
   </div>
@@ -40,10 +41,12 @@
 import { mapGetters, mapActions, mapState } from 'vuex';
 import VueSlider from 'vue-slider-component';
 import PlayPauseSkipControls from './PlayPauseSkipControls.vue';
+import PlayerButtons from '@/components/Player/PlayerButtons';
 
 export default {
   name: 'music-player',
   components: {
+    PlayerButtons,
     VueSlider,
     PlayPauseSkipControls,
   },

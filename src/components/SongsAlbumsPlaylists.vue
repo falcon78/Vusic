@@ -1,6 +1,6 @@
 <template>
   <div class="scrollWrapper">
-    <div v-if="songs">
+    <div v-if="songs && songs.data.length">
       <h2 class="browse-page-category">{{ songs.name }}</h2>
       <div class="top-songs scrollWrapper">
         <song
@@ -14,7 +14,7 @@
       </div>
     </div>
 
-    <div v-if="albums">
+    <div v-if="albums && albums.data.length">
       <h2 class="browse-page-category">{{ albums.name }}</h2>
       <div class="albums-list">
         <artwork-and-title
@@ -27,7 +27,7 @@
       </div>
     </div>
 
-    <div v-if="playlists">
+    <div v-if="playlists && playlists.data.length">
       <h2 class="browse-page-category">{{ playlists.name }}</h2>
       <div class="albums-list">
         <artwork-and-title

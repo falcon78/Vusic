@@ -82,3 +82,35 @@ $image-width-height: 100px;
     }
   }
 }
+
+.player-buttons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  height: 20px;
+}
+
+.volume-slider {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 130px;
+  background: rgba(255, 255, 255, 0.6);
+  position: absolute;
+  bottom: 0;
+  left: -10px;
+  z-index: 10;
+  border-radius: 10px;
+}
+
+.repeat-one {
+  font-size: 12px;
+  font-weight: bold;
+  position: absolute;
+  top: -20%;
+  left: 81%;
+}

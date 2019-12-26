@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import ArtistProfile from '@/components/ArtistProfile';
+import ArtistProfile from '@/components/LibraryArtistProfile';
 import FullPageLoader from '@/components/FullPageLoader';
 export default {
   name: 'Artists',
@@ -33,11 +33,12 @@ export default {
           this.artists.push(...artists);
         } catch (e) {}
       }
-      if (!this.$route.params.id)
+      if (!this.$route.params.id) {
         await this.$router.push({
           name: 'library-artist-items',
           params: { id: this.artists[0].id },
         });
+      }
     },
   },
   async mounted() {

@@ -1,6 +1,11 @@
 <template>
   <div class="play-pause-skip-controls">
-    <arrow-left-icon size="2.5x" class="play-pause-skip-controls__icons" @click="previous" />
+    <font-awesome-icon
+      class="play-pause-skip-controls__icons"
+      size="2x"
+      icon="arrow-left"
+      @click="previous"
+    />
     <div v-if="getNowPlayingStatus.isLoading || fakeLoading" class="spinner">
       <div class="double-bounce1"></div>
       <div class="double-bounce2"></div>
@@ -12,26 +17,27 @@
       icon="play"
       @click="togglePlayPause"
     />
-    <pause-icon
+    <font-awesome-icon
       v-else
-      size="2.5x"
       class="play-pause-skip-controls__icons"
+      size="2x"
+      icon="pause"
       @click="togglePlayPause"
     />
-    <arrow-right-icon size="2.5x" class="play-pause-skip-controls__icons" @click="next" />
+    <font-awesome-icon
+      class="play-pause-skip-controls__icons"
+      size="2x"
+      icon="arrow-right"
+      @click="next"
+    />
   </div>
 </template>
 
 <script>
-import { PauseIcon, ArrowRightIcon, ArrowLeftIcon } from 'vue-feather-icons';
 import { mapState, mapActions, mapGetters } from 'vuex';
 export default {
   name: 'play-pause-skip-controls',
-  components: {
-    PauseIcon,
-    ArrowRightIcon,
-    ArrowLeftIcon,
-  },
+
   data() {
     return {};
   },

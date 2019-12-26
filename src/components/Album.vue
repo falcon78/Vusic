@@ -25,7 +25,9 @@ export default {
   methods: {
     getApi: helpers.getApi,
     getAlbumInfo() {
-      this.getApi(this.library).album(this.id).then((album) => (this.album = album));
+      this.getApi(this.library)
+        .album(this.id)
+        .then((album) => (this.album = album));
     },
   },
   mounted() {

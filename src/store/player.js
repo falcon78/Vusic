@@ -29,6 +29,7 @@ const playerState = {
   drmSupport: true,
   isPlaying: false,
   fakeLoading: false,
+  songsBeforeShuffle: null,
 };
 
 const getters = {
@@ -50,7 +51,7 @@ const getters = {
 };
 
 const mutations = {
-  setVolume(state, { volume }) {
+  setVolumeState(state, { volume }) {
     state.volume = volume;
   },
   setShuffle(state, { shuffle }) {
@@ -84,6 +85,9 @@ const mutations = {
   setFakeLoading(state, { loading }) {
     state.fakeLoading = loading;
   },
+  setSongsBeforeShuffle(state, items) {
+    state.songsBeforeShuffle = items;
+  },
 };
 
 const actions = {
@@ -91,6 +95,7 @@ const actions = {
     const local = {
       volume: 1,
       shuffle: false,
+      repeat: 0,
     };
     if (localStorage) {
       local.volume = getSafe(() => JSON.parse(localStorage.getItem('volume') || '1'), 1);
@@ -116,6 +121,7 @@ const actions = {
   },
 
   setRepeatStatus({ commit }, repeat = 'toggle') {
+    // 0 - off, 1 - one, 2 - on
     if (repeat === 'toggle') {
       // eslint-disable-next-line operator-linebreak
       MusicKit.getInstance().player.repeatMode =
@@ -125,7 +131,7 @@ const actions = {
     } else {
       MusicKit.getInstance().player.repeatMode = repeat;
     }
-    commit('setRepeat', { repeat: MusicKit.getInstance().player.repeat });
+    commit('setRepeat', { repeat: MusicKit.getInstance().player.repeatMode });
     if (window.localStorage) {
       window.localStorage.setItem(
         'repeat',
@@ -136,7 +142,7 @@ const actions = {
   setVolume({ commit }, { volume }) {
     const volumeValue = parseFloat(volume);
     MusicKit.getInstance().player.volume = volumeValue;
-    commit('setVolume', { volume: volumeValue });
+    commit('setVolumeState', { volume: volumeValue });
     if (window.localStorage) {
       window.localStorage.setItem('volume', JSON.stringify(volumeValue));
     }

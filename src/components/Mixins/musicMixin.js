@@ -3,28 +3,77 @@ const musicMixin = {
     milliToMinutes(millis) {
       return MusicKit.formatMediaTime(millis / 1000);
     },
-    async findAlbumId(albumName, artistName) {
-      let albumId;
+    async findAlbums(albumName, artistName) {
+      let albums;
       await MusicKit.getInstance()
         .api.search(`${artistName} ${albumName}`)
         .then((result) => {
           result = Object.assign(result);
-          albumId = result.albums.data[0].id;
+          albums = result.albums.data;
         })
         .catch(() => {
-          albumId = false;
+          albums = false;
         });
-      return albumId;
+      return albums;
     },
-    async routeToAlbum(artistName, albumName) {
-      const id = await this.findAlbumId(artistName, albumName);
-      if (!id) return false;
-      if (this.$route.params.id === id) return false;
+    async routeToAlbum(artistName, albumName, songId = null) {
+      const music = MusicKit.getInstance().api;
+      this.$swal({
+        type: 'info',
+        title: 'Searching for album....',
+        showConfirmButton: false,
+      });
+
+      const albums = await this.findAlbums(artistName, albumName);
+      if (!albums) return false;
+      let albumLists = [];
+      let id = null;
+
+      albums.forEach((album) => {
+        if (album.attributes.artistName !== artistName) return;
+        if (album.attributes.name !== albumName) return;
+        albumLists.push(album);
+      });
+
+      if (songId) {
+        outer: for (const album of albums) {
+          const response = await music.album(album.id);
+          const songs = response.relationships.tracks.data;
+          for (let i = 0; i < songs.length; i++) {
+            if (songs[i].id === songId) {
+              id = response.id;
+              break outer;
+            }
+          }
+        }
+      } else if (albumLists.length === 1) {
+        id = albumLists.pop().id;
+      } else if (albumLists.length > 1) {
+        let finalAlbum = albumLists.pop();
+        albumLists.forEach((album) => {
+          if (album.attributes.contentRating === 'explicit') {
+            finalAlbum = album;
+          }
+        });
+        id = finalAlbum.id;
+      }
+
+      this.$swal.close();
+      if (!id) {
+        this.$swal({
+          type: 'error',
+          title: "Couldn't find album",
+          text: 'Album not found in apple music...',
+        });
+        return;
+      }
       await this.$router.push({
         name: 'album',
         params: { id },
       });
     },
+
+    async routeToArtist() {},
 
     getApi() {
       return this.$route.meta.isLibrary
