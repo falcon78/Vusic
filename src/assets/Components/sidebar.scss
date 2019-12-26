@@ -45,13 +45,12 @@ li {
   height: 100vh;
   overflow-x: hidden;
   width: $sidebar-width;
-  nav{
+  nav {
     height: calc(100% - 280px);
-    overflow-y:auto;
+    overflow-y: auto;
   }
   .padding-div {
     padding-left: 1em;
-
   }
 
   &__category {
@@ -75,5 +74,11 @@ li {
       background: $secondary-color;
       color: white;
     }
+  }
+  .icon {
+    align-self: center;
+    justify-self: center;
+    margin-right: 4px;
+    margin-bottom: 4px;
   }
 }

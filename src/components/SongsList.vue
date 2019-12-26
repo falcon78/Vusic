@@ -5,10 +5,14 @@
       <div class="album-metadata">
         <div class="albums-attributes">
           <h2 :style="getColor('textColor1')">
-            {{ item.attributes.name }}
+            {{ getSafe(() => item.attributes.name, '') }}
           </h2>
-          <h4 :style="getColor('textColor2')">
-            {{ item.attributes.artistName }}
+          <h4
+            :style="getColor('textColor2')"
+            :class="artistId && 'clickable'"
+            @click="() => $router.push({ name: 'artist', params: { id: artistId } })"
+          >
+            {{ getSafe(() => item.attributes.artistName, '') }}
           </h4>
           <h5 :style="getColor('textColor3')" v-if="!isPlaylist">
             {{ getSafe(() => item.attributes.releaseDate, '') }}
@@ -100,6 +104,9 @@ export default {
     }),
     isCurrentlyPlaying() {
       return this.item.attributes.name === this.getNowPlayingStatus.albumName;
+    },
+    artistId() {
+      return this.getSafe(() => this.item.relationships.artists.data[0].id, false);
     },
   },
 };

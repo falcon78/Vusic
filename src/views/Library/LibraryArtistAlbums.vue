@@ -1,13 +1,9 @@
-<template>
-
-</template>
+<template> </template>
 
 <script>
-  export default {
-    name: 'LibraryArtistAlbums',
-  };
+export default {
+  name: 'LibraryArtistAlbums',
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

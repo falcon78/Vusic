@@ -10,13 +10,12 @@ const songFetcherMixin = {
       let fetchingData = true;
       while (fetchingData) {
         try {
-          await music[item](options, {offset: 100}).then((songs) => {
+          await music[item](options, { offset: 100 }).then((songs) => {
             fetchingData = !!songs.length;
             this[item] = songs;
             this.offset += songs.length;
           });
-        } catch (e) {
-        }
+        } catch (e) {}
       }
     },
   },

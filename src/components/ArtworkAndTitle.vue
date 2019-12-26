@@ -1,5 +1,9 @@
 <template>
-  <div class="thumbnail-and-title icon-buttons" :class="`thumbnail-and-title__${size}`">
+  <div
+    v-if="item.type !== 'stations'"
+    class="thumbnail-and-title icon-buttons"
+    :class="`thumbnail-and-title__${size}`"
+  >
     <div
       class="artwork"
       :style="{ backgroundImage: `url('${getArtwork(item.attributes.artwork, 120)}')` }"
@@ -21,13 +25,13 @@
         {{ item.attributes.name }}
       </router-link>
       <div class="album-artist">
-        <a
+        <p
           v-if="getSafe(() => item.attributes.artistName, false)"
           class="sub-text"
-          href="#"
           :title="getSafe(() => item.attributes.artistName, '')"
-          >{{ getSafe(() => item.attributes.artistName, '') }}</a
         >
+          {{ getSafe(() => item.attributes.artistName, '') }}
+        </p>
       </div>
     </div>
   </div>

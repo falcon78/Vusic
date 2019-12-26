@@ -4,8 +4,7 @@ $artwork-width: 120px;
 $artwork-height: $artwork-width;
 $card-width: $artwork-width;
 $card-height: 180px;
-$artwork-box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.3),
-  0 1px 2px 0 rgba(0, 0, 0, 0.2);
+$artwork-box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
 $album-button-color: $owl-pink-dark;
 
 a,
@@ -104,10 +103,6 @@ button,
       @include truncate-text;
       .sub-text {
         color: $sub-text-color;
-      }
-      &:hover {
-        transform: scale(1.02);
-        text-decoration: underline;
       }
     }
   }
