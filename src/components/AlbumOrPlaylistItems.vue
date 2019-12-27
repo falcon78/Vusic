@@ -21,6 +21,11 @@ export default {
     FullPageLoader,
   },
   mixins: [getSafeMixin, musicMixin],
+  watch: {
+    '$route.params.id': function() {
+      this.$route.meta.album ? this.getAlbumInfo() : this.getPlaylistInfo();
+    },
+  },
   data() {
     return {
       id: this.$route.params.id,
