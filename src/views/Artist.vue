@@ -25,6 +25,7 @@ export default {
   watch: {
     '$route.params.id': function() {
       this.fetchArtistInfo();
+      this.fetchArtistItems();
     },
   },
   methods: {

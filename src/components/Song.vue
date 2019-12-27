@@ -34,7 +34,9 @@
     </div>
 
     <div class="song-details">
-      <p :class="isExplicit && 'explicit-content'" :title="track.attributes.name">{{ track.attributes.name }}</p>
+      <p :class="isExplicit && 'explicit-content'" :title="track.attributes.name">
+        {{ track.attributes.name }}
+      </p>
       <a
         @click="routeToAlbum(track.attributes.artistName, track.attributes.albumName, ownId)"
         class="song-album"
@@ -95,8 +97,8 @@ export default {
       return this.nowPlaying.id === this.ownId;
     },
     isExplicit() {
-      return this.getSafe(()=>this.track.attributes.contentRating === 'explicit')
-    }
+      return this.getSafe(() => this.track.attributes.contentRating === 'explicit');
+    },
   },
 };
 </script>
