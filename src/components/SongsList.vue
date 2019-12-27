@@ -24,7 +24,7 @@
         <div class="album-buttons">
           <div
             :style="gradientBackground()"
-            @click="playSongFromItems(item.relationships.tracks.data)"
+            @click="playAlbumOrPlaylist(item.attributes.playParams)"
             class="button "
           >
             <font-awesome-icon icon="play" size="1x" /> <span>Play</span>
