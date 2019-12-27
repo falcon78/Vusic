@@ -57,7 +57,6 @@ export default {
         await music.player.queue.append({ items: queueItems });
         music.player.play();
       } else {
-        console.log(items);
         await music.setQueue({ items });
         await music.player.changeToMediaAtIndex(startPosition);
         music.player.play();
