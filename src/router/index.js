@@ -106,7 +106,7 @@ const routes = [
       {
         path: 'playlists/:id',
         name: 'library-playlist',
-        meta: { isLibrary: true },
+        meta: { isLibrary: true, album: false },
         component: AlbumOrPlaylistItems,
       },
       {
