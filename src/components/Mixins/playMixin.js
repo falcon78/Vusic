@@ -2,11 +2,6 @@ import { mapActions, mapMutations, mapState } from 'vuex';
 
 export default {
   name: 'playMixin',
-  data() {
-    return {
-      what: false,
-    };
-  },
 
   computed: {
     ...mapState('player', {

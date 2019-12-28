@@ -7,9 +7,8 @@ import RecentlyAdded from '@/views/Library/RecentlyAdded.vue';
 import Songs from '@/views/Library/LibrarySongs.vue';
 import Playlists from '@/views/Library/LibraryPlaylist.vue';
 import Album from '@/components/Album';
-import LibraryPlaylist from '@/components/AlbumOrPlaylistItems';
 import LibraryArtists from '@/views/Library/LibraryArtists';
-import Playlist from '../components/AlbumOrPlaylistItems';
+import AlbumOrPlaylistItems from '../components/AlbumOrPlaylistItems';
 import store from '@/store';
 import Login from '@/views/Login';
 import LibraryAlbums from '@/views/Library/LibraryAlbums';
@@ -23,32 +22,36 @@ const routes = [
     path: '/browse',
     name: 'browse',
     component: Browse,
+    meta: { isLibrary: false },
   },
   {
     path: '/login',
     name: 'login',
+
+    meta: { isLibrary: false },
     component: Login,
   },
   {
     path: '/for-you',
     name: 'for-you',
     component: ForYou,
-    meta: { requiresAuth: true },
+    meta: { requiresAuth: true, isLibrary: false },
   },
   {
     path: '/album/:id',
     name: 'album',
-    meta: { album: true },
-    component: Playlist,
+    meta: { album: true,  isLibrary: false},
+    component: AlbumOrPlaylistItems,
   },
   {
     path: '/playlist/:id',
     name: 'playlist',
-    meta: { album: false },
-    component: Playlist,
+    meta: { album: false, isLibrary: false },
+    component: AlbumOrPlaylistItems,
   },
   {
     path: '/artist/:id',
+    meta: { isLibrary: false},
     name: 'artist',
     component: Artist,
   },
@@ -104,13 +107,13 @@ const routes = [
         path: 'playlists/:id',
         name: 'library-playlist',
         meta: { isLibrary: true },
-        component: LibraryPlaylist,
+        component: AlbumOrPlaylistItems,
       },
       {
         path: 'album/:id',
         name: 'library-album',
         meta: { isLibrary: true, album: true },
-        component: Playlist,
+        component: AlbumOrPlaylistItems,
       },
     ],
   },

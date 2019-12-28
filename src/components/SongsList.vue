@@ -27,14 +27,17 @@
             @click="playAlbumOrPlaylist(item.attributes.playParams)"
             class="button "
           >
-            <font-awesome-icon icon="play" size="1x" /> <span>Play</span>
+            <font-awesome-icon icon="play" size="1x" />
+            <span>Play</span>
           </div>
           <div
             v-if="$route.meta.album && $route.meta.isLibrary"
-            @click="routeToAlbum(item.attributes.artistName, item.attributes.name)"
+            @click="routeToAlbum(item.attributes.artistName, item.attributes.name, trackId)"
             class="button "
+            :style="gradientBackground()"
           >
-            <font-awesome-icon icon="record-vinyl" size="1x" /> <span>Complete Album</span>
+            <font-awesome-icon icon="record-vinyl" size="1x" />
+            <span>Complete Album</span>
           </div>
         </div>
       </div>
@@ -58,6 +61,7 @@ import helpers from '../store/helpers';
 import musicMixin from '@/components/Mixins/musicMixin';
 import { mapActions, mapGetters, mapState } from 'vuex';
 import playMixin from '@/components/Mixins/playMixin';
+
 export default {
   name: 'songs-list',
   components: { Song },
@@ -80,7 +84,7 @@ export default {
       return {
         backgroundColor: `#${this.getSafe(
           () => this.item.attributes.artwork.bgColor,
-          '#282828',
+          '282828',
         )} !important`,
       };
     },
@@ -88,7 +92,7 @@ export default {
       return {
         background:
           'linear-gradient(45deg,rgba(242, 127, 156, 1) 0%,rgba(255, 117, 151, 1) 46%,' +
-          `#${this.getSafe(() => this.item.attributes.artwork.bgColor, '#282828')} 100%) `,
+          `#${this.getSafe(() => this.item.attributes.artwork.bgColor, '282828')} 100%) `,
       };
     },
   },
@@ -108,6 +112,18 @@ export default {
     artistId() {
       return this.getSafe(() => this.item.relationships.artists.data[0].id, false);
     },
+    trackId() {
+      let id = null;
+      if (this.$route.meta.isLibrary) {
+        id = this.getSafe(
+          () => this.item.relationships.tracks.data[0].attributes.playParams.catalogId,
+          0,
+        );
+      } else {
+        id = this.getSafe(() => this.item.relationships.tracks.data[0].attributes.playParams.id, 0);
+      }
+      return id;
+    },
   },
 };
 </script>
@@ -119,6 +135,7 @@ export default {
   margin: 1em 0 0 10px;
   padding: 10px 10px;
 }
+
 span {
   margin: 0 0 0 6px;
   display: inline-block;

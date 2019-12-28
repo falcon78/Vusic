@@ -23,7 +23,10 @@ export default {
   mixins: [getSafeMixin, musicMixin],
   watch: {
     '$route.params.id': function() {
-      this.$route.meta.album ? this.getAlbumInfo() : this.getPlaylistInfo();
+      console.log(this.$route.params.id);
+      // this.$route.meta.album ? this.getAlbumInfo() : this.getPlaylistInfo();
+      this.item = null
+      this.getItems();
     },
   },
   data() {
@@ -37,16 +40,26 @@ export default {
     getPlaylistInfo() {
       this.getApi(this.isLibrary)
         .playlist(this.id)
-        .then((playlist) => (this.item = playlist));
+        .then((playlist) => {
+          this.item = { ...playlist };
+          console.log(playlist);
+        });
     },
-    getAlbumInfo() {
-      this.getApi(this.isLibrary)
-        .album(this.id)
-        .then((album) => (this.item = album));
+    async getAlbumInfo() {
+      const album = await this.getApi(this.isLibrary).album(this.id);
+      this.item = { ...album };
+    },
+    async getItems() {
+      const music = this.isLibrary
+        ? MusicKit.getInstance().api.library
+        : MusicKit.getInstance().api;
+      this.item = await music[this.$route.meta.album ? 'album' : 'playlist'](this.id);
     },
   },
   mounted() {
-    this.$route.meta.album ? this.getAlbumInfo() : this.getPlaylistInfo();
+    console.log('ooooooo');
+    //this.$route.meta.album ? this.getAlbumInfo() : this.getPlaylistInfo();
+    this.getItems();
   },
 };
 </script>
