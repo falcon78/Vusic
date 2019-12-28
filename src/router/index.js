@@ -40,7 +40,7 @@ const routes = [
   {
     path: '/album/:id',
     name: 'album',
-    meta: { album: true,  isLibrary: false},
+    meta: { album: true, isLibrary: false },
     component: AlbumOrPlaylistItems,
   },
   {
@@ -51,7 +51,7 @@ const routes = [
   },
   {
     path: '/artist/:id',
-    meta: { isLibrary: false},
+    meta: { isLibrary: false },
     name: 'artist',
     component: Artist,
   },
