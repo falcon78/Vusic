@@ -38,7 +38,6 @@ export default {
       const music = this.isLibrary
         ? MusicKit.getInstance().api.library
         : MusicKit.getInstance().api;
-      console.log(this.$route.params.id, this.$route.meta.album);
       this.item = await music[this.$route.meta.album ? 'album' : 'playlist'](id);
     },
   },
