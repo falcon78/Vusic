@@ -9,6 +9,7 @@
 import SongsList from '@/components/SongsList';
 import FullPageLoader from '@/components/FullPageLoader';
 import helpers from '@/store/helpers';
+
 export default {
   name: 'album',
   components: {
@@ -19,7 +20,7 @@ export default {
     return {
       id: this.$route.params.id,
       album: null,
-      library: this.$route.name === 'library-album',
+      library: this.$route.meta.isLibrary,
     };
   },
   methods: {
