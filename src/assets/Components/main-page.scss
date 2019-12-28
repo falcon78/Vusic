@@ -98,7 +98,7 @@ a {
   }
 
   &::-webkit-scrollbar-thumb {
-    background: lighten($primary-color, 40%);
+    background: lighten($primary-color, 0%);
     border-radius: 1px;
     cursor: pointer;
   }
@@ -108,7 +108,7 @@ a {
   }
 
   &:hover::-webkit-scrollbar-thumb {
-    background: lighten($primary-color, 25%);
+    background: lighten($primary-color, 5%);
   }
 
   &::-webkit-scrollbar-corner {
