@@ -1,12 +1,15 @@
+import getSafeMixin from '@/components/Mixins/getSafeMixin';
+
 const musicMixin = {
+  mixins: [getSafeMixin],
   methods: {
     milliToMinutes(millis) {
       return MusicKit.formatMediaTime(millis / 1000);
     },
-    async findAlbums(albumName, artistName) {
+    async findAlbums(albumName, artistName = '') {
       let albums;
       await MusicKit.getInstance()
-        .api.search(`${artistName} ${albumName}`)
+        .api.search(albumName + artistName)
         .then((result) => {
           result = Object.assign(result);
           albums = result.albums.data;
@@ -17,45 +20,44 @@ const musicMixin = {
       return albums;
     },
     async routeToAlbum(artistName, albumName, songId = null) {
-      const music = MusicKit.getInstance().api;
-      this.$swal({
-        type: 'info',
-        title: 'Searching for album....',
-        showConfirmButton: false,
-      });
-
-      const albums = await this.findAlbums(artistName, albumName);
-      if (!albums) return false;
-      let albumLists = [];
       let id = null;
+      try {
+        const music = MusicKit.getInstance().api;
+        this.$swal({
+          type: 'info',
+          title: 'Searching for album....',
+          showConfirmButton: false,
+        });
+        const albums = await this.findAlbums(albumName);
 
-      albums.forEach((album) => {
-        if (album.attributes.artistName !== artistName) return;
-        if (album.attributes.name !== albumName) return;
-        albumLists.push(album);
-      });
+        if (!albums) throw new Error('Album not found...');
 
-      if (songId) {
-        outer: for (const album of albums) {
-          const response = await music.album(album.id);
-          const songs = response.relationships.tracks.data;
-          for (let i = 0; i < songs.length; i++) {
-            if (songs[i].id === songId) {
-              id = response.id;
-              break outer;
+        let albumLists = [];
+        albums.forEach((album) => {
+          if (album.attributes.name !== albumName) return;
+          albumLists.push(album);
+        });
+
+        if (songId) {
+          outer: for (let album of albumLists) {
+            const response = await music.album(album.id);
+            const songs = this.getSafe(() => response.relationships.tracks.data, []);
+            for (let i = 0; i < songs.length; i++) {
+              if (songs[i].id === songId) {
+                id = response.id;
+                break outer;
+              }
             }
           }
         }
-      } else if (albumLists.length === 1) {
-        id = albumLists.pop().id;
-      } else if (albumLists.length > 1) {
-        let finalAlbum = albumLists.pop();
-        albumLists.forEach((album) => {
-          if (album.attributes.contentRating === 'explicit') {
-            finalAlbum = album;
-          }
+      } catch (e) {
+        this.$swal.close();
+        this.$swal({
+          type: 'error',
+          title: 'Error...',
+          text: e.message,
         });
-        id = finalAlbum.id;
+        return;
       }
 
       this.$swal.close();
