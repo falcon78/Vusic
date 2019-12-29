@@ -25,13 +25,22 @@ export default {
       const music = MusicKit.getInstance().api.library;
       let fetchingData = true;
       let offset = 0;
-      while (fetchingData) {
+      // to prevent infinite loop just in case
+      let loopCount = 0;
+      while (fetchingData || loopCount < 500) {
         try {
           const artists = await music.artists(null, { limit: 100, offset });
           offset += 100;
           fetchingData = !!artists.length;
           this.artists.push(...artists);
-        } catch (e) {}
+          loopCount++;
+        } catch (e) {
+          this.$swal({
+            type: 'error',
+            title: 'An Error Occurred...',
+            text: e.message,
+          });
+        }
       }
       if (!this.$route.params.id) {
         await this.$router.push({
