@@ -11,16 +11,16 @@ const libraryState = {
 
 const mutations = {
   mergeLibraryAlbums(state, albums) {
-    state.albums.push(...Object.assign(albums));
+    state.albums.push(...JSON.parse(JSON.stringify(albums)));
   },
   setStoreFront(state, { storefront }) {
     state.storeFront = storefront;
   },
   mergeLibraryPlaylists(state, playlists) {
-    state.playlists.push(...Object.assign(playlists));
+    state.playlists.push(...JSON.parse(JSON.stringify(playlists)));
   },
   mergeLibrarySongs(state, songs) {
-    state.songs.push(...Object.assign(songs));
+     state.songs.push(...JSON.parse(JSON.stringify(songs)));
   },
   setLibrarySongs(state, songs) {
     state.songs = songs;
@@ -47,11 +47,13 @@ const actions = {
     let offset = 0;
     const music = library ? MusicKit.getInstance().api.library : MusicKit.getInstance().api;
     let noMoreData = false;
-    while (!noMoreData) {
+    let loopCount = 0;
+    while (!noMoreData && loopCount < 500) {
       const items = await music[item](!!options, { offset, limit: 100 });
       commit(`mergeLibrary${name}`, items);
       noMoreData = !items.length;
       offset += 100;
+      loopCount++;
     }
   },
 };
