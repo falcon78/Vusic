@@ -21,7 +21,6 @@ import { mapActions, mapState } from 'vuex';
 export default {
   name: 'Songs',
   components: { FullPageLoader, Song },
-  mixins: [songFetcherMixin],
   data() {
     return {
       fetchingData: true,
