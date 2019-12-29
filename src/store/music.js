@@ -12,11 +12,23 @@ const musicState = {
     forYou: [],
     browse: [],
   },
+  search: '',
+  searchResults: null,
+  searchIsLibrary: false,
 };
 
 const getters = {};
 
 const mutations = {
+  setSearch(state, search) {
+    state.search = search;
+  },
+  setSearchResults(state, results) {
+    state.searchResults = results;
+  },
+  setSearchType(state, type) {
+    state.searchIsLibrary = type;
+  },
   setAuth(state, { auth }) {
     state.auth.isAuthorized = auth;
   },
