@@ -63,12 +63,14 @@ $image-width-height: 100px;
 }
 
 .play-pause-skip-controls {
+  box-sizing: border-box;
   display: flex;
   align-self: center;
   flex-shrink: 0;
   justify-content: space-between;
   width: 80%;
   margin: 0 0 1em;
+  height: 36px;
 
   &__icons {
     flex-shrink: 0;

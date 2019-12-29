@@ -41,20 +41,27 @@ const actions = {
     { commit, state },
     { refresh = false, item, options = null, library = true },
   ) {
-    const name = item.charAt(0).toLocaleUpperCase() + item.substr(1);
-    if (refresh) commit(`setLibrary${name}`, []);
-    if (state[item].length) return;
-    let offset = 0;
-    const music = library ? MusicKit.getInstance().api.library : MusicKit.getInstance().api;
-    let noMoreData = false;
-    let loopCount = 0;
-    while (!noMoreData && loopCount < 500) {
-      const items = await music[item](!!options, { offset, limit: 100 });
-      commit(`mergeLibrary${name}`, items);
-      noMoreData = !items.length;
-      offset += 100;
-      loopCount++;
-    }
+    return new Promise(async (resolve, reject) => {
+      try {
+        const name = item.charAt(0).toLocaleUpperCase() + item.substr(1);
+        if (refresh) commit(`setLibrary${name}`, []);
+        if (state[item].length) return;
+        let offset = 0;
+        const music = library ? MusicKit.getInstance().api.library : MusicKit.getInstance().api;
+        let noMoreData = false;
+        let loopCount = 0;
+        while (!noMoreData && loopCount < 500) {
+          const items = await music[item](!!options, { offset, limit: 100 });
+          commit(`mergeLibrary${name}`, items);
+          noMoreData = !items.length;
+          offset += 100;
+          loopCount++;
+        }
+        return resolve(true);
+      } catch (error) {
+        return reject(error);
+      }
+    });
   },
 };
 

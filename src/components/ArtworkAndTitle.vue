@@ -2,16 +2,13 @@
   <div
     v-if="item.type !== 'stations'"
     class="thumbnail-and-title icon-buttons"
-    :class="{ [`thumbnail-and-title__${size}`]: true, 'explicit-content-album': isExplicit }"
+    :class="{ 'explicit-content-album': isExplicit }"
   >
     <div
       class="artwork"
       :style="{ backgroundImage: `url('${getArtwork(item.attributes.artwork, 120)}')` }"
     ></div>
     <div class="buttons">
-      <button class="button">
-        <HeartIcon class="button-svg" />
-      </button>
       <button class="button button-svg" @click="playItem">
         <PlayCircleIcon class="button-svg" />
       </button>
@@ -38,18 +35,16 @@
 </template>
 
 <script>
-import { HeartIcon, PlayCircleIcon } from 'vue-feather-icons';
+import { PlayCircleIcon } from 'vue-feather-icons';
 import { mapActions } from 'vuex';
 import helpers from '@/store/helpers';
 
 export default {
   name: 'artwork-and-title',
   components: {
-    HeartIcon,
     PlayCircleIcon,
   },
   props: {
-    size: String, // small or big
     item: Object,
     type: String,
   },
