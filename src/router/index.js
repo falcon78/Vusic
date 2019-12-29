@@ -14,6 +14,7 @@ import Login from '@/views/Login';
 import LibraryAlbums from '@/views/Library/LibraryAlbums';
 import MultipleAlbumItems from '@/components/MultipleAlbumItems';
 import Artist from '@/views/Artist';
+import Search from '@/views/Search';
 
 Vue.use(VueRouter);
 
@@ -54,6 +55,12 @@ const routes = [
     meta: { isLibrary: false },
     name: 'artist',
     component: Artist,
+  },
+  {
+    path: '/search',
+    meta: { isLibrary: false },
+    name: 'search',
+    component: Search,
   },
   {
     path: '/library',
@@ -115,6 +122,12 @@ const routes = [
         meta: { isLibrary: true, album: true },
         component: AlbumOrPlaylistItems,
       },
+      {
+        path: 'search',
+        meta: { isLibrary: true },
+        name: 'library-search',
+        component: Search,
+      },
     ],
   },
 ];
@@ -137,6 +150,7 @@ router.beforeEach((to, from, next) => {
   if (to.path === '/') {
     next({ path: '/browse' });
   }
+  if (to.path === from.path) return;
   if (to.matched.some((record) => record.meta.requiresAuth))
     if (!isAuthorized) {
       next({
