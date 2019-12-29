@@ -1,5 +1,5 @@
 <template>
-  <div class="scrollWrapper">
+  <div class="album-playlist-items scrollWrapper">
     <full-page-loader v-if="!item" />
     <songs-list v-if="item" :item="item" />
   </div>

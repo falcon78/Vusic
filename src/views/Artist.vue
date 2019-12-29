@@ -1,5 +1,5 @@
 <template>
-  <div class="scrollWrapper">
+  <div class="full-div scrollWrapper">
     <h2>{{ artistInfo.attributes.name }}</h2>
     <songs-albums-playlists
       :albums="{ name: 'Albums', data: albums }"
