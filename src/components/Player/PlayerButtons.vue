@@ -77,7 +77,6 @@ export default {
     }),
     unShuffle() {
       this.setShuffle();
-      this.unShuffleCurrentQueue();
     },
   },
 };
