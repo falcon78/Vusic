@@ -15,7 +15,7 @@
           :min="0"
           :max="1"
           :height="100"
-          :interval="0.05"
+          :interval="0.02"
           :tooltip-placement="'right'"
           :tooltip-formatter="(value) => Math.round(value * 100)"
         />

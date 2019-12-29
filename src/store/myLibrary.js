@@ -45,7 +45,10 @@ const actions = {
       try {
         const name = item.charAt(0).toLocaleUpperCase() + item.substr(1);
         if (refresh) commit(`setLibrary${name}`, []);
-        if (state[item].length) return;
+        if (state[item].length) {
+          resolve(true);
+          return;
+        }
         let offset = 0;
         const music = library ? MusicKit.getInstance().api.library : MusicKit.getInstance().api;
         let noMoreData = false;
