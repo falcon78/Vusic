@@ -27,11 +27,11 @@ export default {
       let offset = 0;
       // to prevent infinite loop just in case
       let loopCount = 0;
-      while (fetchingData || loopCount < 500) {
+      while (fetchingData && loopCount < 500) {
         try {
           const artists = await music.artists(null, { limit: 100, offset });
           offset += 100;
-          fetchingData = !!artists.length;
+          fetchingData = artists.length > 0;
           this.artists.push(...artists);
           loopCount++;
         } catch (e) {
