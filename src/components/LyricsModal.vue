@@ -1,6 +1,12 @@
 <template>
   <div class="lyrics-container">
-    <iframe frameBorder="0" v-if="lyrics" id="lyrics-iframe" :srcdoc="lyrics + getStyle()"></iframe>
+    <h2 class="browse-page-category" v-if="error">{{ error }}</h2>
+    <iframe
+      frameBorder="0"
+      v-if="!error && lyrics"
+      id="lyrics-iframe"
+      :srcdoc="lyrics + getStyle()"
+    ></iframe>
   </div>
 </template>
 
@@ -110,6 +116,7 @@ export default {
           this.error = null;
         })
         .catch((error) => {
+          this.setLyrics(null);
           this.error = `${error.name} : ${error.message}`;
           this.$swal({
             toast: true,
