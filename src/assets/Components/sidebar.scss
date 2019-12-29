@@ -41,9 +41,8 @@ li {
   box-sizing: border-box;
   background: $sidebar-background-color;
   padding: 1em 0 0 0;
-  position: sticky;
   height: 100vh;
-  overflow-x: hidden;
+  overflow: hidden;
   width: $sidebar-width;
   nav {
     height: calc(100% - 280px);

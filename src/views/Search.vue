@@ -17,7 +17,7 @@
         @focusout="setSearchTyping(false)"
       />
     </label>
-    <div>
+    <div class="scrollWrapper">
       <songs-albums-playlists
         v-if="searchResults"
         :songs="{ name: 'Songs', data: getSafe(() => searchResults.songs.data) }"
