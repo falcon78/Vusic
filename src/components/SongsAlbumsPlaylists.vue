@@ -1,6 +1,6 @@
 <template>
   <div class="scrollWrapper">
-    <div v-if="songs && songs.data.length">
+    <div v-if="songs && songs.data">
       <h2 class="browse-page-category">{{ songs.name }}</h2>
       <div class="top-songs scrollWrapper">
         <song
@@ -14,7 +14,7 @@
       </div>
     </div>
 
-    <div v-if="albums && albums.data.length">
+    <div v-if="albums && albums.data">
       <h2 class="browse-page-category">{{ albums.name }}</h2>
       <div class="albums-list">
         <artwork-and-title
@@ -22,12 +22,12 @@
           v-for="album in albums.data"
           :item="album"
           :key="album.id"
-          :type="'album'"
+          :type="$route.meta.isLibrary ? 'library-album' : 'album'"
         />
       </div>
     </div>
 
-    <div v-if="playlists && playlists.data.length">
+    <div v-if="playlists && playlists.data">
       <h2 class="browse-page-category">{{ playlists.name }}</h2>
       <div class="albums-list">
         <artwork-and-title
@@ -35,7 +35,7 @@
           v-for="playlist in playlists.data"
           :item="playlist"
           :key="playlist.id"
-          :type="'playlist'"
+          :type="$route.meta.isLibrary ? 'library-playlist' : 'playlist'"
         />
       </div>
     </div>
