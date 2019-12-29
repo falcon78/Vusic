@@ -28,7 +28,7 @@
           @click="togglePlayPause"
         />
       </div>
-      <div class="song-play-button" v-else-if="hover" @click="playSongFromItems(playItems, index)">
+      <div class="song-play-button" v-else-if="hover" @click="playSongFromItems(playItems, track)">
         <font-awesome-icon class="play-pause-skip-controls__icons" icon="play" />
       </div>
     </div>
