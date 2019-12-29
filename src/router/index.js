@@ -150,7 +150,6 @@ router.beforeEach((to, from, next) => {
   if (to.path === '/') {
     next({ path: '/browse' });
   }
-  if (to.path === from.path) return;
   if (to.matched.some((record) => record.meta.requiresAuth))
     if (!isAuthorized) {
       next({

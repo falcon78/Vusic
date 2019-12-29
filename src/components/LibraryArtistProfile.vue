@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  name: 'artist-profile',
+  name: 'library-artist-profile',
   props: {
     artist: Object,
   },

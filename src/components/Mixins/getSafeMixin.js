@@ -1,3 +1,5 @@
+import helpers from '@/store/helpers';
+
 const getSafeMixin = {
   methods: {
     getSafe(fn, defaultVal = null) {
