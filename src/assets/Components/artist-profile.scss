@@ -1,0 +1,26 @@
+.artist-profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $card-background-color;
+  border-radius: 10px;
+  width: 180px;
+  height: 70px;
+  margin: 10px;
+  @include transition-animation(0.2);
+  img {
+    box-shadow: $artwork-box-shadow;
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+  }
+  p {
+    margin-left: 6px;
+    @include truncate-text(100px);
+  }
+
+  &:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+  }
+}

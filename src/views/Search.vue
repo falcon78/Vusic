@@ -17,12 +17,32 @@
         @focusout="setSearchTyping(false)"
       />
     </label>
-    <songs-albums-playlists
-      v-if="searchResults"
-      :songs="{ name: 'Songs', data: getSafe(() => searchResults.songs.data) }"
-      :albums="{ name: 'Albums', data: getSafe(() => searchResults.albums.data) }"
-      :playlists="{ name: 'Playlists', data: getSafe(() => searchResults.playlists.data) }"
-    />
+    <div>
+      <songs-albums-playlists
+        v-if="searchResults"
+        :songs="{ name: 'Songs', data: getSafe(() => searchResults.songs.data) }"
+        :albums="{ name: 'Albums', data: getSafe(() => searchResults.albums.data) }"
+        :playlists="{ name: 'Playlists', data: getSafe(() => searchResults.playlists.data) }"
+      />
+
+      <h2
+        v-if="searchResults && searchResults.artists && searchResults.artists.data"
+        class="browse-page-category"
+      >
+        Artists
+      </h2>
+      <div
+        class="artists"
+        v-if="searchResults && searchResults.artists && searchResults.artists.data"
+      >
+        <artist-profile
+          v-for="artist in searchResults.artists.data"
+          :artist="artist"
+          :key="artist.id"
+        />
+      </div>
+      <div class="margin"></div>
+    </div>
   </div>
 </template>
 
@@ -31,9 +51,10 @@ import { debounce } from '@/store/helpers';
 import SongsAlbumsPlaylists from '@/components/SongsAlbumsPlaylists';
 import { mapMutations, mapState } from 'vuex';
 import getSafeMixin from '@/components/Mixins/getSafeMixin';
+import ArtistProfile from '@/components/ArtistProfile';
 export default {
   name: 'Search',
-  components: { SongsAlbumsPlaylists },
+  components: { ArtistProfile, SongsAlbumsPlaylists },
   mixins: [getSafeMixin],
   methods: {
     ...mapMutations('music', {
@@ -47,6 +68,8 @@ export default {
       const music = this.searchIsLibrary
         ? MusicKit.getInstance().api.library
         : MusicKit.getInstance().api;
+      const route = this.searchIsLibrary ? 'library-search' : 'search';
+      await this.$router.push({ name: route, query: { search: this.search } }).catch(() => {});
       try {
         if (this.searchIsLibrary) {
           const searchResult = await music.search(this.search, {
@@ -105,7 +128,13 @@ export default {
   },
 
   mounted() {
+    if (this.search) {
+      const route = this.searchIsLibrary ? 'library-search' : 'search';
+      this.$router.push({ name: route, query: { search: this.search } });
+    }
     this.setSearchType(this.$route.name === 'library-search');
+    this.setSearch(this.$route.query.search);
+    this.debounceSearch();
   },
 };
 </script>
@@ -116,5 +145,12 @@ export default {
   width: max-content;
   margin: 1em 10px 10px 0;
   padding: 12px;
+}
+.margin {
+  margin-bottom: 2em;
+}
+.artists {
+  display: flex;
+  flex-wrap: wrap;
 }
 </style>
