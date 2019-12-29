@@ -20,7 +20,7 @@ const mutations = {
     state.playlists.push(...JSON.parse(JSON.stringify(playlists)));
   },
   mergeLibrarySongs(state, songs) {
-     state.songs.push(...JSON.parse(JSON.stringify(songs)));
+    state.songs.push(...JSON.parse(JSON.stringify(songs)));
   },
   setLibrarySongs(state, songs) {
     state.songs = songs;
