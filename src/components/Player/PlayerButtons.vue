@@ -21,7 +21,12 @@
         />
       </div>
     </transition>
-    <font-awesome-icon class="play-pause-skip-controls__icons" icon="comment-alt" />
+    <font-awesome-icon
+      class="play-pause-skip-controls__icons"
+      icon="comment-alt"
+      :style="{ color: lyricsModal ? '#ff7597' : 'white' }"
+      @click="setLyricsModal()"
+    />
     <font-awesome-icon class="play-pause-skip-controls__icons" icon="video" />
     <font-awesome-icon
       class="play-pause-skip-controls__icons"
@@ -43,7 +48,7 @@
 
 <script>
 import VueSlider from 'vue-slider-component';
-import { mapActions, mapState } from 'vuex';
+import { mapActions, mapMutations, mapState } from 'vuex';
 import playMixin from '@/components/Mixins/playMixin';
 export default {
   name: 'PlayerButtons',
@@ -60,6 +65,9 @@ export default {
       repeat: (state) => state.repeat,
       shuffle: (state) => state.shuffle,
     }),
+    ...mapState('modals', {
+      lyricsModal: (state) => state.lyricsModal,
+    }),
     volume: {
       get() {
         return this.volumeState;
@@ -74,6 +82,9 @@ export default {
       setVolume: 'setVolume',
       setRepeatStatus: 'setRepeatStatus',
       setShuffle: 'setShuffle',
+    }),
+    ...mapMutations('modals', {
+      setLyricsModal: 'setLyricsModal',
     }),
     unShuffle() {
       this.setShuffle();

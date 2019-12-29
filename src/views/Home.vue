@@ -1,26 +1,28 @@
 <template>
   <div class="home ">
     <sidebar />
+
     <div class="main-view ">
       <router-view id="main-body" />
     </div>
-    <div class="test">Test content</div>
+
+    <LyricsModal v-if="lyricsModal" />
   </div>
 </template>
 
 <script>
 import Sidebar from '@/components/Sidebar.vue';
+import { mapState } from 'vuex';
+import LyricsModal from '@/components/LyricsModal';
 
 export default {
   name: 'home',
-  components: { Sidebar },
+  components: { LyricsModal, Sidebar },
+  computed: {
+    ...mapState('modals', {
+      lyricsModal: (state) => state.lyricsModal,
+      youtubeModal: (state) => state.youtubeModal,
+    }),
+  },
 };
 </script>
-
-<style lang="scss">
-.test {
-  width: 350px;
-  height: 100vh;
-  flex-shrink: 0;
-}
-</style>

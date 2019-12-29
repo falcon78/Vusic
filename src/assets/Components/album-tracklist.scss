@@ -10,7 +10,7 @@
   align-items: center;
   background-color: $card-background-color;
   padding: 1em;
-  overflow: scroll;
+  overflow: auto;
   img {
     box-shadow: $artwork-box-shadow;
     border-radius: 8px;

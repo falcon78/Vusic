@@ -1,0 +1,9 @@
+.lyrics-container {
+  width: 350px;
+  height: 100vh;
+  flex-shrink: 0;
+  iframe{
+    height: 100%;
+    width: 100%;
+  }
+}

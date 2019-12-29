@@ -13,7 +13,7 @@ body {
   color: $main-font-color;
 }
 
-.full-div{
+.full-div {
   width: 100%;
   height: 100%;
 }
@@ -80,6 +80,9 @@ a {
 
 .scrollWrapper {
   overflow: auto;
+  // for firefox
+  scrollbar-color: $primary-color;
+  scrollbar-width: thin;
 
   &::-webkit-scrollbar {
     width: 3px;

@@ -134,6 +134,9 @@ export default {
       }
       this.debounceSearch();
     },
+    '$route.query.search': function() {
+      this.setSearch(this.$route.query.search);
+    },
   },
 
   mounted() {
