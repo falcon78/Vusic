@@ -13,6 +13,11 @@ body {
   color: $main-font-color;
 }
 
+.full-div{
+  width: 100%;
+  height: 100%;
+}
+
 .home {
   display: flex;
   justify-content: left;
@@ -50,25 +55,16 @@ a {
 }
 
 .main-view {
-  padding: 0;
-  height: 100vh;
+  display: flex;
   // $sidebar-width --> 260px;
   width: calc(100vw - 260px);
-  @include flex-all-center;
-
+  bottom: 0;
+  overflow: auto;
+  background: transparent;
+  height: 100vh;
   #player {
     height: $player-height;
     width: $main-view-width;
-  }
-
-  #main-body {
-    height: $main-body-height;
-    width: $main-view-width;
-    flex-shrink: 0;
-    position: sticky;
-    bottom: 0;
-    overflow: auto;
-    background: transparent;
   }
 }
 
@@ -84,7 +80,6 @@ a {
 
 .scrollWrapper {
   overflow: auto;
-  overflow-x: hidden !important;
 
   &::-webkit-scrollbar {
     width: 3px;

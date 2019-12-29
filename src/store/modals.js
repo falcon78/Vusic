@@ -1,0 +1,3 @@
+const state = {
+  lyricsModal: false,
+};

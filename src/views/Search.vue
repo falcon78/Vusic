@@ -65,6 +65,13 @@ export default {
     }),
     debounceSearch: debounce(async function() {
       if (!this.search) return;
+      this.$swal({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        type: 'info',
+        title: 'Searching...',
+      });
       const music = this.searchIsLibrary
         ? MusicKit.getInstance().api.library
         : MusicKit.getInstance().api;
@@ -93,6 +100,8 @@ export default {
           title: 'An Error Occurred...',
           text: e.message,
         });
+      } finally {
+        this.$swal.close();
       }
     }, 500),
   },

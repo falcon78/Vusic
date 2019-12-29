@@ -26,6 +26,7 @@ button,
   padding: 20px;
   width: $card-width;
   height: $card-height;
+  flex-shrink: 0;
 
   .artwork {
     @include bg-image-center;
@@ -56,7 +57,8 @@ button,
     display: flex;
     justify-content: flex-end;
     position: absolute;
-    top: 10%;
+    top: 7%;
+    right: 8%;
     width: $artwork-width;
     z-index: 2;
     .button {
