@@ -69,10 +69,12 @@ const musicMixin = {
         });
         return;
       }
-      await this.$router.push({
-        name: 'album',
-        params: { id },
-      });
+      this.$router
+        .push({
+          name: 'album',
+          params: { id },
+        })
+        .catch((e) => {});
     },
 
     async routeToArtist() {},
