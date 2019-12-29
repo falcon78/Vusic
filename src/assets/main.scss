@@ -35,3 +35,5 @@ $swal2-content-color: darken(white, 10);
 $swal2-title-color: darken(white, 10);
 $swal2-confirm-button-background-color: $primary-color;
 @import '~sweetalert2/src/sweetalert2';
+
+@import 'Components/search';
