@@ -15,11 +15,15 @@ const musicState = {
   search: '',
   searchResults: null,
   searchIsLibrary: false,
+  searchTyping: false,
 };
 
 const getters = {};
 
 const mutations = {
+  setSearchTyping(state, typing) {
+    state.searchTyping = typing;
+  },
   setSearch(state, search) {
     state.search = search;
   },
