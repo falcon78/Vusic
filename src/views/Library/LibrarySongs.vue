@@ -1,15 +1,17 @@
 <template>
   <div class="library-songs scrollWrapper">
     <full-page-loader v-if="!songs.length" />
-    <song
-      v-else
-      v-for="(song, index) in songs"
-      :track="song"
-      :index="index"
-      :play-params="{ items: songs }"
-      :play-items="songs"
-      :key="song.id"
-    />
+    <div v-else class="song-lists">
+      <div class="songs-length">Total Songs Loaded : {{ songs.length }}</div>
+      <song
+        v-for="(song, index) in songs"
+        :track="song"
+        :index="index"
+        :play-params="{ items: songs }"
+        :play-items="songs"
+        :key="song.id"
+      />
+    </div>
   </div>
 </template>
 
@@ -27,7 +29,23 @@ export default {
     };
   },
   created() {
-    this.fetchAllItems({ refresh: false, item: 'songs', options: null, library: true });
+    this.$swal({
+      toast: true,
+      position: 'top-end',
+      showConfirmButton: false,
+      type: 'info',
+      title: 'Loading library songs...',
+    });
+    this.fetchAllItems({
+      refresh: false,
+      item: 'songs',
+      options: null,
+      library: true,
+    })
+      .catch(() => {})
+      .finally(() => {
+        this.$swal.close();
+      });
   },
   methods: {
     ...mapActions('myLibrary', {
@@ -41,11 +59,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss">
-.library-songs {
-  width: 30%;
-  margin: 2em 0;
-  box-sizing: border-box;
-}
-</style>

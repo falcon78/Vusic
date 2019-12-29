@@ -7,7 +7,6 @@
       v-for="album in albums"
       :item="album"
       :key="album.id"
-      :size="'small'"
       :type="'library-album'"
     />
   </div>

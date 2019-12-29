@@ -5,7 +5,6 @@
       class="margin"
       v-for="playlist in playlists"
       :key="playlist.id"
-      :size="'small'"
       :item="playlist"
       :type="'library-playlist'"
     />
