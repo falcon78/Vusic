@@ -35,16 +35,18 @@ const playerState = {
 const getters = {
   getNowPlayingStatus(state) {
     const currentPlaying = state.currentlyPlaying;
-    if (!currentPlaying) return { artwork: fakeArtwork };
     return {
-      id: getSafe(() => currentPlaying.id),
-      title: getSafe(() => currentPlaying.title),
-      trackNumber: getSafe(() => currentPlaying.trackNumber),
-      albumName: getSafe(() => currentPlaying.albumName),
-      albumInfo: getSafe(() => currentPlaying.albumInfo),
-      artistName: getSafe(() => currentPlaying.artistName),
-      isLoading: getSafe(() => currentPlaying.isLoading),
-      artwork: getSafe(() => MusicKit.formatArtworkURL(currentPlaying.artwork, 100, 100)),
+      id: getSafe(() => currentPlaying.id, 0),
+      title: getSafe(() => currentPlaying.title, ''),
+      trackNumber: getSafe(() => currentPlaying.trackNumber, ''),
+      albumName: getSafe(() => currentPlaying.albumName, ''),
+      albumInfo: getSafe(() => currentPlaying.albumInfo, ''),
+      artistName: getSafe(() => currentPlaying.artistName, ''),
+      isLoading: getSafe(() => currentPlaying.isLoading, ''),
+      artwork: getSafe(
+        () => MusicKit.formatArtworkURL(currentPlaying.artwork, 100, 100),
+        fakeArtwork,
+      ),
       isPlaying: getSafe(() => state.isPlaying),
     };
   },
@@ -96,23 +98,26 @@ const actions = {
       volume: 1,
       shuffle: false,
       repeat: 0,
+      storefront: 'us',
     };
     if (localStorage) {
       local.volume = getSafe(() => JSON.parse(localStorage.getItem('volume') || '1'), 1);
       local.shuffle = getSafe(() => JSON.parse(localStorage.getItem('shuffle') || 'false'), false);
       local.repeat = getSafe(() => JSON.parse(localStorage.getItem('repeat') || '0'), 0);
+      local.storefront = getSafe(
+        () => JSON.parse(localStorage.getItem('storefront') || 'us'),
+        'us',
+      );
     }
     dispatch('setVolume', { volume: local.volume });
     dispatch('setShuffle', local.shuffle);
     dispatch('setRepeatStatus', local.repeat);
 
+    MusicKit.getInstance().storefrontId = local.storefront;
     MusicKit.getInstance().bitrate = 256;
+
     commit('setDrmStatus', { state: MusicKit.getInstance().player.canSupportDRM });
-    commit(
-      'music/setStoreFront',
-      { storefront: MusicKit.getInstance().storefrontId },
-      { root: true },
-    );
+    commit('music/setStoreFront', { storefront: local.storefront }, { root: true });
     commit('music/setAuth', { auth: MusicKit.getInstance().isAuthorized }, { root: true });
   },
 
