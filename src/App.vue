@@ -11,13 +11,21 @@
 </style>
 <script>
 import Home from '@/views/Home.vue';
+import { mapState } from 'vuex';
 
 export default {
   components: { Home },
+  computed: {
+    ...mapState('music', {
+      searchTyping: (state) => state.searchTyping,
+    }),
+  },
   mounted() {
     document.body.addEventListener(
       'keyup',
       (e) => {
+        // dont react when typing
+        if (this.searchTyping) return;
         if (e.code == 32 || e.keyCode == 32) {
           e.preventDefault();
           this.$store.dispatch('player/togglePlayPause');

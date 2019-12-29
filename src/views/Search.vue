@@ -9,7 +9,13 @@
       </div>
     </div>
     <label>
-      <input type="text" placeholder="Search..." v-model="search" @focus="() => {}" />
+      <input
+        type="text"
+        placeholder="Search..."
+        v-model="search"
+        @focusin="setSearchTyping(true)"
+        @focusout="setSearchTyping(false)"
+      />
     </label>
     <songs-albums-playlists
       v-if="searchResults"
@@ -34,6 +40,7 @@ export default {
       setSearch: 'setSearch',
       setSearchResults: 'setSearchResults',
       setSearchType: 'setSearchType',
+      setSearchTyping: 'setSearchTyping',
     }),
     debounceSearch: debounce(async function() {
       if (!this.search) return;
