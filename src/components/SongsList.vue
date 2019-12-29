@@ -10,7 +10,7 @@
           <h4
             :style="getColor('textColor2')"
             :class="artistId && 'clickable'"
-            @click="() => $router.push({ name: 'artist', params: { id: artistId } })"
+            @click="() => artistId && $router.push({ name: 'artist', params: { id: artistId } })"
           >
             {{ getSafe(() => item.attributes.artistName, '') }}
           </h4>
