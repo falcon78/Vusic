@@ -18,7 +18,6 @@
 <script>
 import Song from '@/components/Song';
 import FullPageLoader from '@/components/FullPageLoader';
-import songFetcherMixin from '@/components/Mixins/SongFetcherMixin';
 import { mapActions, mapState } from 'vuex';
 export default {
   name: 'Songs',
