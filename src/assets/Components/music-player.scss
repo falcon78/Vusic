@@ -18,6 +18,7 @@ $image-width-height: 100px;
   background-color: $player-background-color;
   border-color: $top-border-color;
   width: $sidebar-width;
+  overflow: hidden;
   .image-and-titles {
     display: flex;
     justify-content: center;
