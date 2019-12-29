@@ -9,7 +9,7 @@
       </div>
     </div>
     <label>
-      <input type="text" placeholder="Search..." v-model="search" @focus="()=>{}" />
+      <input type="text" placeholder="Search..." v-model="search" @focus="() => {}" />
     </label>
     <songs-albums-playlists
       v-if="searchResults"
