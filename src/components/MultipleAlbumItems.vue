@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="scrollWrapper">
     <full-page-loader v-if="!items.length" />
     <artwork-and-title
       v-else

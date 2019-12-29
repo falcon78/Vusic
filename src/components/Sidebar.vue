@@ -1,6 +1,6 @@
 <template>
   <div class="sidebar">
-    <nav class="">
+    <nav class="scrollWrapper">
       <div class="padding-div" v-for="(category, index) in categories" :key="index">
         <h2 class="sidebar__category svg-container">
           <font-awesome-icon
