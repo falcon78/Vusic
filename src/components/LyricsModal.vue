@@ -124,6 +124,7 @@ export default {
             position: 'top-end',
             showConfirmButton: false,
             type: 'error',
+            timer: 3000,
             title: error.name,
             text: error.message,
           });
