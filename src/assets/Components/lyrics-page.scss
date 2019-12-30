@@ -3,8 +3,16 @@
   height: 100vh;
   background: black;
   flex-shrink: 0;
+  position: relative;
   iframe {
     height: 100%;
     width: 100%;
+  }
+  .button{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 2em;
+    padding: 10px;
   }
 }

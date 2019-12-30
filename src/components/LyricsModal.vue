@@ -1,12 +1,15 @@
 <template>
   <div class="lyrics-container">
-    <h2 class="browse-page-category" v-if="error">{{ error }}</h2>
+    <h2 class="browse-page-category" v-if="error" style="margin:4em 10px 0 10px">{{ error }}</h2>
     <iframe
       frameBorder="0"
       v-if="!error && lyrics"
       id="lyrics-iframe"
       :srcdoc="lyrics + getStyle()"
     ></iframe>
+    <div class="button" @click="setLyricsModal()">
+      <font-awesome-icon icon="window-close" />
+    </div>
   </div>
 </template>
 
@@ -27,6 +30,7 @@ export default {
     }),
     ...mapMutations('modals', {
       setLyrics: 'setLyrics',
+      setLyricsModal: 'setLyricsModal',
     }),
     getStyle() {
       return `
@@ -107,11 +111,9 @@ export default {
         artistName: this.currentlyPlaying.attributes.artistName,
       })
         .then((res) => {
-          this.setLyrics(res);
           return res;
         })
         .then(() => {
-          const iframe = document.getElementById('lyrics-iframe');
           this.$swal.close();
           this.error = null;
         })
