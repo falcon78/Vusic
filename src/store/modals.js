@@ -5,6 +5,10 @@ const state = {
   youtubeModal: false,
   queueModal: false,
   lyrics: null,
+  lyricsInfo: {
+    song: '',
+    artist: '',
+  },
 };
 
 const mutations = {
@@ -25,6 +29,10 @@ const mutations = {
 const actions = {
   fetchLyrics({ state, commit }, { songName, albumName, artistName }) {
     return new Promise(async (resolve, reject) => {
+      if (songName === state.lyricsInfo.song && artistName === state.lyricsInfo.artist) {
+        return resolve(false);
+      }
+
       const baseUrl = 'https://api.genius.com/';
       const apiKey = `access_token=${keys.geniusAccessToken}`;
       const search = `search?q=${artistName} ${songName}`;
@@ -50,7 +58,7 @@ const actions = {
         }
       }
       if (hit === null) {
-        return reject(new Error('Lyrics not found for this song.'));
+        return reject(new Error('Lyrics not found.'));
       }
       let lyricsResponse = null;
       try {
@@ -58,8 +66,12 @@ const actions = {
       } catch (error) {
         return reject(error);
       }
-
+      state.lyricsInfo = {
+        song: songName,
+        artist: artistName,
+      };
       const embedContent = lyricsResponse.response.song.embed_content;
+      commit('setLyrics', embedContent);
       return resolve(embedContent);
     });
   },
