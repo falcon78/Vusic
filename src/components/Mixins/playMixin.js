@@ -139,6 +139,7 @@ export default {
           if (res.status === 200) {
             resolve(true);
           } else {
+            reject(res.status);
             this.swal('error', 'Server Error');
           }
           if (rating === 1) {
