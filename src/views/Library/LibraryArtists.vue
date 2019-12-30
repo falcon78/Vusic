@@ -42,12 +42,6 @@ export default {
           });
         }
       }
-      if (!this.$route.params.id) {
-        await this.$router.push({
-          name: 'library-artist-items',
-          params: { id: this.artists[0].id },
-        });
-      }
     },
   },
   async mounted() {

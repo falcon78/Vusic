@@ -21,47 +21,52 @@
         />
       </div>
     </transition>
-    <font-awesome-icon
-      class="play-pause-skip-controls__icons"
-      icon="comment-alt"
-      :style="{ color: lyricsModal ? '#ff7597' : 'white' }"
-      @click="setLyricsModal()"
-      title="lyrics"
-    />
-    <font-awesome-icon
-      class="play-pause-skip-controls__icons"
-      icon="video"
-      title="Music Video"
-      :style="{ color: youtubeModal ? '#ff7597' : 'white' }"
-      @click="setYoutubeModal()"
-    />
-    <font-awesome-icon
-      class="play-pause-skip-controls__icons"
-      icon="random"
-      @click="unShuffle"
-      :style="{ color: shuffle === 1 ? '#ff7597' : 'white' }"
-      title="Shuffle"
-    />
-    <font-awesome-icon
-      class="play-pause-skip-controls__icons "
-      icon="redo"
-      :style="{ color: repeat === 0 ? 'white' : '#ff7597' }"
-      @click="setRepeatStatus()"
-      title="Repeat"
-    />
+    <div @click="setLyricsModal()">
+      <font-awesome-icon
+        class="play-pause-skip-controls__icons"
+        icon="comment-alt"
+        :style="{ color: lyricsModal ? '#ff7597' : 'white' }"
+        title="lyrics"
+      />
+    </div>
+    <div @click="setYoutubeModal()">
+      <font-awesome-icon
+        class="play-pause-skip-controls__icons"
+        icon="video"
+        title="Music Video"
+        :style="{ color: youtubeModal ? '#ff7597' : 'white' }"
+      />
+    </div>
+    <div @click="unShuffle">
+      <font-awesome-icon
+        class="play-pause-skip-controls__icons"
+        icon="random"
+        :style="{ color: shuffle === 1 ? '#ff7597' : 'white' }"
+        title="Shuffle"
+      />
+    </div>
+    <div @click="setRepeatStatus()">
+      <font-awesome-icon
+        class="play-pause-skip-controls__icons "
+        icon="redo"
+        :style="{ color: repeat === 0 ? 'white' : '#ff7597' }"
+        title="Repeat"
+      />
+    </div>
     <p class="repeat-one" v-if="repeat === 1">1</p>
-    <font-awesome-icon
-      class="play-pause-skip-controls__icons"
-      icon="list"
-      title="queue"
-      :style="{ color: queueModal ? '#ff7597' : 'white' }"
-      @click="setQueueModal()"
-    />
+    <div @click="setQueueModal()">
+      <font-awesome-icon
+        class="play-pause-skip-controls__icons"
+        icon="list"
+        title="queue"
+        :style="{ color: queueModal ? '#ff7597' : 'white' }"
+      />
+    </div>
     <div @click="optionVisible = true">
       <font-awesome-icon class="play-pause-skip-controls__icons" icon="ellipsis-h" style="" />
       <options-menu
         :isPlayer="true"
-        @mouse:leave="optionVisible = false"
+        @close:options="optionVisible = false"
         :position="'bottom: 0; right: -10px; height: 130px'"
         v-if="optionVisible"
         @add:library="addToLibrary([currentlyPlaying.id], currentlyPlaying.attributes.name)"

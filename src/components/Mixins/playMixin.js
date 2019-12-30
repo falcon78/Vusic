@@ -60,23 +60,6 @@ export default {
       try {
         await music.setQueue(items);
         await music.player.changeToMediaItem(startItem.id);
-        /*if (this.shuffle === 1) {
-          let queueItems = JSON.parse(JSON.stringify(items));
-          this.setSongsBeforeShuffle([...queueItems]);
-          const playItem = queueItems[startPosition];
-          queueItems.splice(startPosition, 1);
-          queueItems = this.shuffleSongs(queueItems);
-
-          await music.setQueue({ items: [playItem] });
-
-          await music.player.queue.append({ items: queueItems });
-          music.player.play();
-        } else {
-          await music.setQueue({ items });
-          // use change to media item
-          await music.player.changeToMediaAtIndex(startPosition);
-          // music.player.play();
-        }*/
       } catch (e) {
         this.swal('error', e.name, e.title);
       }
@@ -105,7 +88,7 @@ export default {
       const api = MusicKit.getInstance().api;
       return new Promise(async (resolve, reject) => {
         try {
-          if (!items || !items.type || !items.id) {
+          if (!items) {
             throw new Error('Cant find Item');
           }
           await api.addToLibrary({ songs: items });
@@ -159,7 +142,7 @@ export default {
             this.swal('error', 'Server Error');
           }
           if (rating === 1) {
-            this.swal('info', `Added ${item.attributes.name} to Loved`);
+            this.swal('info', `Loved ${item.attributes.name} `);
           } else {
             this.swal('info', `Disliked ${item.attributes.name}`);
           }

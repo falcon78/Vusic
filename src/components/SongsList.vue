@@ -40,23 +40,21 @@
             <span>Shuffle</span>
           </div>
 
-          <div
-            :style="gradientBackground()"
-            @click="optionsVisible = true"
-            class="button small-button"
-          >
-            <font-awesome-icon icon="ellipsis-h" size="1x" />
+          <div @click="optionsVisible = true" class="options-button-album">
+            <div :style="gradientBackground()" class="button small-button">
+              <font-awesome-icon icon="ellipsis-h" size="1x" />
+            </div>
+            <options-menu
+              :position="'bottom: 0; right: 0;'"
+              v-if="optionsVisible"
+              @mouse:leave="optionsVisible = false"
+              @play:next="playNext({ items: item.relationships.tracks.data })"
+              @play:later="playLater({ items: item.relationships.tracks.data })"
+              @add:library="addToLibrary([item.id], item.attributes.name)"
+              @love="rateItem(item, 1)"
+              @dislike="rateItem(item, -1)"
+            />
           </div>
-          <options-menu
-            :position="'bottom: 0; right: 37px;'"
-            v-if="optionsVisible"
-            @mouse:leave="optionsVisible = false"
-            @play:next="playNext({ items: item.relationships.tracks.data })"
-            @play:later="playLater({ items: item.relationships.tracks.data })"
-            @add:library="addToLibrary([item.id], item.attributes.name)"
-            @love="rateItem(item, 1)"
-            @dislike="rateItem(item, -1)"
-          />
         </div>
       </div>
     </div>
@@ -167,6 +165,7 @@ export default {
   width: max-content;
   margin: 1em 0 0 10px;
   padding: 10px 10px;
+  height: 44px;
 }
 
 .small-button {

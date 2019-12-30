@@ -38,8 +38,8 @@ const actions = {
       }
 
       const baseUrl = 'https://api.genius.com/';
-      const apiKey = `access_token=${keys.geniusAccessToken}`;
-      const search = `search?q=${artistName} ${songName}`;
+      const apiKey = `access_token=${encodeURIComponent(keys.geniusAccessToken)}`;
+      const search = `search?q=${encodeURIComponent(artistName + ' ' + songName)}`;
       let searchResponse = null;
       try {
         searchResponse = await getRequest(`${baseUrl}${search}&${apiKey}`);
@@ -82,7 +82,8 @@ const actions = {
   fetchYoutubeVideo({ state, commit }, { artistName, songName }) {
     return new Promise(async (resolve, reject) => {
       const baseUrl = 'https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1';
-      const query = `&q=${artistName} ${songName}&type=video`;
+      const query = `&q=${encodeURIComponent(artistName + ' ' + songName)}&type=video`;
+      console.log(query, artistName, songName);
       const apiKey = `&key=${keys.youtubeApiKey}`;
       let searchResult = null;
       try {
