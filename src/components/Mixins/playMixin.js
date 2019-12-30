@@ -11,6 +11,17 @@ export default {
   },
 
   methods: {
+    swal(type, title, text) {
+      this.$swal({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3000,
+        type,
+        title,
+        text,
+      });
+    },
     ...mapActions('player', {
       play: 'play',
     }),
@@ -61,19 +72,24 @@ export default {
           // music.player.play();
         }*/
       } catch (e) {
-        this.$swal({
-          toast: true,
-          position: 'top-end',
-          showConfirmButton: false,
-          timer: 3000,
-          type: 'error',
-          title: e.name,
-          text: e.message,
-        });
+        this.swal('error', e.name, e.title);
       }
     },
+
     changeToIndex(startPosition) {
-      MusicKit.getInstance().player.changeToMediaAtIndex(startPosition);
+      try {
+        MusicKit.getInstance().player.changeToMediaAtIndex(startPosition);
+      } catch (e) {
+        this.swal('error', e.name, e.message);
+      }
+    },
+
+    changeToMediaItem(item) {
+      try {
+        MusicKit.getInstance().player.changeToMediaItem(item);
+      } catch (e) {
+        this.swal('error', e.name, e.message);
+      }
     },
   },
 };

@@ -21,6 +21,7 @@ import {
   faVolumeUp,
   faVolumeMute,
   faList,
+  faWindowClose
 } from '@fortawesome/free-solid-svg-icons';
 
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
@@ -41,6 +42,7 @@ library.add(
   faVolumeUp,
   faVolumeMute,
   faList,
+  faWindowClose
 );
 
 Vue.component('font-awesome-icon', FontAwesomeIcon);

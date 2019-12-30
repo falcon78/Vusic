@@ -4,6 +4,9 @@
 
     <div class="main-view ">
       <router-view id="main-body" />
+      <Modal v-if="queueModal" @clicked="setQueueModal()" :titleName="'Queue Items'">
+        <queue-items />
+      </Modal>
     </div>
 
     <LyricsModal v-if="lyricsModal" />
@@ -12,16 +15,25 @@
 
 <script>
 import Sidebar from '@/components/Sidebar.vue';
-import { mapState } from 'vuex';
+import { mapMutations, mapState } from 'vuex';
 import LyricsModal from '@/components/LyricsModal';
+import Modal from '@/components/Modal';
+import QueueItems from '@/views/Library/QueueItems';
 
 export default {
   name: 'home',
-  components: { LyricsModal, Sidebar },
+  components: { QueueItems, Modal, LyricsModal, Sidebar },
   computed: {
     ...mapState('modals', {
       lyricsModal: (state) => state.lyricsModal,
       youtubeModal: (state) => state.youtubeModal,
+      queueModal: (state) => state.queueModal,
+    }),
+  },
+  methods: {
+    ...mapMutations('modals', {
+      setLyricsModal: 'setLyricsModal',
+      setQueueModal: 'setQueueModal',
     }),
   },
 };

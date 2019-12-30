@@ -2,7 +2,9 @@
   <div class="library-songs scrollWrapper">
     <full-page-loader v-if="!songs.length" />
     <div v-else class="song-lists">
-      <div class="songs-length">Total Songs Loaded : {{ songs.length }}</div>
+      <div class="songs-length">
+        <h4 class="browse-page-category">Total Songs Loaded : {{ songs.length }}</h4>
+      </div>
       <song
         v-for="(song, index) in songs"
         :track="song"

@@ -26,23 +26,32 @@
       icon="comment-alt"
       :style="{ color: lyricsModal ? '#ff7597' : 'white' }"
       @click="setLyricsModal()"
+      title="lyrics"
     />
-    <font-awesome-icon class="play-pause-skip-controls__icons" icon="video" />
+    <font-awesome-icon class="play-pause-skip-controls__icons" icon="video" title="Music Video" />
     <font-awesome-icon
       class="play-pause-skip-controls__icons"
       icon="random"
       @click="unShuffle"
       :style="{ color: shuffle === 1 ? '#ff7597' : 'white' }"
+      title="Shuffle"
     />
     <font-awesome-icon
       class="play-pause-skip-controls__icons "
       icon="redo"
       :style="{ color: repeat === 0 ? 'white' : '#ff7597' }"
       @click="setRepeatStatus()"
+      title="Repeat"
     />
     <p class="repeat-one" v-if="repeat === 1">1</p>
     <!--<font-awesome-icon class="play-pause-skip-controls__icons" icon="heart" />-->
-    <font-awesome-icon class="play-pause-skip-controls__icons" icon="list" />
+    <font-awesome-icon
+      class="play-pause-skip-controls__icons"
+      icon="list"
+      title="queue"
+      :style="{ color: queueModal ? '#ff7597' : 'white' }"
+      @click="setQueueModal()"
+    />
   </div>
 </template>
 
@@ -67,6 +76,7 @@ export default {
     }),
     ...mapState('modals', {
       lyricsModal: (state) => state.lyricsModal,
+      queueModal: (state) => state.queueModal,
     }),
     volume: {
       get() {
@@ -85,6 +95,7 @@ export default {
     }),
     ...mapMutations('modals', {
       setLyricsModal: 'setLyricsModal',
+      setQueueModal: 'setQueueModal',
     }),
     unShuffle() {
       this.setShuffle();

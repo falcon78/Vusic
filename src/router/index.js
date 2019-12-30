@@ -15,6 +15,7 @@ import LibraryAlbums from '@/views/Library/LibraryAlbums';
 import MultipleAlbumItems from '@/components/MultipleAlbumItems';
 import Artist from '@/views/Artist';
 import Search from '@/views/Search';
+import QueueItems from '@/views/Library/QueueItems';
 
 Vue.use(VueRouter);
 
@@ -26,9 +27,13 @@ const routes = [
     meta: { isLibrary: false },
   },
   {
+    path: '/queue',
+    name: 'queue',
+    component: QueueItems,
+  },
+  {
     path: '/login',
     name: 'login',
-
     meta: { isLibrary: false },
     component: Login,
   },

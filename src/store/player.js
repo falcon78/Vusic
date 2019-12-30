@@ -6,25 +6,19 @@ const fakeArtwork =
   'https://is1-ssl.mzstatic.com/image/thumb/Features127/v4/75/f9/6f/75f96fa5-99ca-0854-3aae-8f76f5cb7fb5/source/100x100bb.jpeg';
 
 const playerState = {
-  // @TODO Volume is 1 max?
   volume: 1,
-  // shuffle
   shuffle: 0,
   // Repeat mode , 0 = no repeat, 1 = one, 2 = all
   repeat: 0,
-  // Currently playing MediaItem (Object with type MediaItem)
   playbackTimeInfo: {
     currentPlaybackTime: null,
     currentPlaybackDuration: null,
     currentPlaybackTimeRemaining: null,
   },
-  // @TODO: WTF is this?
   playbackState: 0,
-  // Arrays of MediaItem Objects
   currentlyPlaying: null,
   queue: [],
-  // current position in queue (Array Index of queue)
-  queuePosition: 0, // done commit and action
+  queuePosition: 0,
   history: [],
   drmSupport: true,
   isPlaying: false,
@@ -66,7 +60,7 @@ const mutations = {
     state.currentlyPlaying = Object.assign(currentlyPlaying);
   },
   setQueue(state, { items }) {
-    state.queue = items;
+    state.queue = Object.assign({}, items);
   },
   setQueuePosition(state, { position }) {
     // const oldPosition = position.oldPosition;

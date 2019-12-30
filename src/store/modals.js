@@ -3,6 +3,7 @@ import { getRequest, stringSimilarity } from './helpers';
 const state = {
   lyricsModal: false,
   youtubeModal: false,
+  queueModal: false,
   lyrics: null,
 };
 
@@ -10,8 +11,11 @@ const mutations = {
   setLyricsModal(state, value = !state.lyricsModal) {
     state.lyricsModal = value;
   },
-  setYoutubeModal(state, value) {
+  setYoutubeModal(state, value = !state.youtubeModal) {
     state.youtubeModal = value;
+  },
+  setQueueModal(state, value = !state.queueModal) {
+    state.queueModal = value;
   },
   setLyrics(state, lyrics) {
     state.lyrics = lyrics;
@@ -23,7 +27,7 @@ const actions = {
     return new Promise(async (resolve, reject) => {
       const baseUrl = 'https://api.genius.com/';
       const apiKey = `access_token=${keys.geniusAccessToken}`;
-      const search = `search?q=${artistName}  ${songName}`;
+      const search = `search?q=${artistName} ${songName}`;
       let searchResponse = null;
       try {
         searchResponse = await getRequest(`${baseUrl}${search}&${apiKey}`);
@@ -32,9 +36,6 @@ const actions = {
       }
 
       let hit = null;
-      if (searchResponse.meta.status !== 200) {
-        return reject(new Error(searchResponse.meta.status));
-      }
 
       for (let response of searchResponse.response.hits) {
         const result = response.result;
@@ -57,6 +58,7 @@ const actions = {
       } catch (error) {
         return reject(error);
       }
+
       const embedContent = lyricsResponse.response.song.embed_content;
       return resolve(embedContent);
     });

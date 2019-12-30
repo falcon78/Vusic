@@ -62,6 +62,7 @@ a {
   overflow: auto;
   background: transparent;
   height: 100vh;
+  position: relative;
   #player {
     height: $player-height;
     width: $main-view-width;
