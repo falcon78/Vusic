@@ -83,7 +83,6 @@ const actions = {
     return new Promise(async (resolve, reject) => {
       const baseUrl = 'https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1';
       const query = `&q=${encodeURIComponent(artistName + ' ' + songName)}&type=video`;
-      console.log(query, artistName, songName);
       const apiKey = `&key=${keys.youtubeApiKey}`;
       let searchResult = null;
       try {
