@@ -28,7 +28,13 @@
       @click="setLyricsModal()"
       title="lyrics"
     />
-    <font-awesome-icon class="play-pause-skip-controls__icons" icon="video" title="Music Video" />
+    <font-awesome-icon
+      class="play-pause-skip-controls__icons"
+      icon="video"
+      title="Music Video"
+      :style="{ color: youtubeModal ? '#ff7597' : 'white' }"
+      @click="setYoutubeModal()"
+    />
     <font-awesome-icon
       class="play-pause-skip-controls__icons"
       icon="random"
@@ -44,7 +50,6 @@
       title="Repeat"
     />
     <p class="repeat-one" v-if="repeat === 1">1</p>
-    <!--<font-awesome-icon class="play-pause-skip-controls__icons" icon="heart" />-->
     <font-awesome-icon
       class="play-pause-skip-controls__icons"
       icon="list"
@@ -52,6 +57,18 @@
       :style="{ color: queueModal ? '#ff7597' : 'white' }"
       @click="setQueueModal()"
     />
+    <div @click="optionVisible = true">
+      <font-awesome-icon class="play-pause-skip-controls__icons" icon="ellipsis-h" style="" />
+      <options-menu
+        :isPlayer="true"
+        @mouse:leave="optionVisible = false"
+        :position="'bottom: 0; right: -10px; height: 130px'"
+        v-if="optionVisible"
+        @add:library="addToLibrary([currentlyPlaying.id], currentlyPlaying.attributes.name)"
+        @love="rateItem(currentlyPlaying, 1)"
+        @dislike="rateItem(currentlyPlaying, -1)"
+      />
+    </div>
   </div>
 </template>
 
@@ -59,12 +76,14 @@
 import VueSlider from 'vue-slider-component';
 import { mapActions, mapMutations, mapState } from 'vuex';
 import playMixin from '@/components/Mixins/playMixin';
+import OptionsMenu from '@/assets/Components/OptionsMenu';
 export default {
   name: 'PlayerButtons',
-  components: { VueSlider },
+  components: { OptionsMenu, VueSlider },
   data() {
     return {
       volumeVisible: false,
+      optionVisible: false,
     };
   },
   mixins: [playMixin],
@@ -73,10 +92,12 @@ export default {
       volumeState: (state) => state.volume,
       repeat: (state) => state.repeat,
       shuffle: (state) => state.shuffle,
+      currentlyPlaying: (state) => state.currentlyPlaying,
     }),
     ...mapState('modals', {
       lyricsModal: (state) => state.lyricsModal,
       queueModal: (state) => state.queueModal,
+      youtubeModal: (state) => state.youtubeModal,
     }),
     volume: {
       get() {
@@ -96,6 +117,7 @@ export default {
     ...mapMutations('modals', {
       setLyricsModal: 'setLyricsModal',
       setQueueModal: 'setQueueModal',
+      setYoutubeModal: 'setYoutubeModal',
     }),
     unShuffle() {
       this.setShuffle();

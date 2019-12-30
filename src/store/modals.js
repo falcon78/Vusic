@@ -4,6 +4,7 @@ const state = {
   lyricsModal: false,
   youtubeModal: false,
   queueModal: false,
+  youtubeVideoId: null,
   lyrics: null,
   lyricsInfo: {
     song: '',
@@ -24,10 +25,13 @@ const mutations = {
   setLyrics(state, lyrics) {
     state.lyrics = lyrics;
   },
+  setVideoId(state, videoId) {
+    state.youtubeVideoId = videoId;
+  },
 };
 
 const actions = {
-  fetchLyrics({ state, commit }, { songName, albumName, artistName }) {
+  fetchLyrics({ state, commit }, { songName, artistName }) {
     return new Promise(async (resolve, reject) => {
       if (songName === state.lyricsInfo.song && artistName === state.lyricsInfo.artist) {
         return resolve(false);
@@ -73,6 +77,22 @@ const actions = {
       const embedContent = lyricsResponse.response.song.embed_content;
       commit('setLyrics', embedContent);
       return resolve(embedContent);
+    });
+  },
+  fetchYoutubeVideo({ state, commit }, { artistName, songName }) {
+    return new Promise(async (resolve, reject) => {
+      const baseUrl = 'https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1';
+      const query = `&q=${artistName} ${songName}&type=video`;
+      const apiKey = `&key=${keys.youtubeApiKey}`;
+      let searchResult = null;
+      try {
+        searchResult = await getRequest(baseUrl + query + apiKey);
+      } catch (e) {
+        return reject(new Error("Couldn't fetch video."));
+      }
+      const videoId = searchResult.items.pop().id.videoId;
+      commit('setVideoId', videoId);
+      resolve(videoId);
     });
   },
 };

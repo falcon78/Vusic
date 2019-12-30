@@ -1,5 +1,5 @@
 <template>
-  <div class="queue-modal scrollWrapper">
+  <div class="queue-modal modal-base scrollWrapper">
     <queue-song
       v-for="(song, index) in queue"
       :track="song"

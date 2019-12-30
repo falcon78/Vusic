@@ -12,16 +12,25 @@
   justify-content: center;
 }
 
-.queue-modal {
+.queue {
   z-index: 3;
+}
+.youtube {
+  z-index: 2;
+}
+
+.modal-base {
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 60%;
   width: 90%;
-  padding: 1em 0;
   background: $card-background-color;
   border-radius: 10px;
+}
+
+.queue-modal {
+  padding: 1em 0;
   .song {
     margin-left: 0;
   }
@@ -31,6 +40,9 @@
   .modal-close {
     z-index: 3;
   }
+}
+
+.youtube-modal {
 }
 
 .modal-top {

@@ -44,9 +44,26 @@
         {{ track.attributes.albumName }}
       </a>
     </div>
-    <div class="song-time-stamp">
+
+    <div v-if="!hover" class="song-time-stamp">
       {{ milliToMinutes(track.attributes.durationInMillis) }}
     </div>
+    <div v-else class="song-time-stamp " @click="showMenu($event)">
+      <font-awesome-icon class="song-option" icon="ellipsis-h" />
+    </div>
+    <transition name="fade">
+      <options-menu
+        v-if="optionsMenu"
+        :track="track"
+        :position="this.moveMenuDown ? 'bottom: -150px; right: 1px' : 'bottom: 15px; right: 1px'"
+        @mouse:leave="optionsMenu = false"
+        @play:next="playNext({ items: [track] })"
+        @play:later="playLater({ items: [track] })"
+        @add:library="addToLibrary([ownId], track.attributes.name)"
+        @love="rateItem(track, 1)"
+        @dislike="rateItem(track, -1)"
+      />
+    </transition>
   </div>
 </template>
 
@@ -55,8 +72,10 @@ import helpers from '@/store/helpers';
 import { mapActions, mapGetters, mapState } from 'vuex';
 import musicMixin from '@/components/Mixins/musicMixin';
 import playMixin from '@/components/Mixins/playMixin';
+import OptionsMenu from '@/assets/Components/OptionsMenu';
 export default {
   name: 'song',
+  components: { OptionsMenu },
   props: {
     track: Object,
     index: Number,
@@ -68,6 +87,8 @@ export default {
     return {
       hover: false,
       isLibrary: helpers.getSafe(() => this.$route.meta.isLibrary),
+      optionsMenu: false,
+      moveMenuDown: false,
     };
   },
   methods: {
@@ -76,6 +97,12 @@ export default {
     ...mapActions('player', {
       togglePlayPause: 'togglePlayPause',
     }),
+    showMenu(event) {
+      this.optionsMenu = true;
+      if (event.pageY < 330) {
+        this.moveMenuDown = true;
+      }
+    },
   },
   computed: {
     ...mapGetters('player', {
@@ -102,3 +129,15 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.1s ease-out;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>

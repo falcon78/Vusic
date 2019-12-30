@@ -10,20 +10,12 @@
       <div class="double-bounce1"></div>
       <div class="double-bounce2"></div>
     </div>
-    <font-awesome-icon
-      class="play-pause-skip-controls__icons"
-      v-else-if="!isPlaying"
-      size="2x"
-      icon="play"
-      @click="togglePlayPause"
-    />
-    <font-awesome-icon
-      v-else
-      class="play-pause-skip-controls__icons"
-      size="2x"
-      icon="pause"
-      @click="togglePlayPause"
-    />
+    <div v-else-if="!isPlaying" @click="togglePlayPause">
+      <font-awesome-icon class="play-pause-skip-controls__icons" size="2x" icon="play" />
+    </div>
+    <div v-else @click="togglePlayPause">
+      <font-awesome-icon class="play-pause-skip-controls__icons" size="2x" icon="pause" />
+    </div>
     <font-awesome-icon
       class="play-pause-skip-controls__icons"
       size="2x"

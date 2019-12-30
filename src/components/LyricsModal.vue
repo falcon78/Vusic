@@ -107,7 +107,6 @@ export default {
       });
       this.fetchLyrics({
         songName: this.currentlyPlaying.attributes.name,
-        albumName: '',
         artistName: this.currentlyPlaying.attributes.artistName,
       })
         .then((res) => {

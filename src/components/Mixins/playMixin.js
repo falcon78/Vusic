@@ -1,4 +1,5 @@
 import { mapActions, mapMutations, mapState } from 'vuex';
+import { getAppleMusicConfig } from '../../../apiKeys';
 
 export default {
   name: 'playMixin',
@@ -11,7 +12,7 @@ export default {
   },
 
   methods: {
-    swal(type, title, text) {
+    swal(type, title = '', text = '') {
       this.$swal.close();
       this.$swal({
         toast: true,
@@ -95,6 +96,79 @@ export default {
       } catch (e) {
         this.swal('error', e.name, e.message);
       }
+    },
+    async pause() {
+      return await MusicKit.getInstance().player.pause();
+    },
+
+    addToLibrary(items, title) {
+      const api = MusicKit.getInstance().api;
+      return new Promise(async (resolve, reject) => {
+        try {
+          console.log(items);
+          if (!items || !items.type || !items.id) {
+            throw new Error('Cant find Item');
+          }
+          await api.addToLibrary({ songs: items });
+          this.swal('info', `Added ${title} to library`, '');
+          resolve();
+        } catch (e) {
+          this.swal('error', e.name, e.message);
+          reject();
+        }
+      });
+    },
+    playNext(playParams) {
+      try {
+        const player = MusicKit.getInstance().player;
+        player.queue.prepend(playParams);
+        this.swal('info', 'Added to queue');
+      } catch (e) {
+        this.swal('error', e.name, e.message);
+      }
+    },
+    playLater(playParams) {
+      try {
+        const player = MusicKit.getInstance().player;
+        player.queue.append(playParams);
+        this.swal('info', 'Added to queue');
+      } catch (e) {
+        this.swal('error', e.name, e.message);
+      }
+    },
+
+    rateItem(item, rating = 1) {
+      return new Promise(async (resolve, reject) => {
+        try {
+          let res = await fetch(
+            `https://api.music.apple.com/v1/me/ratings/${item.type}/${item.id}`,
+            {
+              method: 'PUT',
+              headers: getAppleMusicConfig(),
+              body: JSON.stringify({
+                type: 'rating',
+                attributes: {
+                  value: rating,
+                },
+              }),
+            },
+          );
+
+          if (res.status === 200) {
+            resolve(true);
+          } else {
+            this.swal('error', 'Server Error');
+          }
+          if (rating === 1) {
+            this.swal('info', `Added ${item.attributes.name} to Loved`);
+          } else {
+            this.swal('info', `Disliked ${item.attributes.name}`);
+          }
+        } catch (err) {
+          this.swal('error', err.name, err.message);
+          reject(err);
+        }
+      });
     },
   },
 };

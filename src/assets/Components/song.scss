@@ -5,6 +5,7 @@
   width: 95%;
   margin-left: 1em;
   flex-shrink: 0;
+  position: relative;
 
   .explicit-content {
     position: relative;
@@ -56,6 +57,10 @@
     font-size: $tiny-font-size;
     color: $sub-text-color;
   }
+  .button {
+    padding: 6px 8px;
+    margin: 0 0 0 auto;
+  }
 }
 
 .song-play-button {
@@ -70,6 +75,8 @@
   justify-content: center;
   align-items: center;
 }
+
+
 
 .track-number {
   p {
@@ -88,4 +95,8 @@
 .song-time-stamp {
   margin-left: auto;
   align-self: center;
+  .song-option {
+    margin: 0 10px;
+  }
 }
+
