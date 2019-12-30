@@ -5,9 +5,9 @@
     @mouseleave="hover = false"
     :style="isSelfPlaying && { backgroundColor: '#282828' }"
   >
-    <div v-if="!playParams.kind === 'song'" class="track-number">
+    <div  class="track-number">
       <p v-if="playParams.kind === 'album'">{{ track.attributes.trackNumber }}</p>
-      <p v-else-if="playParams.kind === 'playlist'">{{ index + 1 }}</p>
+      <p v-else>{{ index + 1 }}</p>
     </div>
     <div class="song-image">
       <img
