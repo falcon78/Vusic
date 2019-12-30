@@ -43,9 +43,6 @@ const mutations = {
 
 const actions = {
   initializeState() {},
-  showLoginPage() {
-    return MusicKit.getInstance().authorize();
-  },
 };
 
 export default {

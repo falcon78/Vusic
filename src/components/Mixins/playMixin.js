@@ -12,6 +12,7 @@ export default {
 
   methods: {
     swal(type, title, text) {
+      this.$swal.close();
       this.$swal({
         toast: true,
         position: 'top-end',
@@ -30,9 +31,13 @@ export default {
     }),
 
     async playAlbumOrPlaylist(playParams) {
-      const music = MusicKit.getInstance();
-      await music.setQueue({ [playParams.kind]: playParams.id });
-      await music.player.play();
+      try {
+        const music = MusicKit.getInstance();
+        await music.setQueue({ [playParams.kind]: playParams.id });
+        await music.player.play();
+      } catch (e) {
+        this.swal('error', e.name, e.message);
+      }
     },
 
     shuffleSongs(songList) {

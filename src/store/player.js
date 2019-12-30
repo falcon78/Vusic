@@ -148,19 +148,22 @@ const actions = {
   },
 
   setShuffle({ state, commit }, shuffle = 'toggle') {
-    let shuffleBool;
-    if (shuffle === 'toggle') {
-      MusicKit.getInstance().player.shuffle = state.shuffle === 0 ? 1 : 0;
-      commit('setShuffle', { shuffle: MusicKit.getInstance().player.shuffleMode });
-      shuffleBool = state.shuffle === 1;
-    } else {
-      MusicKit.getInstance().player.shuffle = shuffle;
-      commit('setShuffle', { shuffle: MusicKit.getInstance().player.shuffleMode });
-      shuffleBool = state.shuffle === 1;
-    }
-    if (window.localStorage) {
-      window.localStorage.setItem('shuffle', JSON.stringify(shuffleBool));
-    }
+    return new Promise((resolve, reject) => {
+      let shuffleBool;
+      if (shuffle === 'toggle') {
+        MusicKit.getInstance().player.shuffle = state.shuffle === 0 ? 1 : 0;
+        commit('setShuffle', { shuffle: MusicKit.getInstance().player.shuffleMode });
+        shuffleBool = state.shuffle === 1;
+      } else {
+        MusicKit.getInstance().player.shuffle = shuffle;
+        commit('setShuffle', { shuffle: MusicKit.getInstance().player.shuffleMode });
+        shuffleBool = state.shuffle === 1;
+      }
+      if (window.localStorage) {
+        window.localStorage.setItem('shuffle', JSON.stringify(shuffleBool));
+      }
+      resolve(true);
+    });
   },
   async play({ commit, rootState }) {
     if (!rootState.music.auth.isAuthorized) {

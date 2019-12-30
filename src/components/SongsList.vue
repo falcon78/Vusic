@@ -22,14 +22,16 @@
           </p>
         </div>
         <div class="album-buttons">
-          <div
-            :style="gradientBackground()"
-            @click="playAlbumOrPlaylist(item.attributes.playParams)"
-            class="button "
-          >
+          <div :style="gradientBackground()" @click="playItems()" class="button ">
             <font-awesome-icon icon="play" size="1x" />
             <span>Play</span>
           </div>
+
+          <div :style="gradientBackground()" @click="shuffleItems()" class="button">
+            <font-awesome-icon icon="play" size="1x" />
+            <span>Shuffle</span>
+          </div>
+
           <div
             v-if="$route.meta.album && $route.meta.isLibrary"
             @click="routeToAlbum(item.attributes.artistName, item.attributes.name, trackId)"
@@ -74,7 +76,16 @@ export default {
     getUrl: helpers.getUrl,
     ...mapActions('player', {
       togglePlayPause: 'togglePlayPause',
+      setShuffle: 'setShuffle',
     }),
+    async shuffleItems() {
+      await this.setShuffle(1);
+      this.playAlbumOrPlaylist(this.item.attributes.playParams);
+    },
+    async playItems() {
+      await this.setShuffle(0);
+      this.playAlbumOrPlaylist(this.item.attributes.playParams);
+    },
     getColor(type) {
       return {
         color: `#${this.getSafe(() => this.item.attributes.artwork[type], 'white')} !important`,
