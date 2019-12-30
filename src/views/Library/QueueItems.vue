@@ -32,7 +32,6 @@ export default {
   },
   watch: {
     queue: function() {
-      console.log('shuffle');
       this.queueItes = this.queue;
     },
   },

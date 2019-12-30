@@ -105,7 +105,6 @@ export default {
       const api = MusicKit.getInstance().api;
       return new Promise(async (resolve, reject) => {
         try {
-          console.log(items);
           if (!items || !items.type || !items.id) {
             throw new Error('Cant find Item');
           }
