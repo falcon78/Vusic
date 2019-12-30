@@ -66,7 +66,7 @@
       <font-awesome-icon class="play-pause-skip-controls__icons" icon="ellipsis-h" style="" />
       <options-menu
         :isPlayer="true"
-        @close:options="optionVisible = false"
+        @mouse:leave="optionVisible = false"
         :position="'bottom: 0; right: -10px; height: 130px'"
         v-if="optionVisible"
         @add:library="addToLibrary([currentlyPlaying.id], currentlyPlaying.attributes.name)"
