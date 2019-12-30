@@ -38,18 +38,19 @@ const actions = {
 
       for (let response of searchResponse.response.hits) {
         const result = response.result;
-        if (
-          response.type === 'song' &&
-          stringSimilarity(result.title_with_featured, songName) > 0.8 &&
-          stringSimilarity(result.primary_artist.name, artistName) > 0.8
-        ) {
+        const isSong = response.type === 'song';
+        const isSameSong =
+          stringSimilarity(result.title_with_featured, songName) > 0.8 ||
+          stringSimilarity(result.title, songName) > 0.8;
+        const isSameArtist = stringSimilarity(result.primary_artist.name, artistName) > 0.8;
+        if (isSong && isSameSong && isSameArtist) {
           hit = result.id;
+          break;
         }
       }
       if (hit === null) {
         return reject(new Error('Lyrics not found for this song.'));
       }
-
       let lyricsResponse = null;
       try {
         lyricsResponse = await getRequest(`${baseUrl}songs/${hit}?${apiKey}`);

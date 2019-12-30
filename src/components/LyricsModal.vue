@@ -86,9 +86,9 @@ export default {
           }
 
           .rg_embed {
-              background:  #000000;
-              margin: 0;
-              width: 100%;
+              background:  #000000 !important;
+              margin: 0 !important;
+              width: 100% !important;
           }
         </style>
       `;
