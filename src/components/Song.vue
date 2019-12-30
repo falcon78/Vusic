@@ -54,7 +54,6 @@
     <transition name="fade">
       <options-menu
         v-if="optionsMenu"
-        :track="track"
         :position="this.moveMenuDown ? 'bottom: -150px; right: 1px' : 'bottom: 15px; right: 1px'"
         @mouse:leave="optionsMenu = false"
         @play:next="playNext({ items: [track] })"

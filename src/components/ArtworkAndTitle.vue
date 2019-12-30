@@ -49,7 +49,9 @@ export default {
     type: String,
   },
   data() {
-    return {};
+    return {
+      optionsVisible: false,
+    };
   },
   methods: {
     ...mapActions('player', {

@@ -20,6 +20,14 @@
           <p :style="getColor('textColor4')" v-else class="scrollWrapper">
             {{ getSafe(() => item.attributes.description.standard) }}
           </p>
+          <h4
+            v-if="$route.meta.album && $route.meta.isLibrary"
+            class="clickable"
+            @click="routeToAlbum(item.attributes.artistName, item.attributes.name, trackId)"
+            style="color: #ff7597"
+          >
+            Show Complete Album
+          </h4>
         </div>
         <div class="album-buttons">
           <div :style="gradientBackground()" @click="playItems()" class="button ">
@@ -33,14 +41,22 @@
           </div>
 
           <div
-            v-if="$route.meta.album && $route.meta.isLibrary"
-            @click="routeToAlbum(item.attributes.artistName, item.attributes.name, trackId)"
-            class="button "
             :style="gradientBackground()"
+            @click="optionsVisible = true"
+            class="button small-button"
           >
-            <font-awesome-icon icon="record-vinyl" size="1x" />
-            <span>Complete Album</span>
+            <font-awesome-icon icon="ellipsis-h" size="1x" />
           </div>
+          <options-menu
+            :position="'bottom: 0; right: 37px;'"
+            v-if="optionsVisible"
+            @mouse:leave="optionsVisible = false"
+            @play:next="playNext({ items: item.relationships.tracks.data })"
+            @play:later="playLater({ items: item.relationships.tracks.data })"
+            @add:library="addToLibrary([item.id], item.attributes.name)"
+            @love="rateItem(item, 1)"
+            @dislike="rateItem(item, -1)"
+          />
         </div>
       </div>
     </div>
@@ -63,12 +79,18 @@ import helpers from '../store/helpers';
 import musicMixin from '@/components/Mixins/musicMixin';
 import { mapActions, mapGetters, mapState } from 'vuex';
 import playMixin from '@/components/Mixins/playMixin';
+import OptionsMenu from '@/assets/Components/OptionsMenu';
 
 export default {
   name: 'songs-list',
-  components: { Song },
+  components: { OptionsMenu, Song },
   props: {
     item: Object,
+  },
+  data() {
+    return {
+      optionsVisible: false,
+    };
   },
   mixins: [musicMixin, playMixin],
   methods: {
@@ -139,12 +161,17 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .button {
   min-width: 100px;
   width: max-content;
   margin: 1em 0 0 10px;
   padding: 10px 10px;
+}
+
+.small-button {
+  min-width: 50px;
+  width: 50px;
 }
 
 span {
