@@ -14,6 +14,46 @@ button,
   @include transition-animation(0.2);
 }
 
+.artwork-title-container {
+  position: relative;
+  &:hover {
+    .buttons {
+      display: block;
+    }
+    .info {
+      color: white;
+      .album-artist {
+        color: white;
+      }
+    }
+    .thumbnail-and-title {
+      transform: scale(1.05);
+      box-shadow: 0 17px 20px -6px rgba(36, 52, 70, 0.2);
+    }
+    cursor: pointer;
+  }
+}
+.buttons {
+  @include transition-animation(0.2);
+  display: none;
+  overflow: hidden;
+  position: absolute;
+  top: 10%;
+  right: 14%;
+  z-index: 2;
+  margin: 0;
+  background: transparent;
+  .button-svg {
+    fill: $album-button-color;
+    stroke: darken(white, 10%);
+  }
+  &:hover {
+    transform: scale(1.12);
+  }
+  &:active {
+    transform: scale(0.8);
+  }
+}
 .thumbnail-and-title {
   overflow: hidden;
   box-sizing: content-box;
@@ -39,38 +79,8 @@ button,
   }
 
   &:hover {
-    transform: scale(1.05);
-    box-shadow: 0 17px 20px -6px rgba(36, 52, 70, 0.2);
-    .buttons {
-      transform: scale(1);
-    }
-    .info {
-      color: white;
-      .album-artist {
-        color: white;
-      }
-    }
   }
-  .buttons {
-    transform: scale(0);
-    overflow: hidden;
-    display: flex;
-    justify-content: flex-end;
-    position: absolute;
-    top: 7%;
-    right: 8%;
-    width: $artwork-width;
-    z-index: 2;
-    .button {
-      .button-svg {
-        fill: $album-button-color;
-        stroke: darken(white, 10%);
-      }
-      &:active {
-        transform: scale(1.5);
-      }
-    }
-  }
+
   .info {
     a,
     p {
@@ -91,10 +101,7 @@ button,
     .album-title {
       @include truncate-text;
       font-size: $regular-font-size;
-      &:hover {
-        transform: scale(1.03);
-        text-decoration: underline;
-      }
+
     }
     .album-artist {
       font-size: $tiny-font-size;
