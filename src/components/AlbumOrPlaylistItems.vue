@@ -34,11 +34,19 @@ export default {
   },
   methods: {
     async getItems() {
-      const id = this.$route.params.id;
-      const music = this.isLibrary
-        ? MusicKit.getInstance().api.library
-        : MusicKit.getInstance().api;
-      this.item = await music[this.$route.meta.album ? 'album' : 'playlist'](id);
+      try {
+        const id = this.$route.params.id;
+        const music = this.isLibrary
+          ? MusicKit.getInstance().api.library
+          : MusicKit.getInstance().api;
+        this.item = await music[this.$route.meta.album ? 'album' : 'playlist'](id);
+      } catch (e) {
+        this.$swal({
+          type: 'error',
+          title: e.name,
+          text: e.message,
+        });
+      }
     },
   },
   mounted() {

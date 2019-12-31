@@ -25,9 +25,17 @@ export default {
   },
   methods: {
     getLibraryArtistAlbums() {
-      MusicKit.getInstance()
-        .api.library.artist(this.id, { include: 'albums' })
-        .then((albums) => (this.items = albums.relationships.albums.data));
+      try {
+        MusicKit.getInstance()
+          .api.library.artist(this.id, { include: 'albums' })
+          .then((albums) => (this.items = albums.relationships.albums.data));
+      } catch (e) {
+        this.$swal({
+          type: 'error',
+          title: e.name,
+          text: e.message,
+        });
+      }
     },
   },
   watch: {

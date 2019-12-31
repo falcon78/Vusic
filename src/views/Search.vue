@@ -1,22 +1,29 @@
 <template>
   <div class="search-page">
-    <div class="search-buttons">
-      <div class="button" :class="{ 'un-active': searchIsLibrary }" @click="setSearchType(false)">
-        Apple Music
+    <div class="search-container">
+      <div class="search-buttons">
+        <div class="button" :class="{ 'un-active': searchIsLibrary }" @click="setSearchType(false)">
+          Apple Music
+        </div>
+        <div
+          class="button "
+          :class="{ 'un-active': !searchIsLibrary }"
+          @click="isAuthorized ? setSearchType(true) : nonAuthError()"
+        >
+          Library
+        </div>
       </div>
-      <div class="button " :class="{ 'un-active': !searchIsLibrary }" @click="setSearchType(true)">
-        Library
-      </div>
+      <label>
+        <input
+          type="text"
+          placeholder="Search..."
+          v-model="search"
+          @focusin="setSearchTyping(true)"
+          @focusout="setSearchTyping(false)"
+        />
+      </label>
     </div>
-    <label>
-      <input
-        type="text"
-        placeholder="Search..."
-        v-model="search"
-        @focusin="setSearchTyping(true)"
-        @focusout="setSearchTyping(false)"
-      />
-    </label>
+
     <div class="scrollWrapper">
       <songs-albums-playlists
         v-if="searchResults"
@@ -104,13 +111,20 @@ export default {
         this.$swal.close();
       }
     }, 500),
+    nonAuthError() {
+      this.$swal({
+        type: 'error',
+        title: 'Unauthenticated...',
+        text: 'You need to login in to access your library',
+      });
+    },
   },
-
   computed: {
     ...mapState('music', {
       searchText: (state) => state.search,
       searchResults: (state) => state.searchResults,
       searchIsLibrary: (state) => state.searchIsLibrary,
+      isAuthorized: (state) => state.auth.isAuthorized,
     }),
     search: {
       get() {
@@ -121,7 +135,6 @@ export default {
       },
     },
   },
-
   watch: {
     search: function() {
       this.debounceSearch();

@@ -57,7 +57,14 @@ export default {
         .then((items) => (this.heavyRotation = items))
         .then(() => music.recentPlayed().then((items) => (this.recentlyPlayed = items)))
         .then(() => music.recommendations().then((items) => (this.recommendations = items)))
-        .then(() => (this.loading = false));
+        .then(() => (this.loading = false))
+        .catch((e) => {
+          this.$swal({
+            type: 'error',
+            title: e.name,
+            text: e.message,
+          });
+        });
     },
   },
   created() {

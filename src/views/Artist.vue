@@ -30,24 +30,34 @@ export default {
   },
   methods: {
     fetchArtistInfo() {
-      MusicKit.getInstance()
-        .api.artist(this.$route.params.id)
-        .then((res) => {
-          this.artistInfo = res;
+      try {
+        MusicKit.getInstance()
+          .api.artist(this.$route.params.id)
+          .then((res) => {
+            this.artistInfo = res;
+          });
+      } catch (e) {
+        this.$swal({
+          type: 'error',
+          title: e.name,
+          text: e.message,
         });
+      }
     },
-    fetchArtistItems() {
-      const music = MusicKit.getInstance().api;
-      const id = this.$route.params.id;
-      music.artist(id, { include: 'songs' }).then((items) => {
-        this.songs = items;
-      });
-      music.artist(id, { include: 'albums' }).then((items) => {
-        this.albums = items;
-      });
-      music.artist(id, { include: 'playlists' }).then((items) => {
-        this.playlists = items;
-      });
+    async fetchArtistItems() {
+      try {
+        const music = MusicKit.getInstance().api;
+        const id = this.$route.params.id;
+        this.songs = await music.artist(id, { include: 'songs' });
+        this.albums = await music.artist(id, { include: 'albums' });
+        this.playlists = await music.artist(id, { include: 'playlists' });
+      } catch (e) {
+        this.$swal({
+          type: 'error',
+          title: e.name,
+          text: e.message,
+        });
+      }
     },
   },
   created() {

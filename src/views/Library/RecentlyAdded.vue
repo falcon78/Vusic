@@ -22,12 +22,20 @@ export default {
     };
   },
   methods: {
-    fetchRecentlyAdded() {
-      MusicKit.getInstance()
-        .api.library.collection('recently-added')
-        .then((items) => {
-          this.items = items;
+    async fetchRecentlyAdded() {
+      try {
+        await MusicKit.getInstance()
+          .api.library.collection('recently-added')
+          .then((items) => {
+            this.items = items;
+          });
+      } catch (e) {
+        this.$swal({
+          type: 'error',
+          title: e.name,
+          text: e.message,
         });
+      }
     },
   },
   created() {
@@ -35,5 +43,3 @@ export default {
   },
 };
 </script>
-
-<style scoped></style>

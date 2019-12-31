@@ -17,10 +17,18 @@ const helpers = {
   },
 
   setQueue(playParams) {
-    return MusicKit.getInstance().setQueue({ [playParams.kind]: playParams.id });
+    try {
+      return MusicKit.getInstance().setQueue({ [playParams.kind]: playParams.id });
+    } catch (e) {
+      this.$swal({
+        type: 'error',
+        title: e.name,
+        text: e.message,
+      });
+    }
   },
   milliToMinutes(millis) {
-    return MusicKit.formatMediaTime(millis / 1000);
+    return getSafe(() => MusicKit.formatMediaTime(millis / 1000), 60);
   },
   getApi(library = false) {
     if (library) return MusicKit.getInstance().api.library;

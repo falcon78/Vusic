@@ -1,5 +1,9 @@
 .search-page {
   width: 100%;
+  .search-container {
+    height: 124px;
+    flex-shrink: 0;
+  }
   .search-buttons {
     display: flex;
     margin-left: 1em;

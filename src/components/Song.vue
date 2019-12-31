@@ -5,7 +5,7 @@
     @mouseleave="hover = false"
     :style="isSelfPlaying && { backgroundColor: '#282828' }"
   >
-    <div  class="track-number">
+    <div class="track-number">
       <p v-if="playParams.kind === 'album'">{{ track.attributes.trackNumber }}</p>
       <p v-else>{{ index + 1 }}</p>
     </div>
@@ -14,7 +14,7 @@
         :src="getUrl(track.attributes.artwork, 40)"
         alt="`artwork of track ${track.attributes.name}`"
       />
-      <div class="song-play-button" v-if="isSelfPlaying">
+      <div class="song-play-button" v-if="isSelfPlaying && isPlayable">
         <font-awesome-icon
           v-if="nowPlaying.isPlaying"
           class="play-pause-skip-controls__icons"
@@ -28,18 +28,27 @@
           @click="togglePlayPause"
         />
       </div>
-      <div class="song-play-button" v-else-if="hover" @click="playSongFromItems(playItems, track)">
+      <div
+        class="song-play-button"
+        v-else-if="hover && isPlayable"
+        @click="playSongFromItems(playItems, track)"
+      >
         <font-awesome-icon class="play-pause-skip-controls__icons" icon="play" />
       </div>
     </div>
 
     <div class="song-details">
-      <p :class="isExplicit && 'explicit-content'" :title="track.attributes.name">
+      <p
+        :class="isExplicit && 'explicit-content'"
+        :title="isPlayable ? track.attributes.name : 'Error: Item is not playable.'"
+        :style="!isPlayable && 'color: #868686'"
+      >
         {{ track.attributes.name }}
       </p>
       <a
         @click="routeToAlbum(track.attributes.artistName, track.attributes.albumName, ownId)"
         class="song-album"
+        :title="isPlayable ? track.attributes.albumName : 'Error: Item is not playable.'"
       >
         {{ track.attributes.albumName }}
       </a>
@@ -72,6 +81,7 @@ import { mapActions, mapGetters, mapState } from 'vuex';
 import musicMixin from '@/components/Mixins/musicMixin';
 import playMixin from '@/components/Mixins/playMixin';
 import OptionsMenu from '@/assets/Components/OptionsMenu';
+import getSafeMixin from '@/components/Mixins/getSafeMixin';
 export default {
   name: 'song',
   components: { OptionsMenu },
@@ -81,7 +91,7 @@ export default {
     playItems: Array,
     playParams: Object,
   },
-  mixins: [musicMixin, playMixin],
+  mixins: [musicMixin, playMixin, getSafeMixin],
   data() {
     return {
       hover: false,
@@ -91,8 +101,6 @@ export default {
     };
   },
   methods: {
-    getUrl: helpers.getUrl,
-    getSafe: helpers.getSafe,
     ...mapActions('player', {
       togglePlayPause: 'togglePlayPause',
     }),
@@ -110,12 +118,15 @@ export default {
     ...mapState('player', {
       isPlaying: (state) => state.isPlaying,
     }),
+    isPlayable() {
+      return this.getSafe(() => !!this.track.attributes.playParams);
+    },
     ownId() {
       let id = null;
       if (this.isLibrary) {
-        id = this.getSafe(() => this.track.attributes.playParams.catalogId, 0);
+        id = this.getSafe(() => this.track.attributes.playParams.catalogId, null);
       } else {
-        id = this.getSafe(() => this.track.attributes.playParams.id, 0);
+        id = this.getSafe(() => this.track.attributes.playParams.id, null);
       }
       return id;
     },

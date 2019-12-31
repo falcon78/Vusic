@@ -30,10 +30,5 @@ export default {
   mounted() {
     this.queueItems = this.queue;
   },
-  watch: {
-    queue: function() {
-      this.queueItes = this.queue;
-    },
-  },
 };
 </script>

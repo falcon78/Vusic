@@ -78,6 +78,7 @@ import musicMixin from '@/components/Mixins/musicMixin';
 import { mapActions, mapGetters, mapState } from 'vuex';
 import playMixin from '@/components/Mixins/playMixin';
 import OptionsMenu from '@/assets/Components/OptionsMenu';
+import getSafeMixin from '@/components/Mixins/getSafeMixin';
 
 export default {
   name: 'songs-list',
@@ -90,9 +91,8 @@ export default {
       optionsVisible: false,
     };
   },
-  mixins: [musicMixin, playMixin],
+  mixins: [musicMixin, playMixin, getSafeMixin],
   methods: {
-    getSafe: helpers.getSafe,
     getUrl: helpers.getUrl,
     ...mapActions('player', {
       togglePlayPause: 'togglePlayPause',
@@ -129,7 +129,7 @@ export default {
   },
   computed: {
     isPlaylist() {
-      return this.item.attributes.playParams.kind === 'playlist';
+      return this.getSafe(() => this.item.attributes.type === 'playlist');
     },
     ...mapGetters('player', {
       getNowPlayingStatus: 'getNowPlayingStatus',

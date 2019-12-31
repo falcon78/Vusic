@@ -45,7 +45,15 @@ export default {
     },
   },
   async mounted() {
-    await this.fetchAllArtists();
+    try {
+      await this.fetchAllArtists();
+    } catch (e) {
+      this.$swal({
+        type: 'error',
+        title: e.name,
+        text: e.message,
+      });
+    }
   },
 };
 </script>

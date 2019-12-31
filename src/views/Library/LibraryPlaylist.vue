@@ -37,8 +37,21 @@ export default {
       playlists: (state) => state.playlists,
     }),
   },
-  created() {
-    this.fetchAllItems({ refresh: false, item: 'playlists', options: null, library: true });
+  async created() {
+    try {
+      await this.fetchAllItems({
+        refresh: false,
+        item: 'playlists',
+        options: null,
+        library: true,
+      });
+    } catch (e) {
+      this.$swal({
+        type: 'error',
+        title: e.name,
+        text: e.message,
+      });
+    }
   },
 };
 </script>

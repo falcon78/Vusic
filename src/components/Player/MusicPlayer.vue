@@ -42,6 +42,7 @@ import { mapGetters, mapActions, mapState } from 'vuex';
 import VueSlider from 'vue-slider-component';
 import PlayPauseSkipControls from './PlayPauseSkipControls.vue';
 import PlayerButtons from '@/components/Player/PlayerButtons';
+import getSafeMixin from '@/components/Mixins/getSafeMixin';
 
 export default {
   name: 'music-player',
@@ -50,6 +51,7 @@ export default {
     VueSlider,
     PlayPauseSkipControls,
   },
+  mixins: [getSafeMixin],
   computed: {
     ...mapGetters('player', {
       getNowPlayingStatus: 'getNowPlayingStatus',
@@ -58,10 +60,14 @@ export default {
       playbackTimeInfo: (state) => state.playbackTimeInfo,
     }),
     currentTimeInMinutes() {
-      return MusicKit.formatMediaTime(this.playbackTimeInfo.currentPlaybackTime);
+      return this.getSafe(() =>
+        MusicKit.formatMediaTime(this.playbackTimeInfo.currentPlaybackTime),
+      );
     },
     currentDurationInMinutes() {
-      return MusicKit.formatMediaTime(this.playbackTimeInfo.currentPlaybackDuration || 0);
+      return this.getSafe(() =>
+        MusicKit.formatMediaTime(this.playbackTimeInfo.currentPlaybackDuration || 0),
+      );
     },
   },
   methods: {

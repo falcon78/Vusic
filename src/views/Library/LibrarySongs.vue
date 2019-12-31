@@ -43,9 +43,15 @@ export default {
       options: null,
       library: true,
     })
-      .catch(() => {})
-      .finally(() => {
+      .then(() => {
         this.$swal.close();
+      })
+      .catch((e) => {
+        this.$swal({
+          type: 'error',
+          title: e.name,
+          text: e.message,
+        });
       });
   },
   methods: {

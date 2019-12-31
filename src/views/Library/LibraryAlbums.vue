@@ -37,8 +37,21 @@ export default {
       albums: (state) => state.albums,
     }),
   },
-  created() {
-    this.fetchAllItems({ refresh: false, item: 'albums', options: null, library: true });
+  async created() {
+    try {
+      await this.fetchAllItems({
+        refresh: false,
+        item: 'albums',
+        options: null,
+        library: true,
+      });
+    } catch (e) {
+      this.$swal({
+        type: 'error',
+        title: e.name,
+        text: e.message,
+      });
+    }
   },
 };
 </script>

@@ -4,20 +4,28 @@ const musicMixin = {
   mixins: [getSafeMixin],
   methods: {
     milliToMinutes(millis) {
-      return MusicKit.formatMediaTime(millis / 1000);
+      return this.getSafe(() => MusicKit.formatMediaTime(millis / 1000), 60);
     },
     async findAlbums(albumName, artistName = '') {
       let albums;
-      await MusicKit.getInstance()
-        .api.search(albumName + artistName)
-        .then((result) => {
-          result = Object.assign(result);
-          albums = result.albums.data;
-        })
-        .catch(() => {
-          albums = false;
+      try {
+        await MusicKit.getInstance()
+          .api.search(albumName + artistName)
+          .then((result) => {
+            result = Object.assign(result);
+            albums = result.albums.data;
+          })
+          .catch(() => {
+            albums = false;
+          });
+        return albums;
+      } catch (e) {
+        this.$swal({
+          type: 'error',
+          title: e.name,
+          text: e.message,
         });
-      return albums;
+      }
     },
     async routeToAlbum(artistName, albumName, songId = null) {
       let id = null;

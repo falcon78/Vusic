@@ -55,11 +55,12 @@ export default {
       if (!this.songsBeforeShuffle) return;
       await MusicKit.getInstance().setQueue({ items: this.songsBeforeShuffle });
     },
-    async playSongFromItems(items, startItem) {
+    async playSongFromItems(playParams, startItem = null) {
       const music = MusicKit.getInstance();
       try {
-        await music.setQueue(items);
-        await music.player.changeToMediaItem(startItem.id);
+        await music.setQueue(playParams);
+        startItem && (await music.player.changeToMediaItem(startItem.id));
+        await music.player.play();
       } catch (e) {
         this.swal('error', e.name, e.title);
       }
@@ -84,6 +85,13 @@ export default {
       return await MusicKit.getInstance().player.pause();
     },
 
+    alertNonAuth() {
+      this.$swal({
+        type: 'error',
+        title: 'Unauthenticated: Please Login',
+      });
+    },
+
     addToLibrary(items, title) {
       const api = MusicKit.getInstance().api;
       return new Promise(async (resolve, reject) => {
@@ -96,23 +104,36 @@ export default {
           resolve();
         } catch (e) {
           this.swal('error', e.name, e.message);
+          if (e === 'Invalid tokens') {
+            this.alertNonAuth();
+          }
+          console.log(e);
           reject();
         }
       });
     },
-    playNext(playParams) {
+    // id queue is empty the setqueue
+    async playNext(playParams) {
       try {
         const player = MusicKit.getInstance().player;
+        console.log(playParams);
+        if (this.getSafe(() => !player.queue.length)) {
+          await this.playSongFromItems(playParams);
+        }
         player.queue.prepend(playParams);
         this.swal('info', 'Added to queue');
       } catch (e) {
         this.swal('error', e.name, e.message);
       }
     },
-    playLater(playParams) {
+    // id queue is empty the setqueue
+    async playLater(playParams) {
       try {
         const player = MusicKit.getInstance().player;
-        player.queue.append(playParams);
+        if (this.getSafe(() => !player.queue.length)) {
+          await this.playSongFromItems(playParams);
+        }
+        await player.queue.append(playParams);
         this.swal('info', 'Added to queue');
       } catch (e) {
         this.swal('error', e.name, e.message);
@@ -136,20 +157,24 @@ export default {
             },
           );
 
+          console.log(res.status);
           if (res.status === 200) {
             resolve(true);
+          } else if (res.status === 403) {
+            this.alertNonAuth();
+            return reject(403);
           } else {
-            reject(res.status);
             this.swal('error', 'Server Error');
+            return reject(res.status);
           }
           if (rating === 1) {
-            this.swal('info', `Loved ${item.attributes.name} `);
-          } else {
-            this.swal('info', `Disliked ${item.attributes.name}`);
+            this.swal('info', `Loved:  ${item.attributes.name} `);
+          } else if (rating === -1) {
+            this.swal('info', `Disliked:  ${item.attributes.name}`);
           }
         } catch (err) {
+          console.log(err);
           this.swal('error', err.name, err.message);
-          reject(err);
         }
       });
     },
