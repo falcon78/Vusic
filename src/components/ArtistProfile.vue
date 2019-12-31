@@ -17,7 +17,6 @@ export default {
   methods: {
     routeToArtist() {
       const route = this.$route.meta.isLibrary ? 'library-artist-items' : 'artist';
-      console.log(this.artist);
       this.$router.push({ name: route, params: { id: this.artist.id } });
     },
   },

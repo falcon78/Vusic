@@ -107,16 +107,13 @@ export default {
           if (e === 'Invalid tokens') {
             this.alertNonAuth();
           }
-          console.log(e);
           reject();
         }
       });
     },
-    // id queue is empty the setqueue
     async playNext(playParams) {
       try {
         const player = MusicKit.getInstance().player;
-        console.log(playParams);
         if (this.getSafe(() => !player.queue.length)) {
           await this.playSongFromItems(playParams);
         }
@@ -126,7 +123,6 @@ export default {
         this.swal('error', e.name, e.message);
       }
     },
-    // id queue is empty the setqueue
     async playLater(playParams) {
       try {
         const player = MusicKit.getInstance().player;
@@ -157,7 +153,6 @@ export default {
             },
           );
 
-          console.log(res.status);
           if (res.status === 200) {
             resolve(true);
           } else if (res.status === 403) {
@@ -165,7 +160,7 @@ export default {
             return reject(403);
           } else {
             this.swal('error', 'Server Error');
-            return reject(res.status);
+            return reject(new Error(res.status.toString()));
           }
           if (rating === 1) {
             this.swal('info', `Loved:  ${item.attributes.name} `);
@@ -173,7 +168,6 @@ export default {
             this.swal('info', `Disliked:  ${item.attributes.name}`);
           }
         } catch (err) {
-          console.log(err);
           this.swal('error', err.name, err.message);
         }
       });
