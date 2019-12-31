@@ -12,6 +12,7 @@ button,
 .info,
 .thumbnail-and-title {
   @include transition-animation(0.2);
+  flex-shrink: 0;
 }
 
 .artwork-title-container {

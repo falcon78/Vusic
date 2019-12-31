@@ -3,6 +3,7 @@
     <full-page-loader v-if="!items.length" />
     <artwork-and-title
       v-else
+      class="albums-margin"
       v-for="item in items"
       :item="item"
       :key="item.id"
