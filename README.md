@@ -1,7 +1,7 @@
 # Vusic - Apple Music Web Player Built With VueJS
 
 
-![](https://i.imgur.com/9Iom5s3.png)
+![](./example/image.png)
 
 # Screenshots
 
