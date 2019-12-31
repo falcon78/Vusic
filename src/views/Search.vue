@@ -2,13 +2,21 @@
   <div class="search-page">
     <div class="search-container">
       <div class="search-buttons">
-        <div class="button" :class="{ 'un-active': searchIsLibrary }" @click="setSearchType(false)">
+        <div
+          class="button"
+          :class="{ 'un-active': isLibrary }"
+          @click="$router.push({ name: 'search', query: { search } })"
+        >
           Apple Music
         </div>
         <div
           class="button "
-          :class="{ 'un-active': !searchIsLibrary }"
-          @click="isAuthorized ? setSearchType(true) : nonAuthError()"
+          :class="{ 'un-active': !isLibrary }"
+          @click="
+            isAuthorized
+              ? $router.push({ name: 'library-search', query: { search } })
+              : nonAuthError()
+          "
         >
           Library
         </div>
@@ -80,13 +88,13 @@ export default {
         type: 'info',
         title: 'Searching...',
       });
-      const music = this.searchIsLibrary
+      const music = this.isLibrary
         ? MusicKit.getInstance().api.library
         : MusicKit.getInstance().api;
-      const route = this.searchIsLibrary ? 'library-search' : 'search';
+      const route = this.isLibrary ? 'library-search' : 'search';
       await this.$router.push({ name: route, query: { search: this.search } }).catch(() => {});
       try {
-        if (this.searchIsLibrary) {
+        if (this.isLibrary) {
           const searchResult = await music.search(this.search, {
             types: ['library-albums', 'library-songs', 'library-playlists', 'library-artists'],
             limit: 20,
@@ -127,9 +135,12 @@ export default {
       searchIsLibrary: (state) => state.searchIsLibrary,
       isAuthorized: (state) => state.auth.isAuthorized,
     }),
+    isLibrary() {
+      return this.$route.meta.isLibrary;
+    },
     search: {
       get() {
-        return this.searchText;
+        return this.getSafe(() => this.searchText, '');
       },
       set(value) {
         this.setSearch(value);
@@ -140,14 +151,7 @@ export default {
     search: function() {
       this.debounceSearch();
     },
-    searchIsLibrary: function() {
-      if (this.searchIsLibrary) {
-        this.$router.push({ name: 'library-search' });
-      } else {
-        this.$router.push({ name: 'search' });
-      }
-      this.debounceSearch();
-    },
+
     '$route.query.search': function() {
       this.setSearch(this.$route.query.search);
     },
@@ -155,10 +159,9 @@ export default {
 
   mounted() {
     if (this.search) {
-      const route = this.searchIsLibrary ? 'library-search' : 'search';
+      const route = this.isLibrary ? 'library-search' : 'search';
       this.$router.push({ name: route, query: { search: this.search } });
     }
-    this.setSearchType(this.$route.name === 'library-search');
     this.setSearch(this.$route.query.search);
     this.debounceSearch();
   },
