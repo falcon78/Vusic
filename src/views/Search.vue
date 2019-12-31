@@ -159,7 +159,7 @@ export default {
 
   mounted() {
     if (this.search) {
-      const route = this.isLibrary ? 'library-search' : 'search';
+      const route = this.$route.meta.isLibrary ? 'library-search' : 'search';
       this.$router.push({ name: route, query: { search: this.search } });
     }
     this.setSearch(this.$route.query.search);
