@@ -72,6 +72,7 @@ export default {
     }),
     debounceSearch: debounce(async function() {
       if (!this.search) return;
+      document.title = `${this.search} - ${this.$route.meta.title}`;
       this.$swal({
         toast: true,
         position: 'top-end',

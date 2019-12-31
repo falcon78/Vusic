@@ -12,9 +12,11 @@
 <script>
 import Home from '@/views/Home.vue';
 import { mapState } from 'vuex';
+import getSafeMixin from '@/components/Mixins/getSafeMixin';
 
 export default {
   components: { Home },
+  mixins: [getSafeMixin],
   computed: {
     ...mapState('music', {
       searchTyping: (state) => state.searchTyping,
@@ -42,6 +44,12 @@ export default {
       },
       false,
     );
+  },
+  watch: {
+    $route(to, from) {
+      document.title =
+        this.getSafe(() => to.meta.title, 'Vusic - Apple Music Web Player') + ' - Vusic';
+    },
   },
 };
 </script>

@@ -101,7 +101,6 @@ button,
     .album-title {
       @include truncate-text;
       font-size: $regular-font-size;
-
     }
     .album-artist {
       font-size: $tiny-font-size;

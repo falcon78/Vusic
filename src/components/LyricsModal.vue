@@ -112,9 +112,10 @@ export default {
         .then((res) => {
           return res;
         })
-        .then(() => {
+        .then((res) => {
           this.$swal.close();
           this.error = null;
+          return res;
         })
         .catch((error) => {
           this.setLyrics(null);

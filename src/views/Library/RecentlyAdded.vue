@@ -2,6 +2,7 @@
   <full-page-loader v-if="!items.length" />
   <div v-else class="scrollWrapper albums-page">
     <artwork-and-title
+      class="albums-margin"
       v-for="item in items"
       :key="item.id"
       :item="item"

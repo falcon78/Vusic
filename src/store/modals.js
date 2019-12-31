@@ -1,5 +1,7 @@
 import keys from '../../apiKeys';
 import { getRequest, stringSimilarity } from './helpers';
+import helpers from './helpers';
+
 const state = {
   lyricsModal: false,
   youtubeModal: false,
@@ -30,6 +32,28 @@ const mutations = {
   },
 };
 
+function getHitsFromResponse(searchResponse, songName, artistName) {
+  return new Promise(async (resolve, reject) => {
+    let hit = null;
+    for (let response of searchResponse.response.hits) {
+      const result = response.result;
+      const isSong = response.type === 'song';
+      const isSameSong =
+        stringSimilarity(result.title_with_featured, songName) > 0.8 ||
+        stringSimilarity(result.title, songName) > 0.8;
+      const isSameArtist = stringSimilarity(result.primary_artist.name, artistName) > 0.8;
+      if (isSong && isSameSong && isSameArtist) {
+        hit = result.id;
+        break;
+      }
+    }
+    if (!hit) {
+      return reject(new Error('Lyrics not found.'));
+    }
+    resolve(hit);
+  });
+}
+
 const actions = {
   fetchLyrics({ state, commit }, { songName, artistName }) {
     return new Promise(async (resolve, reject) => {
@@ -37,6 +61,7 @@ const actions = {
         return resolve(false);
       }
 
+      commit('setLyrics', null);
       const baseUrl = 'https://api.genius.com/';
       const apiKey = `access_token=${encodeURIComponent(keys.geniusAccessToken)}`;
       const search = `search?q=${encodeURIComponent(artistName + ' ' + songName)}`;
@@ -48,22 +73,32 @@ const actions = {
       }
 
       let hit = null;
+      // first pass
+      try {
+        hit = await getHitsFromResponse(searchResponse, songName, artistName);
+      } catch (e) {}
 
-      for (let response of searchResponse.response.hits) {
-        const result = response.result;
-        const isSong = response.type === 'song';
-        const isSameSong =
-          stringSimilarity(result.title_with_featured, songName) > 0.8 ||
-          stringSimilarity(result.title, songName) > 0.8;
-        const isSameArtist = stringSimilarity(result.primary_artist.name, artistName) > 0.8;
-        if (isSong && isSameSong && isSameArtist) {
-          hit = result.id;
-          break;
+      // second pass
+      if (!hit) {
+        let newSongName = helpers.getSafe(() => songName.match(/^[^(]*/)[0], null);
+        if (!newSongName) {
+          return reject(new Error('Lyrics not found.'));
+        }
+        newSongName = newSongName.replace(/\s+$/, '');
+
+        const newSearch = `search?q=${encodeURIComponent(artistName + ' ' + newSongName)}`;
+        try {
+          searchResponse = await getRequest(`${baseUrl}${newSearch}&${apiKey}`);
+          hit = await getHitsFromResponse(searchResponse, newSongName, artistName);
+        } catch (error) {
+          return reject(error);
         }
       }
-      if (hit === null) {
+
+      if (!hit) {
         return reject(new Error('Lyrics not found.'));
       }
+
       let lyricsResponse = null;
       try {
         lyricsResponse = await getRequest(`${baseUrl}songs/${hit}?${apiKey}`);

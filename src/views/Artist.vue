@@ -58,9 +58,10 @@ export default {
       }
     },
   },
-  created() {
-    this.fetchArtistInfo();
-    this.fetchArtistItems();
+  async created() {
+    await this.fetchArtistInfo();
+    await this.fetchArtistItems();
+    document.title = `${this.artistInfo.attributes.name} - ${this.$route.meta.title}`;
   },
 };
 </script>

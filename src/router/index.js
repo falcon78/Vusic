@@ -1,12 +1,10 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Albums from '@/views/Library/LibraryAlbums.vue';
 import ForYou from '@/views/ForYou.vue';
 import Browse from '@/views/Browse.vue';
 import RecentlyAdded from '@/views/Library/RecentlyAdded.vue';
 import Songs from '@/views/Library/LibrarySongs.vue';
 import Playlists from '@/views/Library/LibraryPlaylist.vue';
-import Album from '@/components/Album';
 import LibraryArtists from '@/views/Library/LibraryArtists';
 import AlbumOrPlaylistItems from '../components/AlbumOrPlaylistItems';
 import store from '@/store';
@@ -15,7 +13,6 @@ import LibraryAlbums from '@/views/Library/LibraryAlbums';
 import MultipleAlbumItems from '@/components/MultipleAlbumItems';
 import Artist from '@/views/Artist';
 import Search from '@/views/Search';
-import QueueItems from '@/views/Library/QueueItems';
 
 Vue.use(VueRouter);
 
@@ -24,53 +21,48 @@ const routes = [
     path: '/browse',
     name: 'browse',
     component: Browse,
-    meta: { isLibrary: false },
-  },
-  {
-    path: '/queue',
-    name: 'queue',
-    component: QueueItems,
+    meta: { isLibrary: false, title: 'Browse' },
   },
   {
     path: '/login',
     name: 'login',
-    meta: { isLibrary: false },
+    meta: { isLibrary: false, title: 'Login' },
     component: Login,
   },
   {
     path: '/for-you',
     name: 'for-you',
     component: ForYou,
-    meta: { requiresAuth: true, isLibrary: false },
+    meta: { requiresAuth: true, isLibrary: false, title: 'For You' },
   },
   {
     path: '/album/:id',
     name: 'album',
-    meta: { album: true, isLibrary: false },
+    meta: { album: true, isLibrary: false, title: 'Album' },
     component: AlbumOrPlaylistItems,
   },
   {
     path: '/playlist/:id',
     name: 'playlist',
-    meta: { album: false, isLibrary: false },
+    meta: { album: false, isLibrary: false, title: 'Playlist' },
     component: AlbumOrPlaylistItems,
   },
   {
     path: '/artist/:id',
-    meta: { isLibrary: false },
+    meta: { isLibrary: false, title: 'Artist' },
     name: 'artist',
     component: Artist,
   },
   {
     path: '/search',
-    meta: { isLibrary: false },
+    meta: { isLibrary: false, title: 'Search' },
     name: 'search',
     component: Search,
   },
   {
     path: '/library',
     name: 'library',
-    meta: { requiresAuth: true, isLibrary: true },
+    meta: { requiresAuth: true, isLibrary: true, title: 'Library' },
     component: {
       render(c) {
         return c('router-view');
@@ -80,19 +72,19 @@ const routes = [
       {
         path: 'recently-added',
         name: 'recently-added',
-        meta: { isLibrary: true },
+        meta: { isLibrary: true, title: 'Recent' },
         component: RecentlyAdded,
       },
       {
         path: 'artists',
         name: 'library-artists',
-        meta: { isLibrary: true },
+        meta: { isLibrary: true, title: 'Library Artists' },
         component: LibraryArtists,
         children: [
           {
             path: ':id',
             name: 'library-artist-items',
-            meta: { isLibrary: true },
+            meta: { isLibrary: true, title: 'Library Artist Albums' },
             component: MultipleAlbumItems,
           },
         ],
@@ -100,36 +92,36 @@ const routes = [
       {
         path: 'albums',
         name: 'library-albums',
-        meta: { isLibrary: true },
+        meta: { isLibrary: true, title: 'Library Albums' },
         component: LibraryAlbums,
       },
       {
         path: 'songs',
         name: 'library-songs',
-        meta: { isLibrary: true },
+        meta: { isLibrary: true, title: 'Library Songs' },
         component: Songs,
       },
       {
         path: 'playlists',
         name: 'library-playlists',
-        meta: { album: false, isLibrary: true },
+        meta: { album: false, isLibrary: true, title: 'Library Playlists' },
         component: Playlists,
       },
       {
         path: 'playlists/:id',
         name: 'library-playlist',
-        meta: { isLibrary: true, album: false },
+        meta: { isLibrary: true, album: false, title: 'Library Playlist' },
         component: AlbumOrPlaylistItems,
       },
       {
         path: 'album/:id',
         name: 'library-album',
-        meta: { isLibrary: true, album: true },
+        meta: { isLibrary: true, album: true, title: 'Library Album' },
         component: AlbumOrPlaylistItems,
       },
       {
         path: 'search',
-        meta: { isLibrary: true },
+        meta: { isLibrary: true, title: 'Library Search' },
         name: 'library-search',
         component: Search,
       },

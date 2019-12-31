@@ -3,7 +3,7 @@
     <full-page-loader v-if="!albums.length" />
     <artwork-and-title
       v-else
-      class="margin"
+      class="albums-margin"
       v-for="album in albums"
       :item="album"
       :key="album.id"

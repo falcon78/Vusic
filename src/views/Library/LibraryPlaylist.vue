@@ -2,7 +2,7 @@
   <div class="albums-page scrollWrapper">
     <full-page-loader v-if="!playlists.length" />
     <artwork-and-title
-      class="margin"
+      class="albums-margin"
       v-for="playlist in playlists"
       :key="playlist.id"
       :item="playlist"

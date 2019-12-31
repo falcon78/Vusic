@@ -50,7 +50,9 @@ export default {
     },
   },
   mounted() {
-    this.getItems();
+    this.getItems().then(() => {
+      document.title = `${this.item.attributes.name} - ${this.$route.meta.title}`;
+    });
   },
 };
 </script>

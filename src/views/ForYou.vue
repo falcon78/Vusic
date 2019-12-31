@@ -4,6 +4,7 @@
     <h2 class="browse-page-category">Recently Played</h2>
     <div class="albums-page">
       <artwork-and-title
+        class="albums-margin"
         v-for="item in recentlyPlayed"
         :item="item"
         :type="item.type.slice(0, -1)"
@@ -14,6 +15,7 @@
     <h2 class="browse-page-category">Heavy Rotation</h2>
     <div class="albums-page">
       <artwork-and-title
+        class="albums-margin"
         v-for="item in heavyRotation"
         :item="item"
         :type="item.type.slice(0, -1)"
@@ -24,6 +26,7 @@
       <h2 class="browse-page-category">{{ items.attributes.title.stringForDisplay }}</h2>
       <div class="albums-page">
         <artwork-and-title
+          class="albums-margin"
           v-for="item in items.relationships.contents.data"
           :key="item.id"
           :item="item"
