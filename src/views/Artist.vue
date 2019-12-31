@@ -1,6 +1,10 @@
 <template>
   <div class="full-div scrollWrapper">
-    <h2>{{ artistInfo.attributes.name }}</h2>
+    <div style="background: rgba(40,40,40,0.31); margin: 0; padding: 1em;">
+      <h2 class="browse-page-category" style="color: rgb(255,117,151)">
+        {{ artistInfo.attributes.name }}
+      </h2>
+    </div>
     <songs-albums-playlists
       :albums="{ name: 'Albums', data: albums }"
       :songs="{ name: 'Songs', data: songs }"
@@ -11,9 +15,11 @@
 
 <script>
 import SongsAlbumsPlaylists from '@/components/SongsAlbumsPlaylists';
+import swalMixin from '@/components/Mixins/swalMixin';
 export default {
   name: 'Artist',
   components: { SongsAlbumsPlaylists },
+  mixins: [swalMixin],
   data() {
     return {
       artistInfo: [],
@@ -37,11 +43,7 @@ export default {
             this.artistInfo = res;
           });
       } catch (e) {
-        this.$swal({
-          type: 'error',
-          title: e.name,
-          text: e.message,
-        });
+        this.swal('error', e.name, e.message);
       }
     },
     async fetchArtistItems() {
@@ -52,11 +54,7 @@ export default {
         this.albums = await music.artist(id, { include: 'albums' });
         this.playlists = await music.artist(id, { include: 'playlists' });
       } catch (e) {
-        this.$swal({
-          type: 'error',
-          title: e.name,
-          text: e.message,
-        });
+        this.swal('error', e.name, e.message);
       }
     },
   },

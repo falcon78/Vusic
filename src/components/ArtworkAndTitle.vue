@@ -15,7 +15,7 @@
     </div>
     <div class="info">
       <router-link
-        class="album-title"
+        class="album-title clickable"
         :to="{ name: type, params: { id: item.id } }"
         :title="item.attributes.name"
       >

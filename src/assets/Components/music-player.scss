@@ -19,6 +19,12 @@ $image-width-height: 100px;
   border-color: $top-border-color;
   width: $sidebar-width;
   overflow: hidden;
+  .title {
+    font-weight: bold !important;
+  }
+  .info {
+    color: #282828 !important;
+  }
   .image-and-titles {
     display: flex;
     justify-content: center;

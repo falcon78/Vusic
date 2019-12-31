@@ -1,9 +1,10 @@
 import { mapActions, mapMutations, mapState } from 'vuex';
 import { getAppleMusicConfig } from '../../../apiKeys';
+import swalMixin from '@/components/Mixins/swalMixin';
 
 export default {
   name: 'playMixin',
-
+  mixins: [swalMixin],
   computed: {
     ...mapState('player', {
       shuffle: (state) => state.shuffle,
@@ -12,18 +13,6 @@ export default {
   },
 
   methods: {
-    swal(type, title = '', text = '') {
-      this.$swal.close();
-      this.$swal({
-        toast: true,
-        position: 'top-end',
-        showConfirmButton: false,
-        timer: 3000,
-        type,
-        title,
-        text,
-      });
-    },
     ...mapActions('player', {
       play: 'play',
     }),

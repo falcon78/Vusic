@@ -17,6 +17,17 @@
           <h5 :style="getColor('textColor3')" v-if="!isPlaylist">
             {{ getSafe(() => item.attributes.releaseDate, '') }}
           </h5>
+          <!--<h5 :style="getColor('textColor3')" v-if="getGenres">
+            {{ getGenres }}
+          </h5>-->
+          <h5
+            v-if="getEditorial"
+            class="clickable"
+            @click="showEditorialNotes()"
+            :style="getColor('textColor4')"
+          >
+            Show Editorial Notes
+          </h5>
           <p :style="getColor('textColor4')" v-else class="scrollWrapper">
             {{ getSafe(() => item.attributes.description.standard) }}
           </p>
@@ -126,10 +137,28 @@ export default {
           `#${this.getSafe(() => this.item.attributes.artwork.bgColor, '282828')} 100%) `,
       };
     },
+    showEditorialNotes() {
+      this.$swal({
+        title: this.item.attributes.name,
+        html: this.getEditorial,
+      });
+    },
   },
   computed: {
+    getEditorial() {
+      if (!this.getSafe(() => this.item.attributes.editorialNotes.standard.length)) {
+        return null;
+      }
+      return this.item.attributes.editorialNotes.standard;
+    },
+    getGenres() {
+      if (!this.getSafe(() => this.item.attributes.genreNames.length)) {
+        return null;
+      }
+      return this.item.attributes.genreNames.join(', ');
+    },
     isPlaylist() {
-      return this.getSafe(() => this.item.attributes.type === 'playlist');
+      return this.getSafe(() => this.item.type === 'playlists');
     },
     ...mapGetters('player', {
       getNowPlayingStatus: 'getNowPlayingStatus',
