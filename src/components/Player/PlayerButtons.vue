@@ -81,7 +81,7 @@
 import VueSlider from 'vue-slider-component';
 import { mapActions, mapMutations, mapState } from 'vuex';
 import playMixin from '@/components/Mixins/playMixin';
-import OptionsMenu from '@/assets/Components/OptionsMenu';
+import OptionsMenu from '@/components/OptionsMenu';
 export default {
   name: 'PlayerButtons',
   components: { OptionsMenu, VueSlider },

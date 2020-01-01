@@ -88,7 +88,7 @@ import helpers from '../store/helpers';
 import musicMixin from '@/components/Mixins/musicMixin';
 import { mapActions, mapGetters, mapState } from 'vuex';
 import playMixin from '@/components/Mixins/playMixin';
-import OptionsMenu from '@/assets/Components/OptionsMenu';
+import OptionsMenu from '@/components/OptionsMenu';
 import getSafeMixin from '@/components/Mixins/getSafeMixin';
 
 export default {
