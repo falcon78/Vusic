@@ -6,6 +6,20 @@ $sidebar-background-color: black;
 ul {
   @include no-margin-padding;
   list-style-type: none;
+  text-decoration: none;
+}
+
+.link {
+  padding: 6px 3px;
+  a {
+    text-decoration: none;
+  }
+  a:link, a:visited {
+    color: white;
+  }
+  a:hover {
+    color: white;
+  }
 }
 
 li {
@@ -19,6 +33,7 @@ li {
     padding: $li-padding;
     width: 100%;
   }
+
   &:hover {
     @include box-shadow;
     background: $primary-color;

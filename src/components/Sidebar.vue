@@ -25,7 +25,26 @@
           </li>
         </ul>
       </div>
+
+      <div class="padding-div">
+        <h2 class="sidebar__category svg-container">
+          <font-awesome-icon class="icon" icon="cat" size="1x" />
+          Github
+        </h2>
+        <ul class="sidebar__ul">
+          <li class="sidebar__li link">
+            <a
+              class="link"
+              href="https://github.com/falcon78/Vusic"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Open In Github</a
+            >
+          </li>
+        </ul>
+      </div>
     </nav>
+
     <div class="player">
       <MusicPlayer />
     </div>

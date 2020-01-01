@@ -23,6 +23,7 @@ import {
   faList,
   faWindowClose,
   faEllipsisH,
+  faCat,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
@@ -44,6 +45,7 @@ library.add(
   faList,
   faWindowClose,
   faEllipsisH,
+  faCat
 );
 
 Vue.component('font-awesome-icon', FontAwesomeIcon);
