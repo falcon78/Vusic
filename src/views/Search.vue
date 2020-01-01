@@ -124,7 +124,7 @@ export default {
       this.$swal({
         type: 'error',
         title: 'Unauthenticated...',
-        text: 'You need to login in to access your library',
+        text: 'You need to login to access your library',
       });
     },
   },
