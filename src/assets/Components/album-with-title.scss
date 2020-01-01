@@ -39,14 +39,22 @@ button,
   display: none;
   overflow: hidden;
   position: absolute;
-  top: 10%;
+  top: 12%;
   right: 14%;
   z-index: 2;
   margin: 0;
   background: transparent;
   .button-svg {
-    fill: $album-button-color;
+    background: $primary-color;
     stroke: darken(white, 10%);
+    color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1px 0 2px 2px;
   }
   &:hover {
     transform: scale(1.12);

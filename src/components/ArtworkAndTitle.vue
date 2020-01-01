@@ -2,7 +2,7 @@
   <div v-if="item.type !== 'stations'" class="artwork-title-container">
     <div class="buttons">
       <div class="button-svg" @click="playItem">
-        <PlayCircleIcon class="button-svg" />
+        <font-awesome-icon icon="play" class="icon " style="color: #dddddd" size="1x" />
       </div>
     </div>
 
@@ -39,15 +39,11 @@
 </template>
 
 <script>
-import { PlayCircleIcon } from 'vue-feather-icons';
 import { mapActions } from 'vuex';
 import helpers from '@/store/helpers';
 
 export default {
   name: 'artwork-and-title',
-  components: {
-    PlayCircleIcon,
-  },
   props: {
     item: Object,
     type: String,
