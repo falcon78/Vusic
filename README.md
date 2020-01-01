@@ -1,5 +1,25 @@
 # Vusic - Apple Music Web Player Built With VueJS
 
+### Made using Vue, Vuex , Vue Router. Powered by Genius, Youtube and Apple MusicKitJS SDK
+
+# Features 
+
+## Library
+* View all songs, albums, playlists in your library.
+* Add songs to your Library.
+* Searh you library.
+
+## Apple Music
+* Browse currently popular songs.
+* Search Apple Music catalog.
+* Show recommendations by Apple (For You)
+* Browse Recently played , added and most frequently played items (heavy rotation)
+* like or dislike (rate) a song
+
+## Other features
+* Show music video for currenyly playing song (youtube)
+* Show lyrics for currenyly playing song
+
 
 ![](./example/image.png)
 
