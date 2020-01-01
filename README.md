@@ -38,7 +38,7 @@
 Rename `apiKeys.example.js` to `apiKeys.js` and add all the necessary api keys
 
 ### Api keys example
-```
+```js
 const keys = {
   appleMusic: {
     developerToken: 'Apple MusicKitJS API Key Goes Here',
