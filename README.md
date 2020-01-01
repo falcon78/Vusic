@@ -19,8 +19,8 @@
 * like or dislike (rate) a song
 
 ## Other features
-* Show music video for currenyly playing song (youtube)
-* Show lyrics for currenyly playing song
+* Show music video for currently playing song (youtube)
+* Show lyrics for currently playing song
 
 
 
