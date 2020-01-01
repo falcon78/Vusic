@@ -9,7 +9,7 @@
 ## Library
 * View all songs, albums, playlists in your library.
 * Add songs to your Library.
-* Searh you library.
+* Search you library.
 
 ## Apple Music
 * Browse currently popular songs.
