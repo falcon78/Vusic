@@ -1,6 +1,7 @@
 # Vusic - Apple Music Web Player Built With VueJS
 
 ### Made using Vue, Vuex , Vue Router. Powered by Genius, Youtube and Apple MusicKitJS SDK
+![](./example/image.png)
 
 # Features 
 
@@ -21,7 +22,7 @@
 * Show lyrics for currenyly playing song
 
 
-![](./example/image.png)
+
 
 # Screenshots
 
