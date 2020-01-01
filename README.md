@@ -26,11 +26,22 @@
 
 # Screenshots
 
+### Album View
 ![](./example/1.png)
-![](./example/2.png)
-![](./example/3.png)
+
+### Playlist View
 ![](./example/4.png)
+
+### Music Video and Lyrics
+![](./example/2.png)
+
+### Library Playlists
+![](./example/3.png)
+
+### Options Menu
 ![](./example/5.png)
+
+### Queue Items
 ![](./example/6.png)
 
 # How to Build
