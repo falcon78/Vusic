@@ -45,7 +45,7 @@ library.add(
   faList,
   faWindowClose,
   faEllipsisH,
-  faCat
+  faCat,
 );
 
 Vue.component('font-awesome-icon', FontAwesomeIcon);
