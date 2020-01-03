@@ -4,6 +4,7 @@
     @mouseover="hover = true"
     @mouseleave="hover = false"
     :style="isSelfPlaying && { backgroundColor: 'rgba(0,0,0,0.6)' }"
+    :id="isSelfPlaying ? 'currently-playing-item' : track.id"
   >
     <div class="track-number">
       <p>{{ index }}</p>
@@ -51,6 +52,7 @@ import helpers from '@/store/helpers';
 import { mapActions, mapGetters, mapState } from 'vuex';
 import musicMixin from '@/components/Mixins/musicMixin';
 import playMixin from '@/components/Mixins/playMixin';
+
 export default {
   name: 'queue-song',
   props: {
@@ -70,6 +72,14 @@ export default {
     ...mapActions('player', {
       togglePlayPause: 'togglePlayPause',
     }),
+    scrollToCurrentlyPlayingItem() {
+      const container = document.getElementById('queue-items');
+      const element = document.getElementById('currently-playing-item');
+
+      const elementTop = element.offsetTop;
+      const containerTop = container.offsetTop;
+      container.scrollTop = elementTop - containerTop - 8;
+    },
   },
   computed: {
     ...mapGetters('player', {
@@ -77,16 +87,20 @@ export default {
     }),
     ...mapState('player', {
       isPlaying: (state) => state.isPlaying,
+      queuePosition: (state) => state.queuePosition,
     }),
     ownId() {
       return this.track.id;
     },
     isSelfPlaying() {
-      return this.nowPlaying.id === this.ownId;
+      return this.index - 1 === this.queuePosition;
     },
     isExplicit() {
       return this.getSafe(() => this.track.attributes.contentRating === 'explicit');
     },
+  },
+  mounted() {
+    this.scrollToCurrentlyPlayingItem();
   },
 };
 </script>
