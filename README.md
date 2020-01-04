@@ -85,3 +85,9 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+# Other Projects like this (inspiration for this project)
+
+## [Musish](https://github.com/Musish/Musish)
+## [apple-music-webplayer by zachomedia](https://github.com/zachomedia/apple-music-webplayer)
+
+
