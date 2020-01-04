@@ -111,11 +111,17 @@ export default {
     }),
     async shuffleItems() {
       await this.setShuffle(1);
-      this.playAlbumOrPlaylist(this.item.attributes.playParams);
+      this.playAlbumOrPlaylist(
+        this.item.attributes.playParams,
+        this.item.relationships.tracks.data,
+      );
     },
     async playItems() {
       await this.setShuffle(0);
-      this.playAlbumOrPlaylist(this.item.attributes.playParams);
+      this.playAlbumOrPlaylist(
+        this.item.attributes.playParams,
+        this.item.relationships.tracks.data,
+      );
     },
     getColor(type) {
       return {
