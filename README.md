@@ -30,6 +30,9 @@
 ### Album View
 ![](./example/1.png)
 
+### Library Artists
+![](./example/8.png)
+
 ### Playlist View
 ![](./example/4.png)
 
