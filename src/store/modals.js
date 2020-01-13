@@ -117,7 +117,9 @@ const actions = {
   fetchYoutubeVideo({ state, commit }, { artistName, songName }) {
     return new Promise(async (resolve, reject) => {
       const baseUrl = 'https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1';
-      const query = `&q=${encodeURIComponent(artistName + ' ' + songName)}&type=video`;
+      const query = `&q=${encodeURIComponent(
+        artistName + ' ' + songName + 'Music Video',
+      )}&type=video`;
       const apiKey = `&key=${keys.youtubeApiKey}`;
       let searchResult = null;
       try {
