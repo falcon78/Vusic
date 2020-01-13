@@ -88,30 +88,33 @@ const mutations = {
 
 const actions = {
   initializeState({ commit, dispatch }) {
-    const local = {
+    const initial = {
       volume: 1,
       shuffle: false,
       repeat: 0,
-      storefront: 'us',
+      storefront: getSafe(() => MusicKit.getInstance().storefront, 'us'),
     };
     if (localStorage) {
-      local.volume = getSafe(() => JSON.parse(localStorage.getItem('volume') || '1'), 1);
-      local.shuffle = getSafe(() => JSON.parse(localStorage.getItem('shuffle') || 'false'), false);
-      local.repeat = getSafe(() => JSON.parse(localStorage.getItem('repeat') || '0'), 0);
-      local.storefront = getSafe(
-        () => JSON.parse(localStorage.getItem('storefront') || 'us'),
-        'us',
+      initial.volume = getSafe(() => JSON.parse(localStorage.getItem('volume') || '1'), 1);
+      initial.shuffle = getSafe(
+        () => JSON.parse(localStorage.getItem('shuffle') || 'false'),
+        false,
+      );
+      initial.repeat = getSafe(() => JSON.parse(localStorage.getItem('repeat') || '0'), 0);
+      initial.storefront = getSafe(
+        () => JSON.parse(localStorage.getItem('storefront')),
+        initial.storefront,
       );
     }
-    dispatch('setVolume', { volume: local.volume });
-    dispatch('setShuffle', local.shuffle);
-    dispatch('setRepeatStatus', local.repeat);
+    dispatch('setVolume', { volume: initial.volume });
+    dispatch('setShuffle', initial.shuffle);
+    dispatch('setRepeatStatus', initial.repeat);
 
-    MusicKit.getInstance().storefrontId = local.storefront;
+    MusicKit.getInstance().storefrontId = initial.storefront;
     MusicKit.getInstance().bitrate = 256;
 
     commit('setDrmStatus', { state: MusicKit.getInstance().player.canSupportDRM });
-    commit('music/setStoreFront', { storefront: local.storefront }, { root: true });
+    commit('music/setStoreFront', { storefront: initial.storefront }, { root: true });
     commit('music/setAuth', { auth: MusicKit.getInstance().isAuthorized }, { root: true });
   },
 
