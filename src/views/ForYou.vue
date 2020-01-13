@@ -80,4 +80,7 @@ export default {
 .padding-div {
   padding: 2em;
 }
+.for-you {
+  overflow-x: hidden;
+}
 </style>
