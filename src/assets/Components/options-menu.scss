@@ -3,18 +3,24 @@
   z-index: 10;
   position: absolute;
   background: rgba(93, 93, 93, 0.9);
-  border-radius: 10px;
-  width: 140px;
-  height: 200px;
+  border-radius: 4px;
+  width: 125px;
+  height: 160px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-  padding: 10px 4px 18px 4px;
+  justify-content: center;
+  padding: 10px 0;
   .button {
     font-size: 14px;
+    background: transparent;
     width: 90%;
     padding: 6px 0;
+    border-radius: 0;
+    margin: 0;
+    &:hover {
+      background-color: $primary-color;
+    }
   }
 }
 
