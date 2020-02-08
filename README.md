@@ -4,6 +4,11 @@
 
 ### Made with Vue, Vuex , Vue Router, (Styled with SASS). Powered by Genius, Youtube and Apple MusicKitJS SDK
 
+# Discussions
+[Hackernews (Show HN)](https://news.ycombinator.com/item?id=21928211)
+
+[Reddit (/r/Vue)](https://www.reddit.com/r/vuejs/comments/ei6ikk/i_made_a_apple_music_web_player_in_vuejs/)
+
 # Features 
 
 ## Library
